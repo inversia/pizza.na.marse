@@ -1,5 +1,34 @@
+
+@keyframes pulse {
+
+    0%   {transform: scale(0.95); opacity:1.0;}
+    
+    50%  {transform: scale(1.0);}
+    /* 100% {transform: scale(1.0); opacity:1.0;transform: rotate(360deg);} */
+    100% {transform: scale(0.95); opacity:1.0;}
+}
+
+
+@keyframes radar-rotate {
+
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes radar-dot {
+
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+
 body {
-    background-color: rgb(255, 155, 155);
+    background-color:#070f17;
+    background-image: url(/static/art/backgroundstars.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:'Xolonium';
 }
 
 h1 {
@@ -25,46 +54,180 @@ h1 {
         color: #fcf9f1;
         text-decoration: none;
         white-space: nowrap;
+        transition:all 0.25s ease-in-out;
+        /* transform: scale(1); */
+    }
+
+    .menu a:hover {
+        color: #f5a623;
+        transform:translate(0%, 7%) scale(1.05);
     }
 
     .menu a.basket {
-        /* background-image:url(/art/basket.svg); */
+        background-image:url(/static/art/basket.svg);
         background-size:contain;
         background-repeat:no-repeat;
         display:block;
+        margin-top: 0.6%;
         height:3vw;
         width:3vw;
 /*         border: 1px solid #e83a82; */
     }
 
-.pizza {
-    color:red;
-    background-size:cover;
-    /* border: solid 2px red; */
-    position: relative;
+
+.terminal {
+    display:flex;
+    justify-content:center;
+    padding-top:10vw;
+    position:relative;
 }
 
-    .pizza img {
-        border-radius: 50%;
-        height: 100%;
-        width: 100%;
-        /* background-size: */
-        /* margin: 30px 50px; */
-        /* border: solid 2px red; */
+    .terminal svg {
+        overflow:visible;
+        width:30vw;
     }
 
-    .pizza h1 {
-        color:#fff1f1;
-        /* border: solid 2px red; */
-        position: absolute;
-        right: 0;
+    #vegButton {
+        transform-origin: 45px 23px;
     }
 
-    .pizza h2 {
-        position: absolute;
-        right: 0vh;
-        top:7vh;
+
+    #meatButton {
+        transform-origin: 45px 23px;
     }
+
+    
+    #fishButton {
+        transform-origin: 45px 23px;
+    }
+
+    #mixButton {
+        transform-origin: 65px 7px;
+    }
+
+    #meatButton, #vegButton, #fishButton, #mixButton {
+        cursor:pointer;
+        transition:all 0.25s ease-in-out;
+    }
+
+    #meatButton:hover, #vegButton:hover, #fishButton:hover, #mixButton:hover {
+        transform:scale(1.1);
+        transition:all 0.25s ease-in-out;
+    }
+
+    #meatButton:hover *, #fishButton:hover *, #vegButton:hover *, #mixButton:hover *  {
+        transition:all 0.25s ease-in-out;
+    }
+
+    #meatButton:hover * {
+        stroke: coral;
+        fill:coral;
+        
+    }
+
+    #vegButton:hover * {
+        stroke:#009688;
+        fill:#009688;
+    }
+
+    #fishButton:hover * {
+        stroke: #65619e;
+        fill:#65619e;
+    }
+
+    #mixButton:hover * {
+        stroke: #f5a623;
+        fill:#f5a623;
+    }
+
+
+.delivery {
+    /*         background-image:url(./art/delivery.svg); */
+            background-repeat:no-repeat;
+            position:fixed;
+            height:6.6vh;
+            width:6.6vw;
+            bottom:5vw;
+            right:2vw;
+            z-index:1;
+            display:flex;
+    /*         border: 1px solid #e83a82; */
+        }
+    
+        #radar-rotor {
+        
+            animation: radar-rotate 1s linear infinite;
+            transform-origin: center;
+        }
+    
+        #radar-dot-5 {
+    
+            opacity:0;
+            animation: radar-dot 1s linear infinite;
+            animation-delay: 0.370s; 
+        }
+    
+        #radar-dot-4 {
+            opacity:0;
+            animation: radar-dot 1s linear infinite;
+            animation-delay: 0.155s; 
+        }
+    
+        #radar-dot-3 {
+            opacity:0;
+            animation: radar-dot 1s linear infinite;
+            animation-delay: 0.855s; 
+        }
+    
+        #radar-dot-2 {
+            opacity:0;
+            animation: radar-dot 1s linear infinite;
+            animation-delay: 0.72s; 
+        }
+    
+        #radar-dot-1 {
+            opacity:0;
+            animation: radar-dot 1s linear infinite;
+            animation-delay: 0.60s; 
+        }
+
+.pizzas {
+    position: relative;
+    /* border:4px solid magenta; */
+    margin-top:-41vh;
+}
+
+    .pizza {
+        color:#f5a623;
+        background-size:cover;
+        position:absolute;
+        left:0;
+        top:0;
+        animation: pulse 8s linear infinite;
+
+    }
+
+        .pizza img {
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+            /* background-size: */
+            /* margin: 30px 50px; */
+            /* border: solid 2px red; */
+        }
+
+        .pizza h1 {
+            color:#fff1f1;
+            /* border: solid 2px red; */
+            position: absolute;
+            right: 15%;
+        }
+
+        .pizza h2 {
+            position: absolute;
+            right: 0vh;
+            top:7vh;
+        }
 
 .pizza-overlay:not(.visible) {
     display: none;
@@ -76,4 +239,3 @@ h1 {
         width: 50vw;
         background-color: aquamarine;
     }
-
