@@ -1,8 +1,9 @@
 import React from 'react'
 
-export default function Pizza ({ position, size, fontSize, img, id, name, price, composition, animationDelay }) {
+export default function Pizza ({ checked = false, onClick, position, size, type, fontSize, img, id, name, price, composition, animationDelay }) {
     
-    return  <div className='pizza'
+    return  <div className={`pizza ${type} ${checked ? 'checked' : ''}`}
+                 onClick={onClick}
                  style={{
                     left:   position[0],
                     top:  position[1],
@@ -10,8 +11,8 @@ export default function Pizza ({ position, size, fontSize, img, id, name, price,
                     width:  size + 'vw',
                     animationDelay: animationDelay,
                 }}>
-                <h1 style={{ fontSize: Math.round(size * 1.49) }}>{name}</h1>
-                <h2 style={{ fontSize: Math.round(size * 1.09) }}>{price}</h2>
-                <img src={img} />
+                <h1 style={{ fontSize: Math.round(size * 0.12) + 'vw' }}>{name} </h1>
+                <h2 style={{ fontSize: Math.round(size * 0.12) + 'vw' }}>{price}</h2>
+                <img src={img}/>
             </div>
 }
