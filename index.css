@@ -328,8 +328,24 @@ h1 {
             }
 
                 .pizza-list li {
-                    color:white;
+                    color:rgb(0, 0, 0);
+                    left:-30vw;
+                    margin-bottom: 1vw;
                 }
+
+    .pizza-info-panel {
+        overflow-y: auto;
+        display: flex;
+        flex:2.5;
+        flex-direction: column;
+        background-color: #000000;
+        padding: 0vw;
+    }
+
+        .pizza-info {
+            padding: 3vw;
+            color:white;
+        }
 
             .pizza-info h1 {
                 color:#ff9100;
