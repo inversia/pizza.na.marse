@@ -121,11 +121,9 @@ h1 {
         transform-origin: 45px 23px;
     }
 
-
     #meatButton {
         transform-origin: 45px 23px;
     }
-
     
     #fishButton {
         transform-origin: 45px 23px;
@@ -146,37 +144,53 @@ h1 {
         transition:all 0.25s ease-in-out;
     }
 
-    #meatButton:hover *, #fishButton:hover *, #vegButton:hover *, #mixButton:hover * {
+    #meatButton:hover > *, #fishButton:hover > *, #vegButton:hover > *, #mixButton:hover > * {
         transition:all 0.25s ease-in-out;
     }
 
-    #meatButton:hover * {
+    #meatButton:hover *,
+    .app.meat #meatButton * {
         stroke: coral;
         fill:coral;
-        
     }
 
-    #vegButton:hover * {
+    .app.meat #meatButton > rect {
+        fill-opacity: 0.2;
+    }
+
+    #vegButton:hover *,
+    .app.veg #vegButton * {
         stroke:#009688;
         fill:#009688;
     }
 
-    #fishButton:hover * {
+    .app.veg #vegButton > rect {
+        fill-opacity: 0.2;
+    }
+
+    #fishButton:hover *,
+    .app.fish #fishButton * {
         stroke: #65619e;
         fill:#65619e;
     }
 
-    #mixButton:hover * {
+    .app.fish #fishButton > rect {
+        fill-opacity: 0.2;
+    }
+
+    #mixButton:hover > *,
+    .app.mix #mixButton > * {
         stroke: #f5a623;
         fill:#f5a623;
     }
 
-    #mixButtonText:hover * {
-        stroke: #f5a623;
-        fill:#f523eb;
-        transition:all 0.05s ease-in-out;
+    .app.mix #mixButton > rect {
+        fill-opacity: 0.25;
     }
 
+    #mixButton:hover text {
+        stroke:none;
+    }
 
 .delivery {
     /*         background-image:url(./art/delivery.svg); */
@@ -276,27 +290,96 @@ h1 {
     display: none;
 }
 
-    .pizza-info {
-        position: relative;
-        height: 30vw;
-        width: 50vw;
-        background-color: aquamarine;
+.pizza-overlay {
+    display: flex;
+    align-items: stretch;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height:100%;
+}
+
+    .pizza-choose-panel {
+        display: flex;
+        flex:1;
+
+        background-color: #ffd209;
+        flex-direction: column;
+        height: 100%;
+        font-size: 4%;
     }
+
+    .pizza-choose-panel button {    /* CLOSE BUTTON*/
+        width:30%;
+        padding:20% 30%;
+        border-radius: 0% 3% 83% 3%;
+        background-color: #000000;
+        color:rgb(255, 174, 0);
+    }
+
+        .pizza-list {
+            white-space:nowrap;
+            padding: 0.2vw 1.5vw;
+            margin-top:1vw;
+            font-size:1.8vh;
+        }
+
+            .pizza-list ul {
+            }
+
+                .pizza-list li {
+                    color:white;
+                }
+
+            .pizza-info h1 {
+                color:#ff9100;
+            }
+            
+            .pizza-info p {
+                color:#fcfcfc;
+            }
+
+            .pizza-image {
+                height: 35vw;
+                width: 35vw;
+                background-size: cover;
+                background-position: center;
+                background-repeat:no-repeat;
+                border-radius: 50%;
+            }
 
 
 
 .pizza-button {
+    --height: 5.5vw;
     display: flex;
-    height: 100%;
+    height: var(--height);
     width: 100%;
+    background-position: center;
     background-image: url(/static/art/buy.svg);
     background-repeat: no-repeat; 
-    background-size:contain;
+    background-size:cover;
     position: fixed;
-    top: 88.5%;
+    bottom:0;
     left:0;
     z-index: 4;
-    opacity: 0.95;
+    opacity: 1;
+    overflow-y: hidden;
+    color:white;
+    transition: all 0.25s ease-in-out;
+    transition-property: bottom, opacity;
+}
+
+.pizza-button .hint {
+    left:0;
+    top:15%;
+    right:0;
+    bottom:0;
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3vw;
 }
 
 .salads {
