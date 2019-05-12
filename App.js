@@ -15,7 +15,7 @@ export default function App () {
 
     const isMix = pizzaTypeSelected === 'mix'
 
-    return <div class={'app ' + (pizzaTypeSelected || '')}>
+    return <div className={'app ' + (pizzaTypeSelected || '')}>
 
             <PizzaOverlay pizzaOverlayVisible={pizzaOverlayVisible} />
             <Menu />

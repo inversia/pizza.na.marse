@@ -311,58 +311,101 @@ h1 {
 
     .pizza-choose-panel button {    /* CLOSE BUTTON*/
         width:30%;
-        padding:20% 30%;
-        border-radius: 0% 3% 83% 3%;
+        padding:10% 23%;
+        border-radius: 0% 0% 93% 0%;
         background-color: #000000;
         color:rgb(255, 174, 0);
     }
 
         .pizza-list {
-            white-space:nowrap;
-            padding: 0.2vw 1.5vw;
-            margin-top:1vw;
+            /* white-space:nowrap; */
+            margin-top:1em;
             font-size:1.8vh;
+            /* border: 1px solid blue; */
+            height:100%;
+            overflow-y:hidden;
         }
 
-            .pizza-list ul {
+            .pizza-list li {
+                /* border: 1px solid red; */
+                display:flex;
+                align-items:center;
+                padding-left: 1em;
+                color:rgb(0, 0, 0);
             }
-
-                .pizza-list li {
-                    color:rgb(0, 0, 0);
-                    left:-30vw;
-                    margin-bottom: 1vw;
-                }
 
     .pizza-info-panel {
         overflow-y: auto;
         display: flex;
-        flex:2.5;
+        flex:3.5;
         flex-direction: column;
         background-color: #000000;
         padding: 0vw;
+        overflow-x:hidden;
     }
 
         .pizza-info {
             padding: 3vw;
             color:white;
+            display:flex;
         }
 
-            .pizza-info h1 {
-                color:#ff9100;
-            }
-            
-            .pizza-info p {
-                color:#fcfcfc;
+            .pizza-info .right-side {
+                display: flex;
+                flex-direction: column;
             }
 
-            .pizza-image {
-                height: 35vw;
-                width: 35vw;
-                background-size: cover;
-                background-position: center;
-                background-repeat:no-repeat;
-                border-radius: 50%;
+                .pizza-info .right-side h1 {
+                    color:#ff9100;
+                    font-size:3vw;
+                    line-height: 0.9em;
+                }
+
+                .pizza-info .right-side h2 {
+                    color:#ffd000;
+                    padding-top: 0.5em;
+                    font-size:3vw;
+                    position:relative;
+                    /* border:1px solid red; */
+                }
+
+                    .pizza-info .right-side h2:after {
+                        content: '';
+                        position:absolute;
+                        background-image: url(/static/art/rub.svg);
+                        background-repeat: no-repeat;
+                        background-size:contain;
+                        height: 0.7em;
+                        width: 0.7em;
+                        top:0.8em;
+                        margin-left: 0.15em;
+                    }
+
+                .pizza-info .right-side ul {
+                    color:#fcfcfc;
+                }
+
+                .pizza-info .right-side button {
+                    border-radius: 75% 75% 75% 75%;
+                    padding: 3em;
+                    background-color: #ffd000;
+                    display: flex;
+                    align-self: flex-end;
+                }
+
+            .pizza-info .left-side {
+                display: flex;
             }
+
+                .pizza-info .left-side .pizza-image {
+                    height: 45vw;
+                    width: 45vw;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat:no-repeat;
+                    border-radius: 50%;
+                    /* border: 2px solid red; */
+                }
 
 
 
