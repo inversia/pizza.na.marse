@@ -1,7 +1,7 @@
 const pizzaData = [
     {
         name: '4 сыра',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['cливочный соус', 'чеддер', 'пармезан', 'моцарелла', 'горгонзола'],
         price: 495,
         position: ['7vw','0vw'],
         size: 13,
@@ -12,7 +12,7 @@ const pizzaData = [
 
     {
         name: 'Frutti di mare',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['cливочный соус', 'моцарелла', 'кальмары', 'мидии', 'креветки', 'осьминоги', 'соус песто', 'орегано'],
         price: 565,
         position: ['77vw','0vw'],
         size: 18,
@@ -23,7 +23,7 @@ const pizzaData = [
 
     {
         name: 'Ветчина Грибы',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['красный соус', 'моцарелла', 'ветчина', 'грибы', 'орегано'],
         price: 440,
         position: ['24vw','8vw'],
         size: 12,
@@ -34,7 +34,7 @@ const pizzaData = [
 
     {
         name: 'Гавайская',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['красный соус', 'моцарелла', 'куриная грудка', 'ветчина', 'ананас'],
         price: 440,
         position: ['3vw','22vw'],
         size: 20,
@@ -45,7 +45,7 @@ const pizzaData = [
 
     {
         name: 'Горгонзола',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['cливочный соус', 'моцарелла', 'горгонзола', 'груша', 'мёд'],
         price: 495,
         position: ['67vw','22vw'],
         size: 22,
@@ -56,7 +56,7 @@ const pizzaData = [
 
     {
         name: 'Марго',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['красный соус', 'моцарелла', 'базилик', 'орегано'],
         price: 320,
         position: ['62vw','11vw'],
         size: 12,
@@ -67,7 +67,7 @@ const pizzaData = [
 
     {
         name: 'Марсиано',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['красный соус', 'моцарелла', 'ветчина', 'салями', 'куриная грудка', 'бекон', 'соленые огурчики', 'лук красный'],
         price: 565,
         position: ['50vw','30vw'],
         size: 11,
@@ -78,7 +78,7 @@ const pizzaData = [
 
     {
         name: 'Охотничья',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['красный соус', 'моцарелла', 'охотничьи колбаски', 'болгарский перец', 'маринованные огурчики', 'красный лук'],
         price: 495,
         position: ['28vw','24vw'],
         size: 14,
@@ -89,7 +89,7 @@ const pizzaData = [
 
     {
         name: 'Пепперони',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['красный соус', 'моцарелла', 'перец чили', 'пепперони'],
         price: 440,
         position: ['57vw','48vw'],
         size: 18,
@@ -100,7 +100,7 @@ const pizzaData = [
 
     {
         name: 'Сэлмон',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['красный соус', 'моцарелла', 'лосось', 'сливочный сыр креметте'],
         price: 565,
         position: ['17vw','43vw'],
         size: 19,
@@ -111,7 +111,7 @@ const pizzaData = [
 
     {
         name: 'Grow pizza',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['красный соус', 'моцарелла', 'кабачки', 'помидоры', 'баклажаны', 'болгарский перчик', 'грибы', 'маслины', 'оливки', 'сливочный сыр креметте'],
         price: 440,
         position: ['41vw','43vw'],
         size: 13,
@@ -122,7 +122,7 @@ const pizzaData = [
 
     {
         name: 'BBQPizza',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['НЕТ СОСТАВА ПОКА'],
         price: 495,
         position: ['84vw','46vw'],
         size: 12,
@@ -133,7 +133,7 @@ const pizzaData = [
 
     {
         name: 'Тот самый Цезарь',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['сливочный соус', 'моцарелла', 'курица', 'помидоры', 'салат айсберг', 'соус цезарь', 'пармезан'],
         price: 495,
         position: ['22vw','67vw'],
         size: 10,
@@ -144,7 +144,7 @@ const pizzaData = [
 
     {
         name: 'А-ля UFIQ',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['красный соус', 'моцарелла', 'пепперони', 'грибы', 'соус песто', 'руккола'],
         price: 565,
         position: ['2vw','57vw'],
         size: 16,
@@ -155,7 +155,7 @@ const pizzaData = [
 
     {
         name: 'Немного салями & сыра',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['красный соус', 'моцарелла', 'салями', 'моцарелла bonfesto', 'шпинат'],
         price: 495,
         position: ['38vw','62vw'],
         size: 19,
@@ -166,7 +166,7 @@ const pizzaData = [
 
     {
         name: 'Вялый томат & гриб',
-        composition: ['meat', 'cheese', 'onion'],
+        composition: ['красный соус', 'моцарелла', 'вяленые томаты', 'соус песто', 'руккола'],
         price: 565,
         position: ['75vw','61vw'],
         size: 17,
