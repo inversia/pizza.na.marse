@@ -297,6 +297,10 @@ h1 {
     z-index: 10000;
     width: 100%;
     height:100%;
+    background-image: url(/static/art/backgroundstars.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+
 }
 
     .pizza-choose-panel {
@@ -304,17 +308,19 @@ h1 {
         flex:1;
 
         background-color: #ffd209;
+        background-color: #f5a623;
         flex-direction: column;
         height: 100%;
         font-size: 4%;
+        border-radius: 0vw 5vw 5vw 0vw;
     }
 
     .pizza-choose-panel button {    /* CLOSE BUTTON*/
-        width:30%;
-        padding:10% 23%;
-        border-radius: 0% 0% 93% 0%;
+        width:20%;
+        padding:2vw 3vw;
+        border-radius: 0vw 0vw 19vw 0vw;
         background-color: #000000;
-        color:rgb(255, 174, 0);
+        color:#f5a623;
     }
 
         .pizza-list {
@@ -339,7 +345,9 @@ h1 {
         display: flex;
         flex:3.5;
         flex-direction: column;
-        background-color: #000000;
+        /* background-image: url(/static/art/backgroundstars.jpg); */
+        background-size:cover;
+        background-repeat:no-repeat;
         padding: 0vw;
         overflow-x:hidden;
     }
@@ -348,11 +356,16 @@ h1 {
             padding: 3vw;
             color:white;
             display:flex;
+            /* border:2px solid red; */
         }
 
             .pizza-info .right-side {
                 display: flex;
                 flex-direction: column;
+                padding-left: 3em;
+                flex:1;
+                justify-content: center;
+                /* border:2px solid red; */
             }
 
                 .pizza-info .right-side h1 {
@@ -383,18 +396,29 @@ h1 {
 
                 .pizza-info .right-side ul {
                     color:#fcfcfc;
+                    /* border:2px solid yellow; */
+                    padding:2em 0em;
+                    list-style-type: disc;
+                    font-size:2.5vw;
+                    color: white;
+                    /* color:#ff9100; */
+
                 }
 
                 .pizza-info .right-side button {
-                    border-radius: 75% 75% 75% 75%;
-                    padding: 3em;
-                    background-color: #ffd000;
+                    border-radius: 23vw 23vw 23vw 23vw;
+                    /* padding: 3em; */
+                    background: url(/static/art/add.svg) no-repeat center;
+                    background-size: 60%;
                     display: flex;
-                    align-self: flex-end;
+                    height:8vw;
+                    width:8vw;
+
                 }
 
             .pizza-info .left-side {
                 display: flex;
+                align-items: center;
             }
 
                 .pizza-info .left-side .pizza-image {
