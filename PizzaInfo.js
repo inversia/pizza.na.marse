@@ -10,11 +10,14 @@ export default function PizzaInfo ({name, composition, price, img}){
             </div>
             <div className='right-side'>
                 <h1>{name}</h1>
-                <h2>{price}</h2>
+                <div className='size-and-price'>
+                    <div className='size'></div>
+                    <h2>{price}</h2>
+                </div>
                 <ul>
                     {composition.map(name => <li key={name}>{name}</li>)}
                 </ul>
-                <button>Добавить</button>
+                <button></button>
             </div>
         </div>
     )

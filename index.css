@@ -114,7 +114,7 @@ h1 {
 
     .terminal svg {
         overflow:visible;
-        width:30vw;
+        width:26vw;
     }
 
     #vegButton {
@@ -246,7 +246,7 @@ h1 {
     position: relative;
     /* border:4px solid magenta; */
     height: 78vw;
-    margin-top:-41vh;
+    margin-top:-28vw;
     pointer-events:none;
 }
 
@@ -374,6 +374,21 @@ h1 {
                     line-height: 0.9em;
                 }
 
+                .pizza-info .right-side .size-and-price {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    border:1px soloid red;
+                }
+
+                    .pizza-info .right-side .size-and-price .size {
+                        height: 14vw;
+                        width: 14vw;
+                        background: url(/static/art/size_toggle.svg) no-repeat center; 
+                        background-size: contain;
+                    }
+
                 .pizza-info .right-side h2 {
                     color:#ffd000;
                     padding-top: 0.5em;
@@ -413,13 +428,12 @@ h1 {
                     display: flex;
                     height:8vw;
                     width:8vw;
-                    color:red;
-                    font-size: 3vw;
                 }
+
 
             .pizza-info .left-side {
                 display: flex;
-                align-items: center;
+                /* align-items: center; */
             }
 
                 .pizza-info .left-side .pizza-image {
@@ -486,14 +500,22 @@ h1 {
         background-color: #e7f523;
     }
 
+    .menu {
+        font-size:1.7vw;
+    }
+
     .terminal {
-        padding-top:9%;
+        padding-top:9vw;
         
     }
 
     .terminal svg {
-        width:25vw;
-        padding-bottom: 5vw;
+        width:27vw;
+
+    }
+
+    .pizzas {
+        margin-top:-28vw;
     }
 }
 
@@ -504,14 +526,21 @@ h1 {
         background-color: #9723f5;
     }
 
+    .menu {
+        font-size:1.8vw;
+    }
+
     .terminal {
-        padding-top:8%;
+        padding-top:10vw;
         
     }
 
     .terminal svg {
         width:25vw;
-        padding-bottom: 10vw;
+    }
+
+    .pizzas {
+        margin-top:-27vw;
     }
 }
 
@@ -522,13 +551,16 @@ h1 {
         background-color: #23f5d9;
     }
 
+    .menu {
+        font-size:1.86vw;
+    }
+
     .terminal {
-        padding-top:8%;  
+        padding-top:10vw;  
     }
 
     .terminal svg {
         width:25vw;
-        padding-bottom: 15vw;
     }
 }
 

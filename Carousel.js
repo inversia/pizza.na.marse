@@ -59,7 +59,11 @@ export default function Carousel ({ items = [], radius = 250 }) {
         else if (e.keyCode === 39) gotoNextItem ()
     }
 
-    return <div></div>
+    return <div>
+
+        
+
+    </div>
 
     //тут дивы через map со всей хуйнёй
 }

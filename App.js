@@ -9,7 +9,7 @@ import PizzaOverlay from './PizzaOverlay'
 
 export default function App () {
     
-    const [pizzaOverlayVisible, setPizzaOverlayVisible] = useState (true)
+    const [pizzaOverlayVisible, setPizzaOverlayVisible] = useState (false)
     const [pizzaTypeSelected,   setPizzaTypeSelected]   = useState (undefined)
     const [selectedPizzas,      setSelectedPizzas]      = useState ({})
 
@@ -17,7 +17,7 @@ export default function App () {
 
     return <div className={'app ' + (pizzaTypeSelected || '')}>
 
-            <PizzaOverlay pizzaOverlayVisible={pizzaOverlayVisible} />
+            <PizzaOverlay pizzaOverlayVisible={pizzaOverlayVisible} setPizzaOverlayVisible={setPizzaOverlayVisible} />
             <Menu />
             <SelectionPanel type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/>
             <Radar />
@@ -29,7 +29,8 @@ export default function App () {
                                                 if (isMix) {
                                                     setSelectedPizzas ({ ...selectedPizzas, [p.name]: !selectedPizzas[p.name] })
                                                 } else {
-                                                    alert ('Окно заказа: выбрали пиццу ' + p.name)
+                                                    //alert ('Окно заказа: выбрали пиццу ' + p.name)
+                                                    setPizzaOverlayVisible (true)
                                                 }
                                            } }/>)}
             </div>
