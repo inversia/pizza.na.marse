@@ -1,10 +1,4 @@
-import React from 'react'
-
-const $  = document.querySelector   .bind (document)
-const $$ = document.querySelectorAll.bind (document)
-
-
-const { min, max, sin, cos } = Math
+const { min, sin, cos } = Math
 
 // --------------------------------------------------
 
@@ -79,11 +73,14 @@ export function InertialValue ({ value    = 0,
 
         set (newTarget) {
 
-            startTime  = Date.now ()
-            startValue = currentValue
-            endValue   = newTarget
+            if (endValue !== newTarget) {
 
-            if (!animating) animFrame = requestAnimationFrame (step)
+                startTime  = Date.now ()
+                startValue = currentValue
+                endValue   = newTarget
+
+                if (!animating) animFrame = requestAnimationFrame (step)
+            }
         },
 
         // abort () {

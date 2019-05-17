@@ -1,69 +1,75 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Easing, rescale, InertialValue } from './anim'
+import './Carousel.css'
 
 // const TAU = Math.PI * 2
 // const sectionAngle = (TAU / N)
 
-export default function Carousel ({ items = [], radius = 250 }) {
-        
-    const N = items.length
-    const TAU = Math.PI * 2
+export default function Carousel ({ children = [], radius = 250 }) {
+
+    const N            = children.length
+    const TAU          = Math.PI * 2
     const sectionAngle = (TAU / N)
-    const [currentItem, setCurrentItem] = useState(0)
 
-    let rotationAngle = InertialValue ({
+    const [rotationAngle, setRotationAngle] = useState (0)
+    const [currentItem,   setCurrentItem]   = useState (0)
 
-        value: 0,
-        duration: 0.5,
-        easing: Easing.inOut,
-        onchange (value) {
-            
-            for (let i = 0; i < N; i++){
+    function gotoPrevItem () { setCurrentItem (currentItem + 1) }
+    function gotoNextItem () { setCurrentItem (currentItem - 1) }
 
-                const angle = Math.PI/2 + value + sectionAngle * i
+    // создает «коробочку» связанную с компонентом (его временем жизни), в которой может лежать что-либо
+    const itemsRef                = useRef ()
+    const rotationAngleInertiaRef = useRef ()
 
-                const x = radius + radius * Math.cos(angle)
-                const z = radius + radius * Math.sin(angle)
+    // вызывает коллбек при фактическом рендере компонента (после создания DOM дерева)
+    useEffect (() => {
 
-                items[i].style.transform = `translate3d(${x + 20}px, 600px, ${z - 250}px)`
-            }
+        // Создаём IntertialValue если он ещё не был создан, кладём его в «коробочку» rotationAngleRef,
+        // где он будет храниться до конца жизни компонента
+        //
+        if (!rotationAngleInertiaRef.current) {
+            rotationAngleInertiaRef.current = InertialValue ({
+                value: 0,
+                duration: 0.5,
+                easing: Easing.inOut,
+                onchange (value) { setRotationAngle (value) }
+            })
+        }
+
+        rotationAngleInertiaRef.current.set (-currentItem * sectionAngle)
+
+        const itemsEl = itemsRef.current
+        const y = itemsEl.offsetHeight / 2
+
+        for (let i = 0; i < N; i++){
+
+            const angle = Math.PI/2 + rotationAngle + sectionAngle * i
+
+            const x = radius + radius * Math.cos (angle)
+            const z = radius + radius * Math.sin (angle)
+
+            itemsEl.children[i].style.transform = `translate3d(${x + 20}px, ${y}px, ${z - 250}px)`
         }
     })
 
-    // function setCurrentItem (i) {
+    return  <div className="carousel">
 
-    //     currentItem = i
-    //     rotationAngle.set (-i * sectionAngle)
+                <svg className="circle">
+                    <circle cx="50%" cy="50%" r="50%" stroke="#5d7e82" strokeWidth="2"/>
+                </svg>
+
+                <div ref={itemsRef} className="items">
+                    {children.map ((child, i) =>
+                        <div className="item" key={i} onClick={() => setCurrentItem (i)}>{child}</div>
+                    )}
+                </div>
+
+            </div>
+
+    // window.onkeydown = function (e) {
+
+    //     if      (e.keyCode === 37) gotoPrevItem ()
+    //     else if (e.keyCode === 39) gotoNextItem ()
     // }
 
-    function gotoPrevItem () {
-        setCurrentItem (currentItem + 1)
-    }
-
-    function gotoNextItem () {
-        setCurrentItem (currentItem - 1)
-    }
-
-
-    for (let i = 0; i < items.length; i++) {
-
-        items[i].onclick = function () {
-            
-            setCurrentItem (i)
-        }
-    }
-
-    window.onkeydown = function (e) {
-
-        if      (e.keyCode === 37) gotoPrevItem ()
-        else if (e.keyCode === 39) gotoNextItem ()
-    }
-
-    return <div>
-
-        
-
-    </div>
-
-    //тут дивы через map со всей хуйнёй
 }

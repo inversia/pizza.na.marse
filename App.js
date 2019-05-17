@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import pizzaData from './pizzaData'
+import saladsData from './saladsData'
 import Pizza from './Pizza'
 import Menu from './Menu'
 import SelectionPanel from './SelectionPanel'
@@ -43,7 +44,6 @@ export default function App () {
             </div>
 
             <div className="salads">
-                <Carousel />
             </div>
         </div>
 }
