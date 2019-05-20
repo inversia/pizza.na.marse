@@ -5,7 +5,7 @@ import useComponentSize from '@rehooks/component-size'
 
 export default function PizzaOverlay ({ pizzaOverlayVisible, setPizzaOverlayVisible }) {
 
-    const pizzaListEl   = useRef (null)
+    const pizzaListEl   = useRef ()
     const pizzaListSize = useComponentSize (pizzaListEl)
 
     return <div className={'pizza-overlay' + (pizzaOverlayVisible ? ' visible' : '')}>

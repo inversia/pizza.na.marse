@@ -71,13 +71,13 @@ export function InertialValue ({ value    = 0,
         // get value ()     { return currentValue },
         // get animating () { return animating    },
 
-        set (newTarget) {
+        set (newEndValue) {
 
-            if (endValue !== newTarget) {
+            if (endValue !== newEndValue) {
 
                 startTime  = Date.now ()
                 startValue = currentValue
-                endValue   = newTarget
+                endValue   = newEndValue
 
                 if (!animating) animFrame = requestAnimationFrame (step)
             }
