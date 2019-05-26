@@ -42,9 +42,20 @@ export default function App () {
                 </div>
                 <div className='order'></div>
             </div>
-            <Carousel perspectiveFactor='3.33'>
-                {saladsData.map((salad, i) => <div key={i}>{salad.name}</div>)}
-            </Carousel>
-                
+
+            <div className='salads-carousel-wrapper'>
+                <h1>Внеземные салаты</h1>
+                <Carousel perspectiveFactor='3.43'>
+                    { saladsData.map((salad, i) => (<div>
+                                                        <div className='salad-item' key={i} style={{backgroundImage: `url(${salad.img})` }} />
+                                                        <h2>{salad.name}</h2>
+                                                    </div>))
+                    }
+                </Carousel>
+            </div> 
+
+            <div className='noodles-wrapper'>
+                    
+            </div>
             </div>
 }

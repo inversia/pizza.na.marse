@@ -118,7 +118,6 @@ export default function Carousel ({ children = [], perspectiveFactor = 1.63 }) {
                         <div className="item" key={i} onClick={() => setCurrentItem (i)}>{child}</div>
                     )}
                 </div> 
-
                 
 {/* 
                 <input style={{width:'60%'}} type="range" min="0" max="10" step="0.01" value={currentPerspectiveFactor} onChange={e => setPerspectiveFactor (event.target.value)}></input>

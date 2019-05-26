@@ -1,3 +1,25 @@
+.salads-carousel-wrapper {
+    margin-top: 13vw;
+}
+
+    .salads-carousel-wrapper h1 {
+        text-align: center;
+        pointer-events: none;
+    }
+
+    .salad-item {
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 10vw;
+        width: 12vw;
+        border-radius:50%;
+        /* border:1px solid pink; */
+    }
+
+
+
+
 .carousel {
     width:70vw;
     height:20vw;
@@ -36,9 +58,12 @@
 
     }
 
-        .carousel .item {
+    .carousel .items h2{
+        white-space: nowrap;
+    }
 
-            pointer-events: all;
+        .carousel .item {
+            /* pointer-events: all; */
             left: 0;
             top: 0;
             position:absolute;
@@ -47,14 +72,16 @@
             height:60px;
             margin-left: -30px;
             margin-top: -30px;
-            background-color:#8a4752;
-            border:solid 1px #5d7e82;
             color:white;
             font-size:20px;
             display:flex;
             align-items:center;
             justify-content:center;
 
+        }
+
+        .carousel .item * {
+            pointer-events: all;
         }
 
             .carousel .item:hover {
