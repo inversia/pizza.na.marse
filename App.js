@@ -42,8 +42,9 @@ export default function App () {
                 </div>
                 <div className='order'></div>
             </div>
-
-            <div className="salads">
+            <Carousel perspectiveFactor='3.33'>
+                {saladsData.map((salad, i) => <div key={i}>{salad.name}</div>)}
+            </Carousel>
+                
             </div>
-        </div>
 }
