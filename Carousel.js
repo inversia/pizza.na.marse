@@ -52,7 +52,7 @@ function useInertialValue (initialValue, config) {
 // пример того, как можно сделать useRef, если у нас есть только useState
 // function useRef_ (initialValue) { return useState ({ current: initialValue })[0] }
 
-export default function Carousel ({ children = [], perspectiveFactor = 1.63 }) {
+export default function Carousel ({ children = [], perspectiveFactor = 1.63, className = '' }) {
 
     const el                 = useRef ()
     const { width, height }  = useComponentSize (el)
@@ -106,7 +106,7 @@ export default function Carousel ({ children = [], perspectiveFactor = 1.63 }) {
 
     const [currentPerspectiveFactor, setPerspectiveFactor] = useState (perspectiveFactor)
 
-    return  <div ref={el} className="carousel" style={{perspective: (height * currentPerspectiveFactor) + 'vh'}}>
+    return  <div ref={el} className={`carousel ${className}`} style={{perspective: (height * currentPerspectiveFactor) + 'px'}}>
 
                 <svg className="circle">
                     <circle cx="50%" cy="50%" r={radius + 'px'} stroke="#5d7e82" strokeWidth="2"/>
