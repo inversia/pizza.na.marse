@@ -52,7 +52,6 @@ function useInertialValue (initialValue, config) {
 // пример того, как можно сделать useRef, если у нас есть только useState
 // function useRef_ (initialValue) { return useState ({ current: initialValue })[0] }
 
-
 export default function Carousel ({ children = [], perspectiveFactor = 1.63 }) {
 
     const el                 = useRef ()
@@ -62,7 +61,7 @@ export default function Carousel ({ children = [], perspectiveFactor = 1.63 }) {
     const N            = children.length
     const TAU          = PI * 2
     const sectionAngle = (TAU / N)
-
+    
     const [currentItem, setCurrentItem] = useState (0)
 
     // TODO: добавить враппинг, чтобы currentItem был в диапазоне [0, N-1]
@@ -107,7 +106,7 @@ export default function Carousel ({ children = [], perspectiveFactor = 1.63 }) {
 
     const [currentPerspectiveFactor, setPerspectiveFactor] = useState (perspectiveFactor)
 
-    return  <div ref={el} className="carousel" style={{perspective: (height * currentPerspectiveFactor) + 'px'}}>
+    return  <div ref={el} className="carousel" style={{perspective: (height * currentPerspectiveFactor) + 'vh'}}>
 
                 <svg className="circle">
                     <circle cx="50%" cy="50%" r={radius + 'px'} stroke="#5d7e82" strokeWidth="2"/>

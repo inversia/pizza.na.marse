@@ -7,6 +7,7 @@ import SelectionPanel from './SelectionPanel'
 import Radar from './Radar'
 import Carousel from './Carousel'
 import PizzaOverlay from './PizzaOverlay'
+import Noodles from './Noodles';
 
 export default function App () {
     
@@ -45,7 +46,7 @@ export default function App () {
 
             <div className='salads-carousel-wrapper'>
                 <h1>Внеземные салаты</h1>
-                <Carousel perspectiveFactor='3.43'>
+                <Carousel perspectiveFactor='0.47'>
                     { saladsData.map((salad, i) => (<div>
                                                         <div className='salad-item' key={i} style={{backgroundImage: `url(${salad.img})` }} />
                                                         <h2>{salad.name}</h2>
@@ -55,7 +56,7 @@ export default function App () {
             </div> 
 
             <div className='noodles-wrapper'>
-                    
+                <Noodles />
             </div>
             </div>
 }
