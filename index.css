@@ -1,3 +1,9 @@
+@font-face {
+    font-family:Xolonium;
+    font-style:normal;
+    src:url(/static/fonts/Xolonium.ttf);
+}
+
 
 @keyframes pulse {
 
