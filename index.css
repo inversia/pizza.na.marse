@@ -59,7 +59,7 @@
 
 body {
     background-color:#070f17;
-    background-image: url(/static/art/backgroundstars.jpg);
+    /* background-image: url(/static/art/backgroundstars.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     font-family:'Xolonium';
@@ -68,6 +68,12 @@ body {
 h1 {
     color:white;
     font-size: 5vw;
+}
+
+.cosmos-zone-one-wrapper {
+    background-image: url(/static/art/backgroundstars.jpg);
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
 }
 
 .menu {
@@ -254,6 +260,7 @@ h1 {
     height: 78vw;
     margin-top:-28vw;
     pointer-events:none;
+    
 }
 
     .pizza {
@@ -486,14 +493,22 @@ h1 {
     font-size: 1.3vw;
 }
 
-.salads {
-    position: relative;
-    height: 500px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    /*background-color: #f5a623;*/
+.cosmos-zone-two-wrapper {
+    background-image: url(/static/art/backgroundstars4.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
+
+
+
+    .salads {
+        position: relative;
+        height: 500px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        /*background-color: #f5a623;*/
+    }
 
 
 
