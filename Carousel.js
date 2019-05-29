@@ -100,7 +100,11 @@ export default function Carousel ({ children = [], perspectiveFactor = 1.63, cla
             const x = radius + radius * cos (angle)
             const z = radius + radius * sin (angle)
 
-            itemsRef.current.children[i].style.transform = `translate3d(${x}px, ${height / 2}px, ${z - radius}px)`
+            const depth = rescale (sin(angle), [-1, 1], [0.5, 1], Easing.out)
+
+            const el = itemsRef.current.children[i]
+
+            el.style.transform = `translate3d(${x}px, ${height / 2}px, ${z - radius}px)`
         }
     })
 
@@ -109,7 +113,11 @@ export default function Carousel ({ children = [], perspectiveFactor = 1.63, cla
     return  <div ref={el} className={`carousel ${className}`} style={{perspective: (height * currentPerspectiveFactor) + 'px'}}>
 
                 <svg className="circle">
-                    <circle cx="50%" cy="50%" r={radius + 'px'} stroke="#5d7e82" strokeWidth="2"/>
+                    <radialGradient id="carouselRadialGradient">
+                        <stop offset="29%" stopColor="transparent"/>
+                        <stop offset="100%" stopColor="black"/>
+                    </radialGradient>
+                    <circle cx="50%" cy="50%" r={radius + 'px'} />
                 </svg>
 
                 <div ref={itemsRef} className="items">

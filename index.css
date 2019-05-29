@@ -1,3 +1,7 @@
+* {
+    backface-visibility: hidden;
+}
+
 @font-face {
     font-family:Xolonium;
     font-style:normal;
@@ -74,6 +78,7 @@ h1 {
     background-image: url(/static/art/backgroundstars.jpg);
     /*background-repeat: no-repeat;*/
     background-size: cover;
+    padding-bottom: 15vw;
 }
 
 .menu {
@@ -494,12 +499,17 @@ h1 {
 }
 
 .cosmos-zone-two-wrapper {
-    background-image: url(/static/art/backgroundstars4.jpg);
+    margin-top:-20vh;
+    background-image: url(/static/art/backgroundstars6.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+
+
+    /* background-size: 100% 100%; */
+    background-repeat:no-repeat;
+    -webkit-mask-image: linear-gradient(to bottom,transparent 0%, black 13%);
+    mask-image: linear-gradient(to bottom, transparent, black);
 }
-
-
 
     .salads {
         position: relative;
@@ -520,7 +530,7 @@ h1 {
 @media (max-width: 1080px) {
 
     body {
-        background-color: #e7f523;
+        /* background-color: #e7f523; */
     }
 
     .menu {
@@ -546,7 +556,7 @@ h1 {
 @media (max-width: 850px) {
 
     body {
-        background-color: #9723f5;
+        /* background-color: #9723f5; */
     }
 
     .menu {
@@ -571,7 +581,7 @@ h1 {
 @media (max-width: 780px) {
 
     body {
-        background-color: #23f5d9;
+        /* background-color: #23f5d9; */
     }
 
     .menu {

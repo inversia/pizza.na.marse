@@ -1,13 +1,10 @@
 .carousel {
-    width:70vw;
+    width:65vw;
     height:20vw;
-    transform-style: preserve-3d;
     perspective-origin: 50% 0%;
     color: white;
     position: relative;
     margin: 0 auto;
-    margin-bottom: 30vw;
-    margin-top:5vw;
 }
 
     .carousel .circle {
@@ -18,10 +15,12 @@
         width:100%;
         height:100%;
         overflow:visible;
-        transform: translate3d(0px, 0px, 0px);
-        transform: rotateX(90deg);
-        opacity:0.0;
-
+        transform: rotateX(90deg) translate3d(0px, 0, -6vw) scale(1.2);
+        fill:black;
+        stroke:white;
+        fill:url(#carouselRadialGradient);
+        opacity: 0.5;
+        stroke-width: 2%;
     }
 
     .carousel .items {
@@ -73,6 +72,11 @@
 
 /* -------------------------------------------------------------- */
 
+.carousel.salads {
+    margin-bottom: 30vw;
+    margin-top: 12vw;
+}
+
 .salads-carousel-wrapper {
     padding-top: 13vw;
     padding-bottom:13vw;
@@ -107,5 +111,6 @@
             text-align: center;
             top: 100%;
             width: 20vw;
+            text-shadow: 0.05em 0.05em 0em rgba(0,0,0,0.4);
             /* border: 1px solid green; */
         }
