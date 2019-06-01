@@ -119,6 +119,77 @@ h1 {
 /*         border: 1px solid #e83a82; */
     }
 
+.menu.mobile {
+    height: 12vw;
+}
+
+    .menu.mobile a {
+        color: orange;
+    }
+
+    .menu.mobile a.basket {
+        background-image:url(/static/art/basket.svg);
+        background-size:contain;
+        background-repeat:no-repeat;
+        display:block;
+        margin-top: 0.6vw;
+        height:8vw;
+        width:8vw;
+
+    }
+
+    .menu.mobile a.meat {
+        background-image:url(/static/art/meat.svg);
+        background-size:contain;
+        background-repeat:no-repeat;
+        display:block;
+        margin-top: 5.0vw;
+        height:12vw;
+        width:12vw;
+
+    }
+
+    .menu.mobile a.broccoli {
+        background-image:url(/static/art/broccoli.svg);
+        background-size:contain;
+        background-repeat:no-repeat;
+        display:block;
+        margin-top: 0.6vw;
+        height:8vw;
+        width:9vw;
+    }
+
+    .menu.mobile a.fish {
+        background-image:url(/static/art/fish.svg);
+        background-size:contain;
+        background-repeat:no-repeat;
+        display:block;
+        margin-top: 4.6vw;
+        height:11vw;
+        width:11vw;
+    }
+
+    .menu.mobile a.hamburger-menu {
+        background-image:url(/static/art/hamburger-menu.svg);
+        background-size:contain;
+        background-repeat:no-repeat;
+        display:block;
+        margin-top: 0.6vw;
+        height:7vw;
+        width:7vw;
+    }
+
+    .menu.mobile a.mix {
+        background-image:url(/static/art/mix.svg);
+        background-size:contain;
+        background-repeat:no-repeat;
+        display:block;
+        margin-top: 12.6vw;
+        height:19vw;
+        width:19vw;
+    }
+
+
 
 .terminal {
     display:flex;
@@ -600,5 +671,30 @@ h1 {
 
 @media (max-width: 690px) {
 
-    /*мобильная версия уже*/
+    .pizzas {
+        height: 100vw;
+        pointer-events:none;
+        
+    }
+}
+
+
+@media (max-height: 501px) {
+    
+    .pizzas {
+        height: 250vw;
+        
+    }
+
+    .cosmos-zone-one-wrapper {
+        padding-bottom: 195vw;
+    }
+
+    .cosmos-zone-two-wrapper {
+        margin-top: 20vw;
+    }
+
+    body {
+        background-color: chartreuse;
+    }
 }

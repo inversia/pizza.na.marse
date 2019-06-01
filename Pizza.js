@@ -1,11 +1,13 @@
 import React from 'react'
 
-export default function Pizza ({ checked = false, onClick, position, size, type, fontSize, img, id, name, price, composition, animationDelay }) {
-    
+export default function Pizza ({ checked = false, onClick, layout, layoutMode, type, fontSize, img, id, name, price, composition, animationDelay }) {
+  
+    const { position, size } = layout[layoutMode]
+
     return  <div className={`pizza ${type} ${checked ? 'checked' : ''}`}
                  onClick={onClick}
                  style={{
-                    left:   position[0],
+                    left: position[0],
                     top:  position[1],
                     height: size + 'vw',
                     width:  size + 'vw',

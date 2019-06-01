@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useCallback, useLayoutEffect, useEffect, useRef } from 'react'
+import useComponentSize from '@rehooks/component-size'
 import pizzaData from './pizzaData'
 import saladsData from './saladsData'
 import Pizza from './Pizza'
@@ -8,6 +9,7 @@ import Radar from './Radar'
 import Carousel from './Carousel'
 import PizzaOverlay from './PizzaOverlay'
 import Noodles from './Noodles';
+import MenuMobile from './MenuMobile';
 
 export default function App () {
     
@@ -17,16 +19,28 @@ export default function App () {
 
     const isMix = pizzaTypeSelected === 'mix'
 
+    const pizzaDataEl = useRef ()
+    
+    useComponentSize (pizzaDataEl)
+
+    const width      = Math.min (window.screen.width, window.innerWidth)
+    const layoutMode = width < 501 ? 'mobile' : 'desktop'
+
+    console.log(width)
     return <div className={'app ' + (pizzaTypeSelected || '')}>
            <div className='cosmos-zone-one-wrapper'>
                 <PizzaOverlay pizzaOverlayVisible={pizzaOverlayVisible} setPizzaOverlayVisible={setPizzaOverlayVisible} />
-                <Menu />
+                
+                {width < 501 ? <MenuMobile/> : <Menu />}
+                
                 <SelectionPanel type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/>
                 <Radar />
 
-                <div className='pizzas'>
+                <div ref={pizzaDataEl} className='pizzas'>
                     {pizzaData.map(p => <Pizza checked={selectedPizzas[p.name] || false}
-                                            key={p.name} {...p}
+                                            key={p.name}
+                                            {...p}
+                                            layoutMode={layoutMode}
                                             onClick={ () => {
                                                     if (isMix) {
                                                         setSelectedPizzas ({ ...selectedPizzas, [p.name]: !selectedPizzas[p.name] })

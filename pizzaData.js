@@ -6,11 +6,11 @@ const pizzaData = [
         layout: {
             desktop: {
                 position: ['7vw','0vw'],
-                size: 19,
+                size: 13,
             },
             mobile: {
-                position: ['38vw','62vw'],
-                size: 19,
+                position: ['8vw','62vw'],
+                size: 29,
             }
         },
         position: ['7vw','0vw'],
@@ -27,11 +27,11 @@ const pizzaData = [
         layout: {
             desktop: {
                 position: ['77vw','0vw'],
-                size: 19,
+                size: 18,
             },
             mobile: {
-                position: ['38vw','62vw'],
-                size: 19,
+                position: ['38vw','12vw'],
+                size: 27,
             }
         },
         position: ['77vw','0vw'],
@@ -48,11 +48,11 @@ const pizzaData = [
         layout: {
             desktop: {
                 position: ['24vw','8vw'],
-                size: 19,
+                size: 12,
             },
             mobile: {
-                position: ['38vw','62vw'],
-                size: 19,
+                position: ['68vw','22vw'],
+                size: 27,
             }
         },
         position: ['24vw','8vw'],
@@ -69,11 +69,11 @@ const pizzaData = [
         layout: {
             desktop: {
                 position: ['3vw','22vw'],
-                size: 19,
+                size: 20,
             },
             mobile: {
-                position: ['38vw','62vw'],
-                size: 19,
+                position: ['8vw','36vw'],
+                size: 33,
             }
         },
         position: ['3vw','22vw'],
@@ -90,11 +90,11 @@ const pizzaData = [
         layout: {
             desktop: {
                 position: ['67vw','22vw'],
-                size: 19,
+                size: 22,
             },
             mobile: {
-                position: ['38vw','62vw'],
-                size: 19,
+                position: ['58vw','9vw'],
+                size: 35,
             }
         },
         position: ['67vw','22vw'],
@@ -111,11 +111,11 @@ const pizzaData = [
         layout: {
             desktop: {
                 position: ['62vw','11vw'],
-                size: 19,
+                size: 12,
             },
             mobile: {
-                position: ['38vw','62vw'],
-                size: 19,
+                position: ['8vw','2vw'],
+                size: 27,
             }
         },
         position: ['62vw','11vw'],
@@ -132,11 +132,11 @@ const pizzaData = [
         layout: {
             desktop: {
                 position: ['50vw','30vw'],
-                size: 19,
+                size: 11,
             },
             mobile: {
                 position: ['38vw','62vw'],
-                size: 19,
+                size: 35,
             }
         },
         position: ['50vw','30vw'],
@@ -153,11 +153,11 @@ const pizzaData = [
         layout: {
             desktop: {
                 position: ['28vw','24vw'],
-                size: 19,
+                size: 14,
             },
             mobile: {
                 position: ['38vw','62vw'],
-                size: 19,
+                size: 27,
             }
         },
         position: ['28vw','24vw'],
@@ -174,11 +174,11 @@ const pizzaData = [
         layout: {
             desktop: {
                 position: ['57vw','48vw'],
-                size: 19,
+                size: 18,
             },
             mobile: {
                 position: ['38vw','62vw'],
-                size: 19,
+                size: 28,
             }
         },
         position: ['57vw','48vw'],
@@ -199,7 +199,7 @@ const pizzaData = [
             },
             mobile: {
                 position: ['38vw','62vw'],
-                size: 19,
+                size: 31,
             }
         },
         position: ['17vw','43vw'],
@@ -216,11 +216,11 @@ const pizzaData = [
         layout: {
             desktop: {
                 position: ['41vw','43vw'],
-                size: 19,
+                size: 13,
             },
             mobile: {
                 position: ['38vw','62vw'],
-                size: 19,
+                size: 26,
             }
         },
         position: ['41vw','43vw'],
@@ -237,11 +237,11 @@ const pizzaData = [
         layout: {
             desktop: {
                 position: ['84vw','46vw'],
-                size: 19,
+                size: 12,
             },
             mobile: {
                 position: ['38vw','62vw'],
-                size: 19,
+                size: 26,
             }
         },
         position: ['84vw','46vw'],
@@ -258,11 +258,11 @@ const pizzaData = [
         layout: {
             desktop: {
                 position: ['22vw','67vw'],
-                size: 19,
+                size: 10,
             },
             mobile: {
-                position: ['38vw','62vw'],
-                size: 19,
+                position: ['18vw','42vw'],
+                size: 34,
             }
         },
         position: ['22vw','67vw'],
@@ -279,11 +279,11 @@ const pizzaData = [
         layout: {
             desktop: {
                 position: ['2vw','57vw'],
-                size: 19,
+                size: 16,
             },
             mobile: {
                 position: ['38vw','62vw'],
-                size: 19,
+                size: 28,
             }
         },
         position: ['2vw','57vw'],
@@ -304,7 +304,7 @@ const pizzaData = [
             },
             mobile: {
                 position: ['38vw','62vw'],
-                size: 19,
+                size: 22,
             }
         },
         position: ['38vw','62vw'],
@@ -321,11 +321,11 @@ const pizzaData = [
         layout: {
             desktop: {
                 position: ['75vw','61vw'],
-                size: 19,
+                size: 17,
             },
             mobile: {
-                position: ['38vw','62vw'],
-                size: 19,
+                position: ['78vw','12vw'],
+                size: 22,
             }
         },
         position: ['75vw','61vw'],
