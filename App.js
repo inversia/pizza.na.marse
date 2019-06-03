@@ -30,7 +30,7 @@ export default function App () {
            <div className='cosmos-zone-one-wrapper'>
                 <PizzaOverlay pizzaOverlayVisible={pizzaOverlayVisible} setPizzaOverlayVisible={setPizzaOverlayVisible} />
                 
-                {isMobile ? <MenuMobile/> : <Menu />}
+                {isMobile ? <MenuMobile type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> : <Menu />}
 
                 {!isMobile && <SelectionPanel type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> }
                 
