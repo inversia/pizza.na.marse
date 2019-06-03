@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MenuMobile = ({ type, onSelect }) =>
+const MenuMobile = ({onSelect }) =>
     <div className="menu mobile">
         <a href="#menu" className="hamburger-menu link"></a>
         <a href="#meatMobile" className="meat link" onClick={() => onSelect ('veg') }></a>

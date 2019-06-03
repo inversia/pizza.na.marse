@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SelectionPanel = ({ type, onSelect }) =>
+const SelectionPanel = ({onSelect }) =>
     <div className="terminal">
         <svg width="38%" height="40%" viewBox="0 0 323 317" version="1.1">
             <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
