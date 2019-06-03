@@ -93,7 +93,7 @@ const pizzaData = [
                 size: 22,
             },
             mobile: {
-                position: ['70vw','174vw'],
+                position: ['65vw','174vw'],
                 size: 33,
             }
         },
