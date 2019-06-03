@@ -21,19 +21,19 @@ export default function App () {
 
     const pizzaDataEl = useRef ()
     
-    useComponentSize (pizzaDataEl)
+    const { width } = useComponentSize (pizzaDataEl)
 
-    const width      = Math.min (window.screen.width, window.innerWidth)
     const layoutMode = width < 501 ? 'mobile' : 'desktop'
+    const isMobile   = layoutMode === 'mobile'
 
-    console.log(width)
-    return <div className={'app ' + (pizzaTypeSelected || '')}>
+    return <div className={'app ' + (pizzaTypeSelected || '') + ' ' + layoutMode}>
            <div className='cosmos-zone-one-wrapper'>
                 <PizzaOverlay pizzaOverlayVisible={pizzaOverlayVisible} setPizzaOverlayVisible={setPizzaOverlayVisible} />
                 
-                {width < 501 ? <MenuMobile/> : <Menu />}
+                {isMobile ? <MenuMobile/> : <Menu />}
+
+                {!isMobile && <SelectionPanel type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> }
                 
-                <SelectionPanel type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/>
                 <Radar />
 
                 <div ref={pizzaDataEl} className='pizzas'>

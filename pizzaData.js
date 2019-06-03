@@ -9,7 +9,7 @@ const pizzaData = [
                 size: 13,
             },
             mobile: {
-                position: ['8vw','62vw'],
+                position: ['3vw','94vw'],
                 size: 29,
             }
         },
@@ -30,8 +30,8 @@ const pizzaData = [
                 size: 18,
             },
             mobile: {
-                position: ['38vw','12vw'],
-                size: 27,
+                position: ['66vw','16vw'],
+                size: 32,
             }
         },
         position: ['77vw','0vw'],
@@ -51,8 +51,8 @@ const pizzaData = [
                 size: 12,
             },
             mobile: {
-                position: ['68vw','22vw'],
-                size: 27,
+                position: ['64vw','54vw'],
+                size: 35,
             }
         },
         position: ['24vw','8vw'],
@@ -72,7 +72,7 @@ const pizzaData = [
                 size: 20,
             },
             mobile: {
-                position: ['8vw','36vw'],
+                position: ['36vw','193vw'],
                 size: 33,
             }
         },
@@ -93,8 +93,8 @@ const pizzaData = [
                 size: 22,
             },
             mobile: {
-                position: ['58vw','9vw'],
-                size: 35,
+                position: ['70vw','174vw'],
+                size: 33,
             }
         },
         position: ['67vw','22vw'],
@@ -114,8 +114,8 @@ const pizzaData = [
                 size: 12,
             },
             mobile: {
-                position: ['8vw','2vw'],
-                size: 27,
+                position: ['3vw','16vw'],
+                size: 32,
             }
         },
         position: ['62vw','11vw'],
@@ -135,7 +135,7 @@ const pizzaData = [
                 size: 11,
             },
             mobile: {
-                position: ['38vw','62vw'],
+                position: ['65vw','129vw'],
                 size: 35,
             }
         },
@@ -156,7 +156,7 @@ const pizzaData = [
                 size: 14,
             },
             mobile: {
-                position: ['38vw','62vw'],
+                position: ['8vw','209vw'],
                 size: 27,
             }
         },
@@ -177,8 +177,8 @@ const pizzaData = [
                 size: 18,
             },
             mobile: {
-                position: ['38vw','62vw'],
-                size: 28,
+                position: ['2vw','136vw'],
+                size: 31,
             }
         },
         position: ['57vw','48vw'],
@@ -198,11 +198,11 @@ const pizzaData = [
                 size: 19,
             },
             mobile: {
-                position: ['38vw','62vw'],
-                size: 31,
+                position: ['27vw','70vw'],
+                size: 33,
             }
         },
-        position: ['17vw','43vw'],
+        position: ['37vw','13vw'],
         size: 19,
         img: '/art/salmon.jpg',
         animationDelay: '0.2s', 
@@ -219,8 +219,8 @@ const pizzaData = [
                 size: 13,
             },
             mobile: {
-                position: ['38vw','62vw'],
-                size: 26,
+                position: ['31vw','109vw'],
+                size: 36,
             }
         },
         position: ['41vw','43vw'],
@@ -240,7 +240,7 @@ const pizzaData = [
                 size: 12,
             },
             mobile: {
-                position: ['38vw','62vw'],
+                position: ['5vw','55vw'],
                 size: 26,
             }
         },
@@ -261,7 +261,7 @@ const pizzaData = [
                 size: 10,
             },
             mobile: {
-                position: ['18vw','42vw'],
+                position: ['5vw','172vw'],
                 size: 34,
             }
         },
@@ -282,8 +282,8 @@ const pizzaData = [
                 size: 16,
             },
             mobile: {
-                position: ['38vw','62vw'],
-                size: 28,
+                position: ['35vw','33vw'],
+                size: 31,
             }
         },
         position: ['2vw','57vw'],
@@ -303,8 +303,8 @@ const pizzaData = [
                 size: 19,
             },
             mobile: {
-                position: ['38vw','62vw'],
-                size: 22,
+                position: ['68vw','92vw'],
+                size: 28,
             }
         },
         position: ['38vw','62vw'],
@@ -324,8 +324,8 @@ const pizzaData = [
                 size: 17,
             },
             mobile: {
-                position: ['78vw','12vw'],
-                size: 22,
+                position: ['36vw','152vw'],
+                size: 33,
             }
         },
         position: ['75vw','61vw'],
