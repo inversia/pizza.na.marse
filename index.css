@@ -123,6 +123,7 @@ h1 {
 .menu.mobile {
     height: 12vw;
     width: 100%;
+    z-index: 200;
 }
 
     .menu.mobile a {
@@ -398,6 +399,10 @@ h1 {
 
 }
 
+.pizza-overlay.mobile {
+
+}
+
     .pizza-choose-panel {
         display: flex;
         flex:1;
@@ -577,7 +582,7 @@ h1 {
 
 .cosmos-zone-two-wrapper {
     margin-top:-20vh;
-    /* background-image: url(/static/art/backgroundstars5.jpg); */
+    background-image: url(/static/art/backgroundstars5.jpg);
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -688,9 +693,10 @@ h1 {
     }
 
     .cosmos-zone-one-wrapper {
-        margin-bottom:60vw;
+        padding-bottom:60vw;
+        margin-bottom: 60vw;
         background-image:url(/static/art/backgroundstars-vertical.jpg);
-        background-size: cover;
+        background-size: contain;
         height: 195vw;
     }
 }
@@ -699,7 +705,7 @@ h1 {
 @media (max-width: 401px) {
     
     .pizzas {
-        height: 250vw;
+        /* height: 250vw; */
         margin-bottom: 20vw;
         
     }
@@ -709,7 +715,7 @@ h1 {
     }
 
     .cosmos-zone-two-wrapper {
-        margin-top: 20vw;
+        margin-top: -10vw;
         margin-bottom:20vw;
     }
     
