@@ -1,12 +1,18 @@
 import React, { useState, useRef, useLayoutEffect, useDebugValue } from 'react'
 import './SizeSelectionButton.css'
+import { classList } from './util'
 
 export default function SizeSelectionButton() {
 
-    const [isLarge, setIsLarge] = useState (true)
+    const [isLarge,   setIsLarge]   = useState (true)
+    const [isClicked, setIsClicked] = useState (false)
 
-    
-    return <div className={'size-switch ' + (isLarge ? 'clicked' : 'active clicked')} onClick={() => setIsLarge(!isLarge) }> 
+    function onClick () {
+        setIsClicked (true)
+        setIsLarge(!isLarge)
+    }
+
+    return <div className={classList ({ 'size-switch': 1, 'active': isLarge, 'clicked': isClicked })} onClick={onClick}> 
             
                 <div className='switch-background'> 
                     <div className='big-size-ball'>

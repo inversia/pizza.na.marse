@@ -19,11 +19,11 @@
   display:flex;
   justify-content:center;
   align-items:center;
+  cursor:pointer;
 }
 
 .switch-background {
   position:relative;
-  border:solid 3px pink;
   display:flex;
   background-size: contain;
   background-color:orange;
@@ -56,8 +56,8 @@
 
     .big-size-ball,
     .big-size-ball body {
-      animation-duration: 0.45s;
-      animation-timing-function: ease-in-out;
+      animation-duration: 0.55s;
+      animation-timing-function: cubic-bezier(.02,-0.66,.69,.99);
       animation-fill-mode: forwards;
     }
 
