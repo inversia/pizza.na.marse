@@ -1,10 +1,10 @@
 @keyframes big-to-small {
     0%   { left: 15%;  transform:scale(1.0);}
-    100% { left: 57.5%;  transform:scale(0.56); }
+    100% { left: 57%; top: 5.5vw;transform:scale(0.56); }
 }
 
 @keyframes small-to-big {
-    0%   { left: 57.5%;  transform:scale(0.56); }
+    0%   { left: 57%;  transform:scale(0.56); }
     100% { left: 15%;  transform:scale(1.0);}
 }
 
@@ -13,7 +13,11 @@
     60%  { transform:scaleX(0.6);}
     100% { transform:scaleX(1.0); }
 }
-
+@keyframes text-color-change {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
 
 .size-switch {
   display:flex;
@@ -21,6 +25,24 @@
   align-items:center;
   cursor:pointer;
 }
+
+
+  .size-switch.active .big {
+    color:rgb(0, 0, 0);
+  }
+
+  .size-switch.active .little {
+    color:rgb(255, 255, 255);
+    animation: text-color-change 0.55s ease-in-out;
+  }
+  .size-switch:not(.active) .little {
+    color: rgb(0, 0, 0);
+  }
+  .size-switch:not(.active) .big {
+    color: rgb(255, 255, 255);
+    animation: text-color-change 0.55s ease-in-out;
+  }
+
 
 .switch-background {
   position:relative;
@@ -39,6 +61,36 @@
   -webkit-mask-position: center;
 }
 
+  .switch-background .big  {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    left:23%;
+    top:32%;
+    font-size: 10vw;
+    height: 15vw;
+    width:15vw;
+    /* border:solid 4px pink; */
+    z-index: 3;
+  }
+
+  .switch-background .little {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    left:65%;
+    top:31.5%;
+    font-size: 6vw;
+    height: 15vw;
+    width:15vw;
+    /* border:solid 4px pink; */
+    z-index: 3;
+  }
+
   .mask-target{
     position:absolute;
     left:7vw;
@@ -49,7 +101,7 @@
     height:28vw;
     width:28vw;
     position:absolute;
-    left:12vw;
+    left:13vw;
     top:5.0vw;
     border-radius:50%;
   }
@@ -78,10 +130,10 @@
     display: block;
     position:relative;
     border-radius:50%;
-    height:28vw;
-    width:28vw;
+    height:27.5vw;
+    width:27.5vw;
     background-color:black;
-    left: 0.1vw;
+    left: 0.8vw;
     top: 1vw;
 
   }

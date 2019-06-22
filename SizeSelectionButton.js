@@ -18,7 +18,10 @@ export default function SizeSelectionButton() {
                     <div className='big-size-ball'>
                         <div className='body'></div>
                     </div>
-                
+
+                    <div className='big'>35</div>
+                    <div className='little'>30</div>
+
                     <div className='switch-shape'>  
                         <svg width='79.5vw' height='38.1vw' viewBox='0 0 675 394' version='1.1' xmlns='http://www.w3.org/2000/svg'>
                             <g id='Page-1' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
