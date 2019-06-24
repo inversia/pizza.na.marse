@@ -17,6 +17,8 @@ export default function PizzaOverlay ({ pizzaOverlayVisible, setPizzaOverlayVisi
                         }
                     </ul>
                 </div>
+
+            
                 <div className='pizza-info-panel'>
                     {pizzaData.map(p => <PizzaInfo key={p.name} {...p} />)}
                 </div>

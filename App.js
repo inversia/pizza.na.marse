@@ -10,7 +10,7 @@ import Carousel from './Carousel'
 import PizzaOverlay from './PizzaOverlay'
 import Noodles from './Noodles';
 import MenuMobile from './MenuMobile';
-import SizeSelectionButton from './SizeSelectionButton';
+import SizeSwitch from './SizeSwitch';
 
 export default function App () {
     
@@ -73,7 +73,6 @@ export default function App () {
                     </Carousel>
                 </div> 
             </div>
-            <SizeSelectionButton />
             <div className='noodles-wrapper'>
                 <Noodles />
             </div>

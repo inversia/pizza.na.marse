@@ -1,11 +1,9 @@
-const { abs, cos, sin, PI } = Math
+const { cos, sin, PI } = Math
 
-import React, { useState, useRef, useLayoutEffect, useDebugValue } from 'react'
+import React, { useState, useRef, useLayoutEffect } from 'react'
 import { Easing, rescale, InertialValue } from './anim'
 import './Carousel.css'
 import useComponentSize from '@rehooks/component-size'
-
-
 
 function loopNumber (i, length) {
     return (length + (i % length)) % length

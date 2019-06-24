@@ -1,5 +1,5 @@
 import React from 'react'
-import pizzaData from './pizzaData'
+import SizeSwitch from './SizeSwitch'
 
 export default function PizzaInfo ({name, composition, price, img}){
         
@@ -9,11 +9,9 @@ export default function PizzaInfo ({name, composition, price, img}){
                 <img className='pizza-image' style={{backgroundImage: 'url(' + img + ')'}} />
             </div>
             <div className='right-side'>
-                <h1>{name}</h1>
-                <div className='size-and-price'>
-                    <div className='size'></div>
-                    <h2>{price}</h2>
-                </div>
+                <div className='name'>{name}</div>
+                <div className='size'><SizeSwitch /></div>
+                <div className='price'>{price}</div>
                 <ul>
                     {composition.map(name => <li key={name}>{name}</li>)}
                 </ul>
