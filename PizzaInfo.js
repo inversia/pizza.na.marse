@@ -1,7 +1,7 @@
 import React from 'react'
 import SizeSwitch from './SizeSwitch'
 
-export default function PizzaInfo ({name, composition, price, img}){
+export default function PizzaInfo ({name, composition, price, img, isLarge}){
         
     return (
         <div className='pizza-info'>

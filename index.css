@@ -465,28 +465,29 @@ h1 {
                 margin-left: 5vw;
                 flex:1;
                 justify-content: center;
-                border:2px solid red;
+                /* border:2px solid red; */
             }
 
                 .pizza-info .right-side .name {
                     color:#ff9100;
                     font-size:4vw;
                     line-height: 0.9em;
-                    border:1px soloid red;
+                    /* border:1px solid red; */
                 }
 
                 
 
                 .pizza-info .right-side .size {
                     background-size: cover;
-                    border:solid 2px pink;
+                    margin: 3vw 0vw;
+                    /* border:solid 2px pink; */
                 }
 
                 .pizza-info .right-side .price {
                     color:#ffd000;
                     padding-top: 0.5em;
                     font-size:3vw;
-                    border:1px solid red;
+                    /* border:1px solid red; */
                     position: relative;
                 }
 
@@ -509,8 +510,7 @@ h1 {
                     list-style-type: disc;
                     font-size:2.5vw;
                     color: white;
-                    /* color:#ff9100; */
-
+                    margin-left: 2.8vw;
                 }
 
                 .pizza-info .right-side button {

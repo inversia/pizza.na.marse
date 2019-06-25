@@ -1,11 +1,11 @@
 @keyframes big-to-small {
-    0%   { left: calc(var(--width)*0.15);  transform:scale(1.0);}
+    0%   { left: calc(var(--width)*0.153);  transform:scale(1.0);}
     100% { left: calc(var(--width)*0.58);  transform:scale(0.56); }
 }
 
 @keyframes small-to-big {
     0%   { left: calc(var(--width)*0.55);  transform:scale(0.56); }
-    100% { left: calc(var(--width)*0.15);  transform:scale(1.0);}
+    100% { left: calc(var(--width)*0.153);  transform:scale(1.0);}
 }
 
 @keyframes big-to-small-squeeze {
@@ -24,6 +24,8 @@
   display:flex;
   cursor:pointer;
   user-select: none; 
+  position: absolute;
+  left:-1.8vw;
 
   --width: 20vw;
 
@@ -73,7 +75,7 @@
     align-items: center;
     color:white;
     left:calc(var(--width)*0.24);
-    top:calc(var(--width)*0.19);
+    top:calc(var(--width)*0.18);
     font-size: calc(var(--width)*0.14);;
     height: calc(var(--width)*0.15);
     width:calc(var(--width)*0.15);
@@ -99,7 +101,7 @@
 
   .size-switch .ball {
     left:calc(var(--width)*0.155);
-    top: calc(var(--width)*0.075);
+    top: calc(var(--width)*0.0725);
     --ball-size: 0.35;
     height:calc(var(--width)*var(--ball-size));
     width: calc(var(--width)*var(--ball-size));
@@ -152,5 +154,4 @@
   .size-switch .shape svg {
     width:var(--width);
     height:calc(var(--width) * 0.5);
-    
   }
