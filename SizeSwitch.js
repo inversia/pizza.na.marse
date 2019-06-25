@@ -2,11 +2,10 @@ import React, { useState } from 'react'
 import './SizeSwitch.css'
 import { classList } from './util'
 
-export default function SizeSwitch () {
+export default function SizeSwitch ({ isLarge, setIsLarge }) {
 
-    const [isLarge,   setIsLarge]   = useState (false)
     const [isClicked, setIsClicked] = useState (false)
-
+    
     function onClick () {
         setIsClicked (true)
         setIsLarge(!isLarge)
