@@ -18,10 +18,17 @@
     100% {transform: scale(0.95); opacity:1.0;transform: rotate(360deg)}
 }
 
+@keyframes glass-button {
+    0%   { left: -2vw;  opacity: 0.5;}
+    7%   {              opacity: 1.0;}
+    15%  { left: 103vw;}
+    100% { left: 103vw;}
+}
+
 
 @keyframes radar-rotate {
 
-    0%   { transform: rotate(0deg); }
+    0%   { transform: rotate(0deg);}
     100% { transform: rotate(360deg); }
 }
 
@@ -421,6 +428,7 @@ h1 {
         border-radius: 0vw 0vw 19vw 0vw;
         background-color: #000000;
         color:#f5a623;
+
     }
 
         .pizza-list {
@@ -485,6 +493,7 @@ h1 {
 
                 .pizza-info .right-side .price {
                     color:#ffd000;
+                    color:wheat;
                     padding-top: 0.5em;
                     font-size:3vw;
                     /* border:1px solid red; */
@@ -510,20 +519,70 @@ h1 {
                     list-style-type: disc;
                     font-size:2.5vw;
                     color: white;
-                    margin-left: 2.8vw;
+                    /* margin-left: 2.8vw; */
+                }
+
+                .pizza-info .right-side li {
+                    list-style: none;
+                    position: relative;
+                }
+
+                .pizza-info .right-side li:before {
+                    content: "•";
+                    position: absolute;
+                    left:-2vw;
+                    top:0.33vw;
+                    opacity: 0.7;
                 }
 
                 .pizza-info .right-side button {
-                    border-radius: 23vw 23vw 23vw 23vw;
+                    border-radius: 23vw 10vw 23vw 23vw;
                     /* padding: 3em; */
-                    background: url(/static/art/add.svg) no-repeat center;
-                    background-size: 60%;
+                    background: url(/static/art/add.svg) no-repeat left;
+                    background-size: 20%;
+                    background-position-x: 1.5vw;
                     display: flex;
-                    height:8vw;
-                    width:8vw;
+                    height:9vw;
+                    width:30vw;
+                    padding-left:5vw;
                     user-select: none; 
                     outline: none;
+                    position: relative;
+                    overflow: hidden;
+                }
 
+                .pizza-info .right-side button span{
+                    color:wheat;
+                    font-size: 2.8vw;
+                    right:1.5vw;
+                    top:2.7vw;
+                    position: absolute;
+                    font-family: Xolonium;
+                }
+
+                .pizza-info .right-side button .highlight {
+                    background-color: #fcf9f1;
+                    opacity: 0.5;
+                    height: 12vw;
+                    top:-2vw;
+                    width:1vw;
+                    transform: rotate(13deg);
+                    position: absolute;
+                    animation: glass-button 7s linear 0s infinite;
+                }
+
+
+
+                .pizza-info .right-side button .highlight2 {
+                    background-color: #fcf9f1;
+                    opacity: 0.5;
+                    height: 12vw;
+                    top:-2vw;
+                    left:3vw;
+                    width:2vw;
+                    transform: rotate(13deg);
+                    position: absolute;
+                    animation: glass-button 7s linear .04s infinite;
                 }
 
 

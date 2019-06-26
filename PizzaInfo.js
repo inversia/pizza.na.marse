@@ -17,7 +17,11 @@ export default function PizzaInfo ({name, composition, price, img }){
                 <ul>
                     {composition.map(name => <li key={name}>{name}</li>)}
                 </ul>
-                <button></button>
+                <button>
+                    <span>ЗАКАЗАТЬ</span>
+                    <div className='highlight'></div>
+                    <div className='highlight2'></div>
+                </button>
             </div>
         </div>
     )
