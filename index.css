@@ -494,7 +494,6 @@ h1 {
                 .pizza-info .right-side .price {
                     color:#ffd000;
                     color:wheat;
-                    padding-top: 0.5em;
                     font-size:3vw;
                     /* border:1px solid red; */
                     position: relative;
@@ -508,14 +507,14 @@ h1 {
                     background-size:contain;
                     height: 0.7em;
                     width: 0.7em;
-                    top:0.8em;
+                    top:0.3em;
                     margin-left: 0.15em;
                 }
 
                 .pizza-info .right-side ul {
                     color:#fcfcfc;
                     /* border:2px solid yellow; */
-                    padding:2em 0em;
+                    padding:1em 0em;
                     list-style-type: disc;
                     font-size:2.5vw;
                     color: white;
@@ -536,27 +535,34 @@ h1 {
                 }
 
                 .pizza-info .right-side button {
-                    border-radius: 23vw 10vw 23vw 23vw;
+                    border-radius: 23vw 23vw 23vw 23vw;
                     /* padding: 3em; */
                     background: url(/static/art/add.svg) no-repeat left;
-                    background-size: 20%;
-                    background-position-x: 1.5vw;
+                    background-size: 15%;
+                    background-position-x: 2.4vw;
                     display: flex;
+                    align-items: center;
+                    justify-content: center;
                     height:9vw;
-                    width:30vw;
+                    width:27vw;
                     padding-left:5vw;
                     user-select: none; 
                     outline: none;
                     position: relative;
                     overflow: hidden;
+                    background-color: #00000070;
+                    border: solid 1px orange;
+                    left:-1.5vw;
+                    /* left:-3.2vw; */
+                    box-shadow: 1vw 0.5vw 5vw rgb(255, 102, 0);
                 }
 
                 .pizza-info .right-side button span{
                     color:wheat;
-                    font-size: 2.8vw;
-                    right:1.5vw;
-                    top:2.7vw;
-                    position: absolute;
+                    position:relative;
+                    top:0.12vw;
+                    left: 0.4vw;
+                    font-size: 2.2vw;
                     font-family: Xolonium;
                 }
 
