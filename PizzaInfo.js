@@ -25,9 +25,9 @@ export default function PizzaInfo ({name, composition, price, img }){
                     {composition.map(name => <li key={name}>{name}</li>)}
                 </ul>
                 <button ref={buttonRef}>
-                    <span>{isVisible ? 'видно' : 'не видно'}</span>
-                    <div className={'highlight ' + (isVisible ? 'ololo' : 'invisible')}></div>
-                    <div className={'highlight2 ' + (isVisible ? 'ololo' : 'invisible')}></div>
+                    <span>ЗАКАЗАТЬ</span>
+                    <div className={'highlight ' + (isVisible ? '' : 'invisible')}></div>
+                    <div className={'highlight2 ' + (isVisible ? '' : 'invisible')}></div>
                 </button>
             </div>
         </div>
