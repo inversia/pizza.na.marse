@@ -22,8 +22,10 @@
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "autoprefixer": "^9.6.0",
     "esm": "^3.2.25",
     "mocha": "^6.1.4",
-    "ololog": "^1.1.129"
+    "ololog": "^1.1.129",
+    "postcss-modules": "^1.4.1"
   }
 }

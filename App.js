@@ -12,6 +12,11 @@ import Noodles from './Noodles';
 import MenuMobile from './MenuMobile';
 import SizeSwitch from './SizeSwitch';
 
+function Cost () {
+
+
+}
+
 export default function App () {
     
     const [pizzaOverlayVisible, setPizzaOverlayVisible] = useState (false)
@@ -27,55 +32,62 @@ export default function App () {
     const layoutMode = width < 501 ? 'mobile' : 'desktop'
     const isMobile   = layoutMode === 'mobile'
 
-    return <div className={'app ' + (pizzaTypeSelected || '') + ' ' + layoutMode}>
-           <div className='cosmos-zone-one-wrapper'>
-                <PizzaOverlay pizzaOverlayVisible={pizzaOverlayVisible} setPizzaOverlayVisible={setPizzaOverlayVisible} />
-                
-                {isMobile ? <MenuMobile type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> : <Menu />}
+    const content = <>
 
-                {!isMobile && <SelectionPanel type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> }
-                
-                <Radar />
+        <div className='cosmos-zone-one-wrapper'>
+            
+            {isMobile ? <MenuMobile type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> : <Menu />}
 
-                <div ref={pizzaDataEl} className='pizzas'>
-                    {pizzaData.map(p => <Pizza checked={selectedPizzas[p.name] || false}
-                                            key={p.name}
-                                            {...p}
-                                            price={p.price[1]}
-                                            layoutMode={layoutMode}
-                                            onClick={ () => {
-                                                    if (isMix) {
-                                                        setSelectedPizzas ({ ...selectedPizzas, [p.name]: !selectedPizzas[p.name] })
-                                                    } else {
-                                                        //alert ('Окно заказа: выбрали пиццу ' + p.name)
-                                                        setPizzaOverlayVisible (true)
-                                                    }
-                                            } }/>)}
+            {!isMobile && <SelectionPanel type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> }
+            
+            <Radar />
+
+            <div ref={pizzaDataEl} className='pizzas'>
+                {pizzaData.map(p => <Pizza checked={selectedPizzas[p.name] || false}
+                                        key={p.name}
+                                        {...p}
+                                        price={p.price[1]}
+                                        layoutMode={layoutMode}
+                                        onClick={ () => {
+                                                if (isMix) {
+                                                    setSelectedPizzas ({ ...selectedPizzas, [p.name]: !selectedPizzas[p.name] })
+                                                } else {
+                                                    //alert ('Окно заказа: выбрали пиццу ' + p.name)
+                                                    setPizzaOverlayVisible (true)
+                                                }
+                                        } }/>)}
+            </div>
+
+            <div className='pizza-button' style={isMix ? { bottom: 0, opacity: 1 } : { bottom: 'calc(-1*var(--height))', opacity: 0 }}>
+                <div className='hint'>
+                    Выберите 2 понравившиеся пиццы, кликнув на них
                 </div>
+                <div className='order'></div>
+            </div>
+        </div>
 
-                <div className='pizza-button' style={isMix ? { bottom: 0, opacity: 1 } : { bottom: 'calc(-1*var(--height))', opacity: 0 }}>
-                    <div className='hint'>
-                        Выберите 2 понравившиеся пиццы, кликнув на них
-                    </div>
-                    <div className='order'></div>
-                </div>
-            </div>
+        <div className='cosmos-zone-two-wrapper'>
+            <div className='salads-carousel-wrapper'>
+                <h1>Внеземные салаты</h1>
+                <Carousel perspectiveFactor='3.37' className='salads'>
+                    { saladsData.map (salad => (
+                            <>
+                                <div className='pic' style={{backgroundImage: `url(${salad.img})` }} />
+                                <div className='title'>{salad.name}</div>
+                            </>
+                    )) }
+                </Carousel>
+            </div> 
+        </div>
+        <div className='noodles-wrapper'>
+            <Noodles />
+        </div>
+    </>
 
-            <div className='cosmos-zone-two-wrapper'>
-                <div className='salads-carousel-wrapper'>
-                    <h1>Внеземные салаты</h1>
-                    <Carousel perspectiveFactor='3.37' className='salads'>
-                        { saladsData.map (salad => (
-                                <>
-                                    <div className='pic' style={{backgroundImage: `url(${salad.img})` }} />
-                                    <div className='title'>{salad.name}</div>
-                                </>
-                        )) }
-                    </Carousel>
-                </div> 
-            </div>
-            <div className='noodles-wrapper'>
-                <Noodles />
-            </div>
-            </div>
+    return <div className={('app ' + (pizzaTypeSelected || '') + ' ' + layoutMode)}>
+
+            {pizzaOverlayVisible
+                ? <PizzaOverlay pizzaOverlayVisible={pizzaOverlayVisible} setPizzaOverlayVisible={setPizzaOverlayVisible} />
+                : content}
+        </div>
 }

@@ -8,11 +8,14 @@
 }
 
     .noodles{
-        height: 40vw;
+        height: 70vw;
         width: 100%;
         background-image: url(/static/art/mars.jpg);
         background-size: 100% 100%;
         background-repeat:no-repeat;
-        -webkit-mask-image: linear-gradient(to bottom,transparent 0%, black 40%);
-        mask-image: linear-gradient(to bottom, transparent, black);
+        mask-image: linear-gradient(to bottom,transparent 0%, black 40%);
     }
+
+    .noodles svg {
+        width:30%;
+    } 
