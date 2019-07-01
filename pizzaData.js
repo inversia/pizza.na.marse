@@ -317,7 +317,7 @@ const pizzaData = [
     {
         name: 'Вялый томат & гриб',
         composition: ['красный соус', 'моцарелла', 'вяленые томаты', 'соус песто', 'руккола'],
-        price: [400, 565],
+        price: [565, 400],
         layout: {
             desktop: {
                 position: ['75vw','61vw'],

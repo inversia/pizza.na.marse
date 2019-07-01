@@ -41,6 +41,7 @@ export default function App () {
                     {pizzaData.map(p => <Pizza checked={selectedPizzas[p.name] || false}
                                             key={p.name}
                                             {...p}
+                                            price={p.price[1]}
                                             layoutMode={layoutMode}
                                             onClick={ () => {
                                                     if (isMix) {
