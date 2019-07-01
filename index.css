@@ -43,6 +43,11 @@
     transition-property:transform, opacity;
 }
 
+.invisible {
+    animation: none !important;
+}
+
+
 .app.meat .pizza:not(.meat),
 .app.veg  .pizza:not(.veg),
 .app.fish .pizza:not(.fish) {
