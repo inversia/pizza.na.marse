@@ -12,7 +12,7 @@ const Noodles = () =>
                 <div className='foreground' style={{backgroundImage:"url(/art/salad2.jpg)"}}></div>
             </div>
 
-            <div className='pasta-item' style={{height:"23vw", width:"23vw", left:"31.8vw", top:"27vw"}}>
+            <div className='pasta-item' style={{height:"23vw", width:"23vw", left:"31.8vw", top:"27.5vw"}}>
                 <div className='background'></div>
                 <div className='foreground' style={{backgroundImage:"url(/art/salad3.jpg)"}}></div>
             </div>
@@ -27,14 +27,29 @@ const Noodles = () =>
                 <div className='foreground' style={{backgroundImage:"url(/art/salad6.jpg)"}}></div>
             </div>
 
-            <div className='pasta-item' style={{height:"18vw", width:"18vw", left:"12vw", top:"7vw"}}>
+            <div className='pasta-item' style={{height:"18vw", width:"18vw", left:"16vw", top:"21vw"}}>
                 <div className='background'></div>
                 <div className='foreground' style={{backgroundImage:"url(/art/salad4.jpg)"}}></div>
             </div>
 
-            <div className='pasta-item' style={{height:"18vw", width:"18vw", left:"32vw", top:"7vw"}}>
+            <div className='pasta-item' style={{height:"18vw", width:"18vw", left:"16vw", top:"39vw"}}>
                 <div className='background'></div>
                 <div className='foreground' style={{backgroundImage:"url(/art/salad4.jpg)"}}></div>
+            </div>
+
+            <div className='pasta-item' style={{height:"8vw", width:"8vw", left:"11vw", top:"17.5vw"}}>
+                <div className='background'></div>
+                <div className='foreground' style={{backgroundColor:"pink"}}></div>
+            </div>
+
+            <div className='pasta-item' style={{height:"9vw", width:"9vw", left:"57.5vw", top:"44vw"}}>
+                <div className='background'></div>
+                <div className='foreground' style={{backgroundColor:"pink"}}></div>
+            </div>
+
+            <div className='pasta-item' style={{height:"9vw", width:"9vw", left:"65.8vw", top:"49vw"}}>
+                <div className='background'></div>
+                <div className='foreground' style={{backgroundColor:"pink"}}></div>
             </div>
         </div>
     </div>
