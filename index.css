@@ -649,19 +649,17 @@ h1 {
 
 .cosmos-zone-two-wrapper {
     margin-top:-20vh;
-    background-image: url(/static/art/backgroundstars5.jpg);
+    background-image: url(/static/art/backgroundstars3.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
-
-
+    background-size: cover;
+    background-position: center center;
     /* background-size: 100% 100%; */
     background-repeat:no-repeat;
-    mask-image: linear-gradient(to bottom,transparent 0%, black 13%);
+    mask-image: linear-gradient(to bottom,transparent 0%, black 23%);
 }
 
     .salads {
         position: relative;
-        height: 500px;
         width: 100%;
         display: flex;
         flex-direction: row;

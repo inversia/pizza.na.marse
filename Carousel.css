@@ -73,13 +73,13 @@
 /* -------------------------------------------------------------- */
 
 .carousel.salads {
-    margin-bottom: 30vw;
-    margin-top: 12vw;
+    margin-bottom: 0vw;
+    margin-top: 2vw;
 }
 
 .salads-carousel-wrapper {
-    padding-top: 13vw;
-    padding-bottom:13vw;
+    padding-top: 15vw;
+    padding-bottom:30vw;
 }
 
     .salads-carousel-wrapper h1 {
