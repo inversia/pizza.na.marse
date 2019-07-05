@@ -7,9 +7,34 @@ const Noodles = () =>
         
         <div className='noodles'>
             <h1>Космическая лапша</h1>
-            <div className='pasta-item' style={{height:"25vw", width:"25vw", left:"10vw", top:"5vw"}}>
+            <div className='pasta-item' style={{height:"23vw", width:"23vw", left:"67vw", top:"7vw"}}>
                 <div className='background'></div>
-                <div className='foreground' style={{backgroundImage:"url(/art/salad5.jpg)"}}></div>
+                <div className='foreground' style={{backgroundImage:"url(/art/salad2.jpg)"}}></div>
+            </div>
+
+            <div className='pasta-item' style={{height:"23vw", width:"23vw", left:"31.8vw", top:"27vw"}}>
+                <div className='background'></div>
+                <div className='foreground' style={{backgroundImage:"url(/art/salad3.jpg)"}}></div>
+            </div>
+
+            <div className='pasta-item' style={{height:"19vw", width:"19vw", left:"69vw", top:"30vw"}}>
+                <div className='background'></div>
+                <div className='foreground' style={{backgroundImage:"url(/art/salad1.jpg)"}}></div>
+            </div>
+
+            <div className='pasta-item' style={{height:"18vw", width:"18vw", left:"53vw", top:"21.5vw"}}>
+                <div className='background'></div>
+                <div className='foreground' style={{backgroundImage:"url(/art/salad6.jpg)"}}></div>
+            </div>
+
+            <div className='pasta-item' style={{height:"18vw", width:"18vw", left:"12vw", top:"7vw"}}>
+                <div className='background'></div>
+                <div className='foreground' style={{backgroundImage:"url(/art/salad4.jpg)"}}></div>
+            </div>
+
+            <div className='pasta-item' style={{height:"18vw", width:"18vw", left:"32vw", top:"7vw"}}>
+                <div className='background'></div>
+                <div className='foreground' style={{backgroundImage:"url(/art/salad4.jpg)"}}></div>
             </div>
         </div>
     </div>
