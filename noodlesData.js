@@ -8,7 +8,8 @@ const noodlesData = [
         left:"67vw", 
         top:"7vw", 
         animationDelay:"1.5s",
-        backgroundImage:"url(/art/salad2.jpg)"
+        backgroundImage:"url(/art/salad2.jpg)",
+        rotateOffset: '100deg'
     },
 
     {
@@ -78,7 +79,8 @@ const noodlesData = [
         left:"11vw", 
         top:"17.5vw", 
         animationDelay:"3.6s",
-        backgroundColor:"orange",
+        backgroundColor:"pink",
+        type:"decoration",
     },
     
     {
@@ -87,7 +89,8 @@ const noodlesData = [
         width:"9vw", 
         left:"57.5vw", 
         top:"44vw",
-        backgroundColor:"ffc400",
+        backgroundColor:"#ffc400",
+        type:"decoration",
     },
 
     {
@@ -96,7 +99,8 @@ const noodlesData = [
         width:"9vw", 
         left:"65.8vw", 
         top:"49vw",
-        backgroundColor:"ff9100",
+        backgroundColor:"#ff9100",
+        type:"decoration",
     }, 
 ]
 

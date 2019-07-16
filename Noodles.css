@@ -1,10 +1,11 @@
 @keyframes rotate {
-    0%   { transform:rotate(0deg);}
-    100% { transform:rotate(360deg);}
+    0%   { transform:rotate(var(--rotate-offset));}
+    100% { transform:rotate(calc(var(--rotate-offset) + 360deg));}
 }
 
 .noodles-wrapper {
     width: 100%;
+    position: relative;
     /* background-color: pink; */
 }
 
@@ -31,7 +32,7 @@
 
 .pasta-item {
     position: absolute;  
-    
+    --rotate-offset: 0deg;
 }
 
     .pasta-item.active {
@@ -62,7 +63,7 @@
         transform: scale(1.04);
         background: conic-gradient(#ff9100, white 90%);
         background: conic-gradient(#ffa704, rgb(15, 10, 3) 99%);
-        animation:brotate 5.8s linear infinite;
+        animation:rotate 5.8s linear infinite;
     }
 
     .pasta-item .foreground {

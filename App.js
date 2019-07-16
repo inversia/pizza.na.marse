@@ -8,20 +8,17 @@ import SelectionPanel from './SelectionPanel'
 import Radar from './Radar'
 import Carousel from './Carousel'
 import PizzaOverlay from './PizzaOverlay'
-import Noodles from './Noodles';
-import MenuMobile from './MenuMobile';
-import SizeSwitch from './SizeSwitch';
+import Noodles from './Noodles'
+import MenuMobile from './MenuMobile'
+import noodlesData from './noodlesData'
 
-function Cost () {
-
-
-}
 
 export default function App () {
     
     const [pizzaOverlayVisible, setPizzaOverlayVisible] = useState (false)
     const [pizzaTypeSelected,   setPizzaTypeSelected]   = useState (undefined)
     const [selectedPizzas,      setSelectedPizzas]      = useState ({})
+    const [currentNoodles,      setCurrentNoodles]      = useState ('лапша2')
 
     const isMix = pizzaTypeSelected === 'mix'
 
@@ -55,7 +52,10 @@ export default function App () {
                                                     //alert ('Окно заказа: выбрали пиццу ' + p.name)
                                                     setPizzaOverlayVisible (true)
                                                 }
-                                        } }/>)}
+                                            }
+                                        } />
+                                )
+                }
             </div>
 
             <div className='pizza-button' style={isMix ? { bottom: 0, opacity: 1 } : { bottom: 'calc(-1*var(--height))', opacity: 0 }}>
@@ -80,7 +80,14 @@ export default function App () {
             </div> 
         </div>
         <div className='noodles-wrapper'>
-            <Noodles />
+            <h1>Космическая лапша</h1>
+            { noodlesData.map (noodles => (<Noodles {...noodles} 
+                                                key={noodles.name} 
+                                                onClick={() => {
+                                                    if(noodles.type !== "decoration") {setCurrentNoodles(noodles.name)}
+                                                }
+                                            }/>))} 
+            <h1>{currentNoodles}</h1>                            
         </div>
     </>
 
