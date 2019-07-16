@@ -9,7 +9,8 @@ const noodlesData = [
         top:"7vw", 
         animationDelay:"1.5s",
         backgroundImage:"url(/art/salad2.jpg)",
-        rotateOffset: '100deg'
+        rotateOffset: '100deg',
+        rotationDirection: 'reverse',
     },
 
     {
@@ -21,7 +22,9 @@ const noodlesData = [
         left:"31.8vw", 
         top:"27.5vw", 
         animationDelay:"0.5s",
-        backgroundImage:"url(/art/salad2.jpg)"
+        backgroundImage:"url(/art/salad2.jpg)",
+        rotateOffset: '180deg',
+        rotationDirection: 'normal',
     },
 
     {
@@ -34,6 +37,9 @@ const noodlesData = [
         top:"30vw", 
         animationDelay:"2.3s",
         backgroundImage:"url(/art/salad2.jpg)",
+        rotateOffset: '10deg',
+        rotationDirection: 'normal',
+
     },
 
     {
@@ -46,6 +52,9 @@ const noodlesData = [
         top:"21.5vw", 
         animationDelay:"0.85s",
         backgroundImage:"url(/art/salad2.jpg)",
+        rotateOffset: '200deg',
+        rotationDirection: 'normal',
+
     },
 
     {
@@ -58,6 +67,9 @@ const noodlesData = [
         top:"21vw", 
         animationDelay:"1.9s",
         backgroundImage:"url(/art/salad2.jpg)",
+        rotateOffset: '300deg',
+        rotationDirection: 'reverse',
+
     },
 
     {
@@ -70,6 +82,9 @@ const noodlesData = [
         top:"39vw", 
         animationDelay:"5.2s",
         backgroundImage:"url(/art/salad4.jpg)",
+        rotateOffset: '0deg',
+        rotationDirection: 'normal',
+        
     },
 
     {
@@ -81,6 +96,7 @@ const noodlesData = [
         animationDelay:"3.6s",
         backgroundColor:"pink",
         type:"decoration",
+        rotationDirection: 'reverse',
     },
     
     {
@@ -91,6 +107,7 @@ const noodlesData = [
         top:"44vw",
         backgroundColor:"#ffc400",
         type:"decoration",
+        rotationDirection: 'normal',
     },
 
     {
@@ -101,6 +118,7 @@ const noodlesData = [
         top:"49vw",
         backgroundColor:"#ff9100",
         type:"decoration",
+        rotationDirection: 'normal',
     }, 
 ]
 
