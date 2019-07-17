@@ -1,15 +1,21 @@
 import React from 'react'
 import { A } from 'hookrouter'
+import { classList } from './util'
+
+const props = id => ({
+    className: classList ({ link: 1, active: location.pathname === ('/' + id) }),
+    href: '/' + id
+})
 
 const Menu = () =>
     <div className="menu">
         <a className="tel" href="tel:+74952949958">+7 495 005 59 36</a>
-        <A href="/" className="link">меню</A>
-        <A href="/loyalty" className="link">акции</A>
-        <A href="/about" className="link">о нас</A> 
-        <a href="#booking" className="link">забронировать</a>
-        <a href="#contact" className="link">контакты</a> 
-        <a href="#basket" className="basket link"></a> 
+        <A {...props ('')}>меню</A>
+        <A {...props ('loyalty')}>акции</A>
+        <A {...props ('about')}>о нас</A> 
+        <a className="link" href="#booking">забронировать</a>
+        <a className="link" href="#contact">контакты</a> 
+        <a className="basket link" href="#basket"></a> 
     </div>
 
 export default Menu

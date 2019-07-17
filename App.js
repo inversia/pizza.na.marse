@@ -24,9 +24,8 @@ export default function App () {
 
     const isMix = pizzaTypeSelected === 'mix'
 
-    const pizzaDataEl = useRef ()
-    
-    const { width } = useComponentSize (pizzaDataEl)
+    const appEl = useRef ()
+    const { width } = useComponentSize (appEl)
 
     const layoutMode = width < 501 ? 'mobile' : 'desktop'
     const isMobile   = layoutMode === 'mobile'
@@ -37,7 +36,7 @@ export default function App () {
             
             {!isMobile && <SelectionPanel type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> }
 
-            <div ref={pizzaDataEl} className='pizzas'>
+            <div className='pizzas'>
                 {pizzaData.map(p => <Pizza checked={selectedPizzas[p.name] || false}
                                         key={p.name}
                                         {...p}
@@ -101,7 +100,7 @@ export default function App () {
 
     </>)
 
-    return <div className={('app ' + (pizzaTypeSelected || '') + ' ' + layoutMode)}>
+    return <div ref={appEl} className={('app ' + (pizzaTypeSelected || '') + ' ' + layoutMode)}>
 
             {pizzaOverlayVisible
                 ? <PizzaOverlay pizzaOverlayVisible={pizzaOverlayVisible} setPizzaOverlayVisible={setPizzaOverlayVisible} />
