@@ -4,10 +4,10 @@ import { classList } from './util'
 
 
 
-export default function Noodles ({ height, width, left, top, backgroundColor, backgroundImage, onClick, rotateOffset = '0deg', rotationDirection = 'normal' }) { 
+export default function Noodles ({ height, width, left, top, backgroundColor, backgroundImage, onClick, rotateOffset = '0deg', rotationDirection = 'normal', type = '' }) { 
     
-    return <div className='pasta-item'
-                style={{ height, width, left, top, '--rotate-offset': rotateOffset, '--rotate-direction': rotationDirection  }}          
+    return <div className={`pasta-item ${type}`}
+                style={{ height, width, left, top, '--rotate-offset': rotateOffset, '--rotate-direction': rotationDirection }}          
                 onClick={onClick}>
                 <div className='background'></div>
                 <div className='foreground' style={{backgroundImage:backgroundImage || '', backgroundColor: backgroundColor || '' }}></div>

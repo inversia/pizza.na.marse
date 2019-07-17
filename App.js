@@ -11,6 +11,8 @@ import PizzaOverlay from './PizzaOverlay'
 import Noodles from './Noodles'
 import MenuMobile from './MenuMobile'
 import noodlesData from './noodlesData'
+import { useRoutes, A } from 'hookrouter'
+import AboutContent from './AboutContent'
 
 
 export default function App () {
@@ -29,15 +31,11 @@ export default function App () {
     const layoutMode = width < 501 ? 'mobile' : 'desktop'
     const isMobile   = layoutMode === 'mobile'
 
-    const content = <>
-
+    const MainContent = () => (<>
+    
         <div className='cosmos-zone-one-wrapper'>
             
-            {isMobile ? <MenuMobile type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> : <Menu />}
-
             {!isMobile && <SelectionPanel type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> }
-            
-            <Radar />
 
             <div ref={pizzaDataEl} className='pizzas'>
                 {pizzaData.map(p => <Pizza checked={selectedPizzas[p.name] || false}
@@ -89,12 +87,35 @@ export default function App () {
                                             }/>))} 
             <h1>{currentNoodles}</h1>                            
         </div>
-    </>
+    </>)
+
+    // const AboutContent = () => (<>
+    //     <div className='about'>
+    //         <h1>О НАС БЛЕАТЬ</h1>
+    //     </div>
+    // </>)
+
+    const LoyaltyProgram = () => (<>
+
+        <h1>Скидосики</h1>
+
+    </>)
 
     return <div className={('app ' + (pizzaTypeSelected || '') + ' ' + layoutMode)}>
 
             {pizzaOverlayVisible
                 ? <PizzaOverlay pizzaOverlayVisible={pizzaOverlayVisible} setPizzaOverlayVisible={setPizzaOverlayVisible} />
-                : content}
+                : <>
+                    {isMobile ? <MenuMobile type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> : <Menu />}
+                    <Radar />
+                    {
+                        useRoutes ({
+                            '/':        MainContent,
+                            '/about':   AboutContent,
+                            '/loyalty': LoyaltyProgram,
+                        })
+                    }
+                </>
+            }
         </div>
 }

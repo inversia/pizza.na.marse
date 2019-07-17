@@ -63,9 +63,15 @@
         height: 100%;
         transform: scale(1.04);
         /* background: conic-gradient(#ff9100, white 90%); */
-        background: conic-gradient(#ffa704, rgb(15, 10, 3) 99%);
+        /* background: conic-gradient(#ffa704, rgb(15, 10, 3) 99%); */
+        /* background: conic-gradient(#0f0a03 12%,#ffa704 40%, #0f0a03 99%); */
+        background: conic-gradient(#0f0a03 12%,#ff9b04 40%, #0f0a03 99%);
         animation:rotate 5.8s linear infinite;
         animation-direction: var(--rotate-direction);
+    }
+
+    .pasta-item.decoration .background:after {
+        background: none;
     }
 
     .pasta-item .foreground {

@@ -10,6 +10,7 @@ const noodlesData = [
         animationDelay:"1.5s",
         backgroundImage:"url(/art/salad2.jpg)",
         rotateOffset: '100deg',
+        type:'interactive',
         rotationDirection: 'reverse',
     },
 
@@ -24,6 +25,7 @@ const noodlesData = [
         animationDelay:"0.5s",
         backgroundImage:"url(/art/salad2.jpg)",
         rotateOffset: '180deg',
+        type:'interactive',
         rotationDirection: 'normal',
     },
 
@@ -38,6 +40,7 @@ const noodlesData = [
         animationDelay:"2.3s",
         backgroundImage:"url(/art/salad2.jpg)",
         rotateOffset: '10deg',
+        type:'interactive',
         rotationDirection: 'normal',
 
     },
@@ -53,6 +56,7 @@ const noodlesData = [
         animationDelay:"0.85s",
         backgroundImage:"url(/art/salad2.jpg)",
         rotateOffset: '200deg',
+        type:'interactive',
         rotationDirection: 'normal',
 
     },
@@ -68,6 +72,7 @@ const noodlesData = [
         animationDelay:"1.9s",
         backgroundImage:"url(/art/salad2.jpg)",
         rotateOffset: '300deg',
+        type:'interactive',
         rotationDirection: 'reverse',
 
     },
@@ -83,6 +88,7 @@ const noodlesData = [
         animationDelay:"5.2s",
         backgroundImage:"url(/art/salad4.jpg)",
         rotateOffset: '0deg',
+        type:'interactive',
         rotationDirection: 'normal',
         
     },
@@ -94,8 +100,8 @@ const noodlesData = [
         left:"11vw", 
         top:"17.5vw", 
         animationDelay:"3.6s",
-        backgroundColor:"pink",
-        type:"decoration",
+        backgroundColor:"#f0c000",
+        type:'decoration',
         rotationDirection: 'reverse',
     },
     
@@ -108,6 +114,7 @@ const noodlesData = [
         backgroundColor:"#ffc400",
         type:"decoration",
         rotationDirection: 'normal',
+
     },
 
     {
