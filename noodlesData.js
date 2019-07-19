@@ -1,6 +1,6 @@
 const noodlesData = [
     {
-        name: 'лапша1',
+        name: 'Ветчина&гриб',
         composition: ['cливочный соус', 'чеддер', 'пармезан', 'моцарелла', 'горгонзола'],
         price: [500],
         height:"23vw",
@@ -12,10 +12,13 @@ const noodlesData = [
         rotateOffset: '100deg',
         type:'interactive',
         rotationDirection: 'reverse',
+        infoImage:"url(/art/ham-mushrooms.svg)",
+        infoTop:"5vw",
+        infoLeft:"-21vw",
     },
 
     {
-        name: 'лапша2',
+        name: 'Арабьята',
         composition: ['cливочный соус', 'чеддер', 'пармезан', 'моцарелла', 'горгонзола'],
         price: [500],
         height:"23vw", 
@@ -27,10 +30,13 @@ const noodlesData = [
         rotateOffset: '180deg',
         type:'interactive',
         rotationDirection: 'normal',
+        infoImage:"url(/art/arabyata.svg)",
+        infoTop:"23vw",
+        infoLeft:"2vw",
     },
 
     {
-        name: 'лапша3',
+        name: 'Паста с лососем',
         composition: ['cливочный соус', 'чеддер', 'пармезан', 'моцарелла', 'горгонзола'],
         price: [500],
         height:"19vw", 
@@ -42,6 +48,9 @@ const noodlesData = [
         rotateOffset: '10deg',
         type:'interactive',
         rotationDirection: 'normal',
+        infoImage:"url(/art/ham-mushrooms.svg)",
+        infoTop:"5vw",
+        infoLeft:"-18vw",
 
     },
 
@@ -56,13 +65,16 @@ const noodlesData = [
         animationDelay:"0.85s",
         backgroundImage:"url(/art/salad2.jpg)",
         rotateOffset: '200deg',
-        type:'interactive',
+        type:'decoractive',
         rotationDirection: 'normal',
+        infoImage:"url(/art/ham-mushrooms.svg)",
+        infoTop:"5vw",
+        infoLeft:"-18vw",
 
     },
 
     {
-        name: 'лапша5',
+        name: 'А-ля норма',
         composition: ['cливочный соус', 'чеддер', 'пармезан', 'моцарелла', 'горгонзола'],
         price: [500],
         height:"18vw", 
@@ -74,11 +86,14 @@ const noodlesData = [
         rotateOffset: '300deg',
         type:'interactive',
         rotationDirection: 'reverse',
+        infoImage:"url(/art/alanorma.svg)",
+        infoTop:"-4vw",
+        infoLeft:"9vw",
 
     },
 
     {
-        name: 'лапша6',
+        name: 'Карбонара',
         composition: ['cливочный соус', 'чеддер', 'пармезан', 'моцарелла', 'горгонзола'],
         price: [500],
         height:"18vw", 
@@ -90,6 +105,9 @@ const noodlesData = [
         rotateOffset: '0deg',
         type:'interactive',
         rotationDirection: 'normal',
+        infoImage:"url(/art/carbonara.svg)",
+        infoTop:"0vw",
+        infoLeft:"-11vw",
         
     },
 
@@ -103,6 +121,9 @@ const noodlesData = [
         backgroundColor:"#f0c000",
         type:'decoration',
         rotationDirection: 'reverse',
+        infoImage:"url(/art/ham-mushrooms.svg)",
+        infoTop:"5vw",
+        infoLeft:"-18vw",
     },
     
     {
@@ -114,6 +135,9 @@ const noodlesData = [
         backgroundColor:"#ffc400",
         type:"decoration",
         rotationDirection: 'normal',
+        infoImage:"url(/art/ham-mushrooms.svg)",
+        infoTop:"5vw",
+        infoLeft:"-18vw",
 
     },
 
@@ -126,6 +150,9 @@ const noodlesData = [
         backgroundColor:"#ff9100",
         type:"decoration",
         rotationDirection: 'normal',
+        infoImage:"url(/art/ham-mushrooms.svg)",
+        infoTop:"5vw",
+        infoLeft:"-18vw",
     }, 
 ]
 

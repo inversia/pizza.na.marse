@@ -83,8 +83,7 @@ export default function App () {
                                                 onClick={() => {
                                                     if(noodles.type !== "decoration") {setCurrentNoodles(noodles.name)}
                                                 }
-                                            }/>))} 
-            <h1>{currentNoodles}</h1>                            
+                                            }/>))}                           
         </div>
     </>)
 
@@ -100,6 +99,12 @@ export default function App () {
 
     </>)
 
+    const content = useRoutes ({
+                        '/':        MainContent,
+                        '/about':   AboutContent,
+                        '/loyalty': LoyaltyProgram,
+                    })
+
     return <div ref={appEl} className={('app ' + (pizzaTypeSelected || '') + ' ' + layoutMode)}>
 
             {pizzaOverlayVisible
@@ -107,13 +112,7 @@ export default function App () {
                 : <>
                     {isMobile ? <MenuMobile type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> : <Menu />}
                     <Radar />
-                    {
-                        useRoutes ({
-                            '/':        MainContent,
-                            '/about':   AboutContent,
-                            '/loyalty': LoyaltyProgram,
-                        })
-                    }
+                    {content}
                 </>
             }
         </div>

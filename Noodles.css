@@ -36,6 +36,13 @@
     --rotate-direction: 'normal';
 }
 
+    .pasta-item h2{
+        color:rgb(255, 79, 108);
+        font-size:3vw;
+        position: absolute;
+        z-index:3;
+    }
+
     .pasta-item.active {
         box-shadow: 1vw 0.5vw 5vw rgb(255, 102, 0);
     }
@@ -87,4 +94,12 @@
         mask-size: 100%;
         mask-position: center;
         position: absolute;
+    }
+
+    .pasta-item.interactive .info {
+        height: 4vw;
+        width: 23vw;
+        position: absolute;
+        background-size:contain;
+        background-repeat: no-repeat;
     }
