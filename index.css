@@ -369,13 +369,14 @@ h1 {
 
     }
 
-        .pizza img {
+        .pizza .image {
             border-radius: 50%;
             height: 100%;
             width: 100%;
             /* background-size: */
             /* margin: 30px 50px; */
             /* border: solid 2px red; */
+            background-size:contain;
             animation: pulse 38s linear infinite;
         }
 
@@ -394,11 +395,7 @@ h1 {
             top:-9%;
         }
 
-.pizza-overlay:not(.visible) {
-    display: none;
-}
-
-.pizza-overlay {
+.product-overlay {
     display: flex;
     align-items: stretch;
     position: fixed;
@@ -409,14 +406,13 @@ h1 {
     background-repeat: no-repeat;
     background-size:cover;
     overflow-x: hidden;
+}
+
+.product-overlay.mobile {
 
 }
 
-.pizza-overlay.mobile {
-
-}
-
-    .pizza-choose-panel {
+    .product-choose-panel {
         display: flex;
         flex:0.65;
 
@@ -428,7 +424,7 @@ h1 {
         border-radius: 0vw 5vw 5vw 0vw;
     }
 
-    .pizza-choose-panel button {    /* CLOSE BUTTON*/
+    .product-choose-panel button {    /* CLOSE BUTTON*/
         width:15%;
         padding:2vw 3vw;
         border-radius: 0vw 0vw 19vw 0vw;
@@ -437,7 +433,7 @@ h1 {
 
     }
 
-        .pizza-list {
+        .product-list {
             /* white-space:nowrap; */
             margin-top:1em;
             font-size:1.8vh;
@@ -446,7 +442,7 @@ h1 {
             overflow-y:hidden;
         }
 
-            .pizza-list li {
+            .product-list li {
                 /* border: 1px solid red; */
                 display:flex;
                 align-items:center;
@@ -454,7 +450,7 @@ h1 {
                 color:rgb(0, 0, 0);
             }
 
-    .pizza-info-panel {
+    .product-info-panel {
         /* overflow-y: auto; */
         display: flex;
         flex:2.5;
@@ -466,14 +462,14 @@ h1 {
         overflow-x:hidden;
     }
 
-        .pizza-info {
+        .product-info {
             padding: 3vw;
             color:white;
             display:flex;
             /* border:2px solid red; */
         }
 
-            .pizza-info .right-side {
+            .product-info .right-side {
                 display: flex;
                 flex-direction: column;
                 margin-left: 5vw;
@@ -482,7 +478,7 @@ h1 {
                 /* border:2px solid red; */
             }
 
-                .pizza-info .right-side .name {
+                .product-info .right-side .name {
                     color:#ff9100;
                     font-size:4vw;
                     line-height: 0.9em;
@@ -491,13 +487,13 @@ h1 {
 
                 
 
-                .pizza-info .right-side .size {
+                .product-info .right-side .size {
                     background-size: cover;
                     margin: 3vw 0vw;
                     /* border:solid 2px pink; */
                 }
 
-                .pizza-info .right-side .price {
+                .product-info .right-side .price {
                     color:#ffd000;
                     color:wheat;
                     font-size:3vw;
@@ -505,7 +501,7 @@ h1 {
                     position: relative;
                 }
 
-                .pizza-info .price:after {
+                .product-info .price:after {
                     content: '';
                     position:absolute;
                     background-image: url(/static/art/rub.svg);
@@ -517,7 +513,7 @@ h1 {
                     margin-left: 0.15em;
                 }
 
-                .pizza-info .right-side ul {
+                .product-info .right-side ul {
                     color:#fcfcfc;
                     /* border:2px solid yellow; */
                     padding:1em 0em;
@@ -527,12 +523,12 @@ h1 {
                     /* margin-left: 2.8vw; */
                 }
 
-                .pizza-info .right-side li {
+                .product-info .right-side li {
                     list-style: none;
                     position: relative;
                 }
 
-                .pizza-info .right-side li:before {
+                .product-info .right-side li:before {
                     content: "•";
                     position: absolute;
                     left:-2vw;
@@ -540,7 +536,7 @@ h1 {
                     opacity: 0.7;
                 }
 
-                .pizza-info .right-side button {
+                .product-info .right-side button {
                     border-radius: 23vw 23vw 23vw 23vw;
                     /* padding: 3em; */
                     background: url(/static/art/add.svg) no-repeat left;
@@ -563,7 +559,7 @@ h1 {
                     box-shadow: 1vw 0.5vw 5vw rgb(255, 102, 0);
                 }
 
-                .pizza-info .right-side button span{
+                .product-info .right-side button span{
                     color:wheat;
                     position:relative;
                     top:0.12vw;
@@ -572,7 +568,7 @@ h1 {
                     font-family: Xolonium;
                 }
 
-                .pizza-info .right-side button .highlight {
+                .product-info .right-side button .highlight {
                     background-color: #fcf9f1;
                     opacity: 0.5;
                     height: 12vw;
@@ -585,7 +581,7 @@ h1 {
 
 
 
-                .pizza-info .right-side button .highlight2 {
+                .product-info .right-side button .highlight2 {
                     background-color: #fcf9f1;
                     opacity: 0.5;
                     height: 12vw;
@@ -598,12 +594,12 @@ h1 {
                 }
 
 
-            .pizza-info .left-side {
+            .product-info .left-side {
                 display: flex;
                 /* align-items: center; */
             }
 
-                .pizza-info .left-side .pizza-image {
+                .product-info .left-side .product-image {
                     height: 40vw;
                     width: 40vw;
                     background-size: cover;
@@ -616,7 +612,7 @@ h1 {
 
 
 
-.pizza-button {
+.product-button {
     --height: 5.5vw;
     display: flex;
     height: var(--height);
@@ -636,7 +632,7 @@ h1 {
     transition-property: bottom, opacity;
 }
 
-.pizza-button .hint {
+.product-button .hint {
     left:0;
     top:15%;
     right:0;

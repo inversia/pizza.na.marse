@@ -1,7 +1,7 @@
 import React, {useRef} from 'react'
 import useVisibility from 'react-use-visibility'
 
-export default function Pizza ({ checked = false, onClick, layout, layoutMode, type, fontSize, img, id, name, price, composition, animationDelay }) {
+export default function Pizza ({ checked = false, onClick, layout, layoutMode, type, fontSize, img, id, name, price, composition, animationDelay, backgroundImage }) {
   
     const { position, size } = layout[layoutMode]
     const pizzaRef = useRef ()
@@ -22,6 +22,6 @@ export default function Pizza ({ checked = false, onClick, layout, layoutMode, t
                  ref={pizzaRef}>
                 <h1 style={{ fontSize: Math.round(size * 0.12) + 'vw' }}>{name} </h1>
                 <h2 style={{ fontSize: Math.round(size * 0.12) + 'vw' }}>{price}</h2>
-                <img src={img}/>
+                <div className='image' style={{backgroundImage}}/>
             </div>
 }

@@ -1,26 +1,23 @@
 import React, { useState, useRef, useDebugValue } from 'react'
-import SizeSwitch from './SizeSwitch'
 import useVisibility from 'react-use-visibility'
 
-export default function PizzaInfo ({name, composition, price, backgroundImage }){
+export default function NoodlesInfo ({name, composition, price, backgroundImage }){
         
-    const [isLarge, setIsLarge] = useState (false)
-    const pizzaInfoRef = useRef ()
+    const noodlesInfoRef = useRef ()
     const buttonRef = useRef ()
     const isVisible = useVisibility (buttonRef.current, {
         partial: true,
-        scrollableEl: pizzaInfoRef.current && pizzaInfoRef.current.parentElement
+        scrollableEl: noodlesInfoRef.current && noodlesInfoRef.current.parentElement
     })
 
     return (
-        <div className='product-info' ref={pizzaInfoRef}>
+        <div className='pizza-info' ref={noodlesInfoRef}>
             <div className='left-side'>
-                <img className='product-image' style={{backgroundImage}} />
+                <img className='pizza-image' style={{backgroundImage}} />
             </div>
             <div className='right-side'>
                 <div className='name'>{name}</div>
-                <div className='size'><SizeSwitch isLarge={isLarge} setIsLarge={setIsLarge} /></div>
-                <div className='price'>{price[Number (isLarge)]}</div>
+                <div className='price'>{price}</div>
                 <ul>
                     {composition.map(name => <li key={name}>{name}</li>)}
                 </ul>

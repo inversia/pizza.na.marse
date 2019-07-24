@@ -7,7 +7,7 @@ import Menu from './Menu'
 import SelectionPanel from './SelectionPanel'
 import Radar from './Radar'
 import Carousel from './Carousel'
-import PizzaOverlay from './PizzaOverlay'
+import Overlay from './Overlay'
 import Noodles from './Noodles'
 import MenuMobile from './MenuMobile'
 import noodlesData from './noodlesData'
@@ -17,10 +17,11 @@ import AboutContent from './AboutContent'
 
 export default function App () {
     
-    const [pizzaOverlayVisible, setPizzaOverlayVisible] = useState (false)
+    const [overlayVisible, setOverlayVisible]           = useState (false)
     const [pizzaTypeSelected,   setPizzaTypeSelected]   = useState (undefined)
     const [selectedPizzas,      setSelectedPizzas]      = useState ({})
     const [currentNoodles,      setCurrentNoodles]      = useState ('лапша2')
+    const [activeProduct, setActiveProduct]             = useState({})
 
     const isMix = pizzaTypeSelected === 'mix'
 
@@ -47,7 +48,8 @@ export default function App () {
                                                     setSelectedPizzas ({ ...selectedPizzas, [p.name]: !selectedPizzas[p.name] })
                                                 } else {
                                                     //alert ('Окно заказа: выбрали пиццу ' + p.name)
-                                                    setPizzaOverlayVisible (true)
+                                                    setActiveProduct('pizzas')
+                                                    setOverlayVisible (true)
                                                 }
                                             }
                                         } />
@@ -77,11 +79,15 @@ export default function App () {
             </div> 
         </div>
         <div className='noodles-wrapper'>
-            <h1>Космическая лапша</h1>
+            <h1>Космическая паста</h1>
             { noodlesData.map (noodles => (<Noodles {...noodles} 
                                                 key={noodles.name} 
                                                 onClick={() => {
-                                                    if(noodles.type !== "decoration") {setCurrentNoodles(noodles.name)}
+                                                    if(noodles.type !== "decoration") {
+                                                        setActiveProduct('noodles')
+                                                        setCurrentNoodles(noodles.name)
+                                                        setOverlayVisible (true)
+                                                    }
                                                 }
                                             }/>))}                           
         </div>
@@ -107,8 +113,8 @@ export default function App () {
 
     return <div ref={appEl} className={('app ' + (pizzaTypeSelected || '') + ' ' + layoutMode)}>
 
-            {pizzaOverlayVisible
-                ? <PizzaOverlay pizzaOverlayVisible={pizzaOverlayVisible} setPizzaOverlayVisible={setPizzaOverlayVisible} />
+            {overlayVisible
+                ? <Overlay setOverlayVisible={setOverlayVisible} activeProduct={activeProduct}/>
                 : <>
                     {isMobile ? <MenuMobile type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> : <Menu />}
                     <Radar />

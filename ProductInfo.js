@@ -2,27 +2,30 @@ import React, { useState, useRef, useDebugValue } from 'react'
 import SizeSwitch from './SizeSwitch'
 import useVisibility from 'react-use-visibility'
 
-export default function PizzaInfo ({name, composition, price, backgroundImage }){
+export default function ProductInfo ({name, composition, price, backgroundImage, activeProduct, type }){
         
     const [isLarge, setIsLarge] = useState (false)
-    const pizzaInfoRef = useRef ()
-    const buttonRef = useRef ()
-    const isVisible = useVisibility (buttonRef.current, {
+    const productInfoRef        = useRef ()
+    const buttonRef             = useRef ()
+    const isVisible             = useVisibility (buttonRef.current, {
         partial: true,
-        scrollableEl: pizzaInfoRef.current && pizzaInfoRef.current.parentElement
+        scrollableEl: productInfoRef.current && productInfoRef.current.parentElement
     })
 
     return (
-        <div className='product-info' ref={pizzaInfoRef}>
+        type !== 'decoration' && <div className='product-info' ref={productInfoRef}>
             <div className='left-side'>
                 <img className='product-image' style={{backgroundImage}} />
             </div>
             <div className='right-side'>
                 <div className='name'>{name}</div>
-                <div className='size'><SizeSwitch isLarge={isLarge} setIsLarge={setIsLarge} /></div>
-                <div className='price'>{price[Number (isLarge)]}</div>
+                
+                {activeProduct === 'pizzas' && <div className='size'><SizeSwitch isLarge={isLarge} setIsLarge={setIsLarge} /></div>}
+                
+                <div className='price'>{activeProduct === 'pizzas' ? price[Number (isLarge)] : price}</div>
+                
                 <ul>
-                    {composition.map(name => <li key={name}>{name}</li>)}
+                    {composition.map(ingridient => <li key={name}>{ingridient}</li>)}
                 </ul>
                 <button ref={buttonRef}>
                     <span>ЗАКАЗАТЬ</span>
