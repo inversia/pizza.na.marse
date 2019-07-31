@@ -114,7 +114,7 @@ export default function App () {
     return <div ref={appEl} className={('app ' + (pizzaTypeSelected || '') + ' ' + layoutMode)}>
 
             {overlayVisible
-                ? <Overlay setOverlayVisible={setOverlayVisible} activeProduct={activeProduct}/>
+                ? <Overlay setOverlayVisible={setOverlayVisible} activeProduct={activeProduct} setActiveProduct={setActiveProduct}/>
                 : <>
                     {isMobile ? <MenuMobile type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> : <Menu />}
                     <Radar />

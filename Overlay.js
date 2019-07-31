@@ -5,9 +5,10 @@ import PizzaInfo from './PizzaInfo'
 import NoodlesInfo from './NoodlesInfo'
 import ProductInfo from './ProductInfo'
 import useComponentSize from '@rehooks/component-size'
+import './Overlay.css'
 
 
-export default function Overlay ({ setOverlayVisible, activeProduct  }) {
+export default function Overlay ({ setOverlayVisible, activeProduct, setActiveProduct  }) {
 
     const productListEl   = useRef ()
     const productListSize = useComponentSize (productListEl)
@@ -18,8 +19,17 @@ export default function Overlay ({ setOverlayVisible, activeProduct  }) {
     }
 
     return <div className='product-overlay'>
+                <div className='overlay-menu'>
+                    <div className='back' onClick={() => setOverlayVisible (false)} >⇐</div>
+                    <div className='choose-type'>
+                        <div className='' onClick={() => setActiveProduct('pizzas')}>ПИЦЦА</div>
+                        <div className='' onClick={() => setActiveProduct('noodles')}>ЛАПША</div>
+                        <div className='' onClick={() => setActiveProduct('salads')}>САЛАТЫ</div>
+                    </div>
+                    <div className='choose-taste'>Выбрать тип начинки</div>
+                    <div className='bucket'>Корзина</div>
+                </div>
                 <div className='product-choose-panel'>
-                    <button onClick={() => setOverlayVisible (false)}>закрыть</button>
                     <ul ref={productListEl} className='product-list'>
                         {
                             products[activeProduct].map((p, i, list) => <li key={p.name} style={{height: productListSize.height / list.length}}>{p.name}</li>)

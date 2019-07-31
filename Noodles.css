@@ -29,10 +29,12 @@
 
     .noodles svg {
         width:100%;
+
     } 
 
 .pasta-item {
     position: absolute;  
+    cursor:pointer;
     --rotate-offset: 0deg;
     --rotate-direction: 'normal';
 }
@@ -76,6 +78,10 @@
         background: conic-gradient(#0f0a03 12%,#ff9b04 40%, #0f0a03 99%);
         animation:rotate 5.8s linear infinite;
         animation-direction: var(--rotate-direction);
+    }
+
+    .pasta-item.decoration {
+        cursor: default;
     }
 
     .pasta-item.decoration .background:after {
