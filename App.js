@@ -71,7 +71,7 @@ export default function App () {
                 <Carousel perspectiveFactor='3.37' className='salads'>
                     { saladsData.map (salad => (
                             <>
-                                <div className='pic' style={{backgroundImage: `url(${salad.img})` }} />
+                                <div className='pic' style={{backgroundImage: salad.backgroundImage}} />
                                 <div className='title'>{salad.name}</div>
                             </>
                     )) }

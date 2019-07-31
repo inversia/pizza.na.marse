@@ -6,6 +6,7 @@ import NoodlesInfo from './NoodlesInfo'
 import ProductInfo from './ProductInfo'
 import useComponentSize from '@rehooks/component-size'
 import './Overlay.css'
+import saladsData from './saladsData';
 
 
 export default function Overlay ({ setOverlayVisible, activeProduct, setActiveProduct  }) {
@@ -14,8 +15,9 @@ export default function Overlay ({ setOverlayVisible, activeProduct, setActivePr
     const productListSize = useComponentSize (productListEl)
 
     const products = {
-        pizzas: pizzaData,
-        noodles: noodlesData
+        pizzas:  pizzaData,
+        noodles: noodlesData,
+        salads:  saladsData,
     }
 
     return <div className='product-overlay'>

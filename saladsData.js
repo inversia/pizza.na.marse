@@ -4,42 +4,42 @@ const saladsData = [
         name: 'Салат греческий',
         composition: ['помидоры', 'болгарский перец', 'салат Айсберг', 'огурцы', 'маслины', 'красный лук', 'сыр фета', 'оливковое масло'],
         price: 210,
-        img: '/art/salad1.jpg',
+        backgroundImage:'url(/art/salad2.jpg)',
     },
 
     {
         name: 'Салат с тунцом',
         composition: ['руккола', 'сладкая кукуруза', 'тунец', 'помидоры черри', 'бальзамический крем соус', 'оливковое масло'],
         price: 260,
-        img: '/art/salad2.jpg',
+        backgroundImage:'url(/art/salad2.jpg)',
     },
 
     {
         name: 'Томаты + моцарелла',
         composition: ['моцарелла "Гальбани"', 'помидоры', 'маслины', 'базилик', 'песто'],
         price: 190,
-        img: '/art/salad3.jpg',
+        backgroundImage:'url(/art/salad2.jpg)',
     },
 
     {
         name: 'Цезарь с креветками',
         composition: ['салат Айсберг', 'соус цезарь', 'помидоры черри', 'креветки', 'пармезан', 'гренки'],
         price: 360,
-        img: '/art/salad4.jpg',
+        backgroundImage:'url(/art/salad2.jpg)',
     },
 
     {
         name: 'Цезарь с курицей',
         composition: ['салат Айсберг', 'соус цезарь', 'помидоры черри', 'курица', 'пармезан', 'гренки'],
         price: 250,
-        img: '/art/salad5.jpg',
+        backgroundImage:'url(/art/salad2.jpg)',
     },
 
     {
         name: 'Цезарь с лососем',
         composition: ['салат Айсберг', 'соус цезарь', 'помидоры черри', 'лосось', 'пармезан', 'гренки'],
         price: 320,
-        img: '/art/salad6.jpg',
+        backgroundImage:'url(/art/salad2.jpg)',
     },
 
 ]
