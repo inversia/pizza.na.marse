@@ -3,18 +3,26 @@
     height: 6vw;
     width: 100%;
     position: fixed;
-    background:linear-gradient(to left, #ebacb6, #644b4b 65%);
+    background:linear-gradient(to right, #644b4b, #f5a30b 14.04%);
+    /* background:linear-gradient(to left, #f5a30b, #644b4b); */
     color:orange;
-    justify-content:space-around;
+    color:#644b4b;
+    /* justify-content:space-around; */
     
 }
 
  .overlay-menu * {
-     cursor: pointer;
-     display: flex;
-     /* border:solid 1px pink; */
-     height: 100%;
-     align-items:center;
+    cursor: pointer;
+    display: flex;
+    /* border:solid 1px pink; */
+    height: 100%;
+    align-items:center;
+    width: 25vw;
+    padding: 0vw 0vw 0vw 0vw;
+    /* border:solid 1px red; */
+    justify-content: center;
+    white-space: nowrap;
+    font-size: 1.8vw;
  }
 
     .choose-type {
@@ -23,11 +31,39 @@
         flex-direction: column;
     }
 
-    .choose-type *{
-        padding: 2vw;
-        background-color: #644b4b;
-        width: 100%;
+    .choose-type ul {
+        position: absolute;
+        display: flex;
+        /* background-color: #644b4b;
+        background-color: #ffae18; */
+        flex-direction: column;
+        width: 10vw;
+        justify-content: center;
+        top:6vw;
     }
+
+    .choose-type li {
+        /* border: solid 1px red; */
+        background-color: #f5a30b;
+        padding: 3vw;
+    }
+
+    .choose-type:hover,
+    .choose-type.active {
+        flex-direction: column;
+        opacity:1.0;
+
+    }
+
+
+    .choose-type:hover ul,
+    .choose-type.active ul {
+    }
+
+    .choose-type:hover li,
+    .choose-type.active li {
+
+    } 
 
 .product-overlay.mobile {
 
@@ -35,13 +71,15 @@
 
     .product-choose-panel {
         display: flex;
-        flex:0.65;
-        background-color: #ffd209;
-        background-color: #f5a623;
+        flex:0.4;
+        /* background-color: #ffd209;
+        background-color: #f5a623; */
+        background:linear-gradient(to left, #644b4b, #f5a30b);
+        background:linear-gradient(to left, #f5a30b, #644b4b);
         flex-direction: column;
         height: 100%;
         font-size: 4%;
-        border-radius: 0vw 5vw 5vw 0vw;
+        border-radius: 0vw 5vw 0vw 0vw;
         padding-top:8vw;
     }
 
@@ -59,7 +97,9 @@
                 display:flex;
                 align-items:center;
                 padding-left: 1em;
+                padding-right: 1em;
                 color:rgb(0, 0, 0);
+                color:#fff0c7;
             }
 
     .product-info-panel {
