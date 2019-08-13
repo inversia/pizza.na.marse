@@ -28,21 +28,7 @@ export default function Overlay ({ setOverlayVisible, activeProduct, setActivePr
 
     return <div className='product-overlay'>
                 <div className='overlay-menu'>
-                    <div className='back' onClick={() => setOverlayVisible (false)} >⇐ Назад</div>
-                    
-                    {/* {dropdownMenuVisible
-                        ? <div className='choose-type' onClick={() => dropdownMenuVisible ? setDropdownMenuVisible(false) : setDropdownMenuVisible(true)}>
-                              {Object.entries(productLabels).map(([k, v]) => <div onClick={() => setActiveProduct(k)}>{v}</div>)}
-                          </div>
-                        : <div className='' onClick={() => setDropdownMenuVisible(true)}>{productLabels[activeProduct]}</div>} */}
-
-                    {/* {dropdownMenuVisible
-                        ? <div className='choose-type' onClick={() => dropdownMenuVisible ? setDropdownMenuVisible(false) : setDropdownMenuVisible(true)}>
-                              {Object.entries(productLabels).map(([k, v]) => <div onClick={() => setActiveProduct(k)}>{v}</div>)}
-                          </div>
-                        : <div className='' onClick={() => setDropdownMenuVisible(true)}>{productLabels[activeProduct]}</div>} */}
-                    
-                    {/*<div className={classList ({ 'size-switch': 1, 'active': isLarge, 'clicked': isClicked })} onClick={onClick}></div> */}   
+                    <div className='back' onClick={() => setOverlayVisible (false)} >⇐ Назад</div>  
 
                     {dropdownMenuVisible
                         ? <div className={classList ({'choose-type': 1, 'active': dropdownMenuVisible})} onClick={() => setDropdownMenuVisible(!dropdownMenuVisible) }>
@@ -58,9 +44,6 @@ export default function Overlay ({ setOverlayVisible, activeProduct, setActivePr
                           </div>
                         : <li className='' onClick={() => setDropdownMenuVisible(true)}>{productLabels[activeProduct]}</li>
                     }
-
-
-
 
                     <div className='choose-taste'>Выбрать начинку</div>
                     <div className='bucket'>Корзина</div>

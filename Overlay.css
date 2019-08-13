@@ -1,14 +1,24 @@
+/* .product-overlay {
+    display: flex;
+    align-items: stretch;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height:100%;
+    background-image: url(/static/art/overlay-gradient.svg), url(/static/art/backgroundstars.jpg),;
+    background-repeat: no-repeat;
+    background-size:cover;
+    overflow-x: hidden;
+} */
+
 .overlay-menu {
     display: flex;
     height: 6vw;
     width: 100%;
     position: fixed;
-    background:linear-gradient(to right, #644b4b, #f5a30b 14.04%);
-    /* background:linear-gradient(to left, #f5a30b, #644b4b); */
-    color:orange;
+    /* background:linear-gradient(to right, #644b4b, #f5a30b 14.04%); */
+    background:linear-gradient(to right, transparent 10%, #ff6600 100%);
     color:#644b4b;
-    /* justify-content:space-around; */
-    
 }
 
  .overlay-menu * {
@@ -79,9 +89,20 @@
         flex-direction: column;
         height: 100%;
         font-size: 4%;
-        border-radius: 0vw 5vw 0vw 0vw;
+        border-radius: 0vw 0vw 0vw 0vw;
         padding-top:8vw;
     }
+
+        .product-choose-panel:after {
+            position: absolute;
+            top:0;
+            left:13.4vw;
+            content: '';
+            width:90vw;
+            height: 6vw;
+            z-index: -3;
+            background-color: #f3a310;
+        }
 
         .product-list {
             /* white-space:nowrap; */
