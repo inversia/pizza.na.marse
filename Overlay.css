@@ -1,3 +1,9 @@
+@keyframes list-appear {
+    0%   { opacity: 0;    top: -40%; }
+    50%  { opacity: 0.3;               }
+    100% { opacity: 1;    top: 100%; }
+}
+
 /* .product-overlay {
     display: flex;
     align-items: stretch;
@@ -19,6 +25,7 @@
     /* background:linear-gradient(to right, #644b4b, #f5a30b 14.04%); */
     background:linear-gradient(to right, transparent 10%, #ff6600 100%);
     color:#644b4b;
+    z-index: 2;
 }
 
  .overlay-menu * {
@@ -33,12 +40,14 @@
     justify-content: center;
     white-space: nowrap;
     font-size: 1.8vw;
+    z-index: 100;
  }
 
     .choose-type {
         position: relative;
         display: flex;
         flex-direction: column;
+        
     }
 
     .choose-type ul {
@@ -50,15 +59,53 @@
         width: 10vw;
         justify-content: center;
         top:6vw;
+        user-select: none;
+        /* transition:all 0.2s ease-in-out;  */
     }
+
 
     .choose-type li {
         /* border: solid 1px red; */
-        background-color: #f5a30b;
+        /* background:linear-gradient(to bottom, orange 10%, #ff6600 100%); */
         padding: 3vw;
+        background:linear-gradient(to right, #f4990c 10%, #f8870b 100%);
+        
     }
 
-    .choose-type:hover,
+    .choose-type .pair {
+        transition:all 0.25s ease-in-out; 
+        animation: list-appear 0.25s ease-out;
+    }
+
+    .choose-type li:nth-child(2):after {
+        content:'';
+        position: absolute;
+        height:2.1vw;
+        width:2vw;
+        top:-0.1vw;
+        left:174%;
+        /* background-color: #f5872d; */
+        background-image: url(/static/art/choose-li-after.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .choose-type li:nth-child(2):before {
+        content:'';
+        position: absolute;
+        height:2vw;
+        width:2vw;
+        top:-0.1vw;
+        left:-93%;
+        background-image: url(/static/art/choose-li-before.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .choose-type li:last-child {
+        border-radius: 0vw 0vw 5vw 5vw;
+    }
+
+    .choose-type.active:hover,
     .choose-type.active {
         flex-direction: column;
         opacity:1.0;
@@ -75,13 +122,17 @@
 
     } 
 
+.product-overlay {
+    z-index: 0;
+}
+
 .product-overlay.mobile {
 
 }
 
     .product-choose-panel {
         display: flex;
-        flex:0.4;
+        flex:0.65;
         /* background-color: #ffd209;
         background-color: #f5a623; */
         background:linear-gradient(to left, #644b4b, #f5a30b);
@@ -91,7 +142,21 @@
         font-size: 4%;
         border-radius: 0vw 0vw 0vw 0vw;
         padding-top:8vw;
+        position: relative;
     }
+
+        .product-choose-panel:before {
+            content: '';
+            position: absolute;
+            width:6vw;
+            height:6vw;
+            background-image: url(/static/art/choose-panel-before.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            top:5.83vw;
+            left:99.8%;
+            z-index: 9;
+        }
 
         .product-choose-panel:after {
             position: absolute;
@@ -100,14 +165,14 @@
             content: '';
             width:90vw;
             height: 6vw;
-            z-index: -3;
+            z-index: -1;
             background-color: #f3a310;
         }
 
         .product-list {
             /* white-space:nowrap; */
             margin-top:1em;
-            font-size:1.8vh;
+            font-size:1.4vw;
             /* border: 1px solid blue; */
             height:100%;
             overflow-y:hidden;
@@ -118,7 +183,7 @@
                 display:flex;
                 align-items:center;
                 padding-left: 1em;
-                padding-right: 1em;
+                /* padding-right: 0.5em; */
                 color:rgb(0, 0, 0);
                 color:#fff0c7;
             }
@@ -156,6 +221,8 @@
                     color:#ff9100;
                     font-size:4vw;
                     line-height: 0.9em;
+                    white-space: normal;
+                    padding-bottom: 0.5em;
                     /* border:1px solid red; */
                 }
 
@@ -163,7 +230,7 @@
 
                 .product-info .right-side .size {
                     background-size: cover;
-                    margin: 3vw 0vw;
+                    margin: -1vw 0vw 1vw 0vw;
                     /* border:solid 2px pink; */
                 }
 
@@ -192,7 +259,7 @@
                     /* border:2px solid yellow; */
                     padding:1em 0em;
                     list-style-type: disc;
-                    font-size:2.5vw;
+                    font-size:2.2vw;
                     color: white;
                     /* margin-left: 2.8vw; */
                 }

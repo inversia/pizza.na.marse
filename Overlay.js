@@ -10,7 +10,7 @@ import saladsData from './saladsData';
 import { useKeyPress } from 'react-use';
 import { classList } from './util'
 
-
+const log = x => (console.log (x), x)
 
 export default function Overlay ({ setOverlayVisible, activeProduct, setActiveProduct  }) {
 
@@ -33,11 +33,11 @@ export default function Overlay ({ setOverlayVisible, activeProduct, setActivePr
                     {dropdownMenuVisible
                         ? <div className={classList ({'choose-type': 1, 'active': dropdownMenuVisible})} onClick={() => setDropdownMenuVisible(!dropdownMenuVisible) }>
                               <ul>
-                                  <li>{productLabels[activeProduct]}</li>
+                                  <li style={{background: 'transparent'}}>{productLabels[activeProduct]}</li>
                                   {
                                       Object.entries(productLabels).map(([k, v]) =>
                                             v !== productLabels[activeProduct]
-                                                ? <li onClick={() => setActiveProduct(k)}>{v}</li>
+                                                ? <li className='pair' onClick={() => setActiveProduct(k)}>{v}</li>
                                                 : undefined)
                                   }
                               </ul>
@@ -51,7 +51,9 @@ export default function Overlay ({ setOverlayVisible, activeProduct, setActivePr
                 <div className='product-choose-panel'>
                     <ul ref={productListEl} className='product-list'>
                         {
-                            products[activeProduct].map((p, i, list) => <li key={p.name} style={{height: productListSize.height / list.length}}>{p.name}</li>)
+                            products[activeProduct]
+                                .filter(p => p.type !== 'decoration')
+                                .map ((p, i, list) => <li key={p.name} style={{ height: Math.min (window.innerWidth / 20, log (productListSize.height / list.length)) + 'px' }}>{p.name}</li>)
                         }
                     </ul>
                 </div>
@@ -60,10 +62,5 @@ export default function Overlay ({ setOverlayVisible, activeProduct, setActivePr
                 <div className='product-info-panel'>
                     {products[activeProduct].map(p => <ProductInfo key={p.name} {...p} activeProduct={activeProduct}/>)}
                 </div>
-
-                {/* <div className='noodles-info-panel'>
-                    {noodlesData.filter(n => n.type !== 'decoration').map(n => <NoodlesInfo key={n.name} {...n} />)}
-                </div> */}
-                
             </div>
 }
