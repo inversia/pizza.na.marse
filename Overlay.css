@@ -148,14 +148,14 @@
         .product-choose-panel:before {
             content: '';
             position: absolute;
-            width:6vw;
-            height:6vw;
+            width:3vw;
+            height:3vw;
             background-image: url(/static/art/choose-panel-before.svg);
             background-size: cover;
             background-repeat: no-repeat;
-            top:5.83vw;
-            left:99.8%;
-            z-index: 9;
+            top:5.89vw;
+            left:99.2%;
+            z-index: 0;
         }
 
         .product-choose-panel:after {

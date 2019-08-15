@@ -69,7 +69,7 @@ export default function App () {
             <div className='salads-carousel-wrapper'>
                 <h1>Внеземные салаты</h1>
                 <Carousel perspectiveFactor='3.37' className='salads'>
-                    { saladsData.map (salad => (
+                    { saladsData.map ((salad, i) => (
                             <>
                                 <div className='pic' style={{backgroundImage: salad.backgroundImage}} />
                                 <div className='title'>{salad.name}</div>
@@ -83,7 +83,7 @@ export default function App () {
             { noodlesData.map (noodles => (<Noodles {...noodles} 
                                                 key={noodles.name} 
                                                 onClick={() => {
-                                                    if(noodles.type !== "decoration") {
+                                                    if(noodles.itemType !== 'decoration') {
                                                         setActiveProduct('noodles')
                                                         setCurrentNoodles(noodles.name)
                                                         setOverlayVisible (true)
@@ -114,7 +114,7 @@ export default function App () {
     return <div ref={appEl} className={('app ' + (pizzaTypeSelected || '') + ' ' + layoutMode)}>
 
             {overlayVisible
-                ? <Overlay setOverlayVisible={setOverlayVisible} activeProduct={activeProduct} setActiveProduct={setActiveProduct}/>
+                ? <Overlay setOverlayVisible={setOverlayVisible} activeProduct={activeProduct} setActiveProduct={setActiveProduct} />
                 : <>
                     {isMobile ? <MenuMobile type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> : <Menu />}
                     <Radar />
