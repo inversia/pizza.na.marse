@@ -23,12 +23,6 @@
     100% {transform: scale(0.95); opacity:1.0;transform: rotate(360deg)}
 }
 
-@keyframes glass-button {
-    0%   { left: -2vw;  opacity: 0.5;}
-    7%   {              opacity: 1.0;}
-    15%  { left: 103vw;}
-    100% { left: 103vw;}
-}
 
 
 @keyframes radar-rotate {
