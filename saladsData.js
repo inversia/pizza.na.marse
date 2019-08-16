@@ -5,6 +5,7 @@ const saladsData = [
         composition: ['помидоры', 'болгарский перец', 'салат Айсберг', 'огурцы', 'маслины', 'красный лук', 'сыр фета', 'оливковое масло'],
         price: 210,
         backgroundImage:'url(/art/salad2.jpg)',
+        type: "veg",
     },
 
     {
@@ -12,6 +13,7 @@ const saladsData = [
         composition: ['руккола', 'сладкая кукуруза', 'тунец', 'помидоры черри', 'бальзамический крем соус', 'оливковое масло'],
         price: 260,
         backgroundImage:'url(/art/salad2.jpg)',
+        type: "fish",
     },
 
     {
@@ -19,6 +21,7 @@ const saladsData = [
         composition: ['моцарелла "Гальбани"', 'помидоры', 'маслины', 'базилик', 'песто'],
         price: 190,
         backgroundImage:'url(/art/salad2.jpg)',
+        type: "veg",
     },
 
     {
@@ -26,6 +29,7 @@ const saladsData = [
         composition: ['салат Айсберг', 'соус цезарь', 'помидоры черри', 'креветки', 'пармезан', 'гренки'],
         price: 360,
         backgroundImage:'url(/art/salad2.jpg)',
+        type: "fish",
     },
 
     {
@@ -33,6 +37,7 @@ const saladsData = [
         composition: ['салат Айсберг', 'соус цезарь', 'помидоры черри', 'курица', 'пармезан', 'гренки'],
         price: 250,
         backgroundImage:'url(/art/salad2.jpg)',
+        type: "meat",
     },
 
     {
@@ -40,6 +45,7 @@ const saladsData = [
         composition: ['салат Айсберг', 'соус цезарь', 'помидоры черри', 'лосось', 'пармезан', 'гренки'],
         price: 320,
         backgroundImage:'url(/art/salad2.jpg)',
+        type: "fish",
     },
 
 ]

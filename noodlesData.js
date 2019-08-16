@@ -15,6 +15,7 @@ const noodlesData = [
         infoImage:"url(/art/ham-mushrooms.svg)",
         infoTop:"5vw",
         infoLeft:"-21vw",
+        type: "meat",
     },
 
     {
@@ -33,6 +34,7 @@ const noodlesData = [
         infoImage:"url(/art/arabyata.svg)",
         infoTop:"23vw",
         infoLeft:"2vw",
+        type: "veg",
     },
 
     {
@@ -51,6 +53,7 @@ const noodlesData = [
         infoImage:"url(/art/ham-mushrooms.svg)",
         infoTop:"5vw",
         infoLeft:"-18vw",
+        type: "fish",
 
     },
 
@@ -70,6 +73,7 @@ const noodlesData = [
         infoImage:"url(/art/ham-mushrooms.svg)",
         infoTop:"5vw",
         infoLeft:"-18vw",
+        type: "",
 
     },
 
@@ -89,6 +93,7 @@ const noodlesData = [
         infoImage:"url(/art/alanorma.svg)",
         infoTop:"-4vw",
         infoLeft:"9vw",
+        type: "veg",
 
     },
 
@@ -108,6 +113,7 @@ const noodlesData = [
         infoImage:"url(/art/carbonara.svg)",
         infoTop:"0vw",
         infoLeft:"-11vw",
+        type: "meat",
         
     },
 
@@ -124,6 +130,7 @@ const noodlesData = [
         infoImage:"url(/art/ham-mushrooms.svg)",
         infoTop:"5vw",
         infoLeft:"-18vw",
+        type: "",
     },
     
     {
@@ -138,6 +145,7 @@ const noodlesData = [
         infoImage:"url(/art/ham-mushrooms.svg)",
         infoTop:"5vw",
         infoLeft:"-18vw",
+        type: "",
 
     },
 
@@ -153,6 +161,7 @@ const noodlesData = [
         infoImage:"url(/art/ham-mushrooms.svg)",
         infoTop:"5vw",
         infoLeft:"-18vw",
+        type: "",
     }, 
 ]
 

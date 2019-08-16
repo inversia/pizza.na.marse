@@ -1,19 +1,17 @@
-import React, { useState, useRef, useDebugValue } from 'react'
+import React, { useState, useRef, useContext, useEffect, useDebugValue, useLayoutEffect } from 'react'
 import SizeSwitch from './SizeSwitch'
-import useVisibility from 'react-use-visibility'
+import useVisibility from './useVisibility'
 
 export default function ProductInfo ({name, composition, price, backgroundImage, activeProduct, type }){
         
-    const [isLarge, setIsLarge] = useState (false)
-    const productInfoRef        = useRef ()
-    const buttonRef             = useRef ()
-    const isVisible             = useVisibility (buttonRef.current, {
-        partial: true,
-        scrollableEl: productInfoRef.current && productInfoRef.current.parentElement
-    })
+    const productInfo = useRef ()
 
+    const [isLarge, setIsLarge] = useState (false)
+    const buttonRef             = useRef ()
+    const isVisible             = useVisibility (buttonRef, { partial: true })
+  
     return (
-        type !== 'decoration' && <div className='product-info' ref={productInfoRef}>
+        <div className='product-info' ref={productInfo}>
             <div className='left-side'>
                 <img className='product-image' style={{backgroundImage}} />
             </div>
@@ -25,7 +23,7 @@ export default function ProductInfo ({name, composition, price, backgroundImage,
                 <div className='price'>{activeProduct === 'pizzas' ? price[Number (isLarge)] : price}</div>
                 
                 <ul>
-                    {composition.map(ingridient => <li key={name}>{ingridient}</li>)}
+                    {composition.map((ingridient, i) => <li key={i}>{ingridient}</li>)}
                 </ul>
                 <button ref={buttonRef}>
                     <span>ЗАКАЗАТЬ</span>
