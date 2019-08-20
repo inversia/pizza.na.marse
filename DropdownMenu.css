@@ -29,15 +29,18 @@
         
     }
 
+    .dropdown-menu:not(.active) ul {
+        pointer-events: none;
+        top:90%;
+        border-radius: 0vw 0vw 1.5vw 1.5vw;
+        /* animation: list-disappear 0.45s ease-in-out; */
+    }
+
     .dropdown-menu.active ul {
         opacity: 1;
         border-radius: 0vw 0vw 3vw 3vw;
-        animation: list-appear 0.55s linear; 
-    }
-    
-    .dropdown-menu:not(.active) ul {
-        pointer-events: none;
-        animation: list-disappear 0.55s linear;
+        top:100%;
+        /* animation: list-appear 0.45s ease-in-out;  */
     }
 
         .dropdown-menu li {
