@@ -1,7 +1,6 @@
 @keyframes list-appear {
     0%   { opacity: 0;    top: -30%; }
-    50%  { opacity: 0.0;               }
-    90%  { opacity: 0.2;               }
+    60%  { opacity: 0.0;             }
     100% { opacity: 1;    top: 100%; }
 }
 
@@ -15,7 +14,6 @@
 
 .dropdown-menu {
     position: relative;
-    transition:all 0.55s ease-in-out;
 }
 
     .dropdown-menu ul {
@@ -28,19 +26,18 @@
         opacity: 0;
         transition:all 0.55s ease-in-out; 
         background: linear-gradient(to right, var(--color-left) 10%, var(--color-right) 100%);
-        animation: list-disappear 1.55s linear;
-        /*animation-fill-mode: forwards;*/
+        
     }
 
     .dropdown-menu.active ul {
         opacity: 1;
         border-radius: 0vw 0vw 3vw 3vw;
-        animation: list-appear 0.55s linear;
-        transition:all 0.55s ease-in-out; 
+        animation: list-appear 0.55s linear; 
     }
     
     .dropdown-menu:not(.active) ul {
         pointer-events: none;
+        animation: list-disappear 0.55s linear;
     }
 
         .dropdown-menu li {
