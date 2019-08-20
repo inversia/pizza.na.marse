@@ -17,11 +17,11 @@ import AboutContent from './AboutContent'
 
 export default function App () {
     
-    const [overlayVisible, setOverlayVisible]           = useState (false)
+    const [overlayVisible, setOverlayVisible]           = useState (true)
     const [pizzaTypeSelected,   setPizzaTypeSelected]   = useState (undefined)
     const [selectedPizzas,      setSelectedPizzas]      = useState ({})
     const [currentNoodles,      setCurrentNoodles]      = useState ('лапша2')
-    const [activeProduct, setActiveProduct]             = useState({})
+    const [activeProduct, setActiveProduct]             = useState ('pizzas')
 
     const isMix = pizzaTypeSelected === 'mix'
 

@@ -1,8 +1,9 @@
-@keyframes list-appear {
+/* @keyframes list-appear {
     0%   { opacity: 0;    top: -40%; }
-    50%  { opacity: 0.3;               }
+    50%  { opacity: 0.0;               }
+    80%  { opacity: 0.3;               }
     100% { opacity: 1;    top: 100%; }
-}
+} */
 
 
 @keyframes glass-button {
@@ -40,7 +41,7 @@
     cursor: pointer;
     display: flex;
     /* border:solid 1px pink; */
-    height: 100%;
+    /* height: 100%; */
     align-items:center;
     width: 25vw;
     padding: 0vw 0vw 0vw 0vw;
@@ -49,86 +50,10 @@
     white-space: nowrap;
     font-size: 1.8vw;
     z-index: 100;
+    user-select: none;
  }
 
-    .choose-type,
-    .choose-taste {
-        position: relative;
-        display: flex;        
-    }
-
-        .choose-type ul,
-        .choose-taste ul {
-            position: absolute;
-            display: flex;
-            /* background-color: #644b4b;
-            background-color: #ffae18; */
-            flex-direction: column;
-            width: 10vw;
-            justify-content: center;
-            top:6vw;
-            user-select: none;
-            /* transition:all 0.2s ease-in-out;  */
-        }
-
-            .choose-type li,
-            .choose-taste li {
-                /* border: solid 1px red; */
-                /* background:linear-gradient(to bottom, orange 10%, #ff6600 100%); */
-                padding: 3vw;
-                background:linear-gradient(to right, #f4990c 10%, #f8870b 100%);
-                
-            }
-
-            .choose-type .pair {
-                transition:all 0.25s ease-in-out; 
-                animation: list-appear 0.25s ease-out;
-            }
-
-            .choose-type li:nth-child(2):after {
-                content:'';
-                position: absolute;
-                height:2.1vw;
-                width:2vw;
-                top:-0.1vw;
-                left:174%;
-                /* background-color: #f5872d; */
-                background-image: url(/static/art/choose-li-after.svg);
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-            .choose-type li:nth-child(2):before {
-                content:'';
-                position: absolute;
-                height:2vw;
-                width:2vw;
-                top:-0.1vw;
-                left:-93%;
-                background-image: url(/static/art/choose-li-before.svg);
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-
-            .choose-type li:last-child,
-            .choose-taste li:last-child {
-                border-radius: 0vw 0vw 5vw 5vw;
-            }
-
-    .choose-type.active:hover,
-    .choose-type.active {
-        flex-direction: column;
-        opacity:1.0;
-    }
-
-
-    .choose-taste {
-
-    }
-
-        .choose-taste ul {
-            padding-top: 6vw;
-        }
-
+    
 
 .product-overlay {
     z-index: 0;
@@ -158,7 +83,7 @@
             position: absolute;
             width:3vw;
             height:3vw;
-            background-image: url(/static/art/choose-panel-before.svg);
+            /* background-image: url(/static/art/choose-panel-before.svg); */
             background-size: cover;
             background-repeat: no-repeat;
             top:5.89vw;
@@ -395,4 +320,14 @@
     justify-content: center;
     align-items: center;
     font-size: 1.3vw;
+}
+
+.choose-type {
+    --color-left: #f4990c;
+    --color-right: #f8870b;
+}
+
+.choose-taste {
+    --color-left: #f8870b;
+    --color-right: #fb7604;
 }
