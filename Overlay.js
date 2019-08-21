@@ -71,6 +71,7 @@ export default function Overlay ({ setOverlayVisible, activeProduct, setActivePr
                 <div className='product-choose-panel'>
                     <ul ref={productListEl} className='product-list'>
                         {noDecoration (products[activeProduct])
+                            .filter(p => !fillingType || (p.type === fillingType))
                             .map ((p, i, list) =>
                                 <li key={p.name} style={{ height: Math.min (window.innerWidth / 20, productListSize.height / list.length) + 'px' }}>{p.name}</li>)
                         }
