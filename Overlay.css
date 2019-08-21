@@ -31,8 +31,7 @@
     height: 6vw;
     width: 100%;
     position: fixed;
-    /* background:linear-gradient(to right, #644b4b, #f5a30b 14.04%); */
-    background:linear-gradient(to right, transparent 10%, #ff6600 100%);
+    background:linear-gradient(to right, transparent 25%, #ff6600 100%);
     color:#644b4b;
     z-index: 2;
 }
@@ -64,12 +63,13 @@
 }
 
     .product-choose-panel {
+
+        --color-left: #f5a30b;
+        --color-right: #644b4b;
+
         display: flex;
         flex:0.65;
-        /* background-color: #ffd209;
-        background-color: #f5a623; */
-        background:linear-gradient(to left, #644b4b, #f5a30b);
-        background:linear-gradient(to left, #f5a30b, #644b4b);
+        background:linear-gradient(to left,var(--color-left),var(--color-right));
         flex-direction: column;
         height: 100%;
         font-size: 4%;
@@ -83,12 +83,17 @@
             position: absolute;
             width:3vw;
             height:3vw;
-            /* background-image: url(/static/art/choose-panel-before.svg); */
             background-size: cover;
             background-repeat: no-repeat;
             top:5.89vw;
             left:99.2%;
             z-index: 0;
+
+            mask-repeat: no-repeat;
+            mask-size: cover;
+            mask-mode: alpha;
+            mask-image: url(/static/art/dropdown-menu-corner.svg);
+            background-color: var(--color-left);
         }
 
         .product-choose-panel:after {
@@ -323,11 +328,11 @@
 }
 
 .choose-type {
-    --color-left: #f4990c;
-    --color-right: #f8870b;
+    --color-left: #f3a310;
+    --color-right: #f78f0b;
 }
 
 .choose-taste {
-    --color-left: #f8870b;
-    --color-right: #fb7604;
+    --color-left: #f78f0b;
+    --color-right: #fb7a05;
 }
