@@ -1,30 +1,36 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import pizzaData from './pizzaData'
 import noodlesData from './noodlesData'
 import DropdownMenu from './DropdownMenu'
-import PizzaInfo from './PizzaInfo'
-import NoodlesInfo from './NoodlesInfo'
 import ProductInfo from './ProductInfo'
 import useComponentSize from '@rehooks/component-size'
 import './Overlay.css'
 import saladsData from './saladsData';
 import { useKeyPress } from 'react-use';
-import { classList } from './util'
-import ScrollableElContext from './ScrollableElContext'
+import { ScrollableElContext } from './ScrollableElContext'
 
 const noDecoration = items => items.filter (p => p.itemType !== 'decoration')
 
 export default function Overlay ({ setOverlayVisible, activeProduct, setActiveProduct}) {
 
-    const productListEl      = useRef ()
-    const productInfoPanelEl = useRef ()
-    const productListSize    = useComponentSize (productListEl)
-    // const [dropdownFillingMenuVisible, setDropdownFillingMenuVisible] = useState(false)
-    const [fillingType, setFillingType] = useState(undefined)
-    // const [activeItem, setActiveItem] = useState(undefined)
-    const [visible, setVisible] = useState (false)
+    const productListEl                         = useRef ()
+    const productPanelEl                        = useRef ()
+    const productListSize                       = useComponentSize (productListEl)
+    const [fillingType, setFillingType]         = useState(undefined)
+    const [currentProduct, setCurrentProduct]   = useState (0)
 
-    const [dropdownMenuVisible, setDropdownMenuVisible] = useState(false)    //  ааа блять, и что, теперь ты тоже скажешь, что не надо его протаскивать наверх?!
+    function onScroll () {
+
+        const { children, scrollTop } = productPanelEl.current
+    
+        for (var i = 0; i < children.length; i++) {
+            
+            if ((children[i].offsetTop - scrollTop) > 0) break
+        }
+
+        setCurrentProduct (i)
+    }
+
 
     const products = {
         pizzas:  pizzaData,
@@ -73,12 +79,22 @@ export default function Overlay ({ setOverlayVisible, activeProduct, setActivePr
                         {noDecoration (products[activeProduct])
                             .filter(p => !fillingType || (p.type === fillingType))
                             .map ((p, i, list) =>
-                                <li key={p.name} style={{ height: Math.min (window.innerWidth / 20, productListSize.height / list.length) + 'px' }}>{p.name}</li>)
+                                <li key={p.name}
+                                    className={i === currentProduct ? 'active' : ''}
+                                    onClick={() => {
+                                        const child = productPanelEl.current.children[i]
+                                        productPanelEl.current.scrollTo ({
+                                                        top: child.offsetTop - child.offsetWidth*0.075,
+                                                        behavior: 'smooth'
+                                                    })
+                                        }
+                                    }
+                                    style={{ height: Math.min (window.innerWidth / 20, productListSize.height / list.length) + 'px' }}>{p.name}</li>)
                         }
                     </ul>
                 </div>
                 
-                <div className='product-info-panel'>
+                <div ref={productPanelEl} className='product-info-panel' onScroll={onScroll}>
                     <ScrollableElContext.Provider value='product-info-panel'>
                         {noDecoration (products[activeProduct])
                             .filter(p => !fillingType || (p.type === fillingType))

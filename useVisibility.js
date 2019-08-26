@@ -1,5 +1,5 @@
 import React, { useState, useContext, useLayoutEffect } from 'react'
-import ScrollableElContext from './ScrollableElContext'
+import { ScrollableElContext, useScrollableEl } from './ScrollableElContext'
 
 import throttle from 'lodash.throttle';
 const throttleInterval = 150;
@@ -38,23 +38,15 @@ function checkVisibility(el, partial) {
     );
 }
 
-function findParentWithClass (element, className) {
-
-    while (element) {
-        if (element.classList.contains (className)) return element
-        element = element.parentElement
-    }
-}
-
 export default function useVisibility (elRef, { partial = false } = {}) {
     
     const [isVisible, setIsVisible] = useState(false);
-    const scrollableElClass = useContext (ScrollableElContext)
+    const getScrollableEl = useScrollableEl ()
 
     useLayoutEffect(() => {
 
         const el           = elRef.current
-        const scrollableEl = findParentWithClass (el, scrollableElClass) || window
+        const scrollableEl = getScrollableEl (el)
 
         const handleScrollOrResize = throttle(
             () => setIsVisible(checkVisibility(el, partial)),
