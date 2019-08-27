@@ -3,15 +3,14 @@ import SizeSwitch from './SizeSwitch'
 import useVisibility from './useVisibility'
 
 export default function ProductInfo ({name, composition, price, backgroundImage, activeProduct, type }){
-        
-    const productInfo = useRef ()
 
-    const [isLarge, setIsLarge] = useState (false)
-    const buttonRef             = useRef ()
-    const isVisible             = useVisibility (buttonRef, { partial: true })
+    const [isLarge, setIsLarge]        = useState (false)
+    const buttonRef                    = useRef ()
+    const isVisible                    = useVisibility (buttonRef, { partial: true })
+
   
     return (
-        <div className='product-info' ref={productInfo}>
+        <div className='product-info'>
             <div className='left-side'>
                 <img className='product-image' style={{backgroundImage}} />
             </div>

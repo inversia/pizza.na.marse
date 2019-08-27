@@ -121,14 +121,14 @@
                 color:#fff0c7;
                 transform:scale(1);
                 cursor: pointer;
+                padding-right: 1em;
 
                 text-decoration: none;
-                background-image: linear-gradient(to right, #ff6600 40%, #644b4b);
                 background-image: linear-gradient(to right, #f5a30b 40%, #ff6600);
                 background-position: 0% 100%;
                 background-repeat: no-repeat;
                 background-size: 0% 1px;
-                transition: background-size .3s;
+                transition: background-size 0.3s;
             }
 
             .product-list li.active,
@@ -155,6 +155,10 @@
             color:white;
             display:flex;
             /* border:2px solid red; */
+        }
+
+        .product-info.invisible {
+            animation: none;
         }
 
             .product-info .right-side {
