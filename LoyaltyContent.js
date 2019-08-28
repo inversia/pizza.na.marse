@@ -2,7 +2,7 @@ import React from 'react'
 
 const LoyaltyContent = () => (<>
     <div className='sales'>
-        <h1>скидочки</h1>
+        <h1>Скидосики</h1>
         
     </div>
 </>)

@@ -13,6 +13,8 @@ import MenuMobile from './MenuMobile'
 import noodlesData from './noodlesData'
 import { useRoutes, A } from 'hookrouter'
 import AboutContent from './AboutContent'
+import LoyaltyContent from './LoyaltyContent'
+import Basket from './Basket'
 
 
 export default function App () {
@@ -22,14 +24,11 @@ export default function App () {
     const [selectedPizzas,      setSelectedPizzas]      = useState ({})
     const [currentNoodles,      setCurrentNoodles]      = useState ('лапша2')
     const [activeProduct, setActiveProduct]             = useState ('pizzas')
-
-    const isMix = pizzaTypeSelected === 'mix'
-
-    const appEl = useRef ()
-    const { width } = useComponentSize (appEl)
-
+    const appEl                                         = useRef ()
+    const { width }                                     = useComponentSize (appEl)
     const layoutMode = width < 501 ? 'mobile' : 'desktop'
     const isMobile   = layoutMode === 'mobile'
+    const isMix = pizzaTypeSelected === 'mix'
 
     const MainContent = () => (<>
     
@@ -93,22 +92,21 @@ export default function App () {
         </div>
     </>)
 
-    // const AboutContent = () => (<>
-    //     <div className='about'>
-    //         <h1>О НАС БЛЕАТЬ</h1>
-    //     </div>
+
+
+    // const LoyaltyProgram = () => (<>
+
+    //     <h1>Скидосики</h1>
+
     // </>)
 
-    const LoyaltyProgram = () => (<>
 
-        <h1>Скидосики</h1>
-
-    </>)
 
     const content = useRoutes ({
                         '/':        MainContent,
                         '/about':   AboutContent,
-                        '/loyalty': LoyaltyProgram,
+                        '/loyalty': LoyaltyContent,
+                        '/basket':  Basket,
                     })
 
     return <div ref={appEl} className={('app ' + (pizzaTypeSelected || '') + ' ' + layoutMode)}>
