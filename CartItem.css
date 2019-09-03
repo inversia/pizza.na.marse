@@ -9,9 +9,6 @@
 }
 
 .orders-list .switch {
-
-    height: 1vw;
-    width: 1vw;
     background-repeat: no-repeat;
     /* border:solid 1px salmon; */
 }
@@ -40,9 +37,9 @@
 .orders-list .trash {
     position: relative;
     display: flex;
-    height: 3vw;
-    width: 3vw;
-    background-image: url(./static/art/trash.svg);
+    height: 5vw;
+    width: 5vw;
+    background-image: url(./static/art/trash2.svg);
     background-repeat: no-repeat;
     background-size: cover;
     /* border:solid 1px salmon; */
