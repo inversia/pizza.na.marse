@@ -5,7 +5,8 @@ const { entries } = Object
 
 export default function DropDownMenu ({ className, items = {}, defaultText, enableSelectAll = true, activeItem, setActiveItem }) {
 
-    const [visible, setVisible] = useState (!defaultText ? true : false)
+    //const [visible, setVisible] = useState (!defaultText ? true : false)
+    const [visible, setVisible] = useState (false)
 
     return <>
          

@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react'
 
-const ScrollableElContext = createContext (window)
+const ScrollableElContext = createContext ('')
 
 function findParentWithClass (element, className) {
 

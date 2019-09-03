@@ -15,11 +15,11 @@ import { useRoutes, A } from 'hookrouter'
 import AboutContent from './AboutContent'
 import LoyaltyContent from './LoyaltyContent'
 import Basket from './Basket'
-
+import { CartContext } from './CartContext'
 
 export default function App () {
     
-    const [overlayVisible, setOverlayVisible]           = useState (true)
+    const [overlayVisible, setOverlayVisible]           = useState (false)
     const [pizzaTypeSelected,   setPizzaTypeSelected]   = useState (undefined)
     const [selectedPizzas,      setSelectedPizzas]      = useState ({})
     const [currentNoodles,      setCurrentNoodles]      = useState ('лапша2')
@@ -30,7 +30,7 @@ export default function App () {
     const isMobile   = layoutMode === 'mobile'
     const isMix = pizzaTypeSelected === 'mix'
 
-    const MainContent = () => (<>
+    const renderMainContent = () => (<>
     
         <div className='cosmos-zone-one-wrapper'>
             
@@ -92,32 +92,34 @@ export default function App () {
         </div>
     </>)
 
-
-
-    // const LoyaltyProgram = () => (<>
-
-    //     <h1>Скидосики</h1>
-
-    // </>)
-
-
-
     const content = useRoutes ({
-                        '/':        MainContent,
-                        '/about':   AboutContent,
-                        '/loyalty': LoyaltyContent,
-                        '/basket':  Basket,
+                        '/':        renderMainContent,
+                        '/about':   () => <AboutContent />,
+                        '/loyalty': () => <LoyaltyContent />,
+                        '/basket':  () => <Basket />,
                     })
+
+    const [cartItems, setCartItems] = useState ([])
+
+    const addToCart        = item            => setCartItems ([...cartItems, item])
+    const removeFromCart   = item            => setCartItems (cartItems.filter (otherItem => otherItem !== item))
+    const setCartItemSize  = (item, isLarge) => {
+                                                    item.isLarge = isLarge
+                                                    setCartItems (cartItems)
+                                                }
 
     return <div ref={appEl} className={('app ' + (pizzaTypeSelected || '') + ' ' + layoutMode)}>
 
-            {overlayVisible
-                ? <Overlay setOverlayVisible={setOverlayVisible} activeProduct={activeProduct} setActiveProduct={setActiveProduct} />
-                : <>
-                    {isMobile ? <MenuMobile type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> : <Menu />}
-                    <Radar />
-                    {content}
-                </>
-            }
+            <CartContext.Provider value={{cartItems, addToCart, removeFromCart, setCartItemSize }}>
+
+                {overlayVisible
+                    ? <Overlay setOverlayVisible={setOverlayVisible} activeProduct={activeProduct} setActiveProduct={setActiveProduct} />
+                    : <>
+                        {isMobile ? <MenuMobile type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> : <Menu />}
+                        <Radar />
+                        {content}
+                    </>
+                }
+            </CartContext.Provider>
         </div>
 }

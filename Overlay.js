@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState, useEffect, useContext } from 'react'
 import pizzaData from './pizzaData'
 import noodlesData from './noodlesData'
 import DropdownMenu from './DropdownMenu'
@@ -8,6 +8,7 @@ import './Overlay.css'
 import saladsData from './saladsData';
 import { useKeyPress } from 'react-use';
 import { ScrollableElContext } from './ScrollableElContext'
+import { CartContext } from './CartContext'
 
 const noDecoration = items => items.filter (p => p.itemType !== 'decoration')
 
@@ -51,6 +52,8 @@ export default function Overlay ({ setOverlayVisible, activeProduct, setActivePr
         salads: 'Салаты' 
     }
 
+    const { cartItems } = useContext (CartContext)
+
     return <div className='product-overlay'>
                 <div className='overlay-menu'>
                     <div className='back' onClick={() => setOverlayVisible (false)} >⇐ Назад</div>  
@@ -71,7 +74,7 @@ export default function Overlay ({ setOverlayVisible, activeProduct, setActivePr
                         setActiveItem={setFillingType} 
                     />
                     
-                    <div className='bucket'>Корзина</div>
+                    <div className='bucket'>Корзина {cartItems.length}</div>
                 </div>
 
                 <div className='product-choose-panel'>
