@@ -20,9 +20,9 @@ export default function Basket () {
     const { cartItems, addToCart, removeFromCart, setIsLarge } = useContext (CartContext)
 
     return  <div className='basket-content'>
-                <h1>Мы почти у цели!</h1>
+                <div className='target'></div>
                 <div className='rocket'></div>
-                <h2>*Напоминаем, что мы доставляем только в радиусе метро Курская*</h2>
+                <h2>* Напоминаем, что мы доставляем только в радиусе метро Курская *</h2>
                 <div className='orders'>
                     {cartItems.map(item => <CartItem item={item} /> )}
                 </div>

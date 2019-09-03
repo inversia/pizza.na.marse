@@ -26,14 +26,15 @@
 }
 
 .orders-list span {
-    text-align: center;
-    color:#ffc400;
+    text-align: left;
+    color:#ffffff;
     /* border:solid 1px salmon; */
     height: 3vw;
     flex:1.8;
     padding: 0vw 3vw;
     justify-content: left;
     font-size: 3.0vw;
+
 }
 
 .orders-list .trash {
