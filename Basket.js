@@ -2,8 +2,7 @@ import React, { useRef, useContext } from 'react'
 import './Basket.css'
 import CartItem from './CartItem'
 import { CartContext } from './CartContext'
-
-
+import pizzaData from './pizzaData'
 
 
 export default function Basket () {
@@ -18,11 +17,20 @@ export default function Basket () {
     }
 
     const { cartItems, addToCart, removeFromCart, setIsLarge } = useContext (CartContext)
+    const isCartEmpty = cartItems.length === 0
+    const randomPizza = Math.floor(Math.random() * pizzaData.length)
 
     return  <div className='basket-content'>
-                <div className='target'></div>
-                <div className='rocket'></div>
-                <h2>* Напоминаем, что мы доставляем только в радиусе метро Курская *</h2>
+                {isCartEmpty ? 
+                    <div className='random'>К сожалению, корзина пока пуста :( <br/>Если Вас одолевают муки выбора, можете попытать удачу и <span onClick={() => addToCart(pizzaData[randomPizza])}>заказать рандомную пиццу</span></div> 
+                    : <div className='target'>Мы уже почти у цели!</div>
+                }
+                {/* <div className='rocket'></div> */}
+                <h2>* Напоминаем, что мы доставляем только в радиусе метро Курская *
+                    <div className='rocket'></div>
+                </h2>
+                {/* <h3>{pizzaData[randomPizza]}</h3> */}
+                {console.log(pizzaData.length)}
                 <div className='orders'>
                     {cartItems.map(item => <CartItem item={item} /> )}
                 </div>

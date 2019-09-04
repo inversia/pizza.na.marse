@@ -1,7 +1,11 @@
 import React, { useState, useCallback, useLayoutEffect, useEffect, useRef } from 'react'
 import useComponentSize from '@rehooks/component-size'
+import { useRoutes, A } from 'hookrouter'
+
 import pizzaData from './pizzaData'
 import saladsData from './saladsData'
+import noodlesData from './noodlesData'
+
 import Pizza from './Pizza'
 import Menu from './Menu'
 import SelectionPanel from './SelectionPanel'
@@ -10,8 +14,6 @@ import Carousel from './Carousel'
 import Overlay from './Overlay'
 import Noodles from './Noodles'
 import MenuMobile from './MenuMobile'
-import noodlesData from './noodlesData'
-import { useRoutes, A } from 'hookrouter'
 import AboutContent from './AboutContent'
 import LoyaltyContent from './LoyaltyContent'
 import Basket from './Basket'
@@ -99,18 +101,20 @@ export default function App () {
                         '/basket':  () => <Basket />,
                     })
 
+    // const [cartItems, setCartItems] = useState (pizzaData.slice (0, 3))
+
     const [cartItems, setCartItems] = useState ([])
 
     const addToCart        = item            => setCartItems ([...cartItems, item])
     const removeFromCart   = item            => setCartItems (cartItems.filter (otherItem => otherItem !== item))
-    const setCartItemSize  = (item, isLarge) => {
+    const setCartItemSize  = (item, isLarge) => {                                                    
                                                     item.isLarge = isLarge
-                                                    setCartItems (cartItems)
+                                                    setCartItems ([...cartItems])
                                                 }
 
     return <div ref={appEl} className={('app ' + (pizzaTypeSelected || '') + ' ' + layoutMode)}>
 
-            <CartContext.Provider value={{cartItems, addToCart, removeFromCart, setCartItemSize }}>
+            <CartContext.Provider value={{cartItems, addToCart, removeFromCart, setCartItemSize}}>
 
                 {overlayVisible
                     ? <Overlay setOverlayVisible={setOverlayVisible} activeProduct={activeProduct} setActiveProduct={setActiveProduct} />

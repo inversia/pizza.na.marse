@@ -6,11 +6,12 @@
     /* border:solid 1px salmon; */
     justify-content: space-between;
     align-items:center;
+    margin: 2.0vw;
 }
 
-.orders-list .switch {
-    background-repeat: no-repeat;
-    /* border:solid 1px salmon; */
+.orders-list .size-switch {
+    
+    --width:10.8vw;    
 }
 
 .orders-list .item-image {
@@ -37,8 +38,8 @@
 .orders-list .trash {
     position: relative;
     display: flex;
-    height: 5vw;
-    width: 5vw;
+    height: 3.1vw;
+    width: 3.1vw;
     background-image: url(./static/art/trash2.svg);
     background-repeat: no-repeat;
     background-size: cover;

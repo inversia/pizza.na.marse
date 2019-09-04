@@ -26,7 +26,7 @@ export default function ProductInfo ({name, composition, price, backgroundImage,
                 <ul>
                     {composition.map((ingridient, i) => <li key={i}>{ingridient}</li>)}
                 </ul>
-                <button ref={buttonRef} onClick={() => addToCart ({ name, isLarge, backgroundImage, price})}>      {/* не передаю ли я BgImg в пустоту?*/}
+                <button ref={buttonRef} onClick={() => addToCart ({ name, isLarge, backgroundImage, price})}>     
                     <span>ЗАКАЗАТЬ</span>
                     <div className={'highlight ' + (isVisible ? '' : 'invisible')}></div>
                     <div className={'highlight2 ' + (isVisible ? '' : 'invisible')}></div>

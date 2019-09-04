@@ -75,7 +75,7 @@
 
 body {
     background-color:#070f17;
-    /* background-image: url(/static/art/backgroundstars.jpg); */
+    background-image: url(/static/art/backgroundstars.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family:'Xolonium';
