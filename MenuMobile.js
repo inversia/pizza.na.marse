@@ -7,7 +7,7 @@ const MenuMobile = ({onSelect }) =>
         <a href="#vegMobile" className="broccoli link" onClick={() => onSelect ('veg') }></a> 
         <a href="#fishMobile" className="fish link" onClick={() => onSelect ('fish') }></a> 
         <a href="#mixMobile" className="mix link" onClick={() => onSelect ('mix') }></a> 
-        <a href="#basket" className="basket link"></a> 
+        <a href="#cart" className="cart link"></a> 
     </div>
 
 export default MenuMobile

@@ -122,8 +122,8 @@ h1 {
         transform:translate(0%, 7%) scale(1.05);
     }
 
-    .menu a.menu-item-basket {
-        background-image:url(/static/art/basket.svg);
+    .menu a.menu-item-cart {
+        background-image:url(/static/art/cart.svg);
         background-size:contain;
         background-repeat:no-repeat;
         display:block;
@@ -143,8 +143,8 @@ h1 {
         color: orange;
     }
 
-    .menu.mobile a.basket {
-        background-image:url(/static/art/basket.svg);
+    .menu.mobile a.cart {
+        background-image:url(/static/art/cart.svg);
         background-size:contain;
         background-repeat:no-repeat;
         display:block;

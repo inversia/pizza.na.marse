@@ -16,8 +16,10 @@ import Noodles from './Noodles'
 import MenuMobile from './MenuMobile'
 import AboutContent from './AboutContent'
 import LoyaltyContent from './LoyaltyContent'
-import Basket from './Basket'
+import Cart from './Cart'
 import { CartContext } from './CartContext'
+
+const genCartItemUid = ((cartItemUid = 0) => () => cartItemUid++) ()
 
 export default function App () {
     
@@ -98,16 +100,16 @@ export default function App () {
                         '/':        renderMainContent,
                         '/about':   () => <AboutContent />,
                         '/loyalty': () => <LoyaltyContent />,
-                        '/basket':  () => <Basket />,
+                        '/cart':    () => <Cart />,
                     })
 
     // const [cartItems, setCartItems] = useState (pizzaData.slice (0, 3))
 
     const [cartItems, setCartItems] = useState ([])
 
-    const addToCart        = item            => setCartItems ([...cartItems, item])
+    const addToCart        = item            => setCartItems ([...cartItems, Object.assign (item, { uid: genCartItemUid () }) ])
     const removeFromCart   = item            => setCartItems (cartItems.filter (otherItem => otherItem !== item))
-    const setCartItemSize  = (item, isLarge) => {                                                    
+    const setCartItemSize  = (item, isLarge) => {
                                                     item.isLarge = isLarge
                                                     setCartItems ([...cartItems])
                                                 }

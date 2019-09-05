@@ -24,7 +24,7 @@ export default function ProductInfo ({name, composition, price, backgroundImage,
                 <div className='price'>{activeProduct === 'pizzas' ? price[Number (isLarge)] : price}</div>
                 
                 <ul>
-                    {composition.map((ingridient, i) => <li key={i}>{ingridient}</li>)}
+                    {composition.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
                 </ul>
                 <button ref={buttonRef} onClick={() => addToCart ({ name, isLarge, backgroundImage, price})}>     
                     <span>ЗАКАЗАТЬ</span>

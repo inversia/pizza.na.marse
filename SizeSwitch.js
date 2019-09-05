@@ -11,7 +11,7 @@ export default function SizeSwitch ({ isLarge, setIsLarge }) {
         setIsLarge(!isLarge)
     }
 
-    return <div className={classList ({ 'size-switch': 1, 'active': isLarge, 'clicked': isClicked })} onClick={onClick}> 
+    return <div className={classList ({ 'size-switch': 1, 'active': !isLarge, 'clicked': isClicked })} onClick={onClick}> 
             
                 <div className='ball'>
                     <div className='body'></div>
