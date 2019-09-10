@@ -25,7 +25,7 @@
         margin: 2vw;
         padding-left: 1.5vw;
         /* display: flex; */
-        border: solid 0.3vw #ffa600;
+        border: solid 0.20vw #ffa600;
         border-radius: 2.5vw;
         background-color:rgba(13, 4, 46, 0.747);
         background-color:rgba(20, 12, 51, 0.747);
@@ -107,9 +107,13 @@
     width: 40vw;
     overflow: hidden;
     border-radius: 20vw 20vw 20vw 20vw;
-    left:3vw;
-    margin-top:18vw;
+    left:4vw;
+    margin-top:16.5vw;
     position: absolute;
     filter: invert(0.96) hue-rotate(145deg);
+    /* filter: invert(0.96) hue-rotate(305deg); */
+    /* filter: invert(0.96) hue-rotate(27deg); */
 
+    box-shadow: -6px -0px 46px rgb(162, 0, 255);
+    /* box-shadow: -6px -0px 46px rgb(0, 102, 255); */
 }
