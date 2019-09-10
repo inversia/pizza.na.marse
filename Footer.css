@@ -11,9 +11,10 @@
 }
 
 .general-info {
-    padding-top:20vw;
+    padding-top:15vw;
     position: absolute;
-    left:2vw;
+    right:0vw;
+    align-items: right;
     color:black;
     color:white;
 
@@ -21,8 +22,7 @@
 
     .general-info div {
         padding: 1.5vw; 
-        margin: 1vw;
-        right:0;
+        margin: 2vw;
         padding-left: 1.5vw;
         /* display: flex; */
         border: solid 0.3vw #ffa600;
@@ -30,7 +30,7 @@
         background-color:rgba(13, 4, 46, 0.747);
         background-color:rgba(20, 12, 51, 0.747);
         box-shadow: 4px 2px 9px rgb(3, 3, 61);
-        position: relative;
+
         /* justify-content: center; */
     }
 
@@ -51,59 +51,65 @@
         .address {
             display: flex;
             flex-direction: row;
-            right:0;
-            width:60vw;
-            border-radius: 3vw 5.5vw 2.5vw 2.5vw !important;
+            position: relative;
+            right:-10vw;
+            width:40vw;
+            border-radius: 3vw 2.5vw 5.5vw 2.5vw !important;
         }
 
             .address a {
-                padding-left: 10.2vw;
+                padding-left: 3.2vw;
             }
         
         .email {
-            width: 55vw;
+            width: 45vw;
+            position: relative;
+            right:-7vw;
         }
 
         .email a {
-            padding-left: 10vw;
+            padding-left: 3vw;
             width:8vw;
         }
 
         .telephone {
             width:55vw;
+            border-radius: 20vw 5vw 20vw 20vw !important;
+
         }
         .telephone a {
-            padding-left:6.4vw;
+            padding-left:1.4vw;
         }
 
         .time {
             display: flex;
             flex-direction: column;
-            width: 55vw;
-            border-radius: 12vw 70vw 22vw 20vw !important;
+            width: 37vw;
+            border-radius: 32vw 20vw 70vw 20vw !important;
+            position: relative;
+            right:-8vw;
             /* border-radius: 12vw 12vw 2vw 70vw; */
 
         }
 
             .time time{
                 color:wheat;
-                padding-left:18.4vw;
+                padding-left:0vw;
             }
 
                 .time time span{
                     /* color:rgb(81, 255, 0); */
-                    padding-left:5.1vw;
+
                 }
 
 .map {
-    height: 36vw;
-    width: 36vw;
+    height: 40vw;
+    width: 40vw;
     overflow: hidden;
     border-radius: 20vw 20vw 20vw 20vw;
-    right:0;
-    margin-top:20vw;
+    left:3vw;
+    margin-top:18vw;
     position: absolute;
-
     filter: invert(0.96) hue-rotate(145deg);
 
 }
