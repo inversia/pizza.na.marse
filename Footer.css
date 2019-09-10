@@ -1,5 +1,5 @@
 .footer-content {
-    height: 50vw;
+    height: 60vw;
     width: 100%;
     background-image: url(./static/art/mars2.jpg);
     background-repeat: no-repeat;
@@ -11,7 +11,7 @@
 }
 
 .general-info {
-    padding-top:12vw;
+    padding-top:20vw;
     position: absolute;
     left:2vw;
     color:black;
@@ -25,13 +25,24 @@
         right:0;
         padding-left: 1.5vw;
         /* display: flex; */
-        border: solid 0.3vw rgb(255, 166, 0);
+        border: solid 0.3vw #ffa600;
         border-radius: 2.5vw;
         background-color:rgba(13, 4, 46, 0.747);
         background-color:rgba(20, 12, 51, 0.747);
         box-shadow: 4px 2px 9px rgb(3, 3, 61);
+        position: relative;
         /* justify-content: center; */
     }
+
+    /* .general-info div::after {
+        position: absolute;
+        left:-4vw;
+        top:25vw;
+        content: '';
+        height: 1vw;
+        width:5vw;
+        background-color: #ffa600;
+    } */
 
     .general-info a {
         color:wheat;
@@ -83,3 +94,16 @@
                     /* color:rgb(81, 255, 0); */
                     padding-left:5.1vw;
                 }
+
+.map {
+    height: 36vw;
+    width: 36vw;
+    overflow: hidden;
+    border-radius: 20vw 20vw 20vw 20vw;
+    right:0;
+    margin-top:20vw;
+    position: absolute;
+
+    filter: invert(0.96) hue-rotate(145deg);
+
+}
