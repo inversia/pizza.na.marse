@@ -2,9 +2,9 @@ import React, { useState, useCallback, useLayoutEffect, useEffect, useRef } from
 import useComponentSize from '@rehooks/component-size'
 import { useRoutes, A } from 'hookrouter'
 
-import pizzaData from './pizzaData'
-import saladsData from './saladsData'
-import noodlesData from './noodlesData'
+import pizzaData from './data/pizza'
+import saladsData from './data/salads'
+import noodlesData from './data/noodles'
 
 import Pizza from './Pizza'
 import Menu from './Menu'
@@ -17,6 +17,7 @@ import MenuMobile from './MenuMobile'
 import AboutContent from './AboutContent'
 import LoyaltyContent from './LoyaltyContent'
 import Cart from './Cart'
+import Footer from './Footer'
 import { CartContext } from './CartContext'
 
 const genCartItemUid = ((cartItemUid = 0) => () => cartItemUid++) ()
@@ -81,7 +82,7 @@ export default function App () {
                 </Carousel>
             </div> 
         </div>
-        <div className='noodles-wrapper'>
+        {/* <div className='noodles-wrapper'>
             <h1>Космическая паста</h1>
             { noodlesData.map (noodles => (<Noodles {...noodles} 
                                                 key={noodles.name} 
@@ -93,7 +94,8 @@ export default function App () {
                                                     }
                                                 }
                                             }/>))}                           
-        </div>
+        </div> */}
+        <Footer />
     </>)
 
     const content = useRoutes ({

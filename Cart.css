@@ -100,7 +100,8 @@
             color: rgb(8, 4, 46);
         }
 
-        .fields input[type="text"] {
+        .fields input[type="text"],
+        .fields input[type="tel"] {
             background: linear-gradient(to bottom,orange 1%, rgb(255, 192, 55) 80%);
             box-shadow: 0px 2px 5px rgba(146, 81, 0, 0.65) inset, 0px 1px 1px rgba(0, 0, 0, 0.5) inset;
         }
@@ -115,13 +116,17 @@
 
         }
 
+        .fields input:focus {
+            outline:none;
+            border-bottom-width: 2px;
+            background-color: #ff9100;
+            font-weight: bold;
+        }
 
-            .fields input:focus {
-                outline:none;
-                border-bottom-width: 2px;
-                background-color: #ff9100;
-                font-weight: bold;
-            }
+        .fields.submit-clicked input:invalid {
+            background: rgb(255, 184, 156);
+            color: red;
+        }
 
         .fields input[type='submit'] {
             color:wheat;

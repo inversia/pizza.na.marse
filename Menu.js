@@ -12,7 +12,7 @@ const Menu = () =>
         <a className="tel" href="tel:+74952949958">+7 495 005 59 36</a>
         <A {...props ('')}>меню</A>
         <A {...props ('loyalty')}>акции</A>
-        <A {...props ('about')}>о нас</A> 
+        {/* <A {...props ('about')}>о нас</A>  */}
         <a className="link" href="#booking">забронировать</a>
         <a className="link" href="#contact">контакты</a> 
         {/* <a className="cart link" href="#cart"></a>  */}

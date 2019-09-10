@@ -1,11 +1,11 @@
 import React, { useRef, useState, useEffect, useContext } from 'react'
-import pizzaData from './pizzaData'
-import noodlesData from './noodlesData'
+import pizzaData from './data/pizza'
+import noodlesData from './data/noodles'
 import DropdownMenu from './DropdownMenu'
 import ProductInfo from './ProductInfo'
 import useComponentSize from '@rehooks/component-size'
 import './Overlay.css'
-import saladsData from './saladsData';
+import saladsData from './data/salads';
 import { useKeyPress } from 'react-use';
 import { ScrollableElContext } from './ScrollableElContext'
 import { CartContext } from './CartContext'

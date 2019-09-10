@@ -1,9 +1,9 @@
-import React, { useRef, useContext } from 'react'
+import React, { useRef, useContext, useState } from 'react'
 import './Cart.css'
 import CartItem from './CartItem'
 import { CartContext } from './CartContext'
-import pizzaData from './pizzaData'
-
+import pizzaData from './data/pizza'
+import { classList } from './util'
 
 export default function Cart () {
 
@@ -20,6 +20,8 @@ export default function Cart () {
     const isCartEmpty = cartItems.length === 0
     const randomPizza = Math.floor(Math.random() * pizzaData.length)
 
+    const [submitClicked, setSubmitClicked] = useState (false)
+
     return  <div className='cart-content'>
                 {isCartEmpty ? 
                     <h1>К сожалению, корзина пока пуста :(</h1> 
@@ -30,17 +32,17 @@ export default function Cart () {
                 </h2>
                 {/* <h3>{pizzaData[randomPizza]}</h3> */}
                 <div className='orders'>
-                    {cartItems.map(item => <CartItem key={item.uid} item={item} /> )}
+                    {cartItems.map(item => <CartItem key={item.uid} item={item} />)}
                 </div>
                 <div className='random'>Если Вас одолевают муки выбора, можете попытать удачи и <br/><span onClick={() => addToCart({ ...pizzaData[randomPizza], isLarge: true })}>заказать рандомную пиццу</span></div>
                 {/* <pre>{JSON.stringify (cartItems, null, 4)}</pre> */}
                 {/* {console.log(cartItems.name)} */}
-                <form onSubmit={submitFormHandler} ref={form} className='fields'>                        
+                <form onSubmit={submitFormHandler} ref={form} className={classList ({ fields: 1, 'submit-clicked': submitClicked })}>                        
                     <input type='text' name='name'   placeholder='Как к Вам обращаться?'/>
-                    <input type='text' name='adress' placeholder='Адрес доставки (напоминаем, что мы доставляем только в радиусе метро Курская)'/>
-                    <input type='text' name='phone'  placeholder='Номер для связи'/>
+                    <input type='text' name='address' placeholder='Адрес доставки (напоминаем, что мы доставляем только в радиусе метро Курская)' required />
+                    <input type='tel' pattern='^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$' name='phone'  placeholder='Номер для связи' required />
                     <input type='text' name='notes'  placeholder='Пометки'/>
-                    <input type='submit' value='Оформить заказ' />
+                    <input type='submit' value='Оформить заказ' onClick={() => setSubmitClicked (true)} />
                 </form>  
             </div>
 }
