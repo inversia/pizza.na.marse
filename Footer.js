@@ -14,9 +14,12 @@ export default function Footer () {
                         <time itemprop='openingHours' datetime='Mo, Fr 10:00-22:00'><br/>Пн-Пт: 10:00 — 22:00</time>
                         <time itemprop='openingHours' datetime='Sa 14:00-22:00'>         Сб:<span className='weekend'>14:00 — 22:00</span></time>
                         <time itemprop='openingHours' datetime='Su 00:00-22:00'>         Вс:<span className='weekend'>00:00 — 22:00</span></time>
-                        {/* <meta itemprop="openingHours" content="Mo-Fr 10:00-22:00"/> */}
+                        
+                        <meta itemprop="openingHours" content="Mo-Fr 10:00-22:00"/>
                         <meta itemprop="openingHours" content="Sa 14:00-22:00"/>
                         <meta itemprop="openingHours" content="Su 00:00-22:00"/> 
+
+                        <meta itemprop="acceptsReservations" content="true"/>
                 </div>
             </div>
             <YMaps>

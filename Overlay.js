@@ -1,11 +1,14 @@
 import React, { useRef, useState, useEffect, useContext } from 'react'
+
 import pizzaData from './data/pizza'
 import noodlesData from './data/noodles'
+import saladsData from './data/salads';
+import beveragesData from './data/beverages';
+
 import DropdownMenu from './DropdownMenu'
 import ProductInfo from './ProductInfo'
 import useComponentSize from '@rehooks/component-size'
 import './Overlay.css'
-import saladsData from './data/salads';
 import { useKeyPress } from 'react-use';
 import { ScrollableElContext } from './ScrollableElContext'
 import { CartContext } from './CartContext'
@@ -37,6 +40,7 @@ export default function Overlay ({ setOverlayVisible, activeProduct, setActivePr
         pizzas:  pizzaData,
         noodles: noodlesData,
         salads:  saladsData,
+        beverages: beveragesData,
     }
 
     const fillings = {
@@ -49,7 +53,8 @@ export default function Overlay ({ setOverlayVisible, activeProduct, setActivePr
     const productLabels = { 
         pizzas: 'Пицца', 
         noodles: 'Лапша', 
-        salads: 'Салаты' 
+        salads: 'Салаты',
+        beverages: 'Напитки', 
     }
 
     const { cartItems } = useContext (CartContext)
