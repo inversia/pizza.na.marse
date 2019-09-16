@@ -124,7 +124,7 @@ export default function App () {
                     ? <Overlay setOverlayVisible={setOverlayVisible} activeProduct={activeProduct} setActiveProduct={setActiveProduct} />
                     : <>
                         {isMobile ? <MenuMobile type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> : <Menu />}
-                        <Radar />
+                        {/* <Radar /> */}
                         {content}
                     </>
                 }
