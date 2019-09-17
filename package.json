@@ -15,7 +15,6 @@
     "@rehooks/component-size": "^1.0.2",
     "hookrouter": "^1.2.3",
     "panic-overlay": "^1.0.13",
-    "parcel-plugin-static-files-copy": "^2.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-use": "^10.5.0",
@@ -29,6 +28,8 @@
     "esm": "^3.2.25",
     "mocha": "^6.1.4",
     "ololog": "^1.1.129",
-    "postcss-modules": "^1.4.1"
+    "postcss-modules": "^1.4.1",
+    "parcel": "^1.12.3",
+    "parcel-plugin-static-files-copy": "^2.0.0"
   }
 }
