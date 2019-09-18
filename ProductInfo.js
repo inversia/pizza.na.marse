@@ -3,30 +3,30 @@ import SizeSwitch from './SizeSwitch'
 import useVisibility from './useVisibility'
 import { CartContext } from './CartContext'
 
-export default function ProductInfo ({name, composition, price, backgroundImage, activeProduct, type }){
+export default React.memo (function ProductInfo ({ name, composition, price, backgroundImage, productType, index }){
 
     const [isLarge, setIsLarge] = useState (false)
     const buttonRef             = useRef ()
     const isVisible             = useVisibility (buttonRef, { partial: true })
 
-    const { cartItems, addToCart } = useContext (CartContext)
+    const { addToCart } = useContext (CartContext)
 
     return (
-        <div className='product-info'>
+        <div className='product-info' data-index={index} data-type={productType} data-name={name}>
             <div className='left-side'>
                 <img className='product-image' style={{backgroundImage}} />
             </div>
             <div className='right-side'>
                 <div className='name'>{name}</div>
                 
-                {activeProduct === 'pizzas' && <div className='size'><SizeSwitch isLarge={isLarge} setIsLarge={setIsLarge} /></div>}
+                {productType === 'pizzas' && <div className='size'><SizeSwitch isLarge={isLarge} setIsLarge={setIsLarge} /></div>}
                 
-                <div className='price'>{activeProduct === 'pizzas' ? price[Number (isLarge)] : price}</div>
+                <div className='price'>{productType === 'pizzas' ? price[Number (isLarge)] : price}</div>
                 
                 <ul>
-                    {composition.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
+                    {productType !== 'beverages' && composition.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
                 </ul>
-                <button ref={buttonRef} onClick={() => addToCart ({ name, isLarge, backgroundImage, price})}>     
+                <button ref={buttonRef} onClick={() => addToCart ({ productType, name, isLarge, backgroundImage, price})}>     
                     <span>ЗАКАЗАТЬ</span>
                     <div className={'highlight ' + (isVisible ? '' : 'invisible')}></div>
                     <div className={'highlight2 ' + (isVisible ? '' : 'invisible')}></div>
@@ -34,4 +34,4 @@ export default function ProductInfo ({name, composition, price, backgroundImage,
             </div>
         </div>
     )
-}
+})

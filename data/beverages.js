@@ -1,53 +1,95 @@
 const beveragesData = [
+    
     {
-        name: 'Фреш яблоко/апельсин',
-        price: [100],
+        name: 'Фреш яблочный',
         itemType:'interactive',
-        backgroundImage:"url(/art/salad2.jpg)",
+        backgroundImage:'url(/art/salad2.jpg)',
+        price: [210],
+        backgroundImage:'url(/art/salad2.jpg)',
+        type: 'veg',
     },
 
     {
-        name: 'Морс домашний',
-        price: [100],
+        name: 'Фреш апельсиновый',
         itemType:'interactive',
-        backgroundImage:"url(/art/salad2.jpg)",
-    },
-
-    {
-        name: 'Сок',
-        price: [100],
-        itemType:'interactive',
-        backgroundImage:"url(/art/salad2.jpg)",
-    },
-
-    {
-        name: 'Чай чёрный/зелёный в пакетиках',
-        price: [100],
-        itemType:'interactive',
-        backgroundImage:"url(/art/salad2.jpg)",
-    },
-
-    {
-        name: 'Чай чёрный/зелёный чайник',
-        price: [100],
-        itemType:'interactive',
-        backgroundImage:"url(/art/salad2.jpg)",
+        backgroundImage:'url(/art/salad2.jpg)',
+        price: [210],
+        backgroundImage:'url(/art/salad2.jpg)',
+        type: 'veg',
     },
 
     {
         name: 'Пуэр ',
-        price: [100],
         itemType:'interactive',
-        backgroundImage:"url(/art/salad2.jpg)",
+        backgroundImage:'url(/art/salad2.jpg)',
+        price: [210],
+        backgroundImage:'url(/art/salad2.jpg)',
+        type: 'veg',
     },
 
     {
         name: 'Кофе',
-        price: [100],
         itemType:'interactive',
-        backgroundImage:"url(/art/salad2.jpg)",
+        backgroundImage:'url(/art/salad2.jpg)',
+        price: [210],
+        backgroundImage:'url(/art/salad2.jpg)',
+        type: 'veg',
+    },
+
+    {
+        name: 'Морс домашний',
+        itemType:'interactive',
+        backgroundImage:'url(/art/salad2.jpg)',
+        price: [210],
+        backgroundImage:'url(/art/salad2.jpg)',
+        type: 'veg',
     },
 
 
+    {
+        name: 'Сок',
+        itemType:'interactive',
+        backgroundImage:'url(/art/salad2.jpg)',
+        price: [210],
+        backgroundImage:'url(/art/salad2.jpg)',
+        type: 'veg',
+    },
 
+    {
+        name: 'Чай чёрный/чайник',
+        itemType:'interactive',
+        backgroundImage:'url(/art/salad2.jpg)',
+        price: [210],
+        backgroundImage:'url(/art/salad2.jpg)',
+        type: 'veg',
+    },
+
+    {
+        name: 'Чай зелёный/чайник',
+        itemType:'interactive',
+        backgroundImage:'url(/art/salad2.jpg)',
+        price: [210],
+        backgroundImage:'url(/art/salad2.jpg)',
+        type: 'veg',
+    },
+
+    {
+        name: 'Чай чёрный в пакетиках',
+        itemType:'interactive',
+        backgroundImage:'url(/art/salad2.jpg)',
+        price: [210],
+        backgroundImage:'url(/art/salad2.jpg)',
+        type: 'veg',
+    },
+
+    {
+        name: 'Чай зелёный в пакетиках',
+        itemType:'interactive',
+        backgroundImage:'url(/art/salad2.jpg)',
+        price: [210],
+        backgroundImage:'url(/art/salad2.jpg)',
+        type: 'veg',
+    },
 ]
+
+export default beveragesData

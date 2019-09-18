@@ -34,9 +34,8 @@ export default function Cart () {
                 <div className='orders'>
                     {cartItems.map(item => <CartItem key={item.uid} item={item} />)}
                 </div>
-                <div className='random'>Если Вас одолевают муки выбора, можете попытать удачи и <br/><span onClick={() => addToCart({ ...pizzaData[randomPizza], isLarge: true })}>заказать рандомную пиццу</span></div>
+                <div className='random'>Если Вас одолевают муки выбора, можете попытать удачи и <br/><span onClick={() => addToCart({ productType: 'pizzas', ...pizzaData[randomPizza], isLarge: true })}>заказать рандомную пиццу</span></div>
                 {/* <pre>{JSON.stringify (cartItems, null, 4)}</pre> */}
-                {/* {console.log(cartItems.name)} */}
                 <form onSubmit={submitFormHandler} ref={form} className={classList ({ fields: 1, 'submit-clicked': submitClicked })}>                        
                     <input type='text' name='name'   placeholder='Как к Вам обращаться?'/>
                     <input type='text' name='address' placeholder='Адрес доставки (напоминаем, что мы доставляем только в радиусе метро Курская)' required />

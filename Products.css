@@ -150,6 +150,13 @@
         overflow-x:hidden;
     }
 
+        .product-info-panel h2 {
+            color: white;
+            font-size: 10vw;
+            padding: 4vw;
+            text-align: center;
+        }
+
         .product-info {
             padding: 3vw;
             color:white;

@@ -1,14 +1,16 @@
-import React, {useRef} from 'react'
+import React, { useRef, useContext } from 'react'
 import useVisibility from 'react-use-visibility'
+import { LayoutModeContext } from './LayoutModeContext'
 
-export default function Pizza ({ checked = false, onClick, layout, layoutMode, type, fontSize, img, id, name, price, composition, animationDelay, backgroundImage }) {
+export default function Pizza ({ checked = false, onClick, layout, type, fontSize, img, id, name, price, composition, animationDelay, backgroundImage }) {
   
+    const { layoutMode } = useContext (LayoutModeContext)
+    
     const { position, size } = layout[layoutMode]
     const pizzaRef = useRef ()
     const isVisible = useVisibility (pizzaRef.current, {
         partial: true,
     })
-
 
     return  <div className={`pizza ${type} ${checked ? 'checked' : ''}` + (isVisible ? '' : 'invisible')}
                  onClick={onClick}
