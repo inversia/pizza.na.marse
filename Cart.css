@@ -1,6 +1,6 @@
 @keyframes loading-pulse {
     0%   {transform: translateX(-90vw);}
-    50%  {transform: translateX(7.5vw);} 
+    50%  {transform: translateX(4.5vw);} 
     100% {transform: translateX(50vw);} 
 }
 
@@ -81,6 +81,7 @@
         flex-direction: column;
         text-align: center;
         padding-top: 3vw;
+        padding-bottom:3vw;
     }
 
         .fields input {

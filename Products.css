@@ -151,8 +151,10 @@
     }
 
         .product-info-panel h2 {
-            color: white;
-            font-size: 10vw;
+            color:#ffeea1e3;
+            color: rgb(255, 240, 199);
+
+            font-size: 14.5vw;
             padding: 4vw;
             text-align: center;
         }
@@ -202,12 +204,12 @@
 
                         .product-info .right-side .size:after {
                             content: 'см';
-                            font-size: 1.6vw;
+                            font-size: 1.568vw;
                             color:white;
                             position: absolute;
                             right:0vw;
-                            top:39%;
-                
+                            top:2.95vw;
+
                         }
 
                     .product-info .right-side .price {
