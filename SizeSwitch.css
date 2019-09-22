@@ -27,7 +27,7 @@
   position: absolute;
   left:-1.8vw;
 
-  --width: 20vw;
+  --width: 15vw;
 
   width:  var(--width);
   height: calc(var(--width)*0.5);

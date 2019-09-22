@@ -126,7 +126,7 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
                         setActiveItem={setFillingType} 
                     />
                     
-                    <div href='/cart' className='bucket'>Корзина {cartItems.length}</div>
+                    <div className='bucket'>Корзина {cartItems.length}</div>
                     {/* <A {...props ('cart')}></A> */}
                     {/* <A href='/cart' className='bucket'>Корзина {cartItems.length}</A> */}
                     

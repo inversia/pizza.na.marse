@@ -17,11 +17,11 @@ export default React.memo (function ProductInfo ({ name, composition, price, bac
                 <img className='product-image' style={{backgroundImage}} />
             </div>
             <div className='right-side'>
-                <div className='name'>{name}</div>
-                
-                {productType === 'pizzas' && <div className='size'><SizeSwitch isLarge={isLarge} setIsLarge={setIsLarge} /></div>}
-                
-                <div className='price'>{productType === 'pizzas' ? price[Number (isLarge)] : price}</div>
+                <h3 className='name'>{name}</h3>
+                <div className='size-and-price'>
+                    {productType === 'pizzas' && <div className='size'><SizeSwitch isLarge={isLarge} setIsLarge={setIsLarge} /></div>}
+                    <div className='price'>{productType === 'pizzas' ? price[Number (isLarge)] : price}</div>
+                </div>
                 
                 <ul>
                     {productType !== 'beverages' && composition.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
