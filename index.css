@@ -105,6 +105,7 @@ h1 {
     align-items:center;
     position:fixed;
     z-index:3;
+    backdrop-filter: blur(4px);
 }
 
     .menu a {

@@ -1,7 +1,13 @@
+/* @keyframes loading-pulse {
+    0%   {transform: translateX(-180vh);}
+    50%  {transform: translateX(8.5vh);} 
+    100% {transform: translateX(120vh);} 
+} */
+
 @keyframes loading-pulse {
-    0%   {transform: translateX(-90vw);}
-    50%  {transform: translateX(4.5vw);} 
-    100% {transform: translateX(50vw);} 
+    0%   {transform: translateX(-105vw);}
+    50%  {transform: translateX(4vw);} 
+    100% {transform: translateX(100vw);} 
 }
 
 .cart-content {
@@ -69,8 +75,10 @@
     }
 
     .cart-content .random  {
-        transform:scale(1.5);
+        /* transform:scale(1.5); */
+        font-size:2.58vw;
         color:white;
+        padding: 2vw;
     }
 
 
