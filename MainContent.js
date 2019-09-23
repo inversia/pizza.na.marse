@@ -12,8 +12,7 @@ import noodlesData from './data/noodles'
 
 export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaTypeSelected }) {
     
-    const [selectedPizzas, setSelectedPizzas] = useState ({})
-
+    const [selectedPizzas, setSelectedPizzas] = useState ({})       // это заюзать потом, для половинчатых пицц
     const isMix = pizzaTypeSelected === 'mix'
 
     return (<>
@@ -27,24 +26,27 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
                                         key={p.name}
                                         {...p}
                                         price={p.price[1]}
-                                        onClick={ () => {
-                                                if (isMix) {
-                                                    setSelectedPizzas ({ ...selectedPizzas, [p.name]: !selectedPizzas[p.name] })
-                                                } else {
-                                                    goToProduct ('pizzas', p.name)
-                                                }
+                                        onClick={
+                                            () => {
+                                                goToProduct ('pizzas', p.name)
+
+                                                // if (isMix) {
+                                                //     setSelectedPizzas ({ ...selectedPizzas, [p.name]: !selectedPizzas[p.name] })    // это заюзать потом, для половинчатых пицц
+                                                // } else {
+                                                //     goToProduct ('pizzas', p.name)
+                                                // }
                                             }
                                         } />
                                 )
                 }
             </div>
 
-            <div className='pizza-button' style={isMix ? { bottom: 0, opacity: 1 } : { bottom: 'calc(-1*var(--height))', opacity: 0 }}>
+            {/*<div className='pizza-button' style={isMix ? { bottom: 0, opacity: 1 } : { bottom: 'calc(-1*var(--height))', opacity: 0 }}>
                 <div className='hint'>
                     Выберите 2 понравившиеся пиццы, кликнув на них
                 </div>
                 <div className='order'></div>
-            </div>
+            </div>*/}
         </div>
 
         <div className='cosmos-zone-two-wrapper'>

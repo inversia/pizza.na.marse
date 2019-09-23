@@ -2,7 +2,6 @@ import React, { useRef, useContext, useState } from 'react'
 import './Cart.css'
 import CartItem from './CartItem'
 import { CartContext } from './CartContext'
-import pizzaData from './data/pizza'
 import { classList } from './util'
 
 export default function Cart () {
@@ -16,9 +15,8 @@ export default function Cart () {
         //alert(form.current)
     }
 
-    const { cartItems, addToCart, removeFromCart, setIsLarge } = useContext (CartContext)
+    const { cartItems, addRandomPizza, removeFromCart, setIsLarge } = useContext (CartContext)
     const isCartEmpty = cartItems.length === 0
-    const randomPizza = Math.floor(Math.random() * pizzaData.length)
 
     const [submitClicked, setSubmitClicked] = useState (false)
 
@@ -34,7 +32,7 @@ export default function Cart () {
                 <div className='orders'>
                     {cartItems.map(item => <CartItem key={item.uid} item={item} />)}
                 </div>
-                <div className='random'>Если Вас одолевают муки выбора, можете попытать удачи и <br/><span onClick={() => addToCart({ productType: 'pizzas', ...pizzaData[randomPizza], isLarge: true })}>заказать рандомную пиццу</span></div>
+                <div className='random'>Если Вас одолевают муки выбора, можете попытать удачи и <br/><span onClick={() => addRandomPizza()}>заказать рандомную пиццу</span></div>
                 {/* <pre>{JSON.stringify (cartItems, null, 4)}</pre> */}
                 <form onSubmit={submitFormHandler} ref={form} className={classList ({ fields: 1, 'submit-clicked': submitClicked })}>                        
                     <input type='text' name='name'   placeholder='Как к Вам обращаться?'/>

@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CartContext } from './CartContext'
+import { navigate } from 'hookrouter'
 
-const SelectionPanel = ({ onSelect }) =>
-    <div className="terminal">
+function SelectionPanel ({ onSelect }) {
+
+    const { addRandomPizza } = useContext (CartContext)
+
+    return <div className="terminal">
         <svg width="38%" height="40%" viewBox="0 0 323 317" version="1.1">
             <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g id="Group-6">
@@ -88,10 +93,10 @@ const SelectionPanel = ({ onSelect }) =>
                     <polygon id="Rectangle-18-Copy-2" fill="#FFFFFF" transform="translate(265.064880, 100.503912) rotate(49.000000) translate(-265.064880, -100.503912) " points="263.560061 83.1758821 266.376392 83.1790086 266.346308 83.4257906 266.569699 83.3470476 266.560061 117.831941 263.560061 117.831941"></polygon>
                     <polygon id="Rectangle-18-Copy-5" fill="#FFFFFF" points="160 229 162.776875 229 162.786247 229.249909 163 229.197313 163 263.656059 160 263.656059"></polygon>
                     <g id="Group-5" transform="translate(91.000000, 261.000000)">
-                        <g id="mixButton" onClick={() => onSelect ('mix') } >
-                            <text id="mixButtonText" fontFamily="Xolonium" fontSize="18" fontWeight="normal" letterSpacing="0.9" fill="#FEFCF7">
-                                <tspan x="23.97" y="22">собрать </tspan>
-                                <tspan x="41.34" y="42">свою</tspan>
+                        <g id="mixButton" onClick={() => { addRandomPizza (); navigate ('/cart') }}>
+                            <text id="mixButtonText" fontFamily="Xolonium" fontSize="16" fontWeight="normal" letterSpacing="0.9" fill="#FEFCF7">
+                                <tspan x="18" y="22">случайная</tspan>
+                                <tspan x="38" y="42">пицца</tspan>
                             </text>
                             <rect id="Rectangle-19-Copy-3" stroke="#FFFFFF" strokeWidth="3" fillOpacity="0" x="1.5" y="1.5" width="138" height="53" rx="26.5"></rect>
                         </g>
@@ -128,5 +133,5 @@ const SelectionPanel = ({ onSelect }) =>
             </g>
         </svg>	
     </div>
-
+}
 export default SelectionPanel

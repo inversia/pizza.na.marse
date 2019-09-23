@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react'
+import pizzaData from './data/pizza'
 
 const CartContext = createContext ()
 
@@ -15,7 +16,16 @@ function useCartState () {
                                                     setCartItems ([...cartItems])
                                                 }
 
-    return { cartItems, addToCart, removeFromCart, setCartItemSize }
+    const addRandomPizza = () => {
+
+        const randomPizza = Math.floor(Math.random() * pizzaData.length)
+
+        addToCart({ productType: 'pizzas', ...pizzaData[randomPizza], isLarge: true }) 
+    }
+
+    return { cartItems, addToCart, removeFromCart, setCartItemSize, addRandomPizza }
 }
+
+
 
 export { CartContext, useCartState }
