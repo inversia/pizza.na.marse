@@ -75,7 +75,7 @@
 
 body {
     background-color:#070f17;
-    background-image: url(/static/art/backgroundstars.jpg);
+    /* background-image: url(/static/art/backgroundstars.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     font-family:'Xolonium';
@@ -89,7 +89,8 @@ h1 {
 
 .cosmos-zone-one-wrapper {
     background-image: url(/static/art/backgroundstars.jpg);
-    /*background-repeat: no-repeat;*/
+    
+    background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 15vw;
 }
@@ -412,13 +413,13 @@ h1 {
 
 .cosmos-zone-two-wrapper {
     margin-top:-20vh;
-    /* background-image: url(/static/art/backgroundstars3.jpg); */
+    background-image: url(/static/art/tumannost3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     /* background-size: 100% 100%; */
     background-repeat:no-repeat;
-    mask-image: linear-gradient(to bottom,transparent 0%, black 23%);
+    mask-image: linear-gradient(to bottom,transparent 0%, black 13%);
 }
 
     .salads {
