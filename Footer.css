@@ -27,8 +27,8 @@
         /* display: flex; */
         border: solid 0.20vw #ffa600;
         border-radius: 2.5vw;
-        background-color:rgba(13, 4, 46, 0.747);
-        /* background-color:rgba(20, 12, 51, 0.747); */
+        /* background-color:rgba(13, 4, 46, 0.747); */
+        background-color:rgba(20, 12, 51, 0.747);
         box-shadow: 4px 2px 9px rgb(3, 3, 61);
 
         /* justify-content: center; */
@@ -46,6 +46,7 @@
 
     .general-info a {
         color:wheat;
+
     }
 
         .address {

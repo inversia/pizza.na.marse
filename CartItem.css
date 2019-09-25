@@ -1,32 +1,21 @@
-@keyframes removing {
-    0%   {opacity: 1; height: 6vw;}
-    /* 50%  {transform: translateX(7.5vw);}  */
-    100% {opacity: 0; height: 0vw;}
-}
-
 .cart-item {
+
+    --height: 5.8vw;
+
     display: flex;
     flex-direction: row;
     width:63vw;
-    /* height: 6vw; */
+
+    height: var(--height);
     /* border:solid 1px salmon; */
     justify-content: space-between;
     align-items:center;
-    margin-bottom: 2.0vw;
     opacity: 1;
-    margin-bottom:-1.3vw;
-}
 
+    transition: 0.5s ease-in-out;
+    transition-property: opacity height top;
 
-
-.cart-item.removing {
-    /* animation: removing 4s ease-in-out; */
-    height: 0;
-    margin-bottom: 0;
-    opacity: 0;
-    transition: 0.25s ease-in-out;
-    transition-property: height opacity margin-bottom;
-    overflow: hidden;
+    position: relative;
 }
 
 .cart-item .size-switch {
@@ -36,11 +25,12 @@
 }
 
 .cart-item .item-image {
-    height: 7vw;
-    width: 7vw;
+    height: var(--height);
+    width: var(--height);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
+    transform:scale(1.25);
     /* border:solid 1px salmon; */
 }
 
@@ -59,7 +49,7 @@
     width: 10vw;
     text-decoration: none;
     white-space: nowrap;
-
+    text-shadow: 0.01em 0.05em 0.2em #472005;
 }
 
 .cart-item-price {
@@ -83,3 +73,23 @@
     right:0;
 }
 
+.cart-item-enter {
+    opacity: 0;
+    height: 0;
+    top: 4vw;
+}
+
+.cart-item-enter-active {
+    opacity: 1;
+    top: 0;
+    height: var(--height);
+}
+
+.cart-item-exit {
+    opacity: 1;
+}
+
+.cart-item-exit-active {
+    opacity: 0;
+    height: 0;
+}

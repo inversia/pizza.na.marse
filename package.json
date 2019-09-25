@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "rm -rf .dist cache && parcel index.html",
     "test": "mocha -r esm --reporter ololog/reporter --watch"
   },
   "keywords": [],
@@ -17,6 +17,7 @@
     "panic-overlay": "^1.0.13",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-transition-group": "^4.3.0",
     "react-use": "^10.5.0",
     "react-use-visibility": "^0.2.0",
     "react-yandex-maps": "^4.0.1"

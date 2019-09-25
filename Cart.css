@@ -22,160 +22,175 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x:hidden;
+
+    --margin: 6vw;
 }
 
-.cart-content span {
-    text-decoration: underline;
-    cursor: pointer;  
-}
-
-.cart-content .target,
-.cart-content h1 {
-    margin-top:6vw;
-    height: 7vw;
-    /* background-image: url(/static/art/target.svg); */
-    /*background-size: contain;
-    background-repeat: no-repeat;*/
-}
-
-.cart-content h1 {
-    font-size:3.6vw;
-    padding: 3vw 3vw;
-    line-height: 1.2em;
-    text-shadow: 0.01em 0.05em 0.6em #ff6600;
-}
-
-.cart-content h2 {
-
-    /* font-size: 1.915vw; */
-    font-size: 1.215vw;
-    /* border: 2px solid var(--color); */
-    border: 2px solid rgba(255, 171, 44, 0.85);
-    padding: 1.5vw !important;
-    border-radius: 2vw;
-    margin: 2vw;
-    color:rgb(245, 166, 35);
-    text-shadow: none !important;
-    background:rgba(0,0,0,0.1);
-    backdrop-filter: blur(5px);
-    position: relative;
-
-}
-
-    .cart-content h1,
-    .target,
-    .random {
-        padding-top: 2.5vw;
-        margin-bottom: 2.5vw;
-        color:white;
-        color:rgb(255, 240, 235);
-        /* text-shadow: 0.01em 0.05em 0.6em #ff6600; */
-        position: relative;
+    .cart-content span {
+        text-decoration: underline;
+        cursor: pointer;  
     }
 
-    .cart-content .rocket {
-        position: absolute;
-        height: 13.1vw;
-        width:13.1vw;
-        background-image: url(./static/art/rocket4.svg);
-        transform: rotate(45deg);
-        top:-4.51vw;
-        left:76%;
-        position: absolute;
-        background-size: 50%;
-        background-repeat: no-repeat;
-        animation: loading-pulse 5.7s ease-in-out infinite;
-        transform-origin: 15% 5%;
-        perspective-origin: 50% 50%;
-        translate: 3d;
-
+    .cart-content h1 {
+        font-size:3.6vw;
+        line-height: 1.2em;
+        text-shadow: 0.01em 0.05em 0.6em #ff6600;
+        padding: 0;
+        padding-top: 5vw;
+        margin-top: var(--margin);
     }
 
-    .cart-content .random  {
-        /* transform:scale(1.5); */
-        font-size:2.08vw;
-        color:#fff0eb;
-        color:#fff6f4;
-        padding: 2vw;
-        text-shadow: 0.01em 0.05em 0.2em #472005;
+    .cart-content .inner {
+        width: 61vw;
+        padding-bottom: 10vw;
     }
 
-
-
-    .fields {
-        width:55vw;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-top: 3vw;
-        padding-bottom:3vw;
-    }
-
-        .fields input {
-            height: 3vw;
-            padding: 2vw;
-            border:none;
-            background-color: rgb(255, 192, 55);
-            margin: 0.5vw;
-            font-size:1.1vw;
-            transition: all 0.25s ease-in-out;
-            border-radius: 20.6vw;
-            /* border:solid 1px salmon; */
+        .cart-content h1,
+        .target,
+        .random {
+            color:rgb(255, 240, 235);
+            /* text-shadow: 0.01em 0.05em 0.6em #ff6600; */
+            position: relative;
         }
 
-        .fields input::placeholder {
-            color: rgb(8, 4, 46);
+        .cart-content .rocket {
+            position: absolute;
+            height: 13.1vw;
+            width:13.1vw;
+            background-image: url(./static/art/rocket4.svg);
+            transform: rotate(45deg);
+            top:-4.51vw;
+            left:76%;
+            position: absolute;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            animation: loading-pulse 5.7s ease-in-out infinite;
+            transform-origin: 15% 5%;
+            perspective-origin: 50% 50%;
+            translate: 3d;
+
         }
 
-        .fields input[type="text"],
-        .fields input[type="tel"] {
-            /* background: linear-gradient(to bottom,orange 1%, rgb(255, 192, 55) 80%); */
-            background: linear-gradient(to bottom,orange 1%, rgb(255, 179, 15) 80%);
-            box-shadow: 0px 2px 5px rgba(146, 81, 0, 0.65) inset, 0px 1px 1px rgba(0, 0, 0, 0.5) inset;
-        }
-        
-        /* .fields input:nth-child(4) {
-            background: linear-gradient(to top,orange 3%, rgb(255, 192, 55));
-        } */
+        .cart-content .delivery-radius {
 
-        .fields input:focus {
-            /* background: linear-gradient(to top,#ff9100 3%, #ff9100); */
-            background: linear-gradient(to bottom, #ff7037 0.1%, #ffc037 95%);
-        }
+            margin-top: var(--margin);
 
-        .fields input:focus {
-            outline:none;
-            border-bottom-width: 2px;
-            background-color: #ff9100;
-            font-weight: bold;
+            /* font-size: 1.915vw; */
+            font-size: 1.215vw;
+            /* border: 2px solid var(--color); */
+            border: 2px solid #ffa73cea;
+            padding: 1.5vw !important;
+            border-radius: 2vw;
+            /* color:#f5a623; */
+            color:#ffa83c;
+            text-shadow: none !important;
+            background:rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+            position: relative;
         }
 
-        .fields.submit-clicked input:invalid {
-            background: rgb(255, 184, 156);
-            color: red;
+        .cart-content .cart-items {
+            margin-top: var(--margin);
+            transition: margin-top 0.5s ease-in-out;
         }
 
-        .fields input[type='submit'] {
+        .cart-content .cart-items.empty {
+            margin-top: 0;
+        }
+
+        .cart-content .random  {
+
+            margin-top: var(--margin);
+
+            /* transform:scale(1.5); */
+            /* font-size:2.08vw; */
+            font-size:1.62vw;
+            color:#fff0eb;
+            color:#fff6f4;
+            white-space: nowrap;
+            text-shadow: 0.01em 0.05em 0.2em #472005;
+        }
+
+        .cart-content form {
+
+            margin-top: var(--margin);
+
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+            .cart-content form input {
+                height: 3vw;
+                padding: 2vw;
+                border:none;
+                background-color: rgb(255, 192, 55);
+                font-size:1.1vw;
+                transition: all 0.25s ease-in-out;
+                border-radius: 20.6vw;
+                /* border:solid 1px salmon; */
+            }
+
+            .cart-content form input:not(:last-child) {
+                margin-bottom: 1vw;
+            }
+
+            .cart-content form input::placeholder {
+                color: rgb(8, 4, 46);
+            }
+
+            .cart-content form input[type="text"],
+            .cart-content form input[type="tel"] {
+                /* background: linear-gradient(to bottom,orange 1%, rgb(255, 192, 55) 80%); */
+                background: linear-gradient(to bottom,orange 1%, rgb(255, 179, 15) 80%);
+                box-shadow: 0px 2px 5px rgba(146, 81, 0, 0.65) inset, 0px 1px 1px rgba(0, 0, 0, 0.5) inset;
+            }
+            
+            /* .fields input:nth-child(4) {
+                background: linear-gradient(to top,orange 3%, rgb(255, 192, 55));
+            } */
+
+            .cart-content form input:focus {
+                /* background: linear-gradient(to top,#ff9100 3%, #ff9100); */
+                background: linear-gradient(to bottom, #ff7037 0.1%, #ffc037 95%);
+            }
+
+            .cart-content form input:focus {
+                outline:none;
+                border-bottom-width: 2px;
+                background-color: #ff9100;
+                font-weight: bold;
+            }
+
+            .cart-content form.submit-clicked input:invalid {
+                background: rgb(255, 184, 156);
+                color: red;
+            }
+
+        .cart-content button.submit {
+
+            margin-top: var(--margin);
+
             color:wheat;
-            margin:3vw;
             border-radius: 23vw 23vw 23vw 23vw;
             /* background: url(/static/art/add.svg) no-repeat left; */
             /* background-size: 15%;
             background-position-x: 2.4vw; */
-            display: flex;
             padding: 0;
             justify-content: center;
             height:7vw;
-            width:60vw;
             user-select: none; 
             cursor:pointer;
             outline: none;
             position: relative;
-            left:-6vw;
             overflow: hidden;
             background-color: #00000070;
             border: solid 1px orange;
             box-shadow: 1vw 0.5vw 5vw #ff6600;
             font-size: 3vw;
             font-family: 'Xolonium';
+            transform: scale(1.1);
+            backdrop-filter: blur(5px);
+            display: block;
+            width: 100%;
         }
