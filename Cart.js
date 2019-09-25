@@ -52,7 +52,10 @@ export default function Cart () {
                         <input type='tel' pattern='^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$' name='phone'  placeholder='Номер для связи' required />
                         <input type='text' name='notes'  placeholder='Пометки'/>
                     </form>
-                    <button class='submit' onClick={onSubmit}>Оформить заказ</button>
+                    <button class='submit' onClick={onSubmit}>Оформить заказ
+                        <div className='cart-highlight'></div>
+                        <div className='cart-highlight2'></div>
+                    </button>
                 </div> 
             </div>
 }

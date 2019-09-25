@@ -18,6 +18,7 @@ import { CartContext } from './CartContext'
 const { entries } = Object
 
 import './Products.css'
+import CartCounter from './CartCounter';
 
 const noDecoration = items => items.filter (p => p.itemType !== 'decoration')
 
@@ -126,9 +127,7 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
                         setActiveItem={setFillingType} 
                     />
                     
-                    <div className='bucket' onClick={() => navigate ('/cart') } >Корзина {cartItems.length}</div>
-                    {/* <A {...props ('cart')}></A> */}
-                    {/* <A href='/cart' className='bucket'>Корзина {cartItems.length}</A> */}
+                    <div className='bucket' onClick={() => navigate ('/cart') } >Корзина <CartCounter /></div>
                     
                 </div>
 

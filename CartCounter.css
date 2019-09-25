@@ -1,0 +1,25 @@
+.cart-counter {
+    height: 3vw;
+    width: 3vw;
+    font-size: 1.3vw;
+    border-radius: 100%;
+    text-align: center;
+    align-items: center;
+    background-color: #644a4b;
+    color:rgb(255, 208, 0);
+    margin-left: 1vw;
+    display: flex;
+    align-items: center;
+
+    background-color:#423737;
+    color:rgb(255, 218, 149);
+    position: relative;
+    top:0.15vw;
+}
+
+.cart-counter.two-digits {
+    font-size: 0.9vw;
+    padding-top: 0.1vw;
+    padding-right: 0.2vw !important;
+}
+

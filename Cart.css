@@ -10,6 +10,13 @@
     100% {transform: translateX(100vw);} 
 }
 
+@keyframes glass-button {
+    0%   { left: -17vw;  opacity: 0.5;}
+    7%   {              opacity: 1.0;}
+    15%  { left: 103vw;}
+    100% { left: 103vw;}
+}
+
 .cart-content {
     height: 100%;
     display: flex;
@@ -194,3 +201,30 @@
             display: block;
             width: 100%;
         }
+
+            .cart-content button .cart-highlight {
+                background-color: #fcf9f1;
+                opacity: 0.5;
+                height: 12vw;
+                top:-2vw;
+                width:1vw;
+                left:-13vw;
+                transform: rotate(13deg);
+                position: absolute;
+                animation: glass-button 6s linear 0s infinite;
+            }
+
+
+
+            .cart-content button .cart-highlight2 {
+                background-color: #fcf9f1;
+                opacity: 0.5;
+                height: 12vw;
+                top:-2vw;
+                left:-13vw;
+                width:2vw;
+                transform: rotate(13deg);
+                position: absolute;
+                animation: glass-button 6s linear .04s infinite;
+
+            }

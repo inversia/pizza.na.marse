@@ -13,6 +13,15 @@
     src:url(/static/fonts/Xolonium.ttf);
 }
 
+@keyframes pulse-alert {
+    0% { transform: scale(1); }
+    25% { transform: scale(0.5); }
+    50% { transform: scale(1.2); }
+    75% { transform: scale(0.8); }
+    100% { transform: scale(1); }
+}
+
+.pulse-alert { animation: pulse-alert 0.5s ease-in-out; }
 
 @keyframes pulse {
 
@@ -97,23 +106,24 @@ h1 {
 
 .menu {
     width:100%;
-    height:5vw;
+    height:6vw;
     background-color:#433c4880;
     font-family:'Xolonium';
-    font-size:1.6vw;
     display:flex; 
     justify-content: space-around;
     align-items:center;
+    text-align: center;
     position:fixed;
     z-index:3;
     backdrop-filter: blur(4px);
 }
 
     .menu a {
-        padding: 0 0.1em;
         color: #fcf9f1;
         text-decoration: none;
+        
         white-space: nowrap;
+        font-size:1.7vw;
         transition:all 0.25s ease-in-out;
         /* transform: scale(1); */
     }
@@ -129,7 +139,7 @@ h1 {
         background-size:contain;
         background-repeat:no-repeat;
         display:block;
-        margin-top: 0.1%;
+        margin-top: 0.6%;
         height:3vw;
         width:3vw;
 /*         border: 1px solid #e83a82; */
