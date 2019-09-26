@@ -167,6 +167,12 @@
             /* border:2px solid red; */
         }
 
+        .product-info.mobile {
+            padding: 23vw 0vw; 
+            border:solid 1px salmon;
+            margin-bottom:7vw;
+        }
+
         .product-info.invisible {
             animation: none;
         }
@@ -180,6 +186,11 @@
                 /* border:2px solid red; */
             }
 
+            .product-info.mobile .right-side {
+                margin-left:13vw;
+                /* margin-right: 3vw; */
+            }
+
                 .product-info .right-side .name {
                     color:#ff9100;
                     font-size:4vw;
@@ -188,6 +199,10 @@
                     padding-bottom: 0.5em;
                     text-shadow: 0px 0px 4vw black;
                     /* border:1px solid red; */
+                }
+
+                .product-info.mobile .name {
+                    font-size: 6vw;
                 }
 
                 .product-info .size-and-price {
@@ -203,6 +218,9 @@
                         /* border:solid 2px pink; */
                     }
 
+                    .product-info.mobile .size {
+                    
+                    }
                         .product-info .right-side .size:after {
                             content: 'см';
                             font-size: 1.568vw;
@@ -210,6 +228,16 @@
                             position: absolute;
                             right:0vw;
                             top:2.95vw;
+
+                        }
+
+                        .product-info.mobile .size:after {
+                            content: 'см';
+                            font-size: 3.15vw;
+                            color:white;
+                            position: absolute;
+                            right:0vw;
+                            top:5.9vw;
 
                         }
 
@@ -334,6 +362,13 @@
                     border-radius: 50%;
                     user-select: none; 
                     /* border: 2px solid red; */
+                }
+
+                .product-info.mobile .product-image {
+                    /* margin-left: -10vw; */
+                    position: relative;
+                    left:-16vw;
+                    transform: scale(2.1);
                 }
 
 

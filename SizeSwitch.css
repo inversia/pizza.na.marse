@@ -21,6 +21,7 @@
 } */
 
 .size-switch {
+
   display:flex;
   cursor:pointer;
   user-select: none; 
@@ -43,6 +44,13 @@
   mask-repeat: no-repeat;
   mask-size: calc(var(--width)*0.8);
   mask-position: center;
+}
+
+.size-switch.mobile {
+  /* width:  var(--width) * 1.8;
+  height: calc(var(--width)*1.55); */
+  --width:30vw;
+  left:-2.9vw;
 }
 
 .size-switch.active .label-big,  
@@ -107,13 +115,15 @@
     width: calc(var(--width)*var(--ball-size));
     position:absolute;
     border-radius:50%;
+    overflow: hidden;
     /* border: 4px solid rgb(0, 0, 0); */
   }
 
     .size-switch .ball,
     .size-switch .ball body {
       animation-duration: 0.55s;
-      animation-timing-function: cubic-bezier(.02,-0.66,.69,.99);
+      /* animation-timing-function: cubic-bezier(.02,-0.66,.69,.99); */
+      animation-timing-function: ease-in-out;
       animation-fill-mode: forwards;
     }
 

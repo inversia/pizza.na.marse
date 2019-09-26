@@ -1,17 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './SizeSwitch.css'
 import { classList } from './util'
+import {LayoutModeContext} from './LayoutModeContext'
 
 export default function SizeSwitch ({ isLarge, setIsLarge }) {
 
     const [isClicked, setIsClicked] = useState (false)
-    
+    const { layoutMode } = useContext (LayoutModeContext)
+
     function onClick () {
         setIsClicked (true)
         setIsLarge(!isLarge)
     }
 
-    return <div className={classList ({ 'size-switch': 1, 'active': !isLarge, 'clicked': isClicked })} onClick={onClick}> 
+    return <div className={classList ({'size-switch': 1, [layoutMode]: layoutMode,'active': !isLarge, 'clicked': isClicked })} onClick={onClick}> 
             
                 <div className='ball'>
                     <div className='body'></div>

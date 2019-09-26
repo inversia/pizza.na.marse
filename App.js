@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import useComponentSize from '@rehooks/component-size'
 import { useRoutes, usePath, A } from 'hookrouter'
 import Menu from './Menu'
@@ -21,6 +21,8 @@ export default function App () {
     const { width }  = useComponentSize (appEl)
     const layoutMode = width < 501 ? 'mobile' : 'desktop'
     const isMobile   = layoutMode === 'mobile'
+
+    // const { layoutMode, isMobile } = useContext (LayoutModeContext)
 
     const [pizzaTypeSelected, setPizzaTypeSelected] = useState (undefined)
 

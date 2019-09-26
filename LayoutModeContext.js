@@ -13,5 +13,4 @@ function useLayoutContext () {
     return {isMobile, layoutMode}
 }
 
-
-export { LayoutModeContext, useLayoutContext }
+export { LayoutModeContext, useLayoutContext}
