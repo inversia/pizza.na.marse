@@ -13,12 +13,11 @@ import { A, useTitle, navigate } from 'hookrouter'
 import {goToProduct} from './util'
 import { useKeyPress } from 'react-use';
 import { ScrollableElContext } from './ScrollableElContext'
-import { CartContext } from './CartContext'
-
+import CartCounter from './CartCounter'
 const { entries } = Object
 
 import './Products.css'
-import CartCounter from './CartCounter';
+
 
 const noDecoration = items => items.filter (p => p.itemType !== 'decoration')
 
@@ -89,7 +88,7 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
         }
     }
 
-    const { cartItems } = useContext (CartContext)
+    // const { cartItems } = useContext (CartContext)
 
     function scrollTo ({ type, name, behavior }) {
 

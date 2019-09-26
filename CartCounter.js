@@ -8,12 +8,13 @@ export default function CartCounter () {
     const el = useRef ()
 
     const { cartItems } = useContext (CartContext)
+    
     const prevNumItems = useRef (cartItems.length)
 
     const isChanged = cartItems.length !== prevNumItems.current
     if (isChanged) prevNumItems.current = cartItems.length
 
-    const offsets = [0, 0.3, 0, 0.05, 0.2, 0, 0, 0, 0.05, 0, 0]
+    const offsets = [0, 0.3, 0, 0.08, 0.2, 0, 0, 0, 0.05, 0, 0]
     const offset = offsets[cartItems.length] || 0
 
     useEffect (() => {

@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react'
 import useComponentSize from '@rehooks/component-size'
 import { useRoutes, usePath, A } from 'hookrouter'
-
 import Menu from './Menu'
 import Radar from './Radar'
 import MenuMobile from './MenuMobile'
@@ -43,13 +42,13 @@ export default function App () {
 
     return  <div ref={appEl} className={('app ' + (pizzaTypeSelected || '') + ' ' + layoutMode)}>
 
-                {!isProducts && menu}
-                {/* <Radar /> */}
-
                 <LayoutModeContext.Provider value={{ isMobile, layoutMode }}>
                     <CartContext.Provider value={useCartState ()}>
+                        {!isProducts && menu}
+                        {/* <Radar /> */}
                         {content}
                     </CartContext.Provider>
                 </LayoutModeContext.Provider>
             </div>
 }
+

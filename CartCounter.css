@@ -1,23 +1,39 @@
 .cart-counter {
     height: 3vw;
-    width: 3vw;
+    width: 3vw; 
     font-size: 1.3vw;
     border-radius: 100%;
     text-align: center;
     align-items: center;
     background-color: #644a4b;
-    color:rgb(255, 208, 0);
+    color:#ffd000;
     margin-left: 1vw;
     display: flex;
     align-items: center;
-
+    justify-content: center;
     background-color:#423737;
-    color:rgb(255, 218, 149);
+    color:#ffda95;
     position: relative;
     top:0.15vw;
 }
 
-.cart-counter.two-digits {
+.menu .cart-counter {
+    /* background-color: #ffba25; */
+    color:rgb(255, 255, 255);
+    border: solid 2px rgb(255, 246, 246);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2.7vw;
+    margin-top:0.7vw;
+    width: 2vw;
+    height: 2vw;
+    overflow: visible;
+    
+}
+
+.cart-counter.two-digits,
+.menu .cart-counter.two-digits {
     font-size: 0.9vw;
     padding-top: 0.1vw;
     padding-right: 0.2vw !important;

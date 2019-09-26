@@ -40,7 +40,7 @@
         z-index: 2;
     }
 
-    .overlay-menu * {
+    .overlay-menu *:not(.cart-counter) {
         cursor: pointer;
         display: flex;
         /* border:solid 1px pink; */

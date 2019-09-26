@@ -60,6 +60,7 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
                             </>
                     )) }
                 </Carousel>
+                <div className='dish-composition'></div>
             </div> 
         </div>
         <div className='noodles-wrapper'>

@@ -15,7 +15,6 @@ function useCartState () {
                                                     item.isLarge = isLarge
                                                     setCartItems ([...cartItems])
                                                 }
-
     const addRandomPizza = () => {
 
         const randomPizza = Math.floor(Math.random() * pizzaData.length)
@@ -26,6 +25,5 @@ function useCartState () {
     return { cartItems, addToCart, removeFromCart, setCartItemSize, addRandomPizza }
 }
 
+export { CartContext, useCartState }  
 
-
-export { CartContext, useCartState }
