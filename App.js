@@ -40,15 +40,17 @@ export default function App () {
 
     const menu = isMobile ? <MenuMobile type={pizzaTypeSelected} onSelect={ type => setPizzaTypeSelected (type === pizzaTypeSelected ? undefined : type) }/> : <Menu />
 
-    return  <div ref={appEl} className={('app ' + (pizzaTypeSelected || '') + ' ' + layoutMode)}>
+    return  <LayoutModeContext.Provider value={{ isMobile, layoutMode }}>
+                <div ref={appEl} className={('app ' + (pizzaTypeSelected || '') + ' ' + layoutMode)}>
 
-                <LayoutModeContext.Provider value={{ isMobile, layoutMode }}>
-                    <CartContext.Provider value={useCartState ()}>
-                        {!isProducts && menu}
-                        {/* <Radar /> */}
-                        {content}
-                    </CartContext.Provider>
-                </LayoutModeContext.Provider>
-            </div>
+                    {/* <LayoutModeContext.Provider value={{ isMobile, layoutMode }}> */}
+                        <CartContext.Provider value={useCartState ()}>
+                            {!isProducts && menu}
+                            {/* <Radar /> */}
+                            {content}
+                        </CartContext.Provider>
+                    
+                </div>
+            </LayoutModeContext.Provider>
 }
 

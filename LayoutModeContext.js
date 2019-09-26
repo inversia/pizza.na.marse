@@ -1,5 +1,17 @@
-import { createContext } from 'react'
+import { createContext, useRef } from 'react'
+import useComponentSize from '@rehooks/component-size'
 
 const LayoutModeContext = createContext ()
 
-export { LayoutModeContext }
+function useLayoutContext () {
+    
+    const appEl      = useRef ()
+    const { width }  = useComponentSize (appEl)
+    const layoutMode = width < 501 ? 'mobile' : 'desktop'
+    const isMobile   = layoutMode === 'mobile'
+
+    return {isMobile, layoutMode}
+}
+
+
+export { LayoutModeContext, useLayoutContext }

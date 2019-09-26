@@ -13,6 +13,7 @@ import { A, useTitle, navigate } from 'hookrouter'
 import {goToProduct} from './util'
 import { useKeyPress } from 'react-use';
 import { ScrollableElContext } from './ScrollableElContext'
+import { LayoutModeContext } from './LayoutModeContext'
 import CartCounter from './CartCounter'
 const { entries } = Object
 
@@ -37,7 +38,7 @@ const fillings = {
 
 const productLabels = { 
     pizzas: 'Пицца', 
-    noodles: 'Лапша', 
+    noodles: 'Паста', 
     salads: 'Салаты',
     beverages: 'Напитки', 
 }
@@ -103,6 +104,8 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
 
     useEffect (() => { scrollTo ({ type: activeType, name: activeName }) }, [])
 
+    const { layoutMode, isMobile } = useContext (LayoutModeContext)
+
     return <div className='product-overlay'>
                 <div className='overlay-menu'>
                     <div className='back' onClick={() => navigate ('/') } >⇐ Назад</div>  
@@ -130,7 +133,7 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
                     
                 </div>
 
-                <SideProductList {...{
+                {!isMobile && <SideProductList {...{
                     activeType, fillingType, visibleProductIndex,
                     onClick (i) {
                         
@@ -146,7 +149,7 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
                             })
                         }
                     }
-                }} />
+                }} />}
                 
                 <div ref={productPanelEl} className='product-info-panel' onScroll={onScroll}>
                     <ScrollableElContext.Provider value='product-info-panel'>
