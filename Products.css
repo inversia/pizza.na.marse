@@ -13,6 +13,8 @@
     100% { left: 103vw;}
 }
 
+
+
 /* .product-overlay {
     display: flex;
     align-items: stretch;
@@ -168,8 +170,8 @@
         }
 
         .product-info.mobile {
-            padding: 23vw 0vw; 
-            border:solid 1px salmon;
+            padding: 12vw 0vw; 
+            /* border:solid 1px salmon; */
             margin-bottom:7vw;
         }
 
@@ -187,7 +189,7 @@
             }
 
             .product-info.mobile .right-side {
-                margin-left:13vw;
+                margin-left:-49vw;
                 /* margin-right: 3vw; */
             }
 
@@ -203,13 +205,21 @@
 
                 .product-info.mobile .name {
                     font-size: 6vw;
+                    margin-bottom:1vw;
+                    padding: 3vw 2vw;
+                    
                 }
 
                 .product-info .size-and-price {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-               } 
+                } 
+
+                .product-info.mobile .size-and-price {
+                    flex-direction: column;
+                    
+                }
 
                     .product-info .right-side .size {
                         background-size: cover;
@@ -236,8 +246,8 @@
                             font-size: 3.15vw;
                             color:white;
                             position: absolute;
-                            right:0vw;
-                            top:5.9vw;
+                            right:2vw;
+                            top:8.9vw;
 
                         }
 
@@ -249,6 +259,12 @@
                         /* border:1px solid red; */
                         position: relative;
                         text-shadow: 0px 0px 4vw black;
+                    }
+
+                    .product-info.mobile .price {
+                        margin-top:6vw;
+                        font-size:7vw;
+                        left:-13.4vw;
                     }
 
                     .product-info .price:after {
@@ -263,6 +279,10 @@
                         margin-left: 0.15em;
                     }
 
+                    .product-info.mobile .price:after {
+                        top:0.27em;
+                    }
+
                 .product-info .right-side ul {
                     color:#fcfcfc;
                     /* border:2px solid yellow; */
@@ -272,6 +292,11 @@
                     color: white;
                     text-shadow: 0px 0px 4vw black;
                     /* margin-left: 2.8vw; */
+                }
+
+                .product-info.mobile ul {
+                    font-size:5.2vw;
+                    padding:6vw 2vw;
                 }
 
                 .product-info .right-side li {
@@ -285,6 +310,10 @@
                     left:-2vw;
                     top:0.33vw;
                     opacity: 0.7;
+                }
+
+                .product-info.mobile li:before {
+                    left:-4vw;
                 }
 
                 .product-info .right-side button {
@@ -311,6 +340,12 @@
                     /* backdrop-filter: blur(3px); */
                 }
 
+                .product-info.mobile button {
+                    height:13vw;
+                    width:37vw;
+                    left:-1.25vw;
+                }
+
                 .product-info .right-side button span{
                     color:wheat;
                     position:relative;
@@ -318,6 +353,11 @@
                     left: 0.4vw;
                     font-size: 2.2vw;
                     font-family: Xolonium;
+                }
+
+                .product-info.mobile button span{
+                    font-size: 3.2vw;
+                    top:0.25vw;
                 }
 
                 .product-info .right-side button .highlight {
@@ -367,8 +407,13 @@
                 .product-info.mobile .product-image {
                     /* margin-left: -10vw; */
                     position: relative;
-                    left:-16vw;
-                    transform: scale(2.1);
+                    left:-56vw;
+                    height: 100vw;
+                    width: 100vw;
+                    padding: 0;
+                    animation: pulse 38s linear infinite;
+                
+                    /* transform: scale(2.1); */
                 }
 
 

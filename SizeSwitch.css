@@ -47,10 +47,10 @@
 }
 
 .size-switch.mobile {
-  /* width:  var(--width) * 1.8;
-  height: calc(var(--width)*1.55); */
-  --width:30vw;
-  left:-2.9vw;
+  /* --width:30vw; */
+  /* left:-2.9vw; */
+  --width:42vw;
+  left:-4.5vw;
 }
 
 .size-switch.active .label-big,  
