@@ -98,7 +98,7 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
                         : productPanelEl.current.querySelector (`h2[data-type="${type}"]`)
 
         if (el) {
-            productPanelEl.current.scrollTo ({ top: el.offsetTop - window.innerWidth*0.06, behavior })
+            productPanelEl.current.scrollTo ({ top: el.offsetTop - window.innerWidth*0.22, behavior })
         }
     }
 
@@ -107,7 +107,7 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
     const { layoutMode, isMobile } = useContext (LayoutModeContext)
 
     return <div className='product-overlay'>
-                <div className='overlay-menu'>
+                <div className={'overlay-menu ' + layoutMode}>
                     <div className='back' onClick={() => navigate ('/') } >⇐ Назад</div>  
                     
                     <DropdownMenu 
@@ -124,7 +124,7 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
                     <DropdownMenu 
                         className='choose-taste'
                         items={fillings}      
-                        defaultText='Выбрать начинку' 
+                        defaultText='Начинка ↓' 
                         activeItem={fillingType} 
                         setActiveItem={setFillingType} 
                     />
