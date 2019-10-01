@@ -51,8 +51,8 @@ const pizzaData = [
                 size: 12,
             },
             mobile: {
-                position: ['64vw','43vw'],
-                size: 35,
+                position: ['64vw','41vw'],
+                size: 34,
             }
         },
         position: ['24vw','8vw'],
@@ -178,7 +178,7 @@ const pizzaData = [
             },
             mobile: {
                 position: ['16vw','121vw'],
-                size: 26,
+                size: 25,
             }
         },
         position: ['57vw','48vw'],
@@ -198,7 +198,7 @@ const pizzaData = [
                 size: 19,
             },
             mobile: {
-                position: ['44vw','74vw'],
+                position: ['45vw','74vw'],
                 size: 26,
             }
         },
@@ -283,7 +283,7 @@ const pizzaData = [
             },
             mobile: {
                 position: ['41vw','20vw'],
-                size: 26,
+                size: 25,
             }
         },
         position: ['2vw','57vw'],

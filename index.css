@@ -209,13 +209,13 @@ h1 {
     }
 
     .menu.mobile a.mix {
-        background-image:url(/static/art/mix.svg);
+        background-image:url(/static/art/random.svg);
         background-size:contain;
         background-repeat:no-repeat;
         display:block;
-        margin-top: 12.6vw;
-        height:19vw;
-        width:19vw;
+        margin-top: 13.2vw;
+        height:23vw;
+        width:23vw;
     }
 
 
@@ -515,6 +515,10 @@ h1 {
 
     .terminal svg {
         width:25vw;
+    }
+
+    .cosmos-zone-one-wrapper {
+        padding-bottom: 28vw;
     }
 }
 
