@@ -98,7 +98,7 @@ h1 {
 
 .cosmos-zone-one-wrapper {
     background-image: url(/static/art/backgroundstars.jpg);
-    padding-top: 2vw;
+    padding-top: 0vw;
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 15vw;
@@ -471,6 +471,10 @@ h1 {
     .app.desktop .pizzas {
         margin-top:-28vw;
     }
+
+    .cosmos-zone-one-wrapper {
+        padding-bottom: 20vw;
+    }
 }
 
 
@@ -495,6 +499,10 @@ h1 {
 
     .app.desktop .pizzas {
         margin-top:-27vw;
+    }
+
+    .cosmos-zone-one-wrapper {
+        padding-bottom: 23vw;
     }
 }
 
