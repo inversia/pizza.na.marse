@@ -98,7 +98,7 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
                         : productPanelEl.current.querySelector (`h2[data-type="${type}"]`)
 
         if (el) {
-            productPanelEl.current.scrollTo ({ top: el.offsetTop - window.innerWidth*0.22, behavior })
+            productPanelEl.current.scrollTo ({ top: el.offsetTop - window.innerWidth*0.19, behavior })
         }
     }
 

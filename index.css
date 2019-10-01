@@ -98,7 +98,7 @@ h1 {
 
 .cosmos-zone-one-wrapper {
     background-image: url(/static/art/backgroundstars.jpg);
-    
+    padding-top: 2vw;
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 15vw;
@@ -532,11 +532,14 @@ h1 {
     }
 
     .cosmos-zone-one-wrapper {
+        padding-top:8vw;
         padding-bottom:60vw;
-        margin-bottom: 60vw;
+        /* margin-bottom: 80vw; */
         background-image:url(/static/art/backgroundstars-vertical.jpg);
-        background-size: contain;
-        height: 195vw;
+        background-size: cover;
+        background-position: 50% 50%;
+        height: 311vw;
+        background-repeat: no-repeat;
     }
 }
 
