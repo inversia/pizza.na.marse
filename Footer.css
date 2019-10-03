@@ -28,7 +28,8 @@
         border: solid 0.20vw #ffa600;
         border-radius: 2.5vw;
         /* background-color:rgba(13, 4, 46, 0.747); */
-        background-color:rgba(20, 12, 51, 0.747);
+        background-color:rgba(10, 6, 29, 0.747);
+    
         box-shadow: 4px 2px 9px rgb(3, 3, 61);
 
         /* justify-content: center; */
@@ -116,6 +117,7 @@
     /* filter: invert(0.96) hue-rotate(305deg); */
     /* filter: invert(0.96) hue-rotate(27deg); */
 
-    box-shadow: -6px -0px 46px rgb(162, 0, 255);
+    /* box-shadow: -6px -0px 46px rgb(162, 0, 255); */
     /* box-shadow: -6px -0px 46px rgb(0, 102, 255); */
+    box-shadow: -6px -0px 26px rgb(255, 255, 255);
 }

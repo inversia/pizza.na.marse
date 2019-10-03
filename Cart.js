@@ -34,7 +34,7 @@ export default function Cart () {
                         <div className='rocket'></div>
                     </div>
 
-                    <div class={classList ({ 'cart-items': 1, 'empty': !cartItems.length })}>
+                    <div className={classList ({ 'cart-items': 1, 'empty': !cartItems.length })}>
                         <TransitionGroup component={null}>
                             {cartItems.map (item =>
                                 <CSSTransition key={item.uid} timeout={500} classNames='cart-item'>

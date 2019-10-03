@@ -27,7 +27,7 @@ export default function App () {
     const [pizzaTypeSelected, setPizzaTypeSelected] = useState (undefined)
 
     const content = useRoutes ({
-                        '/':                     () => <MainContent {...{pizzaTypeSelected, setPizzaTypeSelected, isMobile}} />,
+                        '/':                     () => <MainContent {...{pizzaTypeSelected, setPizzaTypeSelected, isMobile, layoutMode }} />,
                         '/about':                () => <AboutContent />,
                         '/loyalty':              () => <LoyaltyContent />,
                         '/cart':                 () => <Cart />,

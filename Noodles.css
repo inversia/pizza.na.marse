@@ -13,6 +13,17 @@
     /* background-color: pink; */
 }
 
+    .noodles-wrapper.mobile {
+        padding-top:20vw;
+        height: 180vw;
+        position: relative;
+        background-image: url(/static/art/tumannost8vertical.jpg);
+    }
+
+    .noodles-wrapper2.mobile {
+        padding-top:20vw;
+        margin-top:50vw;
+    }
 
 .noodles-wrapper h1 {
     text-align: center;
@@ -32,6 +43,7 @@
         /* mask-image: linear-gradient(to bottom,transparent 0%, black 40%); */
     }
 
+
     .noodles svg {
         width:100%;
 
@@ -42,7 +54,15 @@
     cursor:pointer;
     --rotate-offset: 0deg;
     --rotate-direction: 'normal';
+    /* transform:scale(1.0); */
+    transform:rotate(90deg)!important;
 }
+
+    .pasta-item.mobile {
+        --rotate-offset: 200deg;
+        --rotate-direction: 'normal';
+        transform:rotate(90deg);
+    }
 
     .pasta-item h2{
         color:rgb(255, 79, 108);

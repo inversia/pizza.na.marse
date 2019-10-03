@@ -80,7 +80,7 @@
 
 .salads-carousel-wrapper {
     padding-top: 15vw;
-    padding-bottom:30vw;
+    padding-bottom:45vw;
 }
 
     .salads-carousel-wrapper h1 {
@@ -114,4 +114,12 @@
             width: 20vw;
             text-shadow: 0.05em 0.05em 0em rgba(0,0,0,0.4);
             /* border: 1px solid green; */
+        }
+
+        .item-composition {
+            position: absolute;
+            color:rgb(255, 145, 0);
+            font-size: 6vw;
+            bottom: -38vw;
+            left:50%;
         }

@@ -10,7 +10,7 @@ import pizzaData from './data/pizza'
 import saladsData from './data/salads'
 import noodlesData from './data/noodles'
 
-export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaTypeSelected }) {
+export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaTypeSelected, layoutMode }) {
     
     const [selectedPizzas, setSelectedPizzas] = useState ({})       // это заюзать потом, для половинчатых пицц
     const isMix = pizzaTypeSelected === 'mix'
@@ -52,7 +52,7 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
         <div className='cosmos-zone-two-wrapper'>
             <div className='salads-carousel-wrapper'>
                 <h1>Внеземные салаты</h1>
-                <Carousel perspectiveFactor='3.37' className='salads'>
+                <Carousel perspectiveFactor='3.37' className='salads' composition={saladsData.composition}>
                     { saladsData.map ((salad, i) => (
                             <>
                                 <div className='pic' style={{backgroundImage: salad.backgroundImage}} />
@@ -63,16 +63,19 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
                 <div className='dish-composition'></div>
             </div> 
         </div>
-        <div className='noodles-wrapper'>
+        {/* {console.log (layoutMode)} */}
+        <div className={'noodles-wrapper ' + layoutMode}>
             <h1>Космическая паста</h1>
-            { noodlesData.map (noodles => (<Noodles {...noodles} 
-                                                key={noodles.name} 
-                                                onClick={() => {
-                                                    if(noodles.itemType !== 'decoration') {
-                                                        goToProduct ('noodles', noodles.name)
+            <div className={'noodles-wrapper2' + layoutMode}>
+                { noodlesData.map (noodles => (<Noodles {...noodles} 
+                                                    key={noodles.name} 
+                                                    onClick={() => {
+                                                        if(noodles.itemType !== 'decoration') {
+                                                            goToProduct ('noodles', noodles.name)
+                                                        }
                                                     }
-                                                }
-                                            }/>))}                           
+                                                }/>))}   
+            </div>
         </div>
         <Footer />
     </>)
