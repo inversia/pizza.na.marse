@@ -4,24 +4,26 @@ import { classList } from './util'
 import useVisibility from 'react-use-visibility'
 import {LayoutModeContext}  from './LayoutModeContext'
 
+const toStyle = ({ position, size }) => ({
+    height: size + 'vw',
+    width:  size + 'vw', 
+    left:   position[0] + 'vw', 
+    top:    position[1] + 'vw'
+})
 
-
-export default function Noodles ({ height, width, left, top, layout, backgroundColor, backgroundImage, onClick, rotateOffset = '0deg', rotationDirection = 'normal', itemType = '', infoImage, infoTop, infoLeft, name }) { 
+export default function Noodles ({ height, width, left, top, layout, infoLayout, backgroundColor, backgroundImage, onClick, rotateOffset = '0deg', rotationDirection = 'normal', itemType = '', infoImage, infoTop, infoLeft, name }) { 
     
     const productInfo      = useRef ()
     const isProductVisible = useVisibility (productInfo.current, { partial: true })
     const { layoutMode } = useContext (LayoutModeContext)
-    const { position, size } = layout[layoutMode]
+    const { position: infoPosition, size: infoSize } = infoLayout[layoutMode]
     
     //<div class={classList ({ 'cart-items': 1, 'empty': !cartItems.length })}>
 
     return <div className={classList({[`pasta-item ${itemType}`] : 1, 'invisible' : isProductVisible, 'mobile' : layoutMode})} 
             
                 ref={productInfo}
-                style={{ height: size + 'vw',
-                         width: size + 'vw', 
-                         left: position[0], 
-                         top:position[1], 
+                style={{ ...toStyle (layout[layoutMode]), 
                          '--rotate-offset': rotateOffset, 
                          '--rotate-direction': rotationDirection }}          
                 onClick={onClick}>
@@ -29,6 +31,6 @@ export default function Noodles ({ height, width, left, top, layout, backgroundC
             {/* <div className={classList({[`pasta-item ${itemType}`] : 1, ' invisible' : isProductVisible})}></div> */}
                 <div className='background'></div>
                 <div className='foreground' style={{backgroundImage:backgroundImage || '', backgroundColor: backgroundColor || '' }}></div>
-                <div className={`info ${itemType}`} style={{backgroundImage:infoImage, top:infoTop, left:infoLeft}}></div>
+                <div className={`info ${itemType}`} style={{backgroundImage:infoImage, ...toStyle (infoLayout[layoutMode]) }}></div>
             </div>
 }

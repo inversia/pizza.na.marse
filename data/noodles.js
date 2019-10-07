@@ -9,11 +9,11 @@ const noodlesData = [
         width:"23vw",
         layout: {
             desktop: {
-                position: ['67vw','7vw'],
+                position: [67, 7],
                 size: 23,
             },
             mobile: {
-                position: ['14.4vw','106.68vw'],
+                position: [14.4, 66.68],
                 size: 38.11 * x,
             }
         }, 
@@ -24,9 +24,17 @@ const noodlesData = [
         rotateOffset: '100deg',
         itemType:'interactive',
         rotationDirection: 'reverse',
-        infoImage:"url(/art/ham-mushrooms.svg)",
-        infoTop:"5vw",
-        infoLeft:"-21vw",
+        // infoImage:"url(/art/ham-mushrooms.svg)",
+        infoLayout: {
+            desktop: {
+                position: [-21, 5],
+                size: 23,
+            },
+            mobile: {
+                position: [50, 10],
+                size: 38.11 * x,
+            }
+        },
         type: "meat",
     },
 
@@ -38,11 +46,11 @@ const noodlesData = [
         width:"23vw", 
         layout: {
             desktop: {
-                position: ['31.8vw','27.5vw'],
+                position: [31.8, 27.5],
                 size: 23,
             },
             mobile: {
-                position: ['9.54vw','45.05vw'],
+                position: [9.54, 5.05],
                 size: 38.11 * x,
             }
         }, 
@@ -53,7 +61,17 @@ const noodlesData = [
         rotateOffset: '180deg',
         itemType:'interactive',
         rotationDirection: 'normal',
-        infoImage:"url(/art/arabyata.svg)",
+        // infoImage:"url(/art/arabyata.svg)",
+        infoLayout: {
+            desktop: {
+                position: [2, 23],
+                size: 23,
+            },
+            mobile: {
+                position: [-10, 10],
+                size: 28.11 * x,
+            }
+        },
         infoTop:"23vw",
         infoLeft:"2vw",
         type: "veg",
@@ -67,11 +85,11 @@ const noodlesData = [
         width:"19vw", 
         layout: {
             desktop: {
-                position: ['69vw','30vw'],
+                position: [69, 30],
                 size: 19,
             },
             mobile: {
-                position: ['34.16vw','79.92vw'],
+                position: [34.16, 39.92],
                 size: 28 * x,
             }
         }, 
@@ -82,7 +100,17 @@ const noodlesData = [
         rotateOffset: '10deg',
         itemType:'interactive',
         rotationDirection: 'normal',
-        infoImage:"url(/art/ham-mushrooms.svg)",
+        // infoImage:"url(/art/ham-mushrooms.svg)",
+        infoLayout: {
+            desktop: {
+                position: [-18, 5],
+                size: 23,
+            },
+            mobile: {
+                position: [0, 0],
+                size: 28.11 * x,
+            }
+        },
         infoTop:"5vw",
         infoLeft:"-18vw",
         type: "fish",
@@ -90,29 +118,39 @@ const noodlesData = [
     },
 
     {
-        name: 'паста4',
+        name: 'Гречневая',
         composition: ['cливочный соус', 'чеддер', 'пармезан', 'моцарелла', 'горгонзола'],
         price: [500],
         height:"18vw", 
         width:"18vw", 
         layout: {
             desktop: {
-                position: ['53vw','21.5vw'],
+                position: [53, 21.5],
                 size: 18,
             },
             mobile: {
-                position: ['42.1vw','141.39vw'],
+                position: [42.1, 101.39],
                 size: 24.67 * x,
             }
         },
         left:"53vw", 
         top:"21.5vw", 
         animationDelay:"0.85s",
-        backgroundImage:"url(/art/alanorma.jpg)",
+        backgroundImage:"url(/art/margo.jpg)",
         rotateOffset: '200deg',
         itemType:'decoractive',
         rotationDirection: 'normal',
-        infoImage:"url(/art/ham-mushrooms.svg)",
+        // infoImage:"url(/art/ham-mushrooms.svg)",
+        infoLayout: {
+            desktop: {
+                position: [-18, 5],
+                size: 23,
+            },
+            mobile: {
+                position: [-20, 70],
+                size: 12.11 * x,
+            }
+        },
         infoTop:"5vw",
         infoLeft:"-18vw",
         type: "",
@@ -127,11 +165,11 @@ const noodlesData = [
         width:"18vw",
         layout: {
             desktop: {
-                position: ['16vw','21vw'],
+                position: [16, 21],
                 size: 18,
             },
             mobile: {
-                position: ['64.16vw','45.04vw'],
+                position: [64.16, 5.04],
                 size: 24.67 * x,
             }
         }, 
@@ -142,7 +180,17 @@ const noodlesData = [
         rotateOffset: '300deg',
         itemType:'interactive',
         rotationDirection: 'reverse',
-        infoImage:"url(/art/alanorma.svg)",
+        // infoImage:"url(/art/alanorma.svg)",
+        infoLayout: {
+            desktop: {
+                position: [9, -4],
+                size: 23,
+            },
+            mobile: {
+                position: [0, 0],
+                size: 28.11 * x,
+            }
+        },
         infoTop:"-4vw",
         infoLeft:"9vw",
         type: "veg",
@@ -157,11 +205,11 @@ const noodlesData = [
         width:"18vw",
         layout: {
             desktop: {
-                position: ['16vw','39vw'],
+                position: [16, 39],
                 size: 18,
             },
             mobile: {
-                position: ['54.43vw','104.27vw'],
+                position: [54.43, 64.27],
                 size: 24.67 * x,
             }
         }, 
@@ -172,7 +220,17 @@ const noodlesData = [
         rotateOffset: '0deg',
         itemType:'interactive',
         rotationDirection: 'normal',
-        infoImage:"url(/art/carbonara.svg)",
+        // infoImage:"url(/art/carbonara.svg)",
+        infoLayout: {
+            desktop: {
+                position: [-11, 0],
+                size: 23,
+            },
+            mobile: {
+                position: [20, 50],
+                size: 28.11 * x,
+            }
+        },
         infoTop:"0vw",
         infoLeft:"-11vw",
         type: "meat",
@@ -185,21 +243,30 @@ const noodlesData = [
         width:"8vw", 
         layout: {
             desktop: {
-                position: ['11vw','17.5vw'],
+                position: [11, 17.5],
                 size: 8,
             },
             mobile: {
-                position: ['70.78vw','83.2vw'],
+                position: [70.78, 43.2],
                 size: 12.15 * x,
             }
         }, 
         left:"11vw", 
         top:"17.5vw", 
         animationDelay:"3.6s",
-        backgroundColor:"rgb(130, 116, 90, 0.75)",
+        backgroundColor:"#ffc400",
         itemType:'decoration',
         rotationDirection: 'reverse',
-        infoImage:"url(/art/ham-mushrooms.svg)",
+        infoLayout: {
+            desktop: {
+                position: [5, -18],
+                size: 23,
+            },
+            mobile: {
+                position: [0, 0],
+                size: 28.11 * x,
+            }
+        },
         infoTop:"5vw",
         infoLeft:"-18vw",
         type: "",
@@ -211,20 +278,29 @@ const noodlesData = [
         width:"9vw",
         layout: {
             desktop: {
-                position: ['57.5vw','44vw'],
+                position: [57.5, 44],
                 size: 9,
             },
             mobile: {
-                position: ['77.91vw','71.32vw'],
+                position: [77.91, 31.32],
                 size: 12.15 * x,
             }
         },  
         left:"57.5vw", 
         top:"44vw",
-        backgroundColor:"#ffc400",
+        backgroundColor:"rgb(130, 116, 90, 0.75)",
         itemType:"decoration",
         rotationDirection: 'normal',
-        infoImage:"url(/art/ham-mushrooms.svg)",
+        infoLayout: {
+            desktop: {
+                position: [5, -18],
+                size: 23,
+            },
+            mobile: {
+                position: [0, 0],
+                size: 28.11 * x,
+            }
+        },
         infoTop:"5vw",
         infoLeft:"-18vw",
         type: "",
@@ -237,11 +313,11 @@ const noodlesData = [
         width:"9vw", 
         layout: {
             desktop: {
-                position: ['65.8vw','49vw'],
+                position: [65.8, 49],
                 size: 9,
             },
             mobile: {
-                position: ['41.82vw','39.32vw'],
+                position: [41.82, -1],
                 size: 12.15 * x,
             }
         }, 
@@ -250,7 +326,16 @@ const noodlesData = [
         backgroundColor:"#f0c000", 
         itemType:"decoration",
         rotationDirection: 'normal',
-        infoImage:"url(/art/ham-mushrooms.svg)",
+        infoLayout: {
+            desktop: {
+                position: [5, -18],
+                size: 23,
+            },
+            mobile: {
+                position: [0, 0],
+                size: 28.11 * x,
+            }
+        },
         infoTop:"5vw",
         infoLeft:"-18vw",
         type: "",
@@ -262,20 +347,29 @@ const noodlesData = [
         width:"9vw",
         layout: {
             desktop: {
-                position: ['57.5vw','44vw'],
+                position: [57.5, 44],
                 size: 9,
             },
             mobile: {
-                position: ['69.29vw','151.15vw'],
+                position: [69.29, 111.15],
                 size: 12.15 * x,
             }
         },  
         left:"57.5vw", 
         top:"44vw",
-        backgroundColor:"#ffc400",
+        backgroundColor:"rgb(255, 177, 0)",
         itemType:"decoration",
         rotationDirection: 'normal',
-        infoImage:"url(/art/ham-mushrooms.svg)",
+        infoLayout: {
+            desktop: {
+                position: [5, -18],
+                size: 23,
+            },
+            mobile: {
+                position: [0, 0],
+                size: 28.11 * x,
+            }
+        },
         infoTop:"5vw",
         infoLeft:"-18vw",
         type: "",
@@ -288,11 +382,11 @@ const noodlesData = [
         width:"9vw", 
         layout: {
             desktop: {
-                position: ['65.8vw','49vw'],
+                position: [65.8, 49],
                 size: 9,
             },
             mobile: {
-                position: ['42.02vw','167.42vw'],
+                position: [42.02, 127.42],
                 size: 12.15 * x,
             }
         }, 
@@ -301,7 +395,16 @@ const noodlesData = [
         backgroundColor:"#ff9100",
         itemType:"decoration",
         rotationDirection: 'normal',
-        infoImage:"url(/art/ham-mushrooms.svg)",
+        infoLayout: {
+            desktop: {
+                position: [5, -18],
+                size: 23,
+            },
+            mobile: {
+                position: [0, 0],
+                size: 28.11 * x,
+            }
+        },
         infoTop:"5vw",
         infoLeft:"-18vw",
         type: "",

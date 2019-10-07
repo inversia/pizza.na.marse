@@ -5,6 +5,7 @@
     color: white;
     position: relative;
     margin: 0 auto;
+
 }
 
     .carousel .circle {
@@ -20,7 +21,8 @@
         stroke:white;
         fill:url(#carouselRadialGradient);
         opacity: 0.5;
-        stroke-width: 2%;
+        stroke-width: 1.2%;
+
     }
 
     .carousel .items {
@@ -33,6 +35,7 @@
         cursor:pointer;
         /* border: 1px solid magenta; */
         transform-style: preserve-3d;
+        user-select: none; 
 
     }
 
@@ -73,6 +76,14 @@
 
 /* -------------------------------------------------------------- */
 
+.mobile .carousel {
+    width:70vw;
+}
+
+.mobile .carousel .circle {
+
+}
+
 .carousel.salads {
     margin-bottom: 0vw;
     margin-top: 2vw;
@@ -83,9 +94,96 @@
     padding-bottom:45vw;
 }
 
+.mobile .salads-carousel-wrapper { 
+    padding-top:30vw;
+    padding-bottom:75vw;
+
+}
+
     .salads-carousel-wrapper h1 {
         text-align: center;
         pointer-events: none;
+    }
+
+    .mobile .salads-carousel-wrapper h1 { 
+        margin-bottom: 13vw;
+    }
+
+    .carousel.salads .item {
+        width:10vw;
+        height:10vw;
+        margin-left: -5vw;
+        margin-top: -5vw;
+        /* border: 1px solid red; */
+        border-radius: 0;
+        user-select: none; 
+    }
+
+    .mobile .carousel.salads .item {
+        width:40vw;
+        height:20vw;
+        margin-left: -20vw;
+        margin-top: -5vw;
+    }
+
+        .carousel.salads .item .pic {
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 10vw;
+            width: 10vw;
+            border-radius:50%;
+            transform: scale(1.2);
+            /* border:1px solid pink; */
+        }
+
+        .mobile .carousel.salads .item .pic {
+            transform: scale(2.9);
+        }
+
+        .carousel.salads .item .title {
+            position: absolute;
+            text-align: center;
+            top: 100%;
+            width: 20vw;
+            text-shadow: 0.05em 0.05em 0em rgba(0,0,0,0.4);
+            /* border: 1px solid green; */
+        }
+
+        .item-composition {
+            position: absolute;
+            color:rgb(255, 145, 0);
+            font-size: 6vw;
+            bottom: -38vw;
+            left:50%;
+        }
+
+
+@media (max-width: 500px) {
+    
+    body {
+        overflow-x: hidden;
+    }
+
+    .carousel {
+        width:75vw;
+        perspective-origin: 50% -20%;
+    }
+
+    .carousel .item {
+        /* pointer-events: all; */
+        left: 0;
+        top: 0;
+        position:absolute;
+        border-radius:40%;
+        width:90px;
+        height:90px;
+        color:white;
+        font-size:13px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
     }
 
     .carousel.salads .item {
@@ -116,10 +214,5 @@
             /* border: 1px solid green; */
         }
 
-        .item-composition {
-            position: absolute;
-            color:rgb(255, 145, 0);
-            font-size: 6vw;
-            bottom: -38vw;
-            left:50%;
-        }
+
+}

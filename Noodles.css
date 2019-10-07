@@ -13,16 +13,23 @@
     /* background-color: pink; */
 }
 
-    .noodles-wrapper.mobile {
+    .mobile .noodles-wrapper {
         padding-top:20vw;
-        height: 180vw;
+        height: 200vw;
         position: relative;
         background-image: url(/static/art/tumannost8vertical.jpg);
     }
 
-    .noodles-wrapper2.mobile {
-        padding-top:20vw;
-        margin-top:50vw;
+    .mobile .noodles-wrapper2 {
+        position: relative;
+        margin-top: 0vw;
+        background-image: url(./static/art/mainInfoImage.svg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: cover;
+        height: 100%;
+        width: 100%;
+
     }
 
 .noodles-wrapper h1 {
@@ -31,6 +38,10 @@
     /* margin: 8vw 10vw; */
     /* margin-bottom: 100vw; */
 }
+
+    .mobile .noodles-wrapper h1 {
+        font-size: 7.8vw;
+    }
 
     .noodles{
         height: 30vw;
@@ -55,10 +66,16 @@
     --rotate-offset: 0deg;
     --rotate-direction: 'normal';
     /* transform:scale(1.0); */
-    transform:rotate(90deg)!important;
+    border-radius: 2vw;
+    /* border: solid 1px salmon; */
 }
 
-    .pasta-item.mobile {
+    .pasta-item:nth-child(even) {
+        /* box-shadow: 1vw 0.5vw 5vw #0e0702; */
+        
+    }
+
+    .mobile .pasta-item {
         --rotate-offset: 200deg;
         --rotate-direction: 'normal';
         transform:rotate(90deg);
@@ -89,6 +106,7 @@
         mask-position: center;
         position: absolute;
         overflow: hidden;
+    
     }
 
     .pasta-item .background:after {
@@ -121,7 +139,7 @@
         background-size: 160%;
         background-repeat: no-repeat;
         background-position: center;
-        mask-image: url(/static/art/hexagon.svg);
+        mask-image: url(/static/art/hexagon.svg); 
         mask-mode: alpha;
         mask-repeat: no-repeat;
         mask-size: 100%;
@@ -135,4 +153,10 @@
         position: absolute;
         background-size:contain;
         background-repeat: no-repeat;
+    }
+
+    .mobile .pasta-item.interactive .info {
+        transform: rotate(270deg);
+        height: 9vw;
+        width: 26vw;
     }

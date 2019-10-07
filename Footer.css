@@ -121,3 +121,12 @@
     /* box-shadow: -6px -0px 46px rgb(0, 102, 255); */
     box-shadow: -6px -0px 26px rgb(255, 255, 255);
 }
+
+
+@media (max-width: 500px) {
+    
+    .footer-content {
+        width:100%;
+    }
+ }
+

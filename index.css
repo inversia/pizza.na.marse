@@ -89,6 +89,7 @@ body {
     background-size: cover;
     font-family:'Xolonium';
     overflow-x: hidden;
+    width:100%;
 }
 
 h1 {
@@ -148,7 +149,7 @@ h1 {
 
 .menu.mobile {
     height: 12vw;
-    width: 100%;
+    width: 100vw;
     z-index: 200;
 }
 
@@ -193,7 +194,7 @@ h1 {
         background-size:contain;
         background-repeat:no-repeat;
         display:block;
-        margin-top: 4.6vw;
+        margin-top: 4.5vw;
         height:11vw;
         width:11vw;
     }
@@ -213,7 +214,7 @@ h1 {
         background-size:contain;
         background-repeat:no-repeat;
         display:block;
-        margin-top: 13.2vw;
+        margin-top: 9.2em;
         height:23vw;
         width:23vw;
     }
@@ -553,6 +554,10 @@ h1 {
         height: 311vw;
         background-repeat: no-repeat;
     }
+
+    .salads-carousel-wrapper h1 {
+        font-size: 7.8vw;
+    }
 }
 
 
@@ -565,20 +570,30 @@ h1 {
     }
 
     .cosmos-zone-one-wrapper {
-        height: 195vw;
+        height: 225vw;
+        padding-bottom: 0vw;
+        margin-bottom:-35vw;
     }
 
     .cosmos-zone-two-wrapper {
-        margin-top: -10vw;
-        margin-bottom:20vw;
+        margin-top: 0vw;
+        
+        margin-top: 80vw;
+        padding-top:30vw;
+        padding-bottom: 25vw;
     }
+
+        .salads-carousel-wrapper h1 {
+            font-size: 7vw;
+        }
+
+
     
     .terminal {
         opacity:1;
     }
 
     body {
-        background-color: rgb(14, 5, 54);
         overflow-x: hidden;
     }
 }
