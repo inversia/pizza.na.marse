@@ -23,13 +23,6 @@
     .mobile .noodles-wrapper2 {
         position: relative;
         margin-top: 0vw;
-        background-image: url(./static/art/mainInfoImage.svg);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-position: cover;
-        height: 100%;
-        width: 100%;
-
     }
 
 .noodles-wrapper h1 {
@@ -41,6 +34,7 @@
 
     .mobile .noodles-wrapper h1 {
         font-size: 7.8vw;
+        margin-bottom:7vw;
     }
 
     .noodles{

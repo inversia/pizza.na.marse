@@ -1,4 +1,5 @@
 const x = 1.07
+const height = 1.05;
 
 const noodlesData = [
     {
@@ -13,7 +14,7 @@ const noodlesData = [
                 size: 23,
             },
             mobile: {
-                position: [14.4, 66.68],
+                position: [12.7, 75.2],
                 size: 38.11 * x,
             }
         }, 
@@ -50,7 +51,7 @@ const noodlesData = [
                 size: 23,
             },
             mobile: {
-                position: [9.54, 5.05],
+                position: [10.8, 10.55],
                 size: 38.11 * x,
             }
         }, 
@@ -89,7 +90,7 @@ const noodlesData = [
                 size: 19,
             },
             mobile: {
-                position: [34.16, 39.92],
+                position: [34.16, 47.2],
                 size: 28 * x,
             }
         }, 
@@ -107,7 +108,7 @@ const noodlesData = [
                 size: 23,
             },
             mobile: {
-                position: [0, 0],
+                position: [0, 20],
                 size: 28.11 * x,
             }
         },
@@ -129,7 +130,7 @@ const noodlesData = [
                 size: 18,
             },
             mobile: {
-                position: [42.1, 101.39],
+                position: [40.3, 110.0],
                 size: 24.67 * x,
             }
         },
@@ -169,7 +170,7 @@ const noodlesData = [
                 size: 18,
             },
             mobile: {
-                position: [64.16, 5.04],
+                position: [63.16, 13.8],
                 size: 24.67 * x,
             }
         }, 
@@ -209,7 +210,7 @@ const noodlesData = [
                 size: 18,
             },
             mobile: {
-                position: [54.43, 64.27],
+                position: [54.1, 72.8],
                 size: 24.67 * x,
             }
         }, 
@@ -247,7 +248,7 @@ const noodlesData = [
                 size: 8,
             },
             mobile: {
-                position: [70.78, 43.2],
+                position: [70.5, 51.5],
                 size: 12.15 * x,
             }
         }, 
@@ -282,7 +283,7 @@ const noodlesData = [
                 size: 9,
             },
             mobile: {
-                position: [77.91, 31.32],
+                position: [77.65, 39.32],
                 size: 12.15 * x,
             }
         },  
@@ -317,7 +318,7 @@ const noodlesData = [
                 size: 9,
             },
             mobile: {
-                position: [41.82, -1],
+                position: [43.5, 3.815],
                 size: 12.15 * x,
             }
         }, 
@@ -351,7 +352,7 @@ const noodlesData = [
                 size: 9,
             },
             mobile: {
-                position: [69.29, 111.15],
+                position: [68.5, 119.5],
                 size: 12.15 * x,
             }
         },  
@@ -386,7 +387,7 @@ const noodlesData = [
                 size: 9,
             },
             mobile: {
-                position: [42.02, 127.42],
+                position: [39.3, 136.41],
                 size: 12.15 * x,
             }
         }, 
