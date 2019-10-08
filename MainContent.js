@@ -4,6 +4,7 @@ import SelectionPanel from './SelectionPanel'
 import Carousel from './Carousel'
 import Pizza from './Pizza'
 import Noodles from './Noodles'
+import AddingButton from './AddingButton'
 import NoodlesBackgroundMobile from './NoodlesBackgroundMobile'
 import Footer from './Footer'
 import {goToProduct} from './util'
@@ -64,8 +65,11 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
                             </>
                     )) }
                 </Carousel>
-                <div className='dish-price'>{saladsData[currentSalad].price}</div>
-                <ul className='dish-composition'>{saladsData[currentSalad].composition.map(x => <li>{x}</li>)}</ul>
+                <div className='salad-price'>{saladsData[currentSalad].price}</div>
+                <ul className='salad-composition'>{saladsData[currentSalad].composition.map(x => <li>{x}</li>)}</ul>
+                <div className='salad-add-button'>
+                    <AddingButton  productType={'salads'} name={saladsData[currentSalad].name} backgroundImage={saladsData[currentSalad].backgroundImage} price={saladsData[currentSalad].price}/>
+                </div>
             </div> 
         </div>
         {/* {console.log (layoutMode)} */}

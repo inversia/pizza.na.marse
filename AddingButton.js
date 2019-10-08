@@ -1,5 +1,8 @@
-import React, { useState, useContext, useLayoutEffect } from 'react'
+import React, { useContext, useRef, useState, useEffect, useLayoutEffect } from 'react'
+import { CartContext } from './CartContext'
+import useVisibility from 'react-use-visibility'
 import { ScrollableElContext, useScrollableEl } from './ScrollableElContext'
+import './AddingButton.css'
 
 import throttle from 'lodash.throttle';
 const throttleInterval = 150;
@@ -38,7 +41,7 @@ function checkVisibility(el, partial) {
     );
 }
 
-export default function useVisibility (elRef, { partial = false } = {}) {
+function useVisibility2 (elRef, { partial = false } = {}) {
     
     const [isVisible, setIsVisible] = useState(false);
     const getScrollableEl = useScrollableEl ()
@@ -69,3 +72,17 @@ export default function useVisibility (elRef, { partial = false } = {}) {
 
   return isVisible;
 };
+
+export default function AddingButton ({ productType, name, isLarge, backgroundImage, price}) {
+
+    const { addToCart }         = useContext (CartContext)
+    const buttonRef             = useRef ()
+    const isVisible             = useVisibility2 (buttonRef, { partial: true })
+
+    return <button className='adding-button' ref={buttonRef} onClick={() => addToCart ({ productType, name, isLarge, backgroundImage, price})}>     
+                <span>ЗАКАЗАТЬ</span>
+                <div className={'highlight ' + (isVisible ? '' : 'invisible')}></div>
+                <div className={'highlight2 ' + (isVisible ? '' : 'invisible')}></div>
+            </button>
+}
+

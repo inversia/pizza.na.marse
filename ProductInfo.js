@@ -2,8 +2,7 @@ import React, { useState, useRef, useContext, useEffect, useDebugValue, useLayou
 import useVisibility from './useVisibility'
 
 import SizeSwitch from './SizeSwitch'
-import { classList } from './util'       // подумай, надо ли это
-
+import AddingButton from './AddingButton'
 import { CartContext } from './CartContext'
 import { LayoutModeContext } from './LayoutModeContext'
 
@@ -33,11 +32,14 @@ export default React.memo (function ProductInfo ({ name, composition, price, bac
                 <ul>
                     {productType !== 'beverages' && composition.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
                 </ul>
-                <button ref={buttonRef} onClick={() => addToCart ({ productType, name, isLarge, backgroundImage, price})}>     
+                {/* <button ref={buttonRef} onClick={() => addToCart ({ productType, name, isLarge, backgroundImage, price})}>     
                     <span>ЗАКАЗАТЬ</span>
                     <div className={'highlight ' + (isVisible ? '' : 'invisible')}></div>
                     <div className={'highlight2 ' + (isVisible ? '' : 'invisible')}></div>
-                </button>
+                </button> */}
+                
+                <AddingButton productType={productType} name={name} isLarge={isLarge} backgroundImage={backgroundImage} price={price}/>
+
             </div>
         </div>
     )

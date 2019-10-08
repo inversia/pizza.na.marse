@@ -162,7 +162,7 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
                                         .filter (p => !fillingType || (p.type === fillingType))
                                         .map ((p, i) => <ProductInfo key={p.name} {...p} productType={type} index={i}/>)
                                 ]
-                            ))
+                            )).slice (0, 2)
                         }
                     </ScrollableElContext.Provider>
                 </div>
