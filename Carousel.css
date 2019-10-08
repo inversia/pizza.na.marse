@@ -91,12 +91,12 @@
 
 .salads-carousel-wrapper {
     padding-top: 15vw;
-    padding-bottom:45vw;
+    padding-bottom:5vw;
 }
 
 .mobile .salads-carousel-wrapper { 
     padding-top:30vw;
-    padding-bottom:75vw;
+    padding-bottom:95vw;
 
 }
 
@@ -108,6 +108,41 @@
     .mobile .salads-carousel-wrapper h1 { 
         margin-bottom: 13vw;
     }
+
+        .salads-carousel-wrapper .dish-composition {
+            color:#ffad4f;
+            /* border:solid 2px #ffffff83; */
+            border-radius: 5vw;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin:21vw 4vw 0vw 4vw;
+            padding:0.3em;
+            font-size:4.6vw;
+            backdrop-filter: blur(2px);
+
+        }
+
+                .salads-carousel-wrapper .dish-composition li {
+                    padding:0.4em;
+                    font-size:1.3vw;
+
+                }
+
+        .mobile .salads-carousel-wrapper .dish-composition {
+            padding:1em;
+            margin-top: 54vw;
+            position: absolute;
+            width:100%;
+            margin:54vw 0vw 0vw 0vw;
+        }
+
+            .mobile .salads-carousel-wrapper .dish-composition li {
+                padding:1em;
+                font-size:2.3vw;
+            }
 
     .carousel.salads .item {
         width:10vw;

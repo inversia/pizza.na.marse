@@ -4,7 +4,7 @@ import SelectionPanel from './SelectionPanel'
 import Carousel from './Carousel'
 import Pizza from './Pizza'
 import Noodles from './Noodles'
-import NoodlesBackground from './NoodlesBackground'
+import NoodlesBackgroundMobile from './NoodlesBackgroundMobile'
 import Footer from './Footer'
 import {goToProduct} from './util'
 import pizzaData from './data/pizza'
@@ -16,6 +16,8 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
     
     const [selectedPizzas, setSelectedPizzas] = useState ({})       // это заюзать потом, для половинчатых пицц
     const isMix = pizzaTypeSelected === 'mix'
+
+    const [currentSalad, setCurrentSalad] = useState (0)
 
     return (<>
     
@@ -54,7 +56,7 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
         <div className='cosmos-zone-two-wrapper'>
             <div className='salads-carousel-wrapper'>
                 <h1>Внеземные салаты</h1>
-                <Carousel perspectiveFactor='3.37' className='salads' composition={saladsData.composition}>
+                <Carousel currentItem={currentSalad} setCurrentItem={setCurrentSalad} perspectiveFactor='3.37' className='salads' composition={saladsData.composition}>
                     { saladsData.map ((salad, i) => (
                             <>
                                 <div className='pic' style={{backgroundImage: salad.backgroundImage}} />
@@ -62,7 +64,7 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
                             </>
                     )) }
                 </Carousel>
-                <div className='dish-composition'></div>
+                <ul className='dish-composition'>{saladsData[currentSalad].composition.map(x => <li>{x}</li>)}</ul>
             </div> 
         </div>
         {/* {console.log (layoutMode)} */}
@@ -70,7 +72,7 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
             <h1>Космическая паста</h1>
             <div className='noodles-wrapper2'>
 
-                <div className='bg'><NoodlesBackground /></div>
+                {isMobile && <div className='bg'><NoodlesBackgroundMobile /></div>}
 
                 {noodlesData.map (noodles => (<Noodles {...noodles} 
                                                     key={noodles.name} 

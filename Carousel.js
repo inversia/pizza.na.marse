@@ -50,7 +50,7 @@ function useInertialValue (initialValue, config) {
 // пример того, как можно сделать useRef, если у нас есть только useState
 // function useRef_ (initialValue) { return useState ({ current: initialValue })[0] }
 
-export default function Carousel ({ children = [], perspectiveFactor = 1.63, className = '', composition = [] }) {
+export default function Carousel ({ currentItem, setCurrentItem, children = [], perspectiveFactor = 1.63, className = '', composition = [] }) {
 
     const el                 = useRef ()
     const { width, height }  = useComponentSize (el)
@@ -60,8 +60,6 @@ export default function Carousel ({ children = [], perspectiveFactor = 1.63, cla
     const TAU          = PI * 2
     const sectionAngle = (TAU / N)
     
-    const [currentItem, setCurrentItem] = useState (0)
-
     // TODO: добавить враппинг, чтобы currentItem был в диапазоне [0, N-1]
     //       взять с inversia.space функцию для wrapping с учетом отрицательных чисел
     //
@@ -123,7 +121,7 @@ export default function Carousel ({ children = [], perspectiveFactor = 1.63, cla
                         <div className="item" key={i} onClick={() => setCurrentItem (i)}>{child}</div>
                     )}
                 </div> 
-                {console.log(children[currentItem])}
+
                 <div className='item-composition'>{composition[currentItem]}</div>
                 
 {/* 

@@ -255,7 +255,7 @@ const noodlesData = [
         left:"11vw", 
         top:"17.5vw", 
         animationDelay:"3.6s",
-        backgroundColor:"#ffc400",
+        backgroundColor:"#ffb100",
         itemType:'decoration',
         rotationDirection: 'reverse',
         infoLayout: {
@@ -290,6 +290,7 @@ const noodlesData = [
         left:"57.5vw", 
         top:"44vw",
         backgroundColor:"rgb(130, 116, 90, 0.75)",
+        backgroundColor:"#ffc400",
         itemType:"decoration",
         rotationDirection: 'normal',
         infoLayout: {
@@ -324,7 +325,7 @@ const noodlesData = [
         }, 
         left:"65.8vw", 
         top:"49vw",
-        backgroundColor:"#f0c000", 
+        backgroundColor:"#ffbc00", 
         itemType:"decoration",
         rotationDirection: 'normal',
         infoLayout: {
@@ -352,7 +353,7 @@ const noodlesData = [
                 size: 9,
             },
             mobile: {
-                position: [68.5, 119.5],
+                position: [68.0, 119.5],
                 size: 12.15 * x,
             }
         },  
