@@ -109,34 +109,65 @@
         margin-bottom: 13vw;
     }
 
-        .salads-carousel-wrapper .dish-composition {
-            color:#ffad4f;
-            /* border:solid 2px #ffffff83; */
-            border-radius: 5vw;
-            text-align: center;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin:21vw 4vw 0vw 4vw;
-            padding:0.3em;
-            font-size:4.6vw;
-            backdrop-filter: blur(2px);
+    .salads-carousel-wrapper .dish-price {
+        position: absolute;
+        left:41.5%;
+        /* color:rgb(248, 167, 17); */
+        color:wheat;
+        font-size: 5vw;
+        padding-top: 13vw;
+        
+    }
+
+        .salads-carousel-wrapper .dish-price:after {
+            content: '';
+            position: absolute;
+            background-image: url(./static/art/rub.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 0.7em;
+            width: 0.7em;
+            top: 2.87em;
+            margin-left: 0.15em;
 
         }
 
-                .salads-carousel-wrapper .dish-composition li {
-                    padding:0.4em;
-                    font-size:1.3vw;
+    .mobile .salads-carousel-wrapper .dish-price {
+        padding-top: 49vw;
+        left:44%;
+    }
 
-                }
+        .mobile .salads-carousel-wrapper .dish-price:after {
+            top: 10.07em;
+        }
+
+    .salads-carousel-wrapper .dish-composition {
+        color:#ffad4f;
+        /* border:solid 2px #ffffff83; */
+        border-radius: 5vw;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin:21vw 4vw 0vw 4vw;
+        padding:0.3em;
+        font-size:4.6vw;
+        backdrop-filter: blur(2px);
+
+    }
+
+        .salads-carousel-wrapper .dish-composition li {
+            padding:0.4em;
+            font-size:1.3vw;
+
+        }
 
         .mobile .salads-carousel-wrapper .dish-composition {
             padding:1em;
-            margin-top: 54vw;
             position: absolute;
             width:100%;
-            margin:54vw 0vw 0vw 0vw;
+            margin:56vw 0vw 0vw 0vw;
         }
 
             .mobile .salads-carousel-wrapper .dish-composition li {

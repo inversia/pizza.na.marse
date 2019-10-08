@@ -64,6 +64,7 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
                             </>
                     )) }
                 </Carousel>
+                <div className='dish-price'>{saladsData[currentSalad].price}</div>
                 <ul className='dish-composition'>{saladsData[currentSalad].composition.map(x => <li>{x}</li>)}</ul>
             </div> 
         </div>
