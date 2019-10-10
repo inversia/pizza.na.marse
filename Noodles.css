@@ -4,12 +4,16 @@
 }
 
 .noodles-wrapper {
+    margin-top: -10vw;
+    padding-top: 10vw;
     width: 100%;
-    height: 60vw;
+    height: 70vw;
     position: relative;
     background-image: url(/static/art/tumannost8.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    mask-image: linear-gradient(to bottom,transparent 0%, black 15%);
     /* background-color: pink; */
 }
 
@@ -18,23 +22,33 @@
         height: 200vw;
         position: relative;
         background-image: url(/static/art/tumannost8vertical.jpg);
+
+        
     }
 
-    .mobile .noodles-wrapper2 {
+    .noodles-container {
+        margin-top:-10vw;
         position: relative;
-        margin-top: 0vw;
     }
+
+        .mobile .noodles-container {
+            position: relative;
+            margin-top: 0vw;
+            height: 110vw;
+        }
 
 .noodles-wrapper h1 {
     text-align: center;
-    padding: 3vw;
+    padding-bottom: 7vw;
     /* margin: 8vw 10vw; */
     /* margin-bottom: 100vw; */
 }
 
     .mobile .noodles-wrapper h1 {
         font-size: 7.8vw;
-        margin-bottom:7vw;
+        margin-bottom:9vw;
+        padding: 3vw;
+
     }
 
     .noodles{

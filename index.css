@@ -118,7 +118,7 @@ h1 {
     text-align: center;
     position:fixed;
     z-index:3;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(50px);
 }
 
     .menu a {
@@ -433,7 +433,7 @@ h1 {
     background-position: center center;
     /* background-size: 100% 100%; */
     background-repeat:no-repeat;
-    mask-image: linear-gradient(to bottom,transparent 0%, black 13%);
+    mask-image: linear-gradient(to bottom,transparent 0%, black 15%);
 }
 
     .salads {

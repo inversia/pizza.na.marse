@@ -76,7 +76,7 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
         {/* {console.log (layoutMode)} */}
         <div className='noodles-wrapper'>
             <h1>Космическая паста</h1>
-            <div className='noodles-wrapper2'>
+            <div className='noodles-container'>
 
                 {isMobile && <div className='bg'><NoodlesBackgroundMobile /></div>}
 
