@@ -93,7 +93,9 @@ body {
 }
 
 h1 {
-    color:white;
+
+    color:wheat;
+    color: white;
     font-size: 5vw;
 }
 
@@ -108,7 +110,7 @@ h1 {
 .menu {
     width:100%;
     height:6vw;
-    background-color:#433c4880;
+    background-color:#433c4800;
     font-family:'Xolonium';
     display:flex; 
     justify-content: space-around;
@@ -116,7 +118,7 @@ h1 {
     text-align: center;
     position:fixed;
     z-index:3;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(20px);
 }
 
     .menu a {
@@ -425,7 +427,7 @@ h1 {
 
 .cosmos-zone-two-wrapper {
     margin-top:-20vh;
-    background-image: url(/static/art/tumannost3.jpg);
+    background-image: url(/static/art/neb14.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

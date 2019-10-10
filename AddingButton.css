@@ -14,8 +14,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height:9vw;
-    width:27vw;
+    /* height:9vw;
+    width:27vw; */
+    height: 100%;
+    width:100%;
     padding-left:5vw;
     user-select: none; 
     cursor:pointer;
@@ -33,9 +35,9 @@
     .adding-button span{
         color:wheat;
         position:relative;
-        top:0.12vw;
+        top:0.13vw;
         left: 0.4vw;
-        font-size: 2.2vw;
+        font-size: 1.8vw;
         font-family: Xolonium;
     }
 

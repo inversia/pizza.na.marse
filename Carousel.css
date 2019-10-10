@@ -1,5 +1,5 @@
 .carousel {
-    width:65vw;
+    width:50vw;
     height:20vw;
     perspective-origin: 50% 0%;
     color: white;
@@ -91,12 +91,12 @@
 
 .salads-carousel-wrapper {
     padding-top: 15vw;
-    padding-bottom:5vw;
+    padding-bottom:20vw;
 }
 
 .mobile .salads-carousel-wrapper { 
     padding-top:30vw;
-    padding-bottom:95vw;
+    padding-bottom:102vw;
 
 }
 
@@ -110,12 +110,22 @@
     }
 
     .salads-carousel-wrapper .salad-price {
-        position: absolute;
-        left:41.5%;
+        position: relative;
+        left:44vw;
+        top:9.0vw;
+        padding:2vw;
+        border-radius: 0vw 0vw 6vw 6vw;
         /* color:rgb(248, 167, 17); */
         color:wheat;
-        font-size: 5vw;
-        padding-top: 13vw;
+        font-size: 1.2vw;
+        backdrop-filter: blur(6px);
+        width:10vw;
+        text-align: center;
+        border:solid 1px rgba(255, 255, 255, 0.37);
+        border-top:none;
+        z-index:-1;
+        /* padding-top: 13vw; */
+
         
     }
 
@@ -125,35 +135,41 @@
             background-image: url(./static/art/rub.svg);
             background-repeat: no-repeat;
             background-size: contain;
-            height: 0.7em;
-            width: 0.7em;
-            top: 2.87em;
+            height: 1.2vw;
+            width: 1.2vw;
+            top: 2.2vw; 
             margin-left: 0.15em;
+            
 
         }
 
     .mobile .salads-carousel-wrapper .salad-price {
-        padding-top: 49vw;
-        left:44%;
+        /* padding-top: 49vw; */
+        top:50vw;
+        left:38vw;
+        position: relative;
     }
 
         .mobile .salads-carousel-wrapper .salad-price:after {
-            top: 10.07em;
+            top: 3vw;
+            position: absolute;
         }
 
     .salads-carousel-wrapper .salad-composition {
         color:#ffad4f;
-        /* border:solid 2px #ffffff83; */
-        border-radius: 5vw;
+
+        border:solid 1px #ffffff27;
+        border-radius: 3vw;
         text-align: center;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        margin:21vw 4vw 0vw 4vw;
-        padding:0.3em;
+        margin:11vw 3vw 0vw 3vw;
+        padding:0.4em;
         font-size:4.6vw;
-        backdrop-filter: blur(2px);
+        backdrop-filter: blur(3px);
+        /* background-color: rgba(0, 0, 0, 0.336); */
 
     }
 
@@ -177,11 +193,17 @@
 
         .salads-carousel-wrapper .salad-add-button {
             position: absolute;
+            height: 7vw;
+            width:23vw;
+            left:40.0%;
+            margin-top: 2vw;
         }
 
             .mobile .salads-carousel-wrapper .salad-add-button {
-                margin-top: 78vw;
-                left:40%;
+                margin-top: 82vw;
+                left:36%;
+                height: 12vw;
+                width:35vw;
 
             }
 

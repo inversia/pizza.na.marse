@@ -65,8 +65,9 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
                             </>
                     )) }
                 </Carousel>
-                <div className='salad-price'>{saladsData[currentSalad].price}</div>
+                {/* <div className='salad-price'>{saladsData[currentSalad].price}</div> */}
                 <ul className='salad-composition'>{saladsData[currentSalad].composition.map(x => <li>{x}</li>)}</ul>
+                {/* <div className='salad-price'>{saladsData[currentSalad].price}</div> */}
                 <div className='salad-add-button'>
                     <AddingButton  productType={'salads'} name={saladsData[currentSalad].name} backgroundImage={saladsData[currentSalad].backgroundImage} price={saladsData[currentSalad].price}/>
                 </div>
