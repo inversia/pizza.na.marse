@@ -1,4 +1,5 @@
 const x = 1.07
+const y = 0.9
 const height = 1.05;
 
 const noodlesData = [
@@ -11,7 +12,7 @@ const noodlesData = [
         layout: {
             desktop: {
                 position: [67, 7],
-                size: 23,
+                size: 23 * y,
             },
             mobile: {
                 position: [12.7, 75.2],
@@ -29,7 +30,7 @@ const noodlesData = [
         infoLayout: {
             desktop: {
                 position: [-21, 5],
-                size: 23,
+                size: 23 * y,
             },
             mobile: {
                 position: [50, 10],
@@ -47,8 +48,8 @@ const noodlesData = [
         width:"23vw", 
         layout: {
             desktop: {
-                position: [31.8, 27.5],
-                size: 23,
+                position: [34.0, 25.5],
+                size: 23 * y,
             },
             mobile: {
                 position: [10.8, 10.55],
@@ -66,7 +67,7 @@ const noodlesData = [
         infoLayout: {
             desktop: {
                 position: [2, 23],
-                size: 23,
+                size: 23 * y,
             },
             mobile: {
                 position: [-10, 10],
@@ -86,8 +87,8 @@ const noodlesData = [
         width:"19vw", 
         layout: {
             desktop: {
-                position: [69, 30],
-                size: 19,
+                position: [67, 28],
+                size: 19 * y,
             },
             mobile: {
                 position: [34.16, 47.2],
@@ -105,7 +106,7 @@ const noodlesData = [
         infoLayout: {
             desktop: {
                 position: [-18, 5],
-                size: 23,
+                size: 23 * y,
             },
             mobile: {
                 position: [0, 20],
@@ -126,8 +127,8 @@ const noodlesData = [
         width:"18vw", 
         layout: {
             desktop: {
-                position: [53, 21.5],
-                size: 18,
+                position: [53, 19],
+                size: 18 * y,
             },
             mobile: {
                 position: [40.3, 110.0],
@@ -145,7 +146,7 @@ const noodlesData = [
         infoLayout: {
             desktop: {
                 position: [-18, 5],
-                size: 23,
+                size: 23 * y,
             },
             mobile: {
                 position: [-20, 70],
@@ -166,8 +167,8 @@ const noodlesData = [
         width:"18vw",
         layout: {
             desktop: {
-                position: [16, 21],
-                size: 18,
+                position: [19.3, 19.3],
+                size: 18 * y,
             },
             mobile: {
                 position: [63.16, 13.8],
@@ -185,7 +186,7 @@ const noodlesData = [
         infoLayout: {
             desktop: {
                 position: [9, -4],
-                size: 23,
+                size: 23 * y,
             },
             mobile: {
                 position: [0, 0],
@@ -206,8 +207,8 @@ const noodlesData = [
         width:"18vw",
         layout: {
             desktop: {
-                position: [16, 39],
-                size: 18,
+                position: [19.3, 36.1],
+                size: 18 * y,
             },
             mobile: {
                 position: [54.1, 72.8],
@@ -225,7 +226,7 @@ const noodlesData = [
         infoLayout: {
             desktop: {
                 position: [-11, 0],
-                size: 23,
+                size: 23 * y,
             },
             mobile: {
                 position: [20, 50],
@@ -244,8 +245,8 @@ const noodlesData = [
         width:"8vw", 
         layout: {
             desktop: {
-                position: [11, 17.5],
-                size: 8,
+                position: [13.7, 16.2],
+                size: 8 * y,
             },
             mobile: {
                 position: [70.5, 51.5],
@@ -256,12 +257,13 @@ const noodlesData = [
         top:"17.5vw", 
         animationDelay:"3.6s",
         backgroundColor:"#ffb100",
+        
         itemType:'decoration',
         rotationDirection: 'reverse',
         infoLayout: {
             desktop: {
                 position: [5, -18],
-                size: 23,
+                size: 23 * y,
             },
             mobile: {
                 position: [0, 0],
@@ -279,8 +281,8 @@ const noodlesData = [
         width:"9vw",
         layout: {
             desktop: {
-                position: [57.5, 44],
-                size: 9,
+                position: [87.5, 18],
+                size: 9 * y,
             },
             mobile: {
                 position: [77.65, 39.32],
@@ -291,12 +293,13 @@ const noodlesData = [
         top:"44vw",
         backgroundColor:"rgb(130, 116, 90, 0.75)",
         backgroundColor:"#ffc400",
+        
         itemType:"decoration",
         rotationDirection: 'normal',
         infoLayout: {
             desktop: {
                 position: [5, -18],
-                size: 23,
+                size: 23 * y,
             },
             mobile: {
                 position: [0, 0],
@@ -315,8 +318,9 @@ const noodlesData = [
         width:"9vw", 
         layout: {
             desktop: {
-                position: [65.8, 49],
-                size: 9,
+                // position: [6.5, 20],
+                position: [35.0, 17.5],
+                size: 8 * y,
             },
             mobile: {
                 position: [43.5, 3.815],
@@ -325,13 +329,14 @@ const noodlesData = [
         }, 
         left:"65.8vw", 
         top:"49vw",
-        backgroundColor:"#ffbc00", 
+        backgroundColor:"#241a0ca6",
+        // backgroundColor:"red",
         itemType:"decoration",
         rotationDirection: 'normal',
         infoLayout: {
             desktop: {
                 position: [5, -18],
-                size: 23,
+                size: 23 * y,
             },
             mobile: {
                 position: [0, 0],
@@ -349,8 +354,8 @@ const noodlesData = [
         width:"9vw",
         layout: {
             desktop: {
-                position: [57.5, 44],
-                size: 9,
+                position: [57, 40],
+                size: 9 * y,
             },
             mobile: {
                 position: [68.0, 119.5],
@@ -360,12 +365,13 @@ const noodlesData = [
         left:"57.5vw", 
         top:"44vw",
         backgroundColor:"rgb(255, 177, 0)",
+        // backgroundColor:"green",
         itemType:"decoration",
         rotationDirection: 'normal',
         infoLayout: {
             desktop: {
                 position: [5, -18],
-                size: 23,
+                size: 23 * y,
             },
             mobile: {
                 position: [0, 0],
@@ -384,8 +390,8 @@ const noodlesData = [
         width:"9vw", 
         layout: {
             desktop: {
-                position: [65.8, 49],
-                size: 9,
+                position: [64.8, 45],
+                size: 9 * y,
             },
             mobile: {
                 position: [39.3, 136.41],
@@ -395,12 +401,13 @@ const noodlesData = [
         left:"65.8vw", 
         top:"49vw",
         backgroundColor:"#ff9100",
+        // backgroundColor:"red",
         itemType:"decoration",
         rotationDirection: 'normal',
         infoLayout: {
             desktop: {
                 position: [5, -18],
-                size: 23,
+                size: 23 * y,
             },
             mobile: {
                 position: [0, 0],
