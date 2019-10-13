@@ -28,19 +28,32 @@
     }
 
     .noodles-container {
-        margin-top:-10vw;
         position: relative;
+        margin-top: -2vw;
+        margin-left:-4vw;
+
     }
 
         .mobile .noodles-container {
             position: relative;
             margin-top: 0vw;
             height: 110vw;
+            margin-left:0vw;
+        }
+
+        .noodles-container > .bg > svg {
+            width: 100vw;
+        }
+
+        .noodles-container .noodles-background-desktop {
+            padding-top:4vw;
+            padding-left:3vw;
+
         }
 
 .noodles-wrapper h1 {
     text-align: center;
-    padding-bottom: 7vw;
+    /* padding-bottom: 7vw; */
     /* margin: 8vw 10vw; */
     /* margin-bottom: 100vw; */
 }

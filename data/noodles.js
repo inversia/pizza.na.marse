@@ -281,7 +281,7 @@ const noodlesData = [
         width:"9vw",
         layout: {
             desktop: {
-                position: [87.5, 18],
+                position: [88.5, 17.5],
                 size: 9 * y,
             },
             mobile: {
@@ -293,7 +293,7 @@ const noodlesData = [
         top:"44vw",
         backgroundColor:"rgb(130, 116, 90, 0.75)",
         backgroundColor:"#ffc400",
-        
+        // backgroundColor:"red",
         itemType:"decoration",
         rotationDirection: 'normal',
         infoLayout: {
@@ -330,7 +330,6 @@ const noodlesData = [
         left:"65.8vw", 
         top:"49vw",
         backgroundColor:"#241a0ca6",
-        // backgroundColor:"red",
         itemType:"decoration",
         rotationDirection: 'normal',
         infoLayout: {
@@ -401,7 +400,6 @@ const noodlesData = [
         left:"65.8vw", 
         top:"49vw",
         backgroundColor:"#ff9100",
-        // backgroundColor:"red",
         itemType:"decoration",
         rotationDirection: 'normal',
         infoLayout: {

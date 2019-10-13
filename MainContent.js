@@ -11,6 +11,7 @@ import {goToProduct} from './util'
 import pizzaData from './data/pizza'
 import saladsData from './data/salads'
 import noodlesData from './data/noodles'
+import NoodlesBackgroundDesktop from './NoodlesBackgroundDesktop'
 
 
 export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaTypeSelected, layoutMode }) {
@@ -78,7 +79,7 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
             <h1>Космическая паста</h1>
             <div className='noodles-container'>
 
-                {isMobile && <div className='bg'><NoodlesBackgroundMobile /></div>}
+                {<div className='bg'>{isMobile ? <div className='noodles-background-mobile'><NoodlesBackgroundMobile /></div> : <div className='noodles-background-desktop'><NoodlesBackgroundDesktop /></div>}</div>}
 
                 {noodlesData.map (noodles => (<Noodles {...noodles} 
                                                     key={noodles.name} 
