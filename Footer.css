@@ -1,4 +1,6 @@
 .footer-content {
+    position: relative;
+    margin-top:-12vw;
     height: 60vw;
     width: 100%;
     background-image: url(./static/art/mars2.jpg);
@@ -6,19 +8,35 @@
     background-size: cover;
     color:white;
     font-size:2vw;
-    mask-image: linear-gradient(to bottom,transparent 0%, black 40%);
+    /* mask-image: linear-gradient(to bottom,transparent 0%, black 40%); */
+    mask-image: linear-gradient(to bottom,transparent 0%, rgb(0, 0, 0) 40%);
     display: flex;
 }
 
+    .mobile .footer-content {
+        position: relative;
+        height: 120vw;
+        margin-top:-22vw;
+        mask-image: linear-gradient(to bottom,transparent 0%, black 15%);
+    }
+
 .general-info {
-    padding-top:15vw;
     position: absolute;
-    right:0vw;
+    /* right:0vw; */
     align-items: right;
     color:black;
     color:white;
+    /* border:solid red 1px; */
+    bottom:0;
+    right:0;
 
 }
+
+    .mobile .general-info {
+        /* padding-top:70vw; */
+        bottom:0;
+        left:40vw;
+    }
 
     .general-info div {
         padding: 1.5vw; 
@@ -81,7 +99,15 @@
 
         }
         .telephone a {
+            margin-top: -2vw;
             padding-left:1.4vw;
+            display: block;
+            padding-left:15vw;
+        }
+
+        .telephone a.second {
+            margin-top: 1vw;
+
         }
 
         .time {
@@ -106,13 +132,14 @@
                 }
 
 .map {
+    position: absolute;
     height: 40vw;
     width: 40vw;
     overflow: hidden;
     border-radius: 20vw 20vw 20vw 20vw;
     left:4vw;
-    margin-top:16.5vw;
-    position: absolute;
+    bottom:2vw;
+    /* margin-top:16.5vw; */
     filter: invert(0.96) hue-rotate(145deg);
     /* filter: invert(0.96) hue-rotate(305deg); */
     /* filter: invert(0.96) hue-rotate(27deg); */
@@ -121,6 +148,12 @@
     /* box-shadow: -6px -0px 46px rgb(0, 102, 255); */
     box-shadow: -6px -0px 26px rgb(255, 255, 255);
 }
+
+    .mobile .map {
+
+        bottom:2vw;
+        left:5vw;
+    } 
 
 
 @media (max-width: 500px) {
