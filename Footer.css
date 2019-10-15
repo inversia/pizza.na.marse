@@ -1,6 +1,6 @@
 .footer-content {
     position: relative;
-    margin-top:-10vw;
+    margin-top:-5vw;
     height: 60vw;
     width: 100%;
     background-image: url(./static/art/mars2.jpg);
@@ -15,9 +15,24 @@
 
     .mobile .footer-content {
         position: relative;
-        height: 100vw;
-        margin-top:-10vw;
-        mask-image: linear-gradient(to bottom,transparent 0%, black 25%);
+        height: 180vw;
+        margin-top:-0vw;
+        mask-image: linear-gradient(to bottom,transparent 0%, black 30%);
+        background-image: none;
+    }
+
+    .mobile .footer-content:after {
+        position:absolute;
+        content: '';
+        top:0;
+        bottom: 60vw;
+        left:0;
+        width: 100%;
+        background-image: url(./static/art/mars2.jpg);
+        border-radius: 0vw 0vw 14vw 14vw;
+        background-size: cover;
+        box-shadow: 0px 2vw 5vw rgba(0,0,0,0.8);
+        /* opacity: 0.6; */
     }
 
 .general-info {
@@ -29,13 +44,16 @@
     /* border:solid red 1px; */
     bottom:0;
     right:0;
+    z-index: 2;
 
 }
 
     .mobile .general-info {
         /* padding-top:70vw; */
-        bottom:0;
-        left:40vw;
+        top:35vw;
+        
+        left:20vw;
+        
     }
 
     .general-info div {
@@ -52,6 +70,12 @@
 
         /* justify-content: center; */
     }
+
+        .mobile .general-info div {
+            padding:2.3vw; 
+            margin: 2.5vw;
+            font-size: 3.3vw;
+        }
 
     /* .general-info div::after {
         position: absolute;
@@ -80,6 +104,10 @@
             .address a {
                 padding-left: 3.2vw;
             }
+
+            .mobile .address {
+                width:62vw;
+            }
         
         .email {
             width: 45vw;
@@ -92,6 +120,10 @@
             padding-left: 3vw;
             width:8vw;
         }
+
+            .mobile .email {
+                width: 58vw; 
+            }
 
         .telephone {
             width:55vw;
@@ -109,6 +141,11 @@
             margin-top: 1vw;
 
         }
+
+            .mobile .telephone {
+                width:75vw;
+                padding-left:25vw;
+            }
 
         .time {
             display: flex;
@@ -131,6 +168,10 @@
 
                 }
 
+            .mobile .time {
+                width: 52vw;
+            }
+
 .map {
     position: absolute;
     height: 40vw;
@@ -150,9 +191,11 @@
 }
 
     .mobile .map {
-
-        bottom:2vw;
-        left:5vw;
+        border-radius: 0vw 0vw 0vw 0vw;
+        left:0vw;
+        height: 70vw;
+        bottom:0vw;
+        width: 100%;
     } 
 
 
@@ -160,6 +203,14 @@
     
     .footer-content {
         width:100%;
+    }
+ }
+
+ @media (max-width: 401px) {
+    
+    .footer-content {
+        width:100%;
+
     }
  }
 
