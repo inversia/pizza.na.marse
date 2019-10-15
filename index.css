@@ -548,12 +548,12 @@ h1 {
 
     .cosmos-zone-one-wrapper {
         padding-top:8vw;
-        padding-bottom:60vw;
+        padding-bottom:10vw;
         /* margin-bottom: 80vw; */
         background-image:url(/static/art/backgroundstars-vertical.jpg);
         background-size: cover;
         background-position: 50% 50%;
-        height: 311vw;
+        height: 298vw;
         background-repeat: no-repeat;
     }
 
@@ -567,20 +567,21 @@ h1 {
     
     .pizzas {
         /* height: 250vw; */
-        margin-bottom: 20vw;
+        margin-bottom: 0vw;
         
     }
 
     .cosmos-zone-one-wrapper {
-        height: 225vw;
+        background-size: cover;
+        /* background-color: pink; */
+        height: 300vw;
         padding-bottom: 0vw;
-        margin-bottom:-35vw;
+        margin-bottom:-45vw;
+
     }
 
     .cosmos-zone-two-wrapper {
         margin-top: 0vw;
-        
-        margin-top: 80vw;
         padding-top:30vw;
         padding-bottom: 25vw;
     }
@@ -597,6 +598,18 @@ h1 {
 
     body {
         overflow-x: hidden;
+    }
+
+    .cosmos-zone-two-wrapper {
+        /* margin-top:-20vh;
+        background-image: url(/static/art/neb14.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-repeat:no-repeat; */
+        padding-top:0vw;
+        mask-image: linear-gradient(to bottom,transparent 0%, black 10%);
+        margin-top:-26vh;
     }
 }
 

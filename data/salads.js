@@ -18,7 +18,7 @@ const saladsData = [
 
     {
         name: 'Томаты + моцарелла',
-        composition: ['моцарелла "Гальбани"', 'помидоры', 'маслины', 'базилик', 'песто'],
+        composition: ['помидоры', 'маслины', 'базилик', 'песто', 'моцарелла "Гальбани'],
         price: 190,
         backgroundImage:'url(/art/losos.jpg)',
         type: "veg",

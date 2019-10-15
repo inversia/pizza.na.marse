@@ -1,6 +1,6 @@
 .footer-content {
     position: relative;
-    margin-top:-12vw;
+    margin-top:-10vw;
     height: 60vw;
     width: 100%;
     background-image: url(./static/art/mars2.jpg);
@@ -15,9 +15,9 @@
 
     .mobile .footer-content {
         position: relative;
-        height: 120vw;
-        margin-top:-22vw;
-        mask-image: linear-gradient(to bottom,transparent 0%, black 15%);
+        height: 100vw;
+        margin-top:-10vw;
+        mask-image: linear-gradient(to bottom,transparent 0%, black 25%);
     }
 
 .general-info {
