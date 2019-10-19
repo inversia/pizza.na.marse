@@ -157,7 +157,6 @@
 
     .salads-carousel-wrapper .salad-composition {
         color:#ffad4f;
-
         border:solid 1px #ffffff27;
         border-radius: 3vw;
         text-align: center;
@@ -165,7 +164,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        margin:11vw 3vw 0vw 3vw;
+        margin:12vw 3vw 0vw 3vw;
         padding:0.4em;
         font-size:4.6vw;
         backdrop-filter: blur(3px);
@@ -256,6 +255,41 @@
             left:50%;
         }
 
+
+
+@media (max-width:850px){
+    .salads-carousel-wrapper .salad-composition {
+        margin:14vw 3vw 0vw 3vw;
+    }
+}
+
+
+@media (max-width:630px){
+    
+    .salads-carousel-wrapper .salad-composition {
+        margin:16vw 3vw 0vw 3vw;
+    }
+
+    .carousel.salads .items .title {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width:530px){
+    .salads-carousel-wrapper .salad-composition {
+        margin:17vw 3vw 0vw 3vw;
+        
+    }
+
+    .carousel.salads .items .title {
+        font-size: 3vw;
+    }
+
+    .cosmos-zone-one-wrapper {
+        padding-bottom:7vw;
+    }
+
+}
 
 @media (max-width: 500px) {
     

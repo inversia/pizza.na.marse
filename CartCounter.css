@@ -25,16 +25,17 @@
     align-items: center;
     justify-content: center;
     margin-left: 2.7vw;
-    margin-top:0.7vw;
+    margin-top:0.9vw;
     width: 2vw;
     height: 2vw;
-    overflow: visible;
+    overflow: hidden;
+    font-size: 1.1vw;
     
 }
 
 .cart-counter.two-digits,
 .menu .cart-counter.two-digits {
-    font-size: 0.9vw;
+    font-size: 1vw;
     padding-top: 0.1vw;
     padding-right: 0.2vw !important;
 }

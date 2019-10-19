@@ -174,7 +174,7 @@ h1 {
             height: 3.6vw;
             margin-left: 6.3vw;
             margin-top:3.7vw;
-            background-color:#42373700;
+            background-color:#08033331;
             font-size: 1.3vw;
         }
 
@@ -513,7 +513,7 @@ h1 {
     }
 
     .cosmos-zone-one-wrapper {
-        padding-bottom: 0vw;
+        padding-bottom: 20vw;
     }
 }
 
@@ -544,7 +544,7 @@ h1 {
     }
 
     .cosmos-zone-one-wrapper {
-
+        padding-bottom: 0vw;
     }
 }
 
