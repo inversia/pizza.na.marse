@@ -203,13 +203,22 @@
 
             .mobile .salads-carousel-wrapper .salad-add-button {
                 position: absolute;
-                bottom: 8vw;
+                bottom: 9vw;
                 /* margin-top: 82vw; */
                 left:36%;
                 height: 12vw;
                 width:35vw;
 
             }
+
+                .mobile .salads-carousel-wrapper .salad-add-button .adding-button span{
+                    font-size: 2.8vw;
+                }
+
+                    .mobile .salads-carousel-wrapper .salad-add-button .highlight,
+                    .mobile .salads-carousel-wrapper .salad-add-button .highlight2 {
+                        height: 17vw;
+                    }
 
     .carousel.salads .item {
         width:10vw;
