@@ -29,9 +29,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x:hidden;
-
     --margin: 6vw;
 }
+
+    .mobile .cart-content {
+        background-position-x: 40%;
+
+    }
 
     .cart-content span {
         text-decoration: underline;
@@ -47,10 +51,19 @@
         margin-top: var(--margin);
     }
 
+        .mobile .cart-content h1 {
+            padding-top: 14vw;
+            font-size: 5vw;
+        }
+
     .cart-content .inner {
         width: 61vw;
         padding-bottom: 10vw;
     }
+
+        .mobile .cart-content .inner {
+            width: 85vw;
+        }
 
         .cart-content h1,
         .target,
@@ -95,6 +108,12 @@
             backdrop-filter: blur(5px);
             position: relative;
         }
+
+            .mobile .cart-content .delivery-radius {
+                font-size: 2.4vw;
+                padding: 2.5vw !important;
+                border-radius: 6vw;
+            }
 
         .cart-content .cart-items {
             margin-top: var(--margin);
