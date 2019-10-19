@@ -7,14 +7,14 @@
     align-items: center;
     background-color: #644a4b;
     color:#ffd000;
-    margin-left: 1vw;
+    margin-left: 1.2vw;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color:#423737;
     color:#ffda95;
     position: relative;
-    top:0.15vw;
+    /* top:0.15vw; */
 }
 
 .menu .cart-counter {

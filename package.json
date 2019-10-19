@@ -15,7 +15,7 @@
     "@rehooks/component-size": "^1.0.2",
     "hookrouter": "^1.2.3",
     "js-yaml": "^3.13.1",
-    "panic-overlay": "^1.0.13",
+    "panic-overlay": "^1.0.39",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-transition-group": "^4.3.0",

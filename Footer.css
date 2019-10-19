@@ -50,7 +50,7 @@
 
     .mobile .general-info {
         /* padding-top:70vw; */
-        top:35vw;
+        top:45vw;
         
         left:20vw;
         
@@ -169,7 +169,8 @@
                 }
 
             .mobile .time {
-                width: 52vw;
+                width: 62vw;
+                border-radius: 27vw 20vw 70vw 25vw !important;
             }
 
 .map {

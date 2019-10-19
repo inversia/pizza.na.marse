@@ -11,7 +11,7 @@ import Products from './Products'
 import Cart from './Cart'
 
 import { CartContext, useCartState } from './CartContext'
-import { LayoutModeContext } from './LayoutModeContext'
+import { LayoutModeContext, useLayoutContext } from './LayoutModeContext'
 
 import { decodeProps } from './util'
 
@@ -19,10 +19,8 @@ export default function App () {
     
     const appEl      = useRef ()
     const { width }  = useComponentSize (appEl)
-    const layoutMode = width < 501 ? 'mobile' : 'desktop'
+    const layoutMode = width <= 500 ? 'mobile' : 'desktop'
     const isMobile   = layoutMode === 'mobile'
-
-    // const { layoutMode, isMobile } = useContext (LayoutModeContext)
 
     const [pizzaTypeSelected, setPizzaTypeSelected] = useState (undefined)
 
