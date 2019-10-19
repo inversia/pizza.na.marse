@@ -90,6 +90,7 @@
 }
 
 .salads-carousel-wrapper {
+    position: relative;
     padding-top: 15vw;
     padding-bottom:20vw;
 }
@@ -179,10 +180,12 @@
         }
 
         .mobile .salads-carousel-wrapper .salad-composition {
-            padding:1em;
+            padding:0.9em;
+            margin: 0;
             position: absolute;
             width:100%;
-            margin:56vw 0vw 0vw 0vw;
+            bottom:27vw;
+
         }
 
             .mobile .salads-carousel-wrapper .salad-composition li {
@@ -199,7 +202,9 @@
         }
 
             .mobile .salads-carousel-wrapper .salad-add-button {
-                margin-top: 82vw;
+                position: absolute;
+                bottom: 8vw;
+                /* margin-top: 82vw; */
                 left:36%;
                 height: 12vw;
                 width:35vw;

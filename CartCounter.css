@@ -20,18 +20,22 @@
 .menu .cart-counter {
     /* background-color: #ffba25; */
     color:rgb(255, 255, 255);
-    border: solid 2px rgb(255, 246, 246);
+    border: solid 0.2vw rgb(255, 246, 246);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 2.7vw;
-    margin-top:0.9vw;
+    margin-top:.9vw;
     width: 2vw;
     height: 2vw;
     overflow: hidden;
     font-size: 1.1vw;
     
 }
+
+    .menu.mobile .cart-counter {
+        border: solid 0.3vw rgb(255, 246, 246);
+    }
 
 .cart-counter.two-digits,
 .menu .cart-counter.two-digits {
