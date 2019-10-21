@@ -15,12 +15,20 @@ export default function Cart () {
         
         setSubmitClicked (true)
         event.preventDefault()
-
         //alert(form.current)
     }
 
-    const { cartItems, addRandomPizza, removeFromCart, setIsLarge } = useContext (CartContext)
+    const { cartItems, addRandomPizza, removeFromCart, setIsLarge} = useContext (CartContext)
     const isCartEmpty = cartItems.length === 0
+
+    const prices = cartItems.map(item => item.price[Number(item.isLarge)])
+    const total = prices.reduce((a, b) => a + b, 0)
+
+    console.log(total)
+
+    
+    // item.price[Number(item.isLarge)]
+    // const total = cartItems.reduce()
 
     return  <div className='cart-content'>
                 {isCartEmpty ? 
@@ -43,9 +51,12 @@ export default function Cart () {
                             )}
                         </TransitionGroup>
                     </div>
-                
+
+                    {(prices.length > 1) && <div className='total'>{ 'Итого: ' + total}</div>}
+     
                     <div className='random'>Если Вас одолевают муки выбора, можете попытать удачи и <br/><span onClick={() => addRandomPizza()}>добавить рандомную пиццу</span></div>
                     {/* <pre>{JSON.stringify (cartItems, null, 4)}</pre> */}
+
                     <form ref={form} className={classList ({ fields: 1, 'submit-clicked': submitClicked })}>                        
                         <input type='text' name='name'   placeholder='Как к Вам обращаться?'/>
                         <input type='text' name='address' placeholder='Адрес доставки (напоминаем, что мы доставляем только в радиусе метро Курская)' required />
@@ -56,6 +67,7 @@ export default function Cart () {
                         <div className='cart-highlight'></div>
                         <div className='cart-highlight2'></div>
                     </button>
+                    
                 </div> 
             </div>
 }
