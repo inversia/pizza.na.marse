@@ -170,11 +170,11 @@
             font-size: 14.5vw;
             padding: 4vw;
             text-align: center;
-            margin-top: 10vw;
+            /* margin-top: 10vw; */
         }
 
-        .product-info-panel.mobile h2 {
-            margin-top: 8vw;
+        .mobile .product-info-panel h2 {
+            margin-top: 13vw;
         }
        
         .product-info {
@@ -191,7 +191,7 @@
             position: relative;
         }
 
-        .product-info.mobile:nth-child(odd) {
+        .mobile .product-info:nth-child(odd) {
      
             /* flex-direction: row-reverse; */
             
@@ -486,3 +486,16 @@
     --color-right: #fb7a05;
     white-space: normal;
 }
+
+    .choose-taste:after,
+    .choose-type::after {
+        position: absolute;
+        right: 10%;
+        content: '';
+        height:0.9vw;
+        width:1.1vw;
+        /* background-color: rgb(255, 25, 0); */
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-image: url(./static/art/down1.svg);
+    }

@@ -124,7 +124,7 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
                     <DropdownMenu 
                         className='choose-taste'
                         items={fillings}      
-                        defaultText='Начинка ↓' 
+                        defaultText='Начинка' 
                         activeItem={fillingType} 
                         setActiveItem={setFillingType} 
                     />

@@ -3,7 +3,7 @@
     margin-top:-5vw;
     height: 57vw;
     width: 100%;
-    background-image: url(./static/art/mars2.jpg);
+    background-image: url(./static/art/mars.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color:white;
@@ -26,17 +26,17 @@
 
         .mobile .footer-title {
             position: relative;
-            top:6vw;
-            left:16%;
+            top:10vw;
+            left:9%;
             font-size: 10.8vw;
             padding: 3vw;
         }
 
     .mobile .footer-content {
         position: relative;
-        height: 180vw;
+        height: 160vw;
         margin-top:-0vw;
-        mask-image: linear-gradient(to bottom,transparent 0%, black 30%);
+        mask-image: linear-gradient(to bottom,transparent 0%, black 20%);
         background-image: none;
     }
 
@@ -47,7 +47,7 @@
         bottom: 60vw;
         left:0;
         width: 100%;
-        background-image: url(./static/art/mars2.jpg);
+        background-image: url(./static/art/mars.jpg);
         border-radius: 0vw 0vw 14vw 14vw;
         background-size: cover;
         box-shadow: 0px 2vw 5vw rgba(0,0,0,0.8);
@@ -69,7 +69,7 @@
 
     .mobile .general-info {
         /* padding-top:70vw; */
-        top:45vw;
+        top:22vw;
         
         left:20vw;
         
@@ -152,7 +152,7 @@
             margin-top: -2vw;
             padding-left:1.4vw;
             display: block;
-            padding-left:15vw;
+            padding-left:22vw;
         }
 
         .telephone a.second {
@@ -162,7 +162,6 @@
 
             .mobile .telephone {
                 width:75vw;
-                padding-left:25vw;
             }
 
         .time {
