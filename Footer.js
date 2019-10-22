@@ -5,6 +5,7 @@ import { YMaps, Map } from 'react-yandex-maps';
 export default function Footer () {
 
     return <>
+        <h1 className='footer-title'>Контакты</h1>
         <div className='footer-content' itemscope itemtype='http://schema.org/Restaurant'>
             <div className='general-info'>
                 <div className='telephone'>Телефон: <a href='tel:+7 495 005 59 36'>+7 495 005 59 36</a><a className='second' href='tel:+7 495 005 59 36'>+7 495 005 59 36</a></div>

@@ -1,7 +1,7 @@
 .footer-content {
     position: relative;
     margin-top:-5vw;
-    height: 60vw;
+    height: 57vw;
     width: 100%;
     background-image: url(./static/art/mars2.jpg);
     background-repeat: no-repeat;
@@ -9,9 +9,28 @@
     color:white;
     font-size:2vw;
     /* mask-image: linear-gradient(to bottom,transparent 0%, black 40%); */
-    mask-image: linear-gradient(to bottom,transparent 0%, rgb(0, 0, 0) 40%);
+    mask-image: linear-gradient(to bottom,transparent 0%, rgb(0, 0, 0) 33%);
     display: flex;
 }
+
+    .footer-title{
+        position: relative;
+        top:5vw;
+        left:27%;
+        font-size: 5.5vw;
+        padding: 3vw;
+        z-index: 1;
+        text-transform: uppercase;
+
+    }
+
+        .mobile .footer-title {
+            position: relative;
+            top:6vw;
+            left:16%;
+            font-size: 10.8vw;
+            padding: 3vw;
+        }
 
     .mobile .footer-content {
         position: relative;
@@ -128,7 +147,6 @@
         .telephone {
             width:55vw;
             border-radius: 8vw 12vw 20vw 20vw !important;
-
         }
         .telephone a {
             margin-top: -2vw;
