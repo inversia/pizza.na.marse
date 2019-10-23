@@ -108,7 +108,7 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
 
     return <div className='product-overlay'>
                 <div className={'overlay-menu ' + layoutMode}>
-                    <div className='back' onClick={() => navigate ('/') } >⇐ Назад</div>  
+                    <div className='back' onClick={() => navigate ('/') } >Назад</div>  
                     
                     <DropdownMenu 
                         className='choose-type'
