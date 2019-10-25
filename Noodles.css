@@ -56,13 +56,14 @@
 
 .noodles-wrapper h1 {
     text-align: center;
+    font-size: 6.2vw;
     /* padding-bottom: 7vw; */
     /* margin: 8vw 10vw; */
     /* margin-bottom: 100vw; */
 }
 
     .mobile .noodles-wrapper h1 {
-        font-size: 7.8vw;
+        font-size: 8.8vw;
         margin-bottom:9vw;
         padding: 3vw;
         
