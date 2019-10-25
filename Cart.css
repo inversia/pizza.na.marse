@@ -134,7 +134,8 @@
             position: relative;
             border: 2px solid #ffa73cea;
             margin-top: var(--margin);
-            padding: 2.5vw;
+            padding: 1.5vw;
+            font-size:1.6vw;
             border-radius: 5vw;
             color:#ffa83c;
             background:rgba(0,0,0,0.1);
@@ -143,6 +144,11 @@
             text-shadow: 0.00em 0.00em 0.2em #472005;
 
         }
+
+            .mobile .cart-content .total {
+                padding: 3.2vw;
+                font-size: 3vw;
+            }
 
         .cart-content .random  {
 
