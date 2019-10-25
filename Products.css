@@ -14,7 +14,6 @@
 }
 
 
-
 /* .product-overlay {
     display: flex;
     align-items: stretch;
@@ -86,10 +85,14 @@
         user-select: none;
     }
 
-    .overlay-menu.mobile *:not(.cart-counter) {
+    .mobile .overlay-menu *:not(.cart-counter) {
         font-size: 2.8vw;
         width: 25vw;
     }
+    .mobile .overlay-menu .choose-taste * {
+        width: 38vw;
+    }
+
 
         .overlay-menu .bucket {
             position: relative;
@@ -522,12 +525,23 @@
     --color-left: #f3a310;
     --color-right: #f78f0b;
 }
+    .mobile .choose-type {
+        --color-left: #ffa500;
+        --color-right: #ff9601;
+    }
 
 .choose-taste {
     --color-left: #f78f0b;
     --color-right: #fb7a05;
     white-space: normal;
 }
+
+    .mobile .choose-taste {
+        --color-left: #ff9a01;
+        --color-right: #fe7500;
+        white-space: normal;
+    }
+
 
     .choose-taste:after,
     .choose-type::after {

@@ -29,7 +29,11 @@
 
         .dropdown-menu li {
             height: 6vw;
-        }   
+        } 
+        
+            .mobile .dropdown-menu li {
+                height: 8vw;
+            }
         
         .dropdown-menu li.all {
             font-weight: bold;
