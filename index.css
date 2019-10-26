@@ -123,6 +123,10 @@ h1 {
     padding-bottom: 15vw;
 }
 
+.cosmos-zone-one-wrapper:not(.pizzas) {
+    filter: contrast(1.1);
+}
+
 .menu {
     width:100%;
     height:6vw;
@@ -194,6 +198,7 @@ h1 {
     }
 
         .menu.mobile .cart.link .cart-counter {
+            transform-origin: center;
             width:3.6vw;
             height: 3.6vw;
             margin-left: 6.3vw;
@@ -225,6 +230,7 @@ h1 {
         background-repeat:no-repeat;
         display:block;
         margin-top: 0.6vw;
+        margin-left: 1.5vw;
         height:8vw;
         width:9vw;
         /* filter: invert(0.21) hue-rotate(105deg);
@@ -427,6 +433,7 @@ h1 {
     /* border:4px solid magenta; */
     height: 78vw;
     pointer-events:none;
+    filter: contrast(0.99) !important;
     
 }
 
