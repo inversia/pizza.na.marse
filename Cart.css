@@ -43,7 +43,7 @@
     }
 
     .cart-content h1 {
-        font-size:3.6vw;
+        font-size:3.5vw;
         line-height: 1.2em;
         text-shadow: 0.01em 0.05em 0.6em #ff6600;
         padding: 0;
@@ -53,7 +53,7 @@
 
         .mobile .cart-content h1 {
             padding-top: 14vw;
-            font-size: 5vw;
+            font-size: 4.25vw;
         }
 
     .cart-content .inner {
@@ -79,7 +79,7 @@
             width:13.1vw;
             background-image: url(./static/art/rocket4.svg);
             transform: rotate(45deg);
-            top:-4.51vw;
+            top:-5.51vw;
             left:76%;
             position: absolute;
             background-size: 50%;

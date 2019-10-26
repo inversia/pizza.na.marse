@@ -360,5 +360,7 @@
             /* border: 1px solid green; */
         }
 
-
+        .cosmos-zone-one-wrapper {
+            padding-top:10vw;
+        }
 }
