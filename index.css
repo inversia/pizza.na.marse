@@ -124,7 +124,7 @@ h1 {
 }
 
 .cosmos-zone-one-wrapper:not(.pizzas) {
-    filter: contrast(1.1);
+    filter: contrast(1.08);
 }
 
 .menu {
@@ -137,9 +137,17 @@ h1 {
     align-items:center;
     text-align: center;
     position:fixed;
-    z-index:3;
-    backdrop-filter: blur(50px);
+    z-index:3; 
 }
+
+    .menu::after {
+        content: '';
+        width:100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        backdrop-filter: blur(50px);
+    }
 
     .menu a {
         color: #fcf9f1;
@@ -254,13 +262,13 @@ h1 {
         filter: invert(0.43) hue-rotate(180deg); */
     }
 
-    .menu.mobile a.fish:hover {
+    .mobile .menu a.fish:hover {
         filter: invert(0.21) hue-rotate(105deg);
         filter: invert(0.43) hue-rotate(180deg);
         
     }
 
-    .menu.mobile a.hamburger-menu {
+    .mobile .menu .hamburger-menu {
         background-image:url(/static/art/hamburger-menu.svg);
         background-size:contain;
         background-repeat:no-repeat;
@@ -268,6 +276,24 @@ h1 {
         margin-top: 0.6vw;
         height:7vw;
         width:7vw;
+    }
+
+    .dropdown-menu.hamburger-menu ul {
+        /* background: linear-gradient(to bottom,#09011f 1%, rgb(255, 145, 0) 80%); */
+        backdrop-filter: blur(25px);
+        position: absolute;
+        margin-top: 2.2vw;
+        margin-left:-12;
+        /* padding:0vw 7vw; */
+        padding-top:3vw;
+    }
+
+    .dropdown-menu.hamburger-menu li {
+        height: 12vw;
+        color:white;
+        font-size:3vw;
+        padding:4vw 10vw;
+        padding-bottom: 8vw;
     }
 
     .menu.mobile a.mix {
@@ -476,8 +502,10 @@ h1 {
 
         .pizza h2 {
             position: absolute;
+            z-index: 2;
             right: 0%;
             top:-9%;
+            text-shadow: 0vw 0.5vw 2vw #000000;
         }
 
 .product-overlay {

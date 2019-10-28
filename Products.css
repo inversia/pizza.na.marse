@@ -41,7 +41,7 @@
         z-index: 2;
     }
 
-    .overlay-menu .back::after {
+    /* .overlay-menu .back::after {
         position: absolute;
         left:5.7vw;
         top:38.8%;
@@ -51,7 +51,7 @@
         background-image: url(./static/art/back1.svg);
         background-repeat: no-repeat;
         background-size: cover;
-    }
+    } */
 
     .mobile .overlay-menu .back::after {
         left:4.5vw;
