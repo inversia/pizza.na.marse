@@ -9,6 +9,7 @@ import AboutContent from './AboutContent'
 import LoyaltyContent from './LoyaltyContent'
 import Products from './Products'
 import Cart from './Cart'
+import Footer from './Footer'
 
 import { CartContext, useCartState } from './CartContext'
 import { LayoutModeContext, useLayoutContext } from './LayoutModeContext'
@@ -29,6 +30,7 @@ export default function App () {
                         '/about':                () => <AboutContent />,
                         '/loyalty':              () => <LoyaltyContent />,
                         '/cart':                 () => <Cart />,
+                        '/contacts':             () => <Footer />,
 
                         '/products':                         ()    => <Products />,
                         '/products/:activeType':             props => <Products {...decodeProps (props)} />,

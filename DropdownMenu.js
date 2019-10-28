@@ -18,7 +18,7 @@ export default function DropDownMenu ({ className, items = {}, defaultText, enab
                     ...(enableSelectAll && activeItem) ? [[undefined, 'Выбрать всё']] : []
                 ].map(([k, v]) =>
                         v !== items[activeItem]
-                            ? <li className={!k ? 'all' : ''} key={String (k)} onClick={() => setActiveItem (k)}>{v}</li>
+                            ? <li className={!k ? 'all' : ''} key={String (k)} onClick={() => setActiveItem && setActiveItem (k)}>{v}</li>
                             : undefined)}
             </ul>
         </div>

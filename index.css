@@ -286,13 +286,15 @@ h1 {
         margin-left:-12;
         /* padding:0vw 7vw; */
         padding-top:3vw;
+        border-radius: ;
     }
 
-    .dropdown-menu.hamburger-menu li {
+    .dropdown-menu.hamburger-menu li,
+    .dropdown-menu.hamburger-menu a {
         height: 12vw;
         color:white;
         font-size:3vw;
-        padding:4vw 10vw;
+        padding:4vw 8vw;
         padding-bottom: 8vw;
     }
 

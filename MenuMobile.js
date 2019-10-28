@@ -9,16 +9,10 @@ export default function MenuMobile ({onSelect }) {
 
     const { addRandomPizza } = useContext (CartContext)
 
-    // const paths = {
-    //     main:    pizzaData,
-    //     sales:   noodlesData,
-    //     contacts:    saladsData,
-    // }
-
     const hamburgerLabels = { 
-        main: 'Главная', 
-        sales: 'Акции', 
-        contacts: 'Контакты',
+        main:      <A href="/"        className='dropdown-menu link active'>Главная</A> ,
+        sales:     <A href="/loyalty" className=''>Акции</A> , 
+        contacts:  <A href="/contacts" className=''>Контакты</A> , 
     }
 
 
@@ -29,10 +23,7 @@ export default function MenuMobile ({onSelect }) {
             enableSelectAll={false}
             defaultText={undefined}      
             // activeItem={activeType}
-            setActiveItem={type => {
-                navigate (`/products/${type}`, true)
-                scrollTo ({ type, behavior: 'smooth' }) 
-            }}
+            setActiveItem={undefined}
         />
 
         {/* <a href="javascript:{}" className="hamburger-menu link"></a> */}
