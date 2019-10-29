@@ -14,6 +14,12 @@
 }
 
 @font-face {
+    font-family:Ubuntu;
+    font-style:normal;
+    src:url(/static/fonts/Ubuntu.ttf);
+}
+
+@font-face {
     font-family:Cellblock;
     font-style:normal;
     src:url(/static/fonts/CellblockNBP.otf);

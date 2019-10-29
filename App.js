@@ -30,7 +30,6 @@ export default function App () {
                         '/about':                () => <AboutContent />,
                         '/loyalty':              () => <LoyaltyContent />,
                         '/cart':                 () => <Cart />,
-                        '/contacts':             () => <Footer />,
 
                         '/products':                         ()    => <Products />,
                         '/products/:activeType':             props => <Products {...decodeProps (props)} />,

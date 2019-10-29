@@ -12,7 +12,7 @@ export default function MenuMobile ({onSelect }) {
     const hamburgerLabels = { 
         main:      <A href="/"        className='dropdown-menu link active'>Главная</A> ,
         sales:     <A href="/loyalty" className=''>Акции</A> , 
-        contacts:  <A href="/contacts" className=''>Контакты</A> , 
+        contacts:  <a href="/#contacts" className=''>Контакты</a> , 
     }
 
 

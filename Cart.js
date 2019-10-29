@@ -59,7 +59,7 @@ export default function Cart () {
 
                     <form ref={form} className={classList ({ fields: 1, 'submit-clicked': submitClicked })}>                        
                         <input type='text' name='name'   placeholder='Как к Вам обращаться?'/>
-                        <input type='text' name='address' placeholder='Адрес доставки (напоминаем, что мы доставляем только в радиусе метро Курская)' required />
+                        <input type='text' name='address' placeholder='Адрес (доставка только в радиусе метро Курская)' required />
                         <input type='tel' pattern='^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$' name='phone'  placeholder='Номер для связи' required />
                         <input type='text' name='notes'  placeholder='Пометки'/>
                     </form>

@@ -1,3 +1,11 @@
+#contacts {
+    /* margin-top: -15vw; */
+    bottom:2vw;
+    position: relative;
+    height: 5vw;
+    /* border: solid 1px salmon; */
+}
+
 .footer-title{
     position: relative;
     top:5vw;
@@ -96,6 +104,7 @@
             border-radius: 2.5vw;
             /* background-color:rgba(13, 4, 46, 0.747); */
             background-color:rgba(10, 6, 29, 0.747);
+            background-color:#000000be;
         
             box-shadow: 4px 2px 9px rgb(3, 3, 61);
 

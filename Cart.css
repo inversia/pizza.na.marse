@@ -190,11 +190,12 @@
                 .mobile .cart-content form input {
                     height: 5vw;
                     padding: 5vw;
-                    font-size:2.64vw;  
+                    font-size:3.64vw;  
+                    font-family: 'Ubuntu';
                 }
                 
                 .mobile .cart-content form input:nth-child(2) {
-                    font-size:1.64vw;  
+                    font-size:3.17vw;  
                 }
 
             .cart-content form input:not(:last-child) {
@@ -223,6 +224,7 @@
             .cart-content form input:focus {
                 /* background: linear-gradient(to top,#ff9100 3%, #ff9100); */
                 background: linear-gradient(to bottom, #ff7037 0.1%, #ffc037 95%);
+                
             }
 
             .cart-content form input:focus {
@@ -230,10 +232,12 @@
                 border-bottom-width: 2px;
                 background-color: #ff9100;
                 font-weight: bold;
+                transform: scale(1.1);
             }
 
             .cart-content form.submit-clicked input:invalid {
                 background: rgb(255, 184, 156);
+                background: rgb(255, 134, 104);
                 color: red;
             }
 
@@ -269,6 +273,7 @@
                 /* bottom:11vw; */
                 height: 12vw;
                 width: 100%;
+                font-size: 4.5vw;
             }
 
             .cart-content button .cart-highlight {
@@ -297,3 +302,9 @@
                 animation: glass-button 6s linear .04s infinite;
 
             }
+
+
+
+.loading {
+    animation: loading-pulse 0.25s ease-in-out  direction fill-mode;
+}

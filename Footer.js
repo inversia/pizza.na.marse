@@ -5,6 +5,7 @@ import { YMaps, Map } from 'react-yandex-maps';
 export default function Footer () {
 
     return <>
+    <div id='contacts'></div>
         <h1 className='footer-title'>Контакты</h1>
         <div className='footer-logo'></div>
         <div className='footer-content' itemscope itemtype='http://schema.org/Restaurant'>
