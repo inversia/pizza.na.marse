@@ -5,32 +5,37 @@ import { CartContext } from './CartContext'
 import { classList, timeout } from './util'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
+function RequiredInput (props) {
+
+    const [edited, setEdited] = useState (false)
+
+    return <input {...props} {...edited && { 'data-edited': true }} onBlur={() => setEdited (true)} onInput={() => setEdited (true)} required></input>
+}
 
 export default function Cart () {
 
     const form = useRef ()
 
-    const [submitClicked, setSubmitClicked] = useState (false)
     const [isLoading, setIsLoading] = useState(false)
     const [isDone, setIsDone] = useState(false)
 
     async function onSubmit (event) {
 
         const formInputs =  Object.fromEntries(new FormData (form.current))
+        const addressAndNumberIs = true
 
         try {
 
-            setSubmitClicked (true)
             event.preventDefault()
 
             setIsLoading(true)
 
-            console.log('тут типа запрос на сервер')
-
-            await timeout (6000)
+            await timeout (2000)
 
             setIsLoading(false)
             setIsDone(true)
+
+            console.log(formInputs.phone)
             
             // await fetch ('https://ykxypcgmw9.execute-api.eu-central-1.amazonaws.com/main', {
 
@@ -43,7 +48,7 @@ export default function Cart () {
 
 
         } catch(error){
-            alert('Выйди и зайди нормально')
+
         }
     }
 
@@ -59,7 +64,7 @@ export default function Cart () {
                     : <h1 className='target'>Итак, мы уже почти у цели!</h1>
                 }
 
-                <div className={classList({'inner': 1, 'form-loading': isLoading})}>
+                <div className={classList({'inner': 1, 'form-loading': isLoading, 'done': isDone})}>
                     <div className='delivery-radius'>Напоминаем, что мы доставляем только в радиусе метро Курская
                         <div className='rocket'></div>
                     </div>
@@ -79,13 +84,13 @@ export default function Cart () {
                     <div className='random'>Если Вас одолевают муки выбора, можете попытать удачи и <br/><span onClick={() => addRandomPizza()}>добавить рандомную пиццу</span></div>
                     {/* <pre>{JSON.stringify (cartItems, null, 4)}</pre> */}
 
-                    <form ref={form} className={classList ({ fields: 1, 'submit-clicked': submitClicked })} disabled={isLoading}>                        
-                        <input type='text' name='name'   placeholder='Как к Вам обращаться?'/>
-                        <input type='text' name='address' placeholder='Адрес (доставка только в радиусе метро Курская)' required />
-                        <input type='tel' pattern='^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$' name='phone'  placeholder='Номер для связи' required />
-                        <input type='text' name='notes'  placeholder='Пометки'/>
+                    <form ref={form} className='fields'>                        
+                        <input disabled={isLoading}         type='text' name='name'    placeholder='Как к Вам обращаться?'/>
+                        <RequiredInput disabled={isLoading} type='text' name='address' placeholder='Адрес (доставка только в радиусе метро Курская)' />
+                        <RequiredInput disabled={isLoading} type='tel'  name='phone'   pattern='^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$' placeholder='Номер для связи' />
+                        <input disabled={isLoading}         type='text' name='notes'   placeholder='Пометки'/>
                     </form>
-                    <button className='submit' onClick={onSubmit}>
+                    <button className='submit' onSubmit={onSubmit}>
                         <div className='cart-highlight'></div>
                         <div className='cart-highlight2'></div>
                     </button>

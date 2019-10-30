@@ -241,7 +241,7 @@
                 transform: scale(1.1);
             }
 
-            .cart-content form.submit-clicked input:invalid {
+            .cart-content form input[data-edited]:invalid {
                 background: rgb(255, 184, 156);
                 background: rgb(255, 134, 104);
                 color: red;
@@ -278,6 +278,14 @@
             .cart-content button.submit::before {
                 content: 'Оформить заказ';
             }
+
+                .cart-content .form-loading button.submit::before {
+                    content: 'Отправляется...';
+                }
+
+                .cart-content .done button.submit::before {
+                    content: 'Заказ отправлен!';
+                }
 
             .mobile .cart-content button.submit {
                 /* bottom:11vw; */
@@ -316,9 +324,25 @@
 
 
 .form-loading {
-    animation: loading-pulse 1.0s ease-in-out alternate infinite;
+    /* animation: loading-pulse 1.0s ease-in-out alternate infinite; */
+}
+
+.form-loading input:disabled {
+    opacity: 0.55;
+    color:white;
+    filter: grayscale(100%);
 }
 
 .form-loading button.submit {
-    animation: loading-pulse 2.0s ease-in-out alternate infinite;
+    animation: loading-pulse 1.0s ease-in-out alternate infinite;
+}
+
+.cart-content form:not(:valid) ~ button {
+    pointer-events: none;
+    opacity: 0.75;
+    transform: scale(1);
+}
+
+.cart-content form:not(:valid) ~ button:before {
+    content: 'Заполните поля';
 }
