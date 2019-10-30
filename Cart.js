@@ -2,20 +2,49 @@ import React, { useRef, useContext, useState } from 'react'
 import './Cart.css'
 import CartItem from './CartItem'
 import { CartContext } from './CartContext'
-import { classList } from './util'
+import { classList, timeout } from './util'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
+
 
 export default function Cart () {
 
     const form = useRef ()
 
     const [submitClicked, setSubmitClicked] = useState (false)
+    const [isLoading, setIsLoading] = useState(false)
+    const [isDone, setIsDone] = useState(false)
 
-    function onSubmit (event) {
-        
-        setSubmitClicked (true)
-        event.preventDefault()
-        //alert(form.current)
+    async function onSubmit (event) {
+
+        const formInputs =  Object.fromEntries(new FormData (form.current))
+
+        try {
+
+            setSubmitClicked (true)
+            event.preventDefault()
+
+            setIsLoading(true)
+
+            console.log('тут типа запрос на сервер')
+
+            await timeout (6000)
+
+            setIsLoading(false)
+            setIsDone(true)
+            
+            // await fetch ('https://ykxypcgmw9.execute-api.eu-central-1.amazonaws.com/main', {
+
+            //             method: 'POST',
+            //             body: JSON.stringify (formInputs)
+            //         })
+
+            // alert(isLoading)
+            // alert(submitClicked)
+
+
+        } catch(error){
+            alert('Выйди и зайди нормально')
+        }
     }
 
     const { cartItems, addRandomPizza, removeFromCart, setIsLarge} = useContext (CartContext)
@@ -24,20 +53,13 @@ export default function Cart () {
     const prices = cartItems.map(item => item.price[Number(item.isLarge)])
     const total = prices.reduce((a, b) => a + b, 0)
 
-    console.log(total)
-
-    
-    // item.price[Number(item.isLarge)]
-    // const total = cartItems.reduce()
-
     return  <div className='cart-content'>
                 {isCartEmpty ? 
                     <h1>К сожалению, корзина пока пуста :(</h1> 
                     : <h1 className='target'>Итак, мы уже почти у цели!</h1>
                 }
-                {/* <h3>{pizzaData[randomPizza]}</h3> */}
 
-                <div className='inner'>
+                <div className={classList({'inner': 1, 'form-loading': isLoading})}>
                     <div className='delivery-radius'>Напоминаем, что мы доставляем только в радиусе метро Курская
                         <div className='rocket'></div>
                     </div>
@@ -57,13 +79,13 @@ export default function Cart () {
                     <div className='random'>Если Вас одолевают муки выбора, можете попытать удачи и <br/><span onClick={() => addRandomPizza()}>добавить рандомную пиццу</span></div>
                     {/* <pre>{JSON.stringify (cartItems, null, 4)}</pre> */}
 
-                    <form ref={form} className={classList ({ fields: 1, 'submit-clicked': submitClicked })}>                        
+                    <form ref={form} className={classList ({ fields: 1, 'submit-clicked': submitClicked })} disabled={isLoading}>                        
                         <input type='text' name='name'   placeholder='Как к Вам обращаться?'/>
                         <input type='text' name='address' placeholder='Адрес (доставка только в радиусе метро Курская)' required />
                         <input type='tel' pattern='^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$' name='phone'  placeholder='Номер для связи' required />
                         <input type='text' name='notes'  placeholder='Пометки'/>
                     </form>
-                    <button class='submit' onClick={onSubmit}>Оформить заказ
+                    <button className='submit' onClick={onSubmit}>
                         <div className='cart-highlight'></div>
                         <div className='cart-highlight2'></div>
                     </button>

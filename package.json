@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "browserslist": [
+    "since 2017-06"
+  ],
   "scripts": {
     "start": "rm -rf .dist cache && parcel index.html",
     "test": "mocha -r esm --reporter ololog/reporter --watch"

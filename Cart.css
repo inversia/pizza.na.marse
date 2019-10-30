@@ -4,10 +4,16 @@
     100% {transform: translateX(120vh);} 
 } */
 
-@keyframes loading-pulse {
+@keyframes rocket-appear {
     0%   {transform: translateX(-105vw);}
     50%  {transform: translateX(4vw);} 
     100% {transform: translateX(100vw);} 
+}
+
+@keyframes loading-pulse {
+    0%   {opacity: 1;}
+    50%  {opacity: 0.5;} 
+    100% {opacity: 1;} 
 }
 
 @keyframes glass-button {
@@ -84,7 +90,7 @@
             position: absolute;
             background-size: 50%;
             background-repeat: no-repeat;
-            animation: loading-pulse 5.7s ease-in-out infinite;
+            animation: rocket-appear 5.7s ease-in-out infinite;
             transform-origin: 15% 5%;
             perspective-origin: 50% 50%;
             translate: 3d;
@@ -269,6 +275,10 @@
             width: 100%;
         }
 
+            .cart-content button.submit::before {
+                content: 'Оформить заказ';
+            }
+
             .mobile .cart-content button.submit {
                 /* bottom:11vw; */
                 height: 12vw;
@@ -305,6 +315,10 @@
 
 
 
-.loading {
-    animation: loading-pulse 0.25s ease-in-out  direction fill-mode;
+.form-loading {
+    animation: loading-pulse 1.0s ease-in-out alternate infinite;
+}
+
+.form-loading button.submit {
+    animation: loading-pulse 2.0s ease-in-out alternate infinite;
 }
