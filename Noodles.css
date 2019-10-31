@@ -92,20 +92,22 @@
     cursor:pointer;
     --rotate-offset: 0deg;
     --rotate-direction: 'normal';
-    /* transform:scale(1.0); */
     border-radius: 2vw;
-    /* border: solid 1px salmon; */
+    transition:transform 0.25s ease-in-out;
 }
 
     .pasta-item:nth-child(even) {
         /* box-shadow: 1vw 0.5vw 5vw #0e0702; */
-        
     }
 
     .mobile .pasta-item {
         --rotate-offset: 200deg;
         --rotate-direction: 'normal';
-        transform:rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+    .pasta-item:not(.decoration):hover {
+        transform: scale(1.1) rotate(90deg);
     }
 
     .pasta-item h2{
@@ -133,8 +135,8 @@
         mask-position: center;
         position: absolute;
         overflow: hidden;
-    
     }
+
 
     .pasta-item .background:after {
         content: '';
@@ -172,6 +174,7 @@
         mask-size: 100%;
         mask-position: center;
         position: absolute;
+        transition:transform 0.25s ease-in-out;
     }
 
     .pasta-item.interactive .info {

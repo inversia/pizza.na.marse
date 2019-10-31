@@ -486,6 +486,11 @@ h1 {
 
     }
 
+        .pizza:hover {
+            transform:scale(1.1);
+            transition:transform 0.25s ease-in-out;
+        }
+
         .pizza .image {
             border-radius: 50%;
             height: 100%;
@@ -495,6 +500,7 @@ h1 {
             /* border: solid 2px red; */
             background-size:contain;
             animation: pulse 38s linear infinite;
+            transform:scale(2.1);
         }
 
         .pizza h1 {
