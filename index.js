@@ -5,6 +5,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import './reset.css'
+import './loading.css'
 import './index.css'
 
 import App from './App'

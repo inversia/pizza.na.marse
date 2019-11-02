@@ -106,8 +106,12 @@
         transform: rotate(90deg);
     }
 
-    .pasta-item:not(.decoration):hover {
+    .mobile .pasta-item:not(.decoration):hover {
         transform: scale(1.1) rotate(90deg);
+    }
+
+    .pasta-item:not(.decoration):hover {
+        transform: scale(1.1);
     }
 
     .pasta-item h2{

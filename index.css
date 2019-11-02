@@ -31,7 +31,13 @@
     src:url(/static/fonts/SpaceAge.otf);
 }
 
+@keyframes pulse {
+    0%   {transform: scale(0.95); opacity:1.0;transform: rotate(0deg)}
 
+    50%  {transform: scale(1.0);transform: rotate(180deg)}
+    /* 100% {transform: scale(1.0); opacity:1.0;transform: rotate(360deg);} */
+    100% {transform: scale(0.95); opacity:1.0;transform: rotate(360deg)}
+}
 
 @keyframes pulse-alert {
     0% { transform: scale(1); }
@@ -42,16 +48,6 @@
 }
 
 .pulse-alert { animation: pulse-alert 0.5s ease-in-out; }
-
-@keyframes pulse {
-
-    0%   {transform: scale(0.95); opacity:1.0;transform: rotate(0deg)}
-    
-    50%  {transform: scale(1.0);transform: rotate(180deg)}
-    /* 100% {transform: scale(1.0); opacity:1.0;transform: rotate(360deg);} */
-    100% {transform: scale(0.95); opacity:1.0;transform: rotate(360deg)}
-}
-
 
 
 @keyframes radar-rotate {
@@ -482,6 +478,7 @@ h1 {
         position:absolute;
         left:0;
         top:0;
+        will-change: transform;
         /* animation: pulse 18s linear infinite; */
 
     }
@@ -516,7 +513,7 @@ h1 {
 
         .pizza h2 {
             position: absolute;
-            z-index: 2;
+            z-index: 10;
             right: 0%;
             top:-9%;
             text-shadow: 0vw 0.5vw 2vw #000000;

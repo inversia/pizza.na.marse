@@ -94,7 +94,6 @@ export default function Cart () {
                         <div className='cart-highlight'></div>
                         <div className='cart-highlight2'></div>
                     </button>
-                    
                 </div> 
             </div>
 }

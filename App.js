@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext } from 'react'
+import React, { useState, useRef, useContext, useEffect} from 'react'
 import useComponentSize from '@rehooks/component-size'
 import { useRoutes, usePath, A } from 'hookrouter'
 import Menu from './Menu'
@@ -10,13 +10,16 @@ import LoyaltyContent from './LoyaltyContent'
 import Products from './Products'
 import Cart from './Cart'
 import Footer from './Footer'
-
 import { CartContext, useCartState } from './CartContext'
 import { LayoutModeContext, useLayoutContext } from './LayoutModeContext'
-
 import { decodeProps } from './util'
 
 export default function App () {
+
+
+    useEffect (() => {
+        
+    })
     
     const appEl      = useRef ()
     const { width }  = useComponentSize (appEl)
