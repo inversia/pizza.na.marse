@@ -3,12 +3,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
     document.addEventListener ("DOMContentLoaded", () => {
-        //document.body.classList.remove ("loading")
+        
+        document.body.classList.remove ("loading")
     })
     </script>
  </head> 
 <body class="loading">
-    <div id="loading-overlay"></div>
+    <div id="loading-overlay" ontransitionend="document.body.removeChild (event.target)"></div>
     <div id="root"></div>
     <script src="./index.js" defer></script>
 </body>
