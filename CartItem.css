@@ -39,6 +39,7 @@
     width: var(--height);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     border-radius: 50%;
     transform:scale(1.25);
     /* border:solid 1px salmon; */

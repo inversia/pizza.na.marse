@@ -77,4 +77,5 @@
         animation: flying-pizza 1s ease-in-out;
         border-radius: 100%;
         background-size: cover;
+        background-position: center;
     }

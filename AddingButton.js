@@ -105,7 +105,6 @@ export default function AddingButton ({ productType, name, isLarge, backgroundIm
         })
         
         document.body.appendChild(el)
-
         el.onanimationend = () => { document.body.removeChild (el) }
 
     }}>     
