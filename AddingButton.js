@@ -79,7 +79,36 @@ export default function AddingButton ({ productType, name, isLarge, backgroundIm
     const buttonRef             = useRef ()
     const isVisible             = useVisibility2 (buttonRef, { partial: true })
 
-    return <button className='adding-button' ref={buttonRef} onClick={() => addToCart ({ productType, name, isLarge, backgroundImage, price})}>     
+
+    return <button className='adding-button' ref={buttonRef} onClick={() => {
+
+        addToCart ({ productType, name, isLarge, backgroundImage, price})
+        
+        const img     = document.querySelector (`[data-type='${productType}'][data-name='${name}'] img.product-image`)
+        const imgRect = img.getBoundingClientRect ()
+        const left    = imgRect.x
+        const top     = imgRect.y
+
+
+        const el = document.createElement ('DIV')
+
+        el.classList.add ('flying-pizza')
+
+        Object.assign (el.style, {
+            backgroundImage,
+            position: 'absolute',
+            left: left,
+            top: top,
+            width:  imgRect.width,
+            height: imgRect.height,
+            transform: `translate(${left}, ${top})`,
+        })
+        
+        document.body.appendChild(el)
+
+        el.onanimationend = () => { document.body.removeChild (el) }
+
+    }}>     
                 <span>ЗАКАЗАТЬ</span>
                 <div className={'highlight ' + (isVisible ? '' : 'invisible')}></div>
                 <div className={'highlight2 ' + (isVisible ? '' : 'invisible')}></div>

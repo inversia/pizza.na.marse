@@ -84,27 +84,6 @@ const pizzaData = [
     },
 
     {
-        name: 'Grow pizza',
-        composition: ['cливочный соус', 'моцарелла', 'горгонзола', 'груша', 'мёд'],
-        price: [495,400],
-        layout: {
-            desktop: {
-                position: ['67vw','22vw'],
-                size: 22,
-            },
-            mobile: {
-                position: ['3vw','150vw'],
-                size: 46,
-            }
-        },
-        position: ['67vw','22vw'],
-        size: 22,
-        backgroundImage: 'url(/art/grow.jpg)',
-        animationDelay: '3.15s', 
-        type:'veg',
-    },
-
-    {
         name: 'Гавайская',
         composition: ['красный соус', 'моцарелла', 'базилик', 'орегано'],
         price: [320, 300],
@@ -122,6 +101,27 @@ const pizzaData = [
         size: 12,
         backgroundImage: 'url(/art/hawai.jpg)',
         animationDelay: '0.7s', 
+        type:'veg',
+    },
+
+    {
+        name: 'Grow pizza',
+        composition: ['cливочный соус', 'моцарелла', 'горгонзола', 'груша', 'мёд'],
+        price: [495,400],
+        layout: {
+            desktop: {
+                position: ['67vw','22vw'],
+                size: 22,
+            },
+            mobile: {
+                position: ['3vw','150vw'],
+                size: 46,
+            }
+        },
+        position: ['67vw','22vw'],
+        size: 22,
+        backgroundImage: 'url(/art/grow.jpg)',
+        animationDelay: '3.15s', 
         type:'veg',
     },
 

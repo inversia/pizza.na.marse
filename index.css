@@ -118,7 +118,8 @@ h1 {
 }
 
 .cosmos-zone-one-wrapper {
-    background-image: url(/static/art/backgroundstarsMain4.jpg);
+    /*background-image: url(/static/art/backgroundstarsMain4.jpg);*/
+    background-image: url(/static/art/TESTingImageOptim.jpg);
     padding-top: 0vw;
     background-repeat: no-repeat;
     background-size: cover;
@@ -535,7 +536,7 @@ h1 {
 
 .cosmos-zone-two-wrapper {
     margin-top:-20vh;
-    background-image: url(/static/art/neb14.jpg);
+    background-image: url(/static/art/neb14cropPlusPhotoshopPlusImageOptim.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

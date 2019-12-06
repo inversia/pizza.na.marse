@@ -33,7 +33,7 @@ const fillings = {
     meat: 'Мясное',
     veg: 'Вегетарианское',
     fish: 'Морепродукты',
-    mix: 'Микс всех видов', 
+    // mix: 'Микс всех видов', 
 }
 
 const productLabels = { 

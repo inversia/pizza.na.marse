@@ -9,7 +9,8 @@
     padding-top: 8vw;
     width: 100%;
     position: relative;
-    background-image: url(/static/art/tumannost8.jpg);
+    /* background-image: url(/static/art/tumannost8.jpg); */
+    background-image: url(/static/art/tumannost8ImageOptimLight.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100% 100%;
