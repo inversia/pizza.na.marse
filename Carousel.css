@@ -237,7 +237,13 @@
         margin-top: -5vw;
     }
 
-        .carousel.salads .item .pic {
+        .carousel.salads .item .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel.salads .item .product-image {
             background-size:cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -248,7 +254,7 @@
             /* border:1px solid pink; */
         }
 
-        .mobile .carousel.salads .item .pic {
+        .mobile .carousel.salads .item .product-image {
             transform: scale(2.9);
         }
 
@@ -258,8 +264,23 @@
             top: 100%;
             width: 20vw;
             text-shadow: 0.05em 0.05em 0em rgba(0,0,0,0.4);
+            white-space: nowrap;
             /* border: 1px solid green; */
         }
+
+            .carousel.salads .item .price {
+                /* position: absolute;
+                text-align: center;
+                top: 115%;
+                width: 20vw; */
+                position: absolute;
+                margin-left: 0.8em;
+                font-size: 60%;
+                color:orange;
+                /* color:#ffffff; */
+                text-shadow: 0.05em 0.05em 0em rgba(0,0,0,0.4);
+                /* border: 1px solid green; */
+            }
 
         .item-composition {
             position: absolute;
@@ -341,7 +362,7 @@
         border-radius: 0;
     }
 
-        .carousel.salads .item .pic {
+        .carousel.salads .item .product-image {
             background-size:cover;
             background-repeat: no-repeat;
             background-position: center;

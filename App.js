@@ -15,11 +15,6 @@ import { LayoutModeContext, useLayoutContext } from './LayoutModeContext'
 import { decodeProps } from './util'
 
 export default function App () {
-
-
-    useEffect (() => {
-        
-    })
     
     const appEl      = useRef ()
     const { width }  = useComponentSize (appEl)
@@ -33,6 +28,7 @@ export default function App () {
                         '/about':                () => <AboutContent />,
                         '/loyalty':              () => <LoyaltyContent />,
                         '/cart':                 () => <Cart />,
+                        '/contacts':             () => <a href="/#contacts"></a>,
 
                         '/products':                         ()    => <Products />,
                         '/products/:activeType':             props => <Products {...decodeProps (props)} />,

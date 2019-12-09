@@ -15,7 +15,6 @@ export default function MenuMobile ({onSelect }) {
         contacts:  <a href="/#contacts" className=''>Контакты</a> , 
     }
 
-
     return <div className="menu mobile">
         <DropdownMenu 
             className='hamburger-menu link'

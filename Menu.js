@@ -8,6 +8,18 @@ const props = id => ({
     href: '/' + id
 })
 
+
+function smoothScrollTo(hash) {
+
+    const target = document.getElementById(hash)
+
+    target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
+}
+
+
 export default function Menu () {
 
     return <div className="menu">
@@ -16,7 +28,8 @@ export default function Menu () {
         <A {...props ('loyalty')}>акции</A>
         {/* <A {...props ('about')}>о нас</A>  */}
         {/* <a className="link" href="#booking">забронировать</a> */}
-        <a className="link" href="#contact">контакты</a> 
+        {/* <a className="link" href="#contact">контакты</a>  */}
+        <A {...props ('#contact')} onClick={() => smoothScrollTo('contacts')}>контакты</A> 
         {/* <a className="cart link" href="#cart"></a>  */}
         <A {...props ('cart')}><CartCounter /></A> 
     </div>

@@ -84,11 +84,10 @@ export default function AddingButton ({ productType, name, isLarge, backgroundIm
 
         addToCart ({ productType, name, isLarge, backgroundImage, price})
         
-        const img     = document.querySelector (`[data-type='${productType}'][data-name='${name}'] img.product-image`)
+        const img     = document.querySelector (`[data-type='${productType}'][data-name='${name}'] .product-image`)
         const imgRect = img.getBoundingClientRect ()
         const left    = imgRect.x
         const top     = imgRect.y
-
 
         const el = document.createElement ('DIV')
 
@@ -96,12 +95,9 @@ export default function AddingButton ({ productType, name, isLarge, backgroundIm
 
         Object.assign (el.style, {
             backgroundImage,
-            position: 'absolute',
-            left: left,
-            top: top,
             width:  imgRect.width,
             height: imgRect.height,
-            transform: `translate(${left}, ${top})`,
+            transform: `translate(${left | 0}px, ${top | 0}px)`,
         })
         
         document.body.appendChild(el)

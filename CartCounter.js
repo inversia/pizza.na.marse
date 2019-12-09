@@ -25,7 +25,7 @@ export default function CartCounter () {
         }
     })
 
-    return  <div ref={el} className={classList ({ 'cart-counter': 1, 'two-digits': cartItems.length > 9 })}
+    return  <div ref={el} className={classList ({ 'cart-counter': 1, 'more-than-10': cartItems.length > 9 && cartItems.length < 20, 'more-than-20': cartItems.length > 19 })}
                  onAnimationEnd={e => e.target.classList.remove ('pulse-alert')}
                  style={{paddingRight:offset + 'vw'}}>{cartItems.length}</div>
 }

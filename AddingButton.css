@@ -5,12 +5,6 @@
     100% { left: 103vw;}
 }
 
-@keyframes flying-pizza {
-    0%   { opacity: 1.0; transform: scale(1);}
-    85%  { opacity: 1.0; }
-    100% { opacity: 0.0; transform: scale(0.07); left: 72.5vw; top: -17.0vw; }
-}
-
 .adding-button {
     border-radius: 23vw 23vw 23vw 23vw;
     background: url(/static/art/add.svg) no-repeat left;
@@ -73,9 +67,20 @@
 
     }
 
-    .flying-pizza{
-        animation: flying-pizza 1s ease-in-out;
-        border-radius: 100%;
-        background-size: cover;
-        background-position: center;
-    }
+@keyframes flying-pizza {
+    0%   { opacity: 1.0; }
+    85%  { opacity: 1.0; }
+    100% { opacity: 0.0; transform: translate(91vw, 1vw) scale(0.1); }
+}
+
+.flying-pizza{
+    left: 0;
+    top: 0;
+    animation: flying-pizza 1s ease-in-out;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    z-index: 1000000;
+    transform-origin: left top;
+}

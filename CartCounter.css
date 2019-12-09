@@ -37,10 +37,20 @@
         border: solid 0.3vw rgb(255, 246, 246);
     }
 
-.cart-counter.two-digits,
-.menu .cart-counter.two-digits {
-    font-size: 1vw;
+.cart-counter.more-than-10,
+.menu .cart-counter.more-than-10 {
+    font-size: 0.85vw;
     padding-top: 0.1vw;
     padding-right: 0.2vw !important;
+}
+
+.cart-counter.more-than-20,
+.menu .cart-counter.more-than-20 {
+    font-size: 0.75vw;
+}
+
+.cart-counter.more-than-20 {
+    font-size: 1.05vw;
+    padding-top: 0.135vw;
 }
 

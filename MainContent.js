@@ -60,14 +60,15 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
                 <h1>Внеземные салаты</h1>
                 <Carousel currentItem={currentSalad} setCurrentItem={setCurrentSalad} perspectiveFactor='3.37' className='salads' composition={saladsData.composition}>
                     { saladsData.map ((salad, i) => (
-                            <>
-                                <div className='pic' style={{backgroundImage: salad.backgroundImage}} />
-                                <div className='title'>{salad.name}</div>
-                            </>
+                            <div class='container' key={i} data-type='salads' data-name={salad.name}>
+                                <div className='product-image' style={{backgroundImage: salad.backgroundImage}} />
+                                <div className='title'>{salad.name} <span className='price'>{salad.price}</span></div>
+                                
+                            </div>
                     )) }
                 </Carousel>
                 {/* <div className='salad-price'>{saladsData[currentSalad].price}</div> */}
-                <ul className='salad-composition'>{saladsData[currentSalad].composition.map(x => <li>{x}</li>)}</ul>
+                <ul className='salad-composition'>{saladsData[currentSalad].composition.map((x, i) => <li key={i}>{x}</li>)}</ul>
                 {/* <div className='salad-price'>{saladsData[currentSalad].price}</div> */}
                 <div className='salad-add-button'>
                     <AddingButton  productType={'salads'} name={saladsData[currentSalad].name} backgroundImage={saladsData[currentSalad].backgroundImage} price={saladsData[currentSalad].price}/>
