@@ -55,8 +55,8 @@ export default function Cart () {
     const { cartItems, addRandomPizza, removeFromCart, setIsLarge} = useContext (CartContext)
     const isCartEmpty = cartItems.length === 0
 
-    const prices = cartItems.map(item => item.price[Number(item.isLarge)])
-    const total = prices.reduce((a, b) => a + b, 0)
+    const prices = cartItems.map (item => item.price[item.isLarge ? 1 : 0])
+    const total  = prices.reduce ((a, b) => a + b, 0)
 
     return  <div className='cart-content'>
                 {isCartEmpty ? 

@@ -71,7 +71,8 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
                 <ul className='salad-composition'>{saladsData[currentSalad].composition.map((x, i) => <li key={i}>{x}</li>)}</ul>
                 {/* <div className='salad-price'>{saladsData[currentSalad].price}</div> */}
                 <div className='salad-add-button'>
-                    <AddingButton  productType={'salads'} name={saladsData[currentSalad].name} backgroundImage={saladsData[currentSalad].backgroundImage} price={saladsData[currentSalad].price}/>
+                    <AddingButton  productType={'salads'} {...saladsData[currentSalad]}/>
+                    
                 </div>
             </div> 
         </div>

@@ -12,7 +12,7 @@ export default function CartItem ({ item }) {
         <div className="cart-item">   
             <div className='item-image' style={{backgroundImage: item.backgroundImage}}></div>
             <div className='item-name' onClick={() => goToProduct (item.productType, item.name)}>{item.name}</div>
-            <div className='cart-item-price'>{item.price[Number(item.isLarge)]}</div>
+            <div className='cart-item-price'>{item.price[item.isLarge ? 1 : 0]}</div>
             {item.productType === 'pizzas' && <SizeSwitch isLarge={item.isLarge} setIsLarge={ isLarge => setCartItemSize (item, isLarge) } />}
             <div onClick={() => removeFromCart (item)} className='trash'></div>
             {/* <div className='price'>{item.price}</div> */}

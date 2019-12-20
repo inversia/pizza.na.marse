@@ -73,16 +73,15 @@ function useVisibility2 (elRef, { partial = false } = {}) {
   return isVisible;
 };
 
-export default function AddingButton ({ productType, name, isLarge, backgroundImage, price}) {
+export default function AddingButton ({ productType, name, backgroundImage, ...rest }) {
 
     const { addToCart }         = useContext (CartContext)
     const buttonRef             = useRef ()
     const isVisible             = useVisibility2 (buttonRef, { partial: true })
 
+    const onClick = () => {
 
-    return <button className='adding-button' ref={buttonRef} onClick={() => {
-
-        addToCart ({ productType, name, isLarge, backgroundImage, price})
+        addToCart ({ productType, name, backgroundImage, ...rest })
         
         const img     = document.querySelector (`[data-type='${productType}'][data-name='${name}'] .product-image`)
         const imgRect = img.getBoundingClientRect ()
@@ -102,8 +101,9 @@ export default function AddingButton ({ productType, name, isLarge, backgroundIm
         
         document.body.appendChild(el)
         el.onanimationend = () => { document.body.removeChild (el) }
+    }
 
-    }}>     
+    return <button className='adding-button' ref={buttonRef} onClick={onClick}>     
                 <span>ЗАКАЗАТЬ</span>
                 <div className={'highlight ' + (isVisible ? '' : 'invisible')}></div>
                 <div className={'highlight2 ' + (isVisible ? '' : 'invisible')}></div>
