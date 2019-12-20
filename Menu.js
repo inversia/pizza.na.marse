@@ -29,7 +29,7 @@ export default function Menu () {
         {/* <A {...props ('about')}>о нас</A>  */}
         {/* <a className="link" href="#booking">забронировать</a> */}
         {/* <a className="link" href="#contact">контакты</a>  */}
-        <A {...props ('#contact')} onClick={() => smoothScrollTo('contacts')}>контакты</A> 
+        <A {...props ('')} onClick={() => setTimeout (() => smoothScrollTo('contacts'), 100)}>контакты</A> 
         {/* <a className="cart link" href="#cart"></a>  */}
         <A {...props ('cart')}><CartCounter /></A> 
     </div>

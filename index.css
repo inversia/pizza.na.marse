@@ -10,25 +10,14 @@
 @font-face {
     font-family:Xolonium;
     font-style:normal;
-    src:url(/static/fonts/Xolonium.ttf);
+    src:url(/static/fonts/Xolonium.min.otf);
 }
 
-@font-face {
-    font-family:Ubuntu;
-    font-style:normal;
-    src:url(/static/fonts/Ubuntu.ttf);
-}
-
-@font-face {
-    font-family:Cellblock;
-    font-style:normal;
-    src:url(/static/fonts/CellblockNBP.otf);
-}
 
 @font-face {
     font-family:SpaceAge;
     font-style:normal;
-    src:url(/static/fonts/SpaceAge.otf);
+    src:url(/static/fonts/SpaceAge.min.otf);
 }
 
 @keyframes pulse {
@@ -94,8 +83,6 @@
     height: 100%;
     width: 100%;
     left:0;
-
-
 }
 
 body {
@@ -113,7 +100,6 @@ h1 {
     color:wheat;
     color: white;
     font-size: 6.6vw;
-    font-family:Cellblock;
     font-family:SpaceAge;
 }
 
