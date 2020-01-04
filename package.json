@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "start": "rm -rf .dist cache && parcel index.html",
+    "build": "./build.sh",
     "test": "mocha -r esm --reporter ololog/reporter --watch"
   },
   "keywords": [],
