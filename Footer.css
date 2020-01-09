@@ -30,7 +30,7 @@
     margin-top:-5vw;
     height: 57vw;
     width: 100%;
-    background-image: url(./static/art/mars.jpg);
+    background-image: url(./static/art/background.mars.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color:white;
@@ -55,7 +55,7 @@
         bottom: 60vw;
         left:0;
         width: 100%;
-        background-image: url(./static/art/mars.jpg);
+        background-image: url(./static/art/background.mars.jpg);
         border-radius: 0vw 0vw 14vw 14vw;
         background-size: cover;
         box-shadow: 0px 2vw 5vw rgba(0,0,0,0.8);

@@ -93,7 +93,7 @@ export default function AddingButton ({ productType, name, backgroundImage, ...r
         el.classList.add ('flying-pizza')
 
         Object.assign (el.style, {
-            backgroundImage,
+            backgroundImage: `url(/art/product.${backgroundImage}.min.jpg`,
             width:  imgRect.width,
             height: imgRect.height,
             transform: `translate(${left | 0}px, ${top | 0}px)`,

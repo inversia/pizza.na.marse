@@ -3,45 +3,40 @@ const beveragesData = [
     {
         name: 'Фреш яблочный',
         itemType:'interactive',
-        backgroundImage:'url(/art/salad2.jpg)',
         price: [210],
-        backgroundImage:'url(/art/salad2.jpg)',
+        backgroundImage:'salad2',
         type: 'veg',
     },
 
     {
         name: 'Фреш апельсиновый',
         itemType:'interactive',
-        backgroundImage:'url(/art/salad2.jpg)',
         price: [210],
-        backgroundImage:'url(/art/salad2.jpg)',
+        backgroundImage:'salad2',
         type: 'veg',
     },
 
     {
         name: 'Пуэр ',
         itemType:'interactive',
-        backgroundImage:'url(/art/salad2.jpg)',
         price: [210],
-        backgroundImage:'url(/art/salad2.jpg)',
+        backgroundImage:'salad2',
         type: 'veg',
     },
 
     {
         name: 'Кофе',
         itemType:'interactive',
-        backgroundImage:'url(/art/salad2.jpg)',
         price: [210],
-        backgroundImage:'url(/art/salad2.jpg)',
+        backgroundImage:'salad2',
         type: 'veg',
     },
 
     {
         name: 'Морс домашний',
         itemType:'interactive',
-        backgroundImage:'url(/art/salad2.jpg)',
         price: [210],
-        backgroundImage:'url(/art/salad2.jpg)',
+        backgroundImage:'salad2',
         type: 'veg',
     },
 
@@ -49,45 +44,40 @@ const beveragesData = [
     {
         name: 'Сок',
         itemType:'interactive',
-        backgroundImage:'url(/art/salad2.jpg)',
         price: [210],
-        backgroundImage:'url(/art/salad2.jpg)',
+        backgroundImage:'salad2',
         type: 'veg',
     },
 
     {
         name: 'Чай чёрный/чайник',
         itemType:'interactive',
-        backgroundImage:'url(/art/salad2.jpg)',
         price: [210],
-        backgroundImage:'url(/art/salad2.jpg)',
+        backgroundImage:'salad2',
         type: 'veg',
     },
 
     {
         name: 'Чай зелёный/чайник',
         itemType:'interactive',
-        backgroundImage:'url(/art/salad2.jpg)',
         price: [210],
-        backgroundImage:'url(/art/salad2.jpg)',
+        backgroundImage:'salad2',
         type: 'veg',
     },
 
     {
         name: 'Чай чёрный в пакетиках',
         itemType:'interactive',
-        backgroundImage:'url(/art/salad2.jpg)',
         price: [210],
-        backgroundImage:'url(/art/salad2.jpg)',
+        backgroundImage:'salad2',
         type: 'veg',
     },
 
     {
         name: 'Чай зелёный в пакетиках',
         itemType:'interactive',
-        backgroundImage:'url(/art/salad2.jpg)',
         price: [210],
-        backgroundImage:'url(/art/salad2.jpg)',
+        backgroundImage:'salad2',
         type: 'veg',
     },
 ]

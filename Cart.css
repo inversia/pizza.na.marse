@@ -30,8 +30,8 @@
     text-align: center;
     align-items: center;
     background-position: fixed;
-    /* background-image: url(/static/art/backgroundstars.jpg); */
-    background-image:url(/static/art/tumannost1.jpg);
+    /* background-image: url(/static/art/background.stars.jpg); */
+    background-image:url(/static/art/background.planety.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x:hidden;

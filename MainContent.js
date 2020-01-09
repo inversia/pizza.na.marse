@@ -30,6 +30,7 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
             <div className='pizzas'>
                 {pizzaData.map(p => <Pizza checked={selectedPizzas[p.name] || false}
                                         key={p.name}
+                                        // backgroundImage={`url(/art/product.${p.backgroundImage}.min.jpg`}
                                         {...p}
                                         price={p.price[1]}
                                         onClick={
@@ -61,7 +62,7 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
                 <Carousel currentItem={currentSalad} setCurrentItem={setCurrentSalad} perspectiveFactor='3.37' className='salads' composition={saladsData.composition}>
                     { saladsData.map ((salad, i) => (
                             <div class='container' key={i} data-type='salads' data-name={salad.name}>
-                                <div className='product-image' style={{backgroundImage: salad.backgroundImage}} />
+                                <div className='product-image' style={{backgroundImage: `url(/art/product.${salad.backgroundImage}.min.jpg`}} />
                                 <div className='title'>{salad.name} <span className='price'>{salad.price}</span></div>
                                 
                             </div>

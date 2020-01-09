@@ -20,7 +20,7 @@ export default React.memo (function ProductInfo ({ name, composition, price, bac
     return (
         <div className={'product-info ' + layoutMode} data-index={index} data-type={productType} data-name={name}>
             <div className='left-side'>
-                <img className='product-image' style={{backgroundImage}} />
+                <img className='product-image' style={{backgroundImage: `url(/art/product.${backgroundImage}.jpg`}} />
             </div>
             <div className='right-side'>
                 <h3 className='name'>{name}</h3>

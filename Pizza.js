@@ -24,6 +24,8 @@ export default function Pizza ({ checked = false, onClick, layout, type, fontSiz
                  ref={pizzaRef}>
                 <h1 style={{ fontSize: Math.round(size * 0.12) + 'vw' }}>{name} </h1>
                 <h2 style={{ fontSize: Math.round(size * 0.12) + 'vw' }}>{price}</h2>
-                <div className='image' style={{backgroundImage}}/>
+                {/* <div className='image' style={{backgroundImage: `url(/art/${backgroundImage}.jpg`}}/> */}
+                <div className='image' style={{backgroundImage: `url(/art/product.${backgroundImage}.min.jpg`}}/>
+               
             </div>
 }

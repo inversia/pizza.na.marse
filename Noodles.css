@@ -9,8 +9,7 @@
     padding-top: 8vw;
     width: 100%;
     position: relative;
-    /* background-image: url(/static/art/tumannost8.jpg); */
-    background-image: url(/static/art/tumannost8ImageOptimLight.jpg);
+    background-image: url(/static/art/background.tumannost.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 100% 100%;
@@ -24,7 +23,7 @@
         margin-bottom:0vw;
         position: relative;
         mask-image: linear-gradient(to bottom,transparent 0%, black 5%);
-        background-image: url(/static/art/tumannost8vertical.jpg);
+        background-image: url(/static/art/verticalbackground.tumannost.jpg);
 
         
     }
