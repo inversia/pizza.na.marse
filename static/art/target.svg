@@ -1,0 +1,27 @@
+
+<svg width="1570px" height="275px" viewBox="0 0 1570 275" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-2.6%" y="-19.2%" width="105.1%" height="138.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="10.9347098" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.6%" y="-19.2%" width="105.1%" height="138.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="10.9347098" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-0.2%" y="-1.7%" width="100.5%" height="103.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1.16350446" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-0.2%" y="-1.7%" width="100.5%" height="103.5%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="1.16350446" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="DRAguScript-Book" font-size="200" font-weight="300" letter-spacing="0.0111111104">
+        <text id="Мы-почти-у-цели!-Copy-11" stroke="#FA8544" stroke-width="11" fill="#D8D8D8" filter="url(#filter-2)">
+            <tspan x="39.0111111" y="198">Мы почти у цели!</tspan>
+        </text>
+        <text id="Мы-почти-у-цели!-Copy-12" filter="url(#filter-4)" fill="#FFF7EF">
+            <tspan x="39.0111111" y="197">Мы почти у цели!</tspan>
+        </text>
+    </g>
+</svg>

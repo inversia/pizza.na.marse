@@ -1,19 +1,19 @@
-# ---------- Сжатие шрифтов ------------------
+# # ---------- Сжатие шрифтов ------------------
 
-for file_path in ./static/fonts/src/*; do           # ./static/fonts/src/Xolonium.ttf
+# for file_path in ./static/fonts/src/*; do           # ./static/fonts/src/Xolonium.ttf
 
-    file_name_with_extension=$(basename $file_path) # Xolonium.ttf
-    file_name=${file_name_with_extension%%.*}       # Xolonium
+#     file_name_with_extension=$(basename $file_path) # Xolonium.ttf
+#     file_name=${file_name_with_extension%%.*}       # Xolonium
 
-    echo Processing $file_name
+#     echo Processing $file_name
     
-    pyftsubset $file_path --output-file=./static/fonts/$file_name.min.otf --unicodes-file=/reactpizza/static/fonts/unicodes-file/$file_name.txt
+#     pyftsubset $file_path --output-file=./static/fonts/$file_name.min.otf --unicodes-file=/reactpizza/static/fonts/unicodes-file/$file_name.txt
 
-done
+# done
 
 
 
-# -----------Уменьшение разрешения картинок---------------
+# -----------Уменьшение разрешения салатов и паст---------------
 
 salads=`for i in ./static/art/src/product.salad.*
 
@@ -49,7 +49,7 @@ for src_path in ./static/art/src/background.*; do
     dst_path=./static/art/${file_name}.jpg
 
     #echo Clipping backgrounds $src_path to $dst_path
-    sharp -i $src_path -o $dst_path resize 2000 1334                                                
+    sharp -i $src_path -o $dst_path resize 2880 1800                                                
 done
 
 for src_path in ./static/art/src/verticalbackground.*; do
@@ -59,25 +59,8 @@ for src_path in ./static/art/src/verticalbackground.*; do
     dst_path=./static/art/${file_name}.jpg
     
     #echo Clipping verticals $src_path to $dst_path
-    sharp -i $src_path -o $dst_path resize 1334 2000                                             
+    sharp -i $src_path -o $dst_path resize 1800 2880                                             
 done
-
-
-# -----------Минифицированные версии картинок---------------
-
-for src_path in ./static/art/src/product.*; do
-
-    file_name_with_extension=$(basename $src_path)   
-    file_name=${file_name_with_extension%.*}
-
-    dst_path=./static/art/${file_name}.min.jpg
-    
-    echo Clipping $src_path to $dst_path
-
-    #sharp -i $src_path -o $dst_path extract 40 40 1160 1160     # Скрипт, который вырезает указанную область (<top> <left> <width> <height>)
-    sharp -i $src_path -o $dst_path resize 500 500               # Задает размер  ПОПРОБУЙ 400                                                     
-done
-
 
 
 #---------- Сжатие картинок ------------------
@@ -93,4 +76,19 @@ for src_path in ./static/art/*.jpg; do                  # ПОМЕНЯЙ ПАП�
     # echo Compressing $file_name to $dst_path
 
     guetzli --quality 84 $src_path $dst_path
+done
+
+# -----------Минифицированные версии картинок---------------
+
+for src_path in ./static/art/product.*; do
+
+    file_name_with_extension=$(basename $src_path)   
+    file_name=${file_name_with_extension%.*}
+
+    dst_path=./static/art/${file_name}.min.jpg
+    
+    echo Clipping $src_path to $dst_path
+
+    #sharp -i $src_path -o $dst_path extract 40 40 1160 1160     # Скрипт, который вырезает указанную область (<top> <left> <width> <height>)
+    sharp -i $src_path -o $dst_path resize 400 400               # Задает размер  ПОПРОБУЙ 400                                                     
 done
