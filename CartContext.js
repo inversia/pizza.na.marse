@@ -7,9 +7,13 @@ const genCartItemUid = ((cartItemUid = 0) => () => cartItemUid++) ()
 
 function useCartState () {
 
-    const [cartItems, setCartItems] = useState ([])
+    const [cartItems, setCartItems] = useState (JSON.parse(localStorage.getItem('cartItems')))
 
     const addToCart        = item            => setCartItems ([...cartItems, Object.assign (item, { uid: genCartItemUid () }) ])
+                                                
+                                                localStorage.setItem('cartItems', JSON.stringify(cartItems))
+                                                console.log(localStorage)
+
     const removeFromCart   = item            => setCartItems (cartItems.filter (otherItem => otherItem !== item))
     const setCartItemSize  = (item, isLarge) => {
                                                     item.isLarge = isLarge

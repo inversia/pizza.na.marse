@@ -92,3 +92,4 @@ for src_path in ./static/art/product.*; do
     #sharp -i $src_path -o $dst_path extract 40 40 1160 1160     # Скрипт, который вырезает указанную область (<top> <left> <width> <height>)
     sharp -i $src_path -o $dst_path resize 400 400               # Задает размер  ПОПРОБУЙ 400                                                     
 done
+

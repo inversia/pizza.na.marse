@@ -53,6 +53,7 @@ export default function Cart () {
     }
 
     const { cartItems, addRandomPizza, removeFromCart, setIsLarge} = useContext (CartContext)
+
     const isCartEmpty = cartItems.length === 0
 
     const prices = cartItems.map (item => item.price[item.isLarge ? 1 : 0])
@@ -83,7 +84,7 @@ export default function Cart () {
      
                     <div className='random'>Если Вас одолевают муки выбора, можете попытать удачи и <br/><span onClick={() => addRandomPizza()}>добавить рандомную пиццу</span></div>
                     {/* <pre>{JSON.stringify (cartItems, null, 4)}</pre> */}
-
+                    
                     <form ref={form} className='fields'>                        
                         <input disabled={isLoading}         type='text' name='name'    placeholder='Как к Вам обращаться?'/>
                         <RequiredInput disabled={isLoading} type='text' name='address' placeholder='Адрес (доставка только в радиусе метро Курская)' />
