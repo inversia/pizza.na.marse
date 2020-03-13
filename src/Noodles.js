@@ -30,7 +30,8 @@ export default function Noodles ({ height, width, left, top, layout, infoLayout,
 
             {/* <div className={classList({[`pasta-item ${itemType}`] : 1, ' invisible' : isProductVisible})}></div> */}
                 <div className='background'></div>
-                <div className='foreground' style={{backgroundImage:`url(/art/product.${backgroundImage}.min.jpg` || '', backgroundColor: backgroundColor || '' }}></div>
+                {/* <div className='foreground' style={{backgroundImage:`url(/art/product.${backgroundImage}.min.jpg` || '', backgroundColor: backgroundColor || '' }}></div> */}
+                <div className='foreground' style={{backgroundImage:`url(/art/product.pasta.${backgroundImage}.min.jpg` || '', backgroundColor: backgroundColor || '' }}></div>
                 {/* <div className={`info ${itemType}`} style={{backgroundImage:infoImage, ...toStyle (infoLayout[layoutMode]) }}></div> */}
             </div>
 }

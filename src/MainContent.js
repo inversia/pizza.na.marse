@@ -10,7 +10,7 @@ import Footer from './Footer'
 import {goToProduct} from './util'
 import pizzaData from '../data/pizza'
 import saladsData from '../data/salads'
-import noodlesData from '../data/noodles'
+import pastaData from '../data/pasta'
 import NoodlesBackgroundDesktop from './NoodlesBackgroundDesktop'
 
 
@@ -62,7 +62,7 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
                 <Carousel currentItem={currentSalad} setCurrentItem={setCurrentSalad} perspectiveFactor='3.37' className='salads' composition={saladsData.composition}>
                     { saladsData.map ((salad, i) => (
                             <div className='container' key={i} data-type='salads' data-name={salad.name}>
-                                <div className='product-image' style={{backgroundImage: `url(/art/product.${salad.backgroundImage}.min.jpg`}} />
+                                <div className='product-image' style={{backgroundImage: `url(/art/product.salads.${salad.backgroundImage}.min.jpg`}} />
                                 <div className='title'>{salad.name} <span className='price'>{salad.price}</span></div>
                                 
                             </div>
@@ -78,17 +78,17 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
             </div> 
         </div>
         {/* {console.log (layoutMode)} */}
-        <div className='noodles-wrapper'>
+        <div className='pasta-wrapper'>
             <h1>Космическая паста</h1>
-            <div className='noodles-container'>
+            <div className='pasta-container'>
 
-                {<div className='bg'>{isMobile ? <div className='noodles-background-mobile'><NoodlesBackgroundMobile /></div> : <div className='noodles-background-desktop'><NoodlesBackgroundDesktop /></div>}</div>}
+                {<div className='bg'>{isMobile ? <div className='pasta-background-mobile'><NoodlesBackgroundMobile /></div> : <div className='pasta-background-desktop'><NoodlesBackgroundDesktop /></div>}</div>}
 
-                {noodlesData.map (noodles => (<Noodles {...noodles} 
-                                                    key={noodles.name} 
+                {pastaData.map (pasta => (<Noodles {...pasta} 
+                                                    key={pasta.name} 
                                                     onClick={() => {
-                                                        if(noodles.itemType !== 'decoration') {
-                                                            goToProduct ('noodles', noodles.name)
+                                                        if(pasta.itemType !== 'decoration') {
+                                                            goToProduct ('pasta', pasta.name)
                                                         }
                                                     }
                                                 }/>))}   

@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect, useContext } from 'react'
 
 import pizzaData from '../data/pizza'
-import noodlesData from '../data/noodles'
+import pastaData from '../data/pasta'
 import saladsData from '../data/salads'
 import beveragesData from '../data/beverages'
 
@@ -24,7 +24,7 @@ const noDecoration = items => items.filter (p => p.itemType !== 'decoration')
 
 const products = {
     pizzas:    pizzaData,
-    noodles:   noodlesData,
+    pasta:   pastaData,
     salads:    saladsData,
     beverages: beveragesData,
 }
@@ -38,7 +38,7 @@ const fillings = {
 
 const productLabels = { 
     pizzas: 'Пицца', 
-    noodles: 'Паста', 
+    pasta: 'Паста', 
     salads: 'Салаты',
     beverages: 'Напитки', 
 }

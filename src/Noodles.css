@@ -3,7 +3,7 @@
     100% { transform:rotate(calc(var(--rotate-offset) + 360deg));}
 }
 
-.noodles-wrapper {
+.pasta-wrapper {
     margin-top: -10vw;
     padding-top: 8vw;
     width: 100%;
@@ -16,7 +16,7 @@
     mask-image: linear-gradient(to bottom,transparent 0%, black 15%);
 } 
 
-    .mobile .noodles-wrapper {
+    .mobile .pasta-wrapper {
         margin-bottom:0vw;
         position: relative;
         mask-image: linear-gradient(to bottom,transparent 0%, black 5%);
@@ -25,7 +25,7 @@
         
     }
 
-    .noodles-container {
+    .pasta-container {
         position: relative;
         margin-top: -2vw;
         margin-left:-4vw;
@@ -34,29 +34,29 @@
 
     }
 
-        .mobile .noodles-container {
+        .mobile .pasta-container {
             position: relative;
             margin-top: 0vw;
             margin-left:0vw;
 
         }
 
-        .noodles-container > .bg > svg {
+        .pasta-container > .bg > svg {
             width: 100vw;
         }
 
-        .noodles-container .noodles-background-desktop {
+        .pasta-container .pasta-background-desktop {
             padding-top:4vw;
             padding-left:3vw;
 
         }
 
-.noodles-wrapper h1 {
+.pasta-wrapper h1 {
     text-align: center;
     font-size: 6.2vw;
 }
 
-    .mobile .noodles-wrapper h1 {
+    .mobile .pasta-wrapper h1 {
         font-size: 8.8vw;
         margin-bottom:9vw;
         padding: 3vw;
@@ -64,7 +64,7 @@
 
     }
 
-    .noodles{
+    .pasta{
         height: 30vw;
         width: 100%;
         background-color: #05000e;
@@ -74,7 +74,7 @@
     }
 
 
-    .noodles svg {
+    .pasta svg {
         width:100%;
 
     } 

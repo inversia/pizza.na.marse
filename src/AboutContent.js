@@ -3,7 +3,7 @@ import './AboutContent.css'
 
 const AboutContent = () => (<>
     <div className='about'>
-        <h1>О НАС БЛЕАТЬ</h1>
+        <h1>О НАС</h1>
         <div className='history-container'>
             <p className='history'>
                 Давным-давно, 
