@@ -133,7 +133,7 @@
         .salads-carousel-wrapper .salad-price:after {
             content: '';
             position: absolute;
-            background-image: url(./static/art/rub.svg);
+            background-image: url(/static/art/rub.svg);
             background-repeat: no-repeat;
             background-size: contain;
             height: 1.2vw;
@@ -183,9 +183,8 @@
             padding:0.9em;
             margin: 0;
             position: absolute;
-            width:100%;
+            /* width:100%; */
             bottom:27vw;
-
         }
 
             .mobile .salads-carousel-wrapper .salad-composition li {
@@ -264,7 +263,7 @@
             top: 100%;
             width: 20vw;
             text-shadow: 0.05em 0.05em 0em rgba(0,0,0,0.4);
-            white-space: nowrap;
+            /* white-space: nowrap; */
             /* border: 1px solid green; */
         }
 
@@ -376,7 +375,7 @@
             position: absolute;
             text-align: center;
             top: 100%;
-            width: 20vw;
+            width: 35vw;
             text-shadow: 0.05em 0.05em 0em rgba(0,0,0,0.4);
             /* border: 1px solid green; */
         }

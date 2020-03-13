@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext, useEffect, useDebugValue, useLayoutEffect } from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import useVisibility from './useVisibility'
 
 import SizeSwitch from './SizeSwitch'
@@ -15,12 +15,12 @@ export default React.memo (function ProductInfo ({ name, composition, price, bac
     const { addToCart } = useContext (CartContext)
     const { layoutMode, isMobile } = useContext (LayoutModeContext)
 
-    //class={classList ({ 'cart-items': 1, 'empty': !cartItems.length })}
+    //className={classList ({ 'cart-items': 1, 'empty': !cartItems.length })}
 
     return (
         <div className={'product-info ' + layoutMode} data-index={index} data-type={productType} data-name={name}>
             <div className='left-side'>
-                <img className='product-image' style={{backgroundImage: `url(/art/product.${backgroundImage}.jpg`}} />
+                <img className='product-image' style={{backgroundImage: `url(/art/product.${productType}.${backgroundImage}.jpg`}} />
             </div>
             <div className='right-side'>
                 <h3 className='name'>{name}</h3>

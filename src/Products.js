@@ -1,9 +1,9 @@
 import React, { useRef, useState, useEffect, useContext } from 'react'
 
-import pizzaData from './data/pizza'
-import noodlesData from './data/noodles'
-import saladsData from './data/salads'
-import beveragesData from './data/beverages'
+import pizzaData from '../data/pizza'
+import noodlesData from '../data/noodles'
+import saladsData from '../data/salads'
+import beveragesData from '../data/beverages'
 
 import DropdownMenu from './DropdownMenu'
 import ProductInfo from './ProductInfo'

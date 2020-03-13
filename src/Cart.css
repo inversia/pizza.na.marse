@@ -83,7 +83,7 @@
             position: absolute;
             height: 13.1vw;
             width:13.1vw;
-            background-image: url(./static/art/rocket4.svg);
+            background-image: url(/static/art/rocket4.svg);
             transform: rotate(45deg);
             top:-5.51vw;
             left:76%;

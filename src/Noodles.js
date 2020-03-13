@@ -18,7 +18,7 @@ export default function Noodles ({ height, width, left, top, layout, infoLayout,
     const { layoutMode } = useContext (LayoutModeContext)
     const { position: infoPosition, size: infoSize } = infoLayout[layoutMode]
     
-    //<div class={classList ({ 'cart-items': 1, 'empty': !cartItems.length })}>
+    //<div className={classList ({ 'cart-items': 1, 'empty': !cartItems.length })}>
 
     return <div className={classList({[`pasta-item ${itemType}`] : 1, 'invisible' : isProductVisible, 'mobile' : layoutMode})} 
             

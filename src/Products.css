@@ -48,7 +48,7 @@
         content: '';
         height: 1.4vw;
         width: 2.5vw;
-        background-image: url(./static/art/back1.svg);
+        background-image: url(/static/art/back1.svg);
         background-repeat: no-repeat;
         background-size: cover;
     } */
@@ -107,7 +107,6 @@
         flex:0.65;
         background:linear-gradient(to left,var(--color-left),var(--color-right));
         flex-direction: column;
-        height: 100%;
         font-size: 4%;
         border-radius: 0vw 0vw 0vw 0vw;
         padding-top:8vw;
@@ -222,7 +221,7 @@
         }
 
         .product-info.invisible {
-            animation: none;
+            animation: none !important;
         }
 
             .product-info .right-side {
@@ -559,7 +558,7 @@
         /* background-color: rgb(255, 25, 0); */
         background-repeat: no-repeat;
         background-size:cover;
-        background-image: url(./static/art/down1.svg);
+        background-image: url(/static/art/down1.svg);
     }
 
         .mobile .choose-taste:after,

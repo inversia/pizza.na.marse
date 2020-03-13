@@ -26,10 +26,10 @@ export default function MenuMobile ({onSelect }) {
         />
 
         {/* <a href="javascript:{}" className="hamburger-menu link"></a> */}
-        <a href="javascript:{}" className="meat link" onClick={() => onSelect ('meat') }></a>
-        <a href="javascript:{}" className="broccoli link" onClick={() => onSelect ('veg') }></a> 
-        <a href="javascript:{}" className="fish link" onClick={() => onSelect ('fish') }></a> 
-        <a href="javascript:{}" className="mix link" onClick={() => { addRandomPizza (); navigate ('/cart') }}></a> 
+        <a href="#" className="meat link" onClick={() => onSelect ('meat') }></a>
+        <a href="#" className="broccoli link" onClick={() => onSelect ('veg') }></a> 
+        <a href="#" className="fish link" onClick={() => onSelect ('fish') }></a> 
+        <a href="#" className="mix link" onClick={() => { addRandomPizza (); navigate ('/cart') }}></a> 
         <A href="/cart" className="cart link"><CartCounter /></A> 
     </div>
 }

@@ -8,9 +8,9 @@ import AddingButton from './AddingButton'
 import NoodlesBackgroundMobile from './NoodlesBackgroundMobile'
 import Footer from './Footer'
 import {goToProduct} from './util'
-import pizzaData from './data/pizza'
-import saladsData from './data/salads'
-import noodlesData from './data/noodles'
+import pizzaData from '../data/pizza'
+import saladsData from '../data/salads'
+import noodlesData from '../data/noodles'
 import NoodlesBackgroundDesktop from './NoodlesBackgroundDesktop'
 
 
@@ -61,7 +61,7 @@ export default function MainContent ({ isMobile, pizzaTypeSelected, setPizzaType
                 <h1>Внеземные салаты</h1>
                 <Carousel currentItem={currentSalad} setCurrentItem={setCurrentSalad} perspectiveFactor='3.37' className='salads' composition={saladsData.composition}>
                     { saladsData.map ((salad, i) => (
-                            <div class='container' key={i} data-type='salads' data-name={salad.name}>
+                            <div className='container' key={i} data-type='salads' data-name={salad.name}>
                                 <div className='product-image' style={{backgroundImage: `url(/art/product.${salad.backgroundImage}.min.jpg`}} />
                                 <div className='title'>{salad.name} <span className='price'>{salad.price}</span></div>
                                 

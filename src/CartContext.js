@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react'
-import pizzaData from './data/pizza'
+import pizzaData from '../data/pizza'
 
 const CartContext = createContext ()
 
