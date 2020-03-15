@@ -1,5 +1,5 @@
 const beveragesData = [
-    
+
     {
         name: 'Фреш яблочный',
         itemType:'interactive',

@@ -9,7 +9,10 @@
   ],
   "scripts": {
     "start": "rm -rf dist .cache && parcel index.html",
-    "build": "./build.sh",
+    "compress": "./build.sh",
+    "build": "rm -rf dist .cache && parcel build --public-url ./ index.html",
+    "publish": "npm run build && ./pizza-publish.sh",
+    "eslint": "eslint .",
     "test": "mocha -r esm --reporter ololog/reporter --watch"
   },
   "keywords": [],
@@ -36,6 +39,8 @@
     "ololog": "^1.1.150",
     "parcel": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.2.2",
-    "postcss-modules": "^1.5.0"
+    "postcss-modules": "^1.5.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0"
   }
 }

@@ -16,7 +16,7 @@ const pizzaData = [
         position: ['7vw','0vw'],
         size: 13,
         backgroundImage: 'salmon',
-        animationDelay: '0.2s', 
+        animationDelay: '0.2s',
         type:'veg',
     },
 
@@ -37,7 +37,7 @@ const pizzaData = [
         position: ['77vw','0vw'],
         size: 18,
         backgroundImage: '4cheese',
-        animationDelay: '1.1s', 
+        animationDelay: '1.1s',
         type:'fish',
     },
 
@@ -58,7 +58,7 @@ const pizzaData = [
         position: ['24vw','8vw'],
         size: 12,
         backgroundImage: 'salyami',
-        animationDelay: '0.5s', 
+        animationDelay: '0.5s',
         type:'meat',
     },
 
@@ -79,7 +79,7 @@ const pizzaData = [
         position: ['3vw','22vw'],
         size: 20,
         backgroundImage: 'pepperoni',
-        animationDelay: '2.5s', 
+        animationDelay: '2.5s',
         type:'meat',
     },
 
@@ -100,7 +100,7 @@ const pizzaData = [
         position: ['62vw','11vw'],
         size: 12,
         backgroundImage: 'hawai',
-        animationDelay: '0.7s', 
+        animationDelay: '0.7s',
         type:'veg',
     },
 
@@ -121,7 +121,7 @@ const pizzaData = [
         position: ['67vw','22vw'],
         size: 22,
         backgroundImage: 'grow',
-        animationDelay: '3.15s', 
+        animationDelay: '3.15s',
         type:'veg',
     },
 
@@ -142,7 +142,7 @@ const pizzaData = [
         position: ['50vw','30vw'],
         size: 11,
         backgroundImage: 'ham',
-        animationDelay: '1.45s', 
+        animationDelay: '1.45s',
         type:'meat',
     },
 
@@ -163,7 +163,7 @@ const pizzaData = [
         position: ['28vw','24vw'],
         size: 14,
         backgroundImage: 'hunter',
-        animationDelay: '2.35s', 
+        animationDelay: '2.35s',
         type:'meat',
     },
 
@@ -184,7 +184,7 @@ const pizzaData = [
         position: ['57vw','48vw'],
         size: 18,
         backgroundImage: 'margo',
-        animationDelay: '0.2s', 
+        animationDelay: '0.2s',
         type:'meat',
     },
 
@@ -205,7 +205,7 @@ const pizzaData = [
         position: ['37vw','13vw'],
         size: 19,
         backgroundImage: 'bbq',
-        animationDelay: '0.2s', 
+        animationDelay: '0.2s',
         type:'fish',
     },
 
@@ -226,7 +226,7 @@ const pizzaData = [
         position: ['41vw','43vw'],
         size: 13,
         backgroundImage: 'ufiq',
-        animationDelay: '0.2s', 
+        animationDelay: '0.2s',
         type:'meat',
     },
 
@@ -247,7 +247,7 @@ const pizzaData = [
         position: ['84vw','46vw'],
         size: 12,
         backgroundImage: 'marsiano',
-        animationDelay: '0.2s', 
+        animationDelay: '0.2s',
         type:'meat',
     },
 
@@ -268,7 +268,7 @@ const pizzaData = [
         position: ['22vw','67vw'],
         size: 10,
         backgroundImage: 'cezar',
-        animationDelay: '0.2s', 
+        animationDelay: '0.2s',
         type:'meat',
     },
 
@@ -289,7 +289,7 @@ const pizzaData = [
         position: ['2vw','57vw'],
         size: 16,
         backgroundImage: 'frutti',
-        animationDelay: '0.2s', 
+        animationDelay: '0.2s',
         type:'meat',
     },
 
@@ -310,7 +310,7 @@ const pizzaData = [
         position: ['38vw','62vw'],
         size: 19,
         backgroundImage: 'gorgonzola',
-        animationDelay: '0.2s', 
+        animationDelay: '0.2s',
         type:'meat',
     },
 
@@ -331,7 +331,7 @@ const pizzaData = [
         position: ['75vw','61vw'],
         size: 17,
         backgroundImage: 'tomat',
-        animationDelay: '0.2s', 
+        animationDelay: '0.2s',
         type:'veg',
     },
 ]
