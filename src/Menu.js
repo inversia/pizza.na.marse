@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { A } from 'hookrouter'
-import CartCounter from './CartCounter';
+import CartCounter from './CartCounter'
 import { classList } from './util'
 
 const props = id => ({
@@ -9,16 +9,15 @@ const props = id => ({
 })
 
 
-function smoothScrollTo(hash) {
+function smoothScrollTo (hash) {
 
-    const target = document.getElementById(hash)
+    const target = document.getElementById (hash)
 
-    target.scrollIntoView({
+    target.scrollIntoView ({
         behavior: 'smooth',
         block: 'start'
     })
 }
-
 
 export default function Menu () {
 
@@ -29,8 +28,8 @@ export default function Menu () {
         {/* <A {...props ('about')}>о нас</A>  */}
         {/* <a className="link" href="#booking">забронировать</a> */}
         {/* <a className="link" href="#contact">контакты</a>  */}
-        <A {...props ('')} onClick={() => setTimeout (() => smoothScrollTo('contacts'), 100)}>контакты</A> 
+        <A {...props ('')} onClick={() => setTimeout (() => smoothScrollTo ('contacts'), 100)}>контакты</A>
         {/* <a className="cart link" href="#cart"></a>  */}
-        <A {...props ('cart')}><CartCounter /></A> 
+        <A {...props ('cart')}><CartCounter /></A>
     </div>
 }

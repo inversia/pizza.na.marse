@@ -530,5 +530,5 @@ export default function NoodlesBackgroundDesktop () {
       <path stroke="#D0021B" strokeWidth={0} d="M4.5 4.5H6186.5V3047.5H4.5z" />
     </g>
   </svg>
-      );
+      )
 }

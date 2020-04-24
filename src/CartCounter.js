@@ -8,7 +8,7 @@ export default function CartCounter () {
     const el = useRef ()
 
     const { cartItems } = useContext (CartContext)
-    
+
     const prevNumItems = useRef (cartItems.length)
 
     const isChanged = cartItems.length !== prevNumItems.current

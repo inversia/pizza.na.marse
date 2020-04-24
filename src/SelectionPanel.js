@@ -131,7 +131,7 @@ function SelectionPanel ({ onSelect }) {
                     <polygon id="Rectangle-18-Copy-3" fill="#FFFFFF" transform="translate(58.060619, 100.499319) rotate(-49.000000) translate(-58.060619, -100.499319) " points="56.9601435 82.8258913 59.5606189 83.0981127 59.5606189 118.172746 56.5606189 118.172746 56.5606189 83.2929158 56.5648582 83.1695076"></polygon>
                 </g>
             </g>
-        </svg>	
+        </svg>
     </div>
 }
 export default SelectionPanel

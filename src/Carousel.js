@@ -59,12 +59,12 @@ export default function Carousel ({ currentItem, setCurrentItem, children = [], 
     const N            = children.length
     const TAU          = PI * 2
     const sectionAngle = (TAU / N)
-    
+
     // TODO: добавить враппинг, чтобы currentItem был в диапазоне [0, N-1]
     //       взять с inversia.space функцию для wrapping с учетом отрицательных чисел
     //
-    //function gotoPrevItem () { setCurrentItem (currentItem + 1) }
-    //function gotoNextItem () { setCurrentItem (currentItem - 1) }
+    // function gotoPrevItem () { setCurrentItem (currentItem + 1) }
+    // function gotoNextItem () { setCurrentItem (currentItem - 1) }
 
     // создает «коробочку» связанную с компонентом (его временем жизни), в которой может лежать что-либо
     const itemsRef = useRef ()
@@ -92,11 +92,11 @@ export default function Carousel ({ currentItem, setCurrentItem, children = [], 
         for (let i = 0; i < N; i++){
 
             const angle = PI/2 + intermediateRotationAngle + sectionAngle * i
-        
+
             const x = radius + radius * cos (angle)
             const z = radius + radius * sin (angle)
 
-            const depth = rescale (sin(angle), [-1, 1], [0.5, 1], Easing.out)
+            // const depth = rescale (sin (angle), [-1, 1], [0.5, 1], Easing.out)
 
             const el = itemsRef.current.children[i]
 
@@ -117,14 +117,14 @@ export default function Carousel ({ currentItem, setCurrentItem, children = [], 
                 </svg>
 
                 <div ref={itemsRef} className="items">
-                    {children.map ((child, i) => 
+                    {children.map ((child, i) =>
                         <div className="item" key={i} onClick={() => setCurrentItem (i)}>{child}</div>
                     )}
-                </div> 
+                </div>
 
                 <div className='item-composition'>{composition[currentItem]}</div>
-                
-{/* 
+
+{/*
                 <input style={{width:'60%'}} type="range" min="0" max="10" step="0.01" value={currentPerspectiveFactor} onChange={e => setPerspectiveFactor (event.target.value)}></input>
                 <span style={{color:'white'}}>{currentPerspectiveFactor}</span> */}
 
@@ -132,8 +132,8 @@ export default function Carousel ({ currentItem, setCurrentItem, children = [], 
                 <div>{'Intermediate rotation angle ' + intermediateRotationAngle}</div>
                 <div>{'Section angle ' + sectionAngle}</div>
                 <div>{'Current item '   + currentItem} </div> */}
-                
-            </div> 
+
+            </div>
 
     // window.onkeydown = function (e) {
 

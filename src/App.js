@@ -10,12 +10,12 @@ import LoyaltyContent from './LoyaltyContent'
 import Products from './Products'
 import Cart from './Cart'
 import Footer from './Footer'
-import { CartContext, useCartState } from './CartContext'
+import { ProvideCartContext } from './CartContext'
 import { LayoutModeContext, useLayoutContext } from './LayoutModeContext'
 import { decodeProps } from './util'
 
 export default function App () {
-    
+
     const appEl      = useRef ()
     const { width }  = useComponentSize (appEl)
     const layoutMode = width <= 500 ? 'mobile' : 'desktop'
@@ -44,12 +44,11 @@ export default function App () {
                 <div ref={appEl} className={('app ' + (pizzaTypeSelected || '') + ' ' + layoutMode)}>
 
                     {/* <LayoutModeContext.Provider value={{ isMobile, layoutMode }}> */}
-                        <CartContext.Provider value={useCartState ()}>
+                        <ProvideCartContext>
                             {!isProducts && menu}
                             {/* <Radar /> */}
                             {content}
-                        </CartContext.Provider>
-                    
+                        </ProvideCartContext>
                 </div>
             </LayoutModeContext.Provider>
 }

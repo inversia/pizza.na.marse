@@ -11,7 +11,7 @@ import useComponentSize from '@rehooks/component-size'
 import { A, useTitle, navigate } from 'hookrouter'
 
 import {goToProduct} from './util'
-import { useKeyPress } from 'react-use';
+import { useKeyPress } from 'react-use'
 import { ScrollableElContext } from './ScrollableElContext'
 import { LayoutModeContext } from './LayoutModeContext'
 import CartCounter from './CartCounter'
@@ -33,25 +33,25 @@ const fillings = {
     meat: 'Мясное',
     veg: 'Вегетарианское',
     fish: 'Морепродукты',
-    // mix: 'Микс всех видов', 
+    // mix: 'Микс всех видов',
 }
 
-const productLabels = { 
-    pizzas: 'Пицца', 
-    pasta: 'Паста', 
+export const productLabels = {
+    pizzas: 'Пицца',
+    pasta: 'Паста',
     salads: 'Салаты',
-    beverages: 'Напитки', 
+    beverages: 'Напитки',
 }
 
 const SideProductList = React.memo (function SideProductList ({activeType, fillingType, visibleProductIndex, onClick }) {
-    
+
     const productListEl   = useRef ()
     const productListSize = useComponentSize (productListEl)
 
     return <div className='product-choose-panel'>
         <ul ref={productListEl} className='product-list'>
             {noDecoration (products[activeType])
-                .filter(p => !fillingType || (p.type === fillingType))
+                .filter (p => !fillingType || (p.type === fillingType))
                 .map ((p, i, list) =>
                     <li key={p.name}
                         className={i === visibleProductIndex ? 'active' : ''}
@@ -65,7 +65,7 @@ const SideProductList = React.memo (function SideProductList ({activeType, filli
 export default React.memo (function Products ({ activeType = 'pizzas', activeName }) {
 
     const productPanelEl                        = useRef ()
-    const [fillingType, setFillingType]         = useState(undefined)
+    const [fillingType, setFillingType]         = useState (undefined)
     const [visibleProductIndex, setVisibleProductIndex] = useState (0)
 
     const activeProductEl = useRef ()
@@ -73,9 +73,9 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
     function onScroll () {
 
         const { children, scrollTop } = productPanelEl.current
-        
+
         const productEls = [...children].filter (x => x.classList.contains ('product-info'))
-    
+
         const el = productEls.find (x => (x.offsetTop - scrollTop) > 0)
 
         if (el) {
@@ -98,7 +98,7 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
                         : productPanelEl.current.querySelector (`h2[data-type="${type}"]`)
 
         if (el) {
-            productPanelEl.current.scrollTo ({ top: el.offsetTop - window.innerWidth*0.05, behavior })
+            productPanelEl.current.scrollTo ({ top: el.offsetTop - window.innerWidth * 0.05, behavior })
         }
     }
 
@@ -108,35 +108,35 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
 
     return <div className='product-overlay'>
                 <div className={'overlay-menu ' + layoutMode}>
-                    <div className='back' onClick={() => navigate ('/') } >Главная</div>  
-                    
-                    <DropdownMenu 
+                    <div className='back' onClick={() => navigate ('/') } >Главная</div>
+
+                    <DropdownMenu
                         className='choose-type'
                         items={productLabels} 
                         enableSelectAll={false}
-                        defaultText='Блюдо'      
+                        defaultText='Блюдо'
                         activeItem={activeType}
                         setActiveItem={type => {
                             navigate (`/products/${type}`, true)
                             scrollTo ({ type, behavior: 'smooth' })
-                        }}  
+                        }}
                     />
-                    <DropdownMenu 
+                    <DropdownMenu
                         className='choose-taste'
-                        items={fillings}      
-                        defaultText='Начинка' 
-                        activeItem={fillingType} 
-                        setActiveItem={setFillingType} 
+                        items={fillings}
+                        defaultText='Начинка'
+                        activeItem={fillingType}
+                        setActiveItem={setFillingType}
                     />
-                    
+
                     <div className='bucket' onClick={() => navigate ('/cart') } >Корзина <CartCounter /></div>
-                    
+
                 </div>
 
                 {!isMobile && <SideProductList {...{
                     activeType, fillingType, visibleProductIndex,
                     onClick (i) {
-                        
+
                         // const child = productPanelEl.current.querySelector (`.product-info[data-type="${activeType}"][data-index="${i}"]`)
 
                         const child = [...productPanelEl.current.children].find (x => (x.dataset.type  === activeType) &&
@@ -144,20 +144,20 @@ export default React.memo (function Products ({ activeType = 'pizzas', activeNam
 
                         if (child) {
                             productPanelEl.current.scrollTo ({
-                                top: child.offsetTop - child.offsetWidth*0.075,
+                                top: child.offsetTop - child.offsetWidth * 0.075,
                                 behavior: 'smooth'
                             })
                         }
                     }
                 }} />}
-                
+
                 <div ref={productPanelEl} className='product-info-panel' onScroll={onScroll}>
                     <ScrollableElContext.Provider value='product-info-panel'>
                         {
-                            [].concat (...entries (products).map (([type, products]) =>
+                            [].concat (...entries (products).map (([type, products], i) =>
 
                                 [
-                                    <h2 data-type={type}>{productLabels[type]}</h2>,
+                                    <h2 key={i} data-type={type}>{productLabels[type]}</h2>,
                                     ...noDecoration (products)
                                         .filter (p => !fillingType || (p.type === fillingType))
                                         .map ((p, i) => <ProductInfo key={p.name} {...p} productType={type} index={i}/>)

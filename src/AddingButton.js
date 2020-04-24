@@ -4,12 +4,12 @@ import useVisibility from 'react-use-visibility'
 import { ScrollableElContext, useScrollableEl } from './ScrollableElContext'
 import './AddingButton.css'
 
-import throttle from 'lodash.throttle';
-const throttleInterval = 150;
+import throttle from 'lodash.throttle'
+const throttleInterval = 150
 
-function checkVisibility(el, partial) {
+function checkVisibility (el, partial) {
     if (!el) {
-        return false;
+        return false
     }
 
     const {
@@ -19,10 +19,10 @@ function checkVisibility(el, partial) {
         left,
         width,
         height,
-    } = el.getBoundingClientRect();
+    } = el.getBoundingClientRect ()
 
     if (top + right + bottom + left === 0) {
-        return false;
+        return false
     }
 
     const topCheck = partial ? top + height : top;
@@ -42,36 +42,36 @@ function checkVisibility(el, partial) {
 }
 
 function useVisibility2 (elRef, { partial = false } = {}) {
-    
-    const [isVisible, setIsVisible] = useState(false);
+
+    const [isVisible, setIsVisible] = useState (false)
     const getScrollableEl = useScrollableEl ()
 
-    useLayoutEffect(() => {
+    useLayoutEffect (() => {
 
-        const el           = elRef.current        
+        const el           = elRef.current
         const scrollableEl = getScrollableEl (el)
 
-        const handleScrollOrResize = throttle(
-            () => setIsVisible(checkVisibility(el, partial)),
+        const handleScrollOrResize = throttle (
+            () => setIsVisible (checkVisibility (el, partial)),
             throttleInterval,
         );
 
-        scrollableEl.addEventListener('scroll', handleScrollOrResize);
-        window.addEventListener('resize', handleScrollOrResize);
+        scrollableEl.addEventListener ('scroll', handleScrollOrResize);
+        window.addEventListener ('resize', handleScrollOrResize);
 
-        const visibility = checkVisibility(el, partial)
+        const visibility = checkVisibility (el, partial)
 
-        setIsVisible(visibility)
+        setIsVisible (visibility)
 
         return () => {
-            scrollableEl.removeEventListener('scroll', handleScrollOrResize);
-            window.removeEventListener('resize', handleScrollOrResize);
-        };
+            scrollableEl.removeEventListener ('scroll', handleScrollOrResize)
+            window.removeEventListener ('resize', handleScrollOrResize)
+        }
     }
-  );
+  )
 
-  return isVisible;
-};
+  return isVisible
+}
 
 export default function AddingButton ({ productType, name, backgroundImage, ...rest }) {
 
@@ -82,7 +82,7 @@ export default function AddingButton ({ productType, name, backgroundImage, ...r
     const onClick = () => {
 
         addToCart ({ productType, name, backgroundImage, ...rest })
-        
+
         const img     = document.querySelector (`[data-type='${productType}'][data-name='${name}'] .product-image`)
         const imgRect = img.getBoundingClientRect ()
         const left    = imgRect.x
@@ -98,12 +98,12 @@ export default function AddingButton ({ productType, name, backgroundImage, ...r
             height: imgRect.height,
             transform: `translate(${left | 0}px, ${top | 0}px)`,
         })
-        
-        document.body.appendChild(el)
+
+        document.body.appendChild (el)
         el.onanimationend = () => { document.body.removeChild (el) }
     }
 
-    return <button className='adding-button' ref={buttonRef} onClick={onClick}>     
+    return <button className='adding-button' ref={buttonRef} onClick={onClick}>
                 <span>ЗАКАЗАТЬ</span>
                 <div className={'highlight ' + (isVisible ? '' : 'invisible')}></div>
                 <div className={'highlight2 ' + (isVisible ? '' : 'invisible')}></div>

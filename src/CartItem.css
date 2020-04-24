@@ -61,6 +61,7 @@
     text-decoration: none;
     white-space: nowrap;
     text-shadow: 0.01em 0.05em 0.2em #472005;
+    cursor: pointer; 
 }
 
     .mobile .cart-item .item-name {

@@ -6,26 +6,26 @@ import {LayoutModeContext}  from './LayoutModeContext'
 
 const toStyle = ({ position, size }) => ({
     height: size + 'vw',
-    width:  size + 'vw', 
-    left:   position[0] + 'vw', 
+    width:  size + 'vw',
+    left:   position[0] + 'vw',
     top:    position[1] + 'vw'
 })
 
-export default function Noodles ({ height, width, left, top, layout, infoLayout, backgroundColor, backgroundImage, onClick, rotateOffset = '0deg', rotationDirection = 'normal', itemType = '', infoImage, infoTop, infoLeft, name }) { 
-    
+export default function Noodles ({ height, width, left, top, layout, infoLayout, backgroundColor, backgroundImage, onClick, rotateOffset = '0deg', rotationDirection = 'normal', itemType = '', infoImage, infoTop, infoLeft, name }) {
+
     const productInfo      = useRef ()
     const isProductVisible = useVisibility (productInfo.current, { partial: true })
     const { layoutMode } = useContext (LayoutModeContext)
     const { position: infoPosition, size: infoSize } = infoLayout[layoutMode]
-    
-    //<div className={classList ({ 'cart-items': 1, 'empty': !cartItems.length })}>
 
-    return <div className={classList({[`pasta-item ${itemType}`] : 1, 'invisible' : isProductVisible, 'mobile' : layoutMode})} 
-            
+    // <div className={classList ({ 'cart-items': 1, 'empty': !cartItems.length })}>
+
+    return <div className={classList ({[`pasta-item ${itemType}`] : 1, 'invisible' : isProductVisible, 'mobile' : layoutMode})}
+
                 ref={productInfo}
-                style={{ ...toStyle (layout[layoutMode]), 
-                         '--rotate-offset': rotateOffset, 
-                         '--rotate-direction': rotationDirection }}          
+                style={{ ...toStyle (layout[layoutMode]),
+                         '--rotate-offset': rotateOffset,
+                         '--rotate-direction': rotationDirection }}
                 onClick={onClick}>
 
             {/* <div className={classList({[`pasta-item ${itemType}`] : 1, ' invisible' : isProductVisible})}></div> */}

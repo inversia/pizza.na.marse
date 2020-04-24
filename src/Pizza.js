@@ -3,9 +3,9 @@ import useVisibility from 'react-use-visibility'
 import { LayoutModeContext } from './LayoutModeContext'
 
 export default function Pizza ({ checked = false, onClick, layout, type, fontSize, img, id, name, price, composition, animationDelay, backgroundImage }) {
-  
+
     const { layoutMode } = useContext (LayoutModeContext)
-    
+
     const { position, size } = layout[layoutMode]
     const pizzaRef = useRef ()
     const isVisible = useVisibility (pizzaRef.current, {
@@ -26,6 +26,5 @@ export default function Pizza ({ checked = false, onClick, layout, type, fontSiz
                 <h2 style={{ fontSize: Math.round(size * 0.12) + 'vw' }}>{price}</h2>
                 {/* <div className='image' style={{backgroundImage: `url(/art/${backgroundImage}.jpg`}}/> */}
                 <div className='image' style={{backgroundImage: `url(/art/product.${backgroundImage}.min.jpg`}}/>
-               
             </div>
 }

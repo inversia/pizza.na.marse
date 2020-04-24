@@ -15,7 +15,7 @@ export default React.memo (function ProductInfo ({ name, composition, price, bac
     const { addToCart } = useContext (CartContext)
     const { layoutMode, isMobile } = useContext (LayoutModeContext)
 
-    //className={classList ({ 'cart-items': 1, 'empty': !cartItems.length })}
+    // className={classList ({ 'cart-items': 1, 'empty': !cartItems.length })}
 
     return (
         <div className={'product-info ' + layoutMode} data-index={index} data-type={productType} data-name={name}>
@@ -28,16 +28,16 @@ export default React.memo (function ProductInfo ({ name, composition, price, bac
                     {productType === 'pizzas' && <div className='size'><SizeSwitch isLarge={isLarge} setIsLarge={setIsLarge} /></div>}
                     <div className='price'>{productType === 'pizzas' ? price[Number (isLarge)] : price}</div>
                 </div>
-                
+
                 <ul>
                     {productType !== 'beverages' && composition.map((ingredient, i) => <li key={i}>{ingredient}</li>)}
                 </ul>
-                {/* <button ref={buttonRef} onClick={() => addToCart ({ productType, name, isLarge, backgroundImage, price})}>     
+                {/* <button ref={buttonRef} onClick={() => addToCart ({ productType, name, isLarge, backgroundImage, price})}>
                     <span>ЗАКАЗАТЬ</span>
                     <div className={'highlight ' + (isVisible ? '' : 'invisible')}></div>
                     <div className={'highlight2 ' + (isVisible ? '' : 'invisible')}></div>
                 </button> */}
-                
+
                 <AddingButton productType={productType} name={name} isLarge={isLarge} backgroundImage={backgroundImage} price={price}/>
 
             </div>

@@ -1,9 +1,6 @@
 /*
-
     classList ({ 'size-switch': 1, 'active': false, 'clicked': true})
-    
     → 'size-switch clicked'
-
 */
 
 import { navigate } from 'hookrouter'
