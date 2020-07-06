@@ -1,5 +1,5 @@
 import panic from 'panic-overlay'
-panic.configure ({ projectRoot: '/Users/inversia/reactpizza' })
+panic.configure ({ projectRoot: '/Users/new/Documents/reactpizza' })
 
 import React from 'react'
 import ReactDOM from 'react-dom'
