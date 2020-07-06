@@ -1,0 +1,31 @@
+
+<svg width="36px" height="22px" viewBox="0 0 36 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="noun_down_452913" transform="translate(-669.000000, -329.000000)">
+            <g id="Group-33" transform="translate(665.000000, 324.000000)">
+                <g id="Group-32-Copy">
+                    <g id="Group-34">
+                        <g id="Group-35">
+                            <g id="Group-Copy-5" transform="translate(16.000000, 16.000000) rotate(90.000000) translate(-16.000000, -16.000000) ">
+                                <g id="Group" transform="translate(8.000000, 10.000000)" stroke="#644B4B" stroke-width="2">
+                                    <polygon id="Shape" fill="#644B4B" fill-rule="nonzero" points="8 7.807 5.83 3.862 10.171 3.862"></polygon>
+                                    <path d="M8,7.807 L8,14.649" id="Shape"></path>
+                                    <path d="M10.17,3.862 L15.654,0.737" id="Shape"></path>
+                                    <path d="M5.829,3.862 L0.346,0.737" id="Shape"></path>
+                                </g>
+                                <g id="Group">
+                                    <polygon id="Shape" stroke="#644B4B" stroke-width="2" points="16 25.591 24.555 10.319 7.446 10.319"></polygon>
+                                    <path d="M16,2 C23.72,2 30,8.28 30,16 C30,23.72 23.72,30 16,30 C8.28,30 2,23.72 2,16 C2,8.28 8.28,2 16,2 Z M0,16 C0,24.837 7.163,32 16,32 C24.837,32 32,24.837 32,16 C32,7.163 24.837,0 16,0 C7.163,0 0,7.163 0,16 Z" id="Shape" fill-opacity="0" fill="#FFFFFF" fill-rule="nonzero"></path>
+                                </g>
+                            </g>
+                            <rect id="Rectangle-25" stroke="#644B4B" stroke-width="2" x="22" y="14" width="17" height="4" rx="1"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
