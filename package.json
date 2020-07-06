@@ -9,7 +9,9 @@
   ],
   "scripts": {
     "start": "rm -rf dist .cache && parcel index.html",
-    "build": "./build.sh",
+    "build": "rm -rf dist .cache && parcel build --public-url ./ index.html",
+    "publish": "npm run build && ./publish.sh",
+    "build-images": "./build-images.sh",
     "test": "mocha -r esm --reporter ololog/reporter --watch"
   },
   "keywords": [],

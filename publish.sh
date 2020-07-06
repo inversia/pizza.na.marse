@@ -1,5 +1,5 @@
 echo Publishing to GitHub Pages \
-&& git checkout bundling-pizza \
+&& git checkout release \
 && git rm *.html *.js *.css *.map \
 && cp dist/* . \
 && git add --ignore-errors -A \
