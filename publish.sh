@@ -1,5 +1,5 @@
 echo Publishing to GitHub Pages \
-&& git checkout release \
+&& git checkout gh-pages \
 && cp .gitignore .gitignore_saved \
 && git rm -r '*' \
 && mv .gitignore_saved .gitignore \
