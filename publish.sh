@@ -3,7 +3,7 @@ echo Publishing to GitHub Pages \
 && cp .gitignore .gitignore_saved \
 && git rm -r '*' \
 && cp .gitignore_saved .gitignore \
-&& cp dist/* . \
+&& cp -rf dist/* . \
 && git add --ignore-errors -A \
 && git commit -am "new build" \
 && git push \
