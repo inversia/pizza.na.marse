@@ -1,6 +1,8 @@
 echo Publishing to GitHub Pages \
 && git checkout release \
-&& git rm *.html *.js *.css *.map \
+&& cp .gitignore .gitignore_saved \
+&& git rm -r '*' \
+&& cp .gitignore_saved .gitignore \
 && cp dist/* . \
 && git add --ignore-errors -A \
 && git commit -am "new build" \
