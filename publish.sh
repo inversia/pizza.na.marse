@@ -1,7 +1,7 @@
 echo Publishing to GitHub Pages \
 && git checkout gh-pages \
 && cp .gitignore .gitignore_saved \
-&& cp CNAME CNAME_saved
+&& cp CNAME CNAME_saved \
 && git rm -r '*' \
 && mv .gitignore_saved .gitignore \
 && mv CNAME_saved CNAME \
