@@ -34,7 +34,7 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "autoprefixer": "^9.7.4",
     "esm": "^3.2.25",
-    "mocha": "^6.2.2",
+    "mocha": "^10.2.0",
     "ololog": "^1.1.150",
     "parcel": "^1.12.4",
     "parcel-plugin-static-files-copy": "^2.2.2",
